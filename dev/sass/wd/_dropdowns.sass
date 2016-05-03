@@ -2,7 +2,7 @@
 ////            WD DROPDOWN
 ///////////////////////////////////////////////////////////////////////////////////
 
-.wd-dropdown
+.dropdown
     display: inline-block
     margin: 0
     padding: 0
@@ -28,11 +28,11 @@
             $inverseColor: $wdWerneoGreyMedium
         &.#{$name}
             &:hover
-                .wd-dropdown-value
+                .dropdown-value
                     background-color: lighten($color,10%)
-            .wd-dropdown-list
+            .dropdown-list
                 background-color: $color
-            .wd-dropdown-value
+            .dropdown-value
                 &.active
                     background-color: $color
             a
@@ -40,13 +40,13 @@
                     background-color: darken($color,20%)
     /// extra properties for 'strange' colors (white, grey, black)
     &.white
-        .wd-dropdown-list
+        .dropdown-list
             background-color: $wdWerneoWhite
         a
             &:hover
                 color: $wdWerneoGreyDark
 
-.wd-dropdown-value
+.dropdown-value
     display: inline-block
     width: 100%
     padding: 0 2rem 0 1rem
@@ -57,7 +57,7 @@
         outline: 0
     &.active
 
-.wd-dropdown-handle
+.dropdown-handle
     position: absolute
     right: 0
     top: 0
@@ -68,7 +68,7 @@
     text-align: center
     box-sizing: border-box
 
-.wd-dropdown-list
+.dropdown-list
     display: none
     position: absolute
     left: 0
@@ -84,7 +84,7 @@
     &.active
         display: block
 
-.wd-dropdown-option
+.dropdown-option
     display: block
     padding: 0 1.5rem
     transition: all 400ms ease-in-out
@@ -100,10 +100,10 @@
         padding-left: 5rem
         font-size: 1.1rem
 
-.wd-dropdown-level
+.dropdown-level
     display: none
 
-.wd-dropdown-divider
+.dropdown-divider
     display: block
     height: 0.1rem
     margin: 0 0.5rem

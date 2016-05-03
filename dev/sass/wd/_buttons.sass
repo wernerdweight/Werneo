@@ -2,7 +2,7 @@
 ////            WD BUTTONS
 ///////////////////////////////////////////////////////////////////////////////////
 
-.wd-btn
+.btn
     padding: 1.3rem 3rem
     font-size: 1.5rem
     line-height: 1.8rem
@@ -41,27 +41,23 @@
             +diagonal-split-background($wdWerneoWhite,$wdWerneoWhite)
     
     /// sizes
-    &.huge
-        font-size: 3.5rem
-        line-height: 3.8rem
-        padding: 1.8rem 4rem
-    &.bigger
-        font-size: 3rem
-        line-height: 3.2rem
-        padding: 1.4rem 3.5rem
-    &.big
+    &.sm
+        font-size: 1.3rem
+        line-height: 1.6rem
+        padding: 0.6rem 1.2rem
+    &.lg
         padding: 1.2rem 2.6rem
         font-size: 2.4rem
         line-height: 2.6rem
+    &.xl
+        font-size: 3.5rem
+        line-height: 3.8rem
+        padding: 1.8rem 4rem
     &.full
         width: 100%
         padding-left: 0
         padding-right: 0
         text-align: center
-    &.small
-        font-size: 1.3rem
-        line-height: 1.6rem
-        padding: 0.6rem 1.2rem
     &.input
         font-size: 1.6rem
         line-height: 2rem
@@ -81,24 +77,17 @@
         animation: loadMoreSpinner 1s infinite
         &:hover,&:focus
             background-position: 50% 50%
-    &.th-loading
-        background-color: $wdWerneoTurquoise
-        color: $wdWerneoWhite
-        +diagonal-split-background-none
-        animation: loadMorePulse 1s infinite
     &[disabled="disabled"]
-        background: $wdWerneoGreyMedium
-        color: $wdWerneoWhite
+        background: $wdWerneoGreyLight
+        color: darken($wdWerneoGreyLight,10%)
         &:hover
-            background: $wdWerneoGreyMedium
-            color: $wdWerneoWhite
+            background: $wdWerneoGreyLight
+            color: darken($wdWerneoGreyLight,10%)
         &:focus,&:active,&.active
-            background: $wdWerneoGreyMedium
-            color: $wdWerneoWhite
+            background: $wdWerneoGreyLight
+            color: darken($wdWerneoGreyLight,10%)
 
     /// children
-    .wd-dot
-        line-height: 1.6rem
     &.ico
         .fa
             display: block
@@ -106,6 +95,6 @@
             font-size: 1.8rem
             line-height: 1.8rem
 
-.wd-btn-group
-    .wd-btn
+.btn-group
+    .btn
         float: left
