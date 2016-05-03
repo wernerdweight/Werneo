@@ -1,0 +1,160 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD MODAL BUTTONS
+///////////////////////////////////////////////////////////////////////////////////
+
+.wd-modal-btn
+    display: inline-block
+    position: relative
+    &:hover
+        .modal-btn-overlay
+            height: 3.2rem
+    &::before
+        background: rgba(darken($wdWerneoTurquoise,50%),0.5)
+        opacity: 0
+        pointer-events: none
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 800
+        width: 100%
+        height: 100%
+        content: ''
+        transition: opacity 400ms 400ms
+    .modal-btn-trigger
+        display: block
+        pointer-events: auto
+        transition: opacity 300ms 300ms
+        & > *
+            transition: opacity 300ms 500ms
+    .modal-btn-overlay
+        display: block
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 0
+        overflow: hidden
+        background-color: $wdWerneoGreyLight
+        color: $wdWerneoWhite
+        text-align: center
+        line-height: 3.2rem
+        text-decoration: none
+        z-index: 700
+        +diagonal-split-background($wdWerneoTurquoise,darken($wdWerneoTurquoise,3%))
+        box-sizing: border-box
+        transition: height 300ms 300ms, opacity 300ms 100ms, background-position 300ms 0
+        &:hover
+            +diagonal-split-background-hover
+            & ~ .modal-btn-trigger
+                opacity: 0.5
+    .modal-btn-content
+        position: fixed
+        display: block
+        overflow: hidden
+        opacity: 0
+        z-index: 1000
+        pointer-events: none
+        transition-timing-function: cubic-bezier(0.7,0,0.3,1)
+        transition: opacity 400ms 600ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms
+        &.wd-list-item-modal
+            width: 30rem
+            height: 10rem
+        & > *
+            opacity: 0
+            transition: opacity 300ms 0
+        .close
+            display: block
+            position: absolute
+            top: 1rem
+            right: 1rem
+            color: $wdWerneoWhite
+            z-index: 1100
+            opacity: 0.3
+            transition: opacity 400ms ease-in-out
+            &:hover
+                opacity: 1
+        .header
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            padding: 1rem 3.5rem 0.5rem 1rem
+            margin: 0
+            background-color: $wdWerneoTurquoise
+            color: $wdWerneoWhite
+            border-bottom: 0.4rem solid lighten($wdWerneoTurquoise,20%)
+            z-index: 1100
+            p
+                font-size: 2.4rem
+                margin: 0
+                +hellip
+            .close
+                display: block
+                position: absolute
+                top: 1rem
+                right: 1rem
+                color: $wdWerneoWhite
+                z-index: 1101
+                opacity: 0.3
+                +transition(opacity 400ms ease-in-out)
+                &:hover
+                    opacity: 1
+        .body
+            margin-top: 4.3rem
+            padding: 1rem 2rem 2rem 2rem
+            z-index: 1099
+            height: 20.2rem
+            overflow: auto
+            p
+                margin: 0
+        .footer
+            z-index: 1100
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            padding: 0.5rem
+            margin: 0
+            background-color: $wdWerneoGreyLightest
+            border-top: 0.1rem solid $wdWerneoGreyLight
+
+    /// functional
+    &.open
+        &::before
+            opacity: 1
+            pointer-events: auto
+            transition: opacity 400ms 100ms
+        .modal-btn-overlay
+            opacity: 0
+            pointer-events: none
+            height: 0
+            transition: all 300ms 0
+        .modal-btn-trigger
+            opacity: 0
+            pointer-events: none
+            transition: opacity 100ms 100ms
+            & > *
+                opacity: 0
+                transition: opacity 300ms
+        .modal-btn-content
+            top: 50% !important
+            left: 50% !important
+            margin-left: -25rem
+            margin-top: -15rem
+            width: 50rem
+            height: 30rem
+            opacity: 1
+            pointer-events: auto
+            box-sizing: border-box
+            transition: opacity 100ms 100ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms
+            & > *
+                opacity: 1
+                transition: opacity 400ms 500ms
+
+    /// colors
+    @each $name, $color, in $wdWerneoColors
+        &.#{$name}
+            .modal-btn-trigger
+                background-color: $color
+            .modal-btn-content
+                background-color: $color

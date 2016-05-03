@@ -1,0 +1,145 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD LISTS
+///////////////////////////////////////////////////////////////////////////////////
+
+.wd-list-item-container
+    margin: 0 1rem 1rem 0
+    display: inline-block
+    &:hover .wd-list-item
+        box-shadow: 0 0 0 0.3rem $wdWerneoGreyLight
+    &.table-like
+        .wd-list-item
+            width: 100%
+            height: 6.4rem
+            & > a
+                color: $wdWerneoGreyDark
+            .info
+                margin-left: 0
+                width: 100%
+                span
+                    display: inline-block
+                    margin-right: 1rem
+        & ~ .sortable-placeholder
+            width: 100%
+            height: 6.4rem
+
+.wd-list-item
+    display: block
+    position: relative
+    border: 0.1rem solid $wdWerneoGreyLight
+    padding: 1rem
+    background-color: $wdWerneoWhite
+    text-decoration: none
+    color: $wdWerneoGreyDark
+    width: 30rem
+    height: 10rem
+    overflow: hidden
+    +box-sizing(border-box)
+    &:focus
+        outline: none
+        border: 0.1rem dashed $wdWerneoTurquoise
+    &.checked
+        border: 0.4rem solid $wdWerneoTurquoise
+        padding: 0.6rem
+        &::before
+            display: block
+            width: 4rem
+            height: 4rem
+            background-color: $wdWerneoTurquoise
+            position: absolute
+            right: 0
+            top: 0
+            border-right: 2rem solid $wdWerneoTurquoise
+            border-top: 2rem solid $wdWerneoTurquoise
+            border-bottom: 2rem solid $wdWerneoWhite
+            border-left: 2rem solid $wdWerneoWhite
+            content: " "
+        &::after
+            position: absolute
+            right: 0
+            top: 0
+            font-family: $wdWerneoIconFontFamily
+            content: "\f00c"
+            color: $wdWerneoWhite
+        &.checked-disabled
+            border-color: $wdWerneoTeal
+            &::before
+                background-color: $wdWerneoTeal
+                border-right-color: $wdWerneoTeal
+                border-top-color: $wdWerneoTeal
+            &::after
+                content: "\f0c1"
+    .icon
+        width: 8rem
+        height: 8rem
+        float: left
+        text-align: center
+        color: $wdWerneoWhite
+        display: flex
+        align-items: center
+        align-content: center
+        &.split
+            +diagonal-split-background($wdWerneoTurquoise,darken($wdWerneoTurquoise,4%))
+        i
+            &.fa
+                line-height: 8rem
+                font-size: 3.2rem
+        > *
+            width: 100%
+            text-align: center
+        p
+            line-height: 100%
+        hr
+            margin: 0.2rem 0
+    .info
+        margin-left: 1rem
+        float: left
+        width: 18rem
+        height: 8rem
+        p
+            display: block
+            margin: 0 0 0.5rem 0
+            font-size: 1.6rem
+            line-height: 2rem
+            +hellip
+        span
+            display: block
+            font-size: 1.4rem
+            line-height: 1.6rem
+            +hellip
+            &.counts
+                margin-top: 0.5rem
+                color: $wdWerneoGreyDark
+                font-size: 1rem
+                position: absolute
+                bottom: 0.5rem
+                right: 1rem
+                &.big
+                    font-size: 1.4rem
+            &.error
+                color: $wdWerneoCrimson
+                font-weight: normal
+            &.badge
+                padding: 0 0.6rem
+                height: 1.8rem
+                line-height: 1.8rem
+                font-size: 1.2rem
+                margin-bottom: 0.4rem
+                color: $wdWerneoWhite
+                text-shadow: 0.1rem 0.1rem 0.2rem rgba($wdWerneoBlack,0.5)
+                border: 0.1rem solid $wdWerneoGreyMedium
+        input
+            margin-bottom: 0.5rem
+    input
+        &[type="checkbox"]
+            width: 0
+            height: 0
+            overflow: hidden
+            display: block
+            border: none
+            padding: 0
+            margin: 0
+            z-index: -1
+            position: absolute
+            bottom: 0
+            right: 0

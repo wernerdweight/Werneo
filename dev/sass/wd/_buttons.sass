@@ -1,0 +1,111 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD BUTTONS
+///////////////////////////////////////////////////////////////////////////////////
+
+.wd-btn
+    padding: 1.3rem 3rem
+    font-size: 1.5rem
+    line-height: 1.8rem
+    display: inline-block
+    text-decoration: none
+    cursor: pointer
+    border: none
+    box-sizing: border-box
+    transition: all 300ms ease-in-out
+    
+    /// colors
+    @each $name, $color, in $wdWerneoColors
+        $inverseColor: $wdWerneoWhite
+        @if $name == 'white' or $name == 'grey-light'
+            $inverseColor: $wdWerneoGreyMedium
+        &.#{$name}
+            background-color: $color
+            color: $inverseColor
+            +diagonal-split-background(lighten($color,4%),$color)
+            &:hover
+                color: darken($inverseColor,10%)
+                background-color: darken($color,10%)
+                +diagonal-split-background-hover
+            &:focus,&:active,&.active
+                color: desaturate($inverseColor,10%)
+                background-color: desaturate($color,10%)
+                +diagonal-split-background(darken($color,10%),darken($color,5%))
+                +diagonal-split-background-hover
+    /// abnormalities
+    &.white
+        color: $wdWerneoGreyMedium
+        &:hover
+            color: darken($wdWerneoGreyDark,10%)
+        &:focus,&:active,&.active
+            color: $wdWerneoGreyDark
+            +diagonal-split-background($wdWerneoWhite,$wdWerneoWhite)
+    
+    /// sizes
+    &.huge
+        font-size: 3.5rem
+        line-height: 3.8rem
+        padding: 1.8rem 4rem
+    &.bigger
+        font-size: 3rem
+        line-height: 3.2rem
+        padding: 1.4rem 3.5rem
+    &.big
+        padding: 1.2rem 2.6rem
+        font-size: 2.4rem
+        line-height: 2.6rem
+    &.full
+        width: 100%
+        padding-left: 0
+        padding-right: 0
+        text-align: center
+    &.small
+        font-size: 1.3rem
+        line-height: 1.6rem
+        padding: 0.6rem 1.2rem
+    &.input
+        font-size: 1.6rem
+        line-height: 2rem
+        padding: 1rem 2rem
+    
+    /// functional
+    &.loading
+        width: 3rem
+        height: 3rem
+        padding: 0
+        overflow: hidden
+        border-radius: 50%
+        text-indent: -999rem
+        white-space: nowrap
+        background-position: 50% 50%
+        outline: 0
+        animation: loadMoreSpinner 1s infinite
+        &:hover,&:focus
+            background-position: 50% 50%
+    &.th-loading
+        background-color: $wdWerneoTurquoise
+        color: $wdWerneoWhite
+        +diagonal-split-background-none
+        animation: loadMorePulse 1s infinite
+    &[disabled="disabled"]
+        background: $wdWerneoGreyMedium
+        color: $wdWerneoWhite
+        &:hover
+            background: $wdWerneoGreyMedium
+            color: $wdWerneoWhite
+        &:focus,&:active,&.active
+            background: $wdWerneoGreyMedium
+            color: $wdWerneoWhite
+
+    /// children
+    .wd-dot
+        line-height: 1.6rem
+    &.ico
+        .fa
+            display: block
+            width: 100%
+            font-size: 1.8rem
+            line-height: 1.8rem
+
+.wd-btn-group
+    .wd-btn
+        float: left

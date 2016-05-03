@@ -1,0 +1,288 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD FORMS
+///////////////////////////////////////////////////////////////////////////////////
+
+form
+    &#login-form
+        margin-top: 0
+        margin-bottom: 0
+    &.wd-form
+        margin: 0
+        padding: 0
+    .required > label,label.required
+        &:after
+            content: '*'
+            display: inline-block
+            color: $wdWerneoCrimson
+            margin-left: 0.5rem
+
+input,select,textarea,option
+    font-weight: $wdWerneoNormal
+    font-family: $wdWerneoBasicFontFamily
+    color: $wdWerneoGreyMedium
+
+input,select,textarea
+    display: inline-block
+    margin: 0
+    padding: 0 1rem
+    border: 0.1rem solid darken($wdWerneoGreyLight,10%)
+    border-radius: 0.3rem
+    transition: all 300ms ease-in-out
+    +input-placeholder
+        color: $wdWerneoGreyLight
+        transition: color 300ms ease-in-out
+    &:hover,&:focus,&:active
+        +input-placeholder
+            color: $wdWerneoGreyMedium
+    &:focus,&:active
+        outline: 0
+        border-color: $wdWerneoGreyDark
+    &[disabled],&[readonly]
+        background-color: $wdWerneoGreyLightest
+        color: $wdWerneoGreyMedium
+    @each $name, $color, in $wdWerneoColors
+        &.#{$name}
+            &:focus,&:active
+                border-color: $color
+
+input
+    width: 100%
+    height: 3.2rem
+    font-size: 1.1rem
+    &.big
+        height: 4rem
+        font-size: 1.6rem
+    &.medium
+        height: 2.8rem
+        font-size: 1.4rem
+    &.small
+        height: 2.4rem
+        font-size: 1rem
+        padding: 0 0.5rem
+    &.wd-input-btn
+        text-align: center
+    &[type="radio"],&[type="checkbox"]
+        display: none
+        & + label
+            display: inline-block
+            cursor: pointer
+            margin-right: 1.5rem
+            p
+                display: inline-block
+                margin-left: 2rem
+            &::before
+                content: ''
+                display: inline-block
+                width: 1.5rem
+                height: 1.5rem
+                border: 0.1rem solid $wdWerneoGreyLight
+                background-color: $wdWerneoGreyLightest
+                color: $wdWerneoGreyDark
+                font-size: 100%
+                line-height: 1.2rem
+                text-indent: -0.1rem
+                text-align: center
+                vertical-align: middle
+                margin-right: 0.5rem
+            &.required
+                &::after
+                    content: none
+    &[type="radio"]
+        & + label
+            &::before
+                font-size: 300%
+                border-radius: 50%
+        &:checked
+            & + label
+                &::before
+                    content: '\2022'
+                    border: 0.1rem solid $wdWerneoGreyDark
+    &[type="checkbox"]
+        &:checked
+            & + label
+                &::before
+                    content: '\2713'
+                    border: 0.1rem solid $wdWerneoGreyDark
+    &[type="number"]
+        padding-right: 0
+
+textarea
+    width: 100%
+    padding: 0.5rem 1rem
+    font-size: 1.1rem
+    +input-placeholder
+        font-size: 1.1rem
+
+select
+    height: 3.2rem
+    width: 100%
+    font-size: 1.1rem
+    &.big
+        height: 4rem
+        font-size: 1.6rem
+    &.medium
+        height: 2.8rem
+        font-size: 1.4rem
+    &.small
+        height: 2.4rem
+        font-size: 1rem
+    &[multiple="multiple"]
+        height: auto
+    option
+        &[value=""]
+            color: $wdWerneoGreyLight
+            transition: color 300ms ease-in-out
+
+.wd-input-bound
+    position: relative
+    &.textarea
+        input
+            &.wd-input-btn
+                height: 100%
+    &.double
+        input,textarea,select
+            &:first-child
+                padding-right: 10rem
+    .wd-btn-group
+        position: absolute
+        right: 0
+        top: 0
+        height: 100%
+        padding: 0.1rem
+        box-sizing: border-box
+        .wd-btn
+            width: 4rem
+            float: right
+            height: 100%
+            font-size: 1.6rem
+            text-align: center
+            &:first-child
+                float: left
+    input,textarea,select
+        color: $wdWerneoGreyDark
+        &:first-child
+            padding-right: 5rem
+
+label
+    display: block
+    font-size: 1.3rem
+    line-height: 1.8rem
+    &[data-after]
+        &::after
+            content: " " attr(data-after)
+    &.small
+        font-size: 1.2rem
+    /// validation errors
+    & + ul
+        margin: 0
+        padding: 0
+        border: 0.1rem solid darken($wdWerneoGreyLight,10%)
+        border-bottom: none
+        li
+            font-size: 1.2rem
+            background-color: $wdWerneoCrimson
+            padding: 0.5rem 1rem
+            color: $wdWerneoWhite
+            list-style: none
+
+.wd-form-error
+    padding: 0.5rem 1rem
+    background-color: $wdWerneoMauve
+    color: $wdWerneoWhite
+
+.form-errors
+    margin: 0
+    padding: 0
+    ul
+        margin: 0
+        padding: 0
+    li
+        list-style: none
+        padding: 0.5rem 1rem
+        color: $wdWerneoCrimson
+
+.wd-form-tab
+    p,label
+        position: relative
+        display: inline-block
+        background-color: $wdWerneoTurquoise
+        color: $wdWerneoWhite
+        padding: 0.5rem 1rem
+        font-size: 1.2rem
+        margin-bottom: 0
+        &.wd-form-error
+            padding: 0.5rem 1rem
+            background-color: $wdWerneoCrimson
+            color: $wdWerneoWhite
+    label.section-label
+        display: block
+        font-size: 1.8rem
+        padding: 0
+        color: $wdWerneoGreyDark
+        background-color: transparent
+        margin-bottom: 0.5rem
+        &:after
+            content: ":"
+
+.wd-switch
+    input[type="checkbox"]
+        position: absolute
+        opacity: 0
+        width: 0.1rem
+        height: 0.1rem
+        &:checked
+            & + .check
+                background-color: $wdWerneoTurquoise
+                &::after
+                    left: 4.1rem
+    .check
+        position: relative
+        width: 5rem
+        height: 2rem
+        outline: 0.1rem solid $wdWerneoGreyLight
+        border: 0.1rem solid $wdWerneoWhite
+        cursor: pointer
+        background-color: $wdWerneoGreyLight
+        display: inline-block
+        z-index: 1
+        transition: background-color 200ms ease-in-out
+        &::after
+            content: ''
+            position: absolute
+            left: -0.1rem
+            top: -0.1rem
+            display: block
+            width: 1rem
+            height: 2rem
+            outline: 0.1rem solid $wdWerneoGreyDark
+            background-color: $wdWerneoGreyDark
+            z-index: 2
+            transition: left 200ms ease-in-out
+
+.wd-form
+    padding-bottom: 3rem
+    button
+        margin: 2rem 1rem 0 0
+    label
+        display: block
+        line-height: 3.2rem
+    .padded-left
+        label
+            padding-left: 1rem
+    .wd-nested-label
+        display: block
+        background-color: $wdWerneoTurquoise
+        color: $wdWerneoWhite
+        font-size: 125%
+        border-bottom: 0.5rem solid lighten($wdWerneoTurquoise,10%)
+        padding: 1rem 1rem 0.5rem 1rem
+        &::before
+            content: ''
+    .wd-nested-form
+        padding: 1rem
+        background-color: $wdWerneoWhite
+        border: 0.1rem solid $wdWerneoGreyLight
+        border-top: none
+        .controls
+            .wd-btn
+                font-size: 2rem

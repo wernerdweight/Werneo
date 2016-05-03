@@ -1,0 +1,31 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD PROGRESSBAR
+///////////////////////////////////////////////////////////////////////////////////
+
+.wd-progressbar
+    width: 100%
+    display: block
+    height: 10px
+    padding: 3px
+    background-color: $wdWerneoGreyLight
+    box-sizing: border-box
+
+    /// size
+    &.small
+        height: 0.6rem
+        padding: 0.2rem
+    &.big
+        height: 1.5rem
+        padding: 0.5rem
+
+    /// color
+    @each $name, $color, in $wdWerneoColors
+        &.#{$name}
+            span
+                background-color: $color
+
+    /// progress element
+    span
+        display: block
+        height: 100%
+        transition: width 600ms ease-in-out

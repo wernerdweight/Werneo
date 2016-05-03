@@ -1,0 +1,119 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD DROPDOWN
+///////////////////////////////////////////////////////////////////////////////////
+
+.wd-dropdown
+    display: inline-block
+    margin: 0
+    padding: 0
+    position: relative
+    cursor: pointer
+    box-sizing: border-box
+    transition: all 400ms ease-in-out
+    height: 6rem
+    line-height: 6rem
+    a
+        text-decoration: none
+        display: block
+        text-align: left
+        height: 4rem
+        line-height: 4rem
+        margin: 0
+        padding: 0
+
+    /// colors
+    @each $name, $color, in $wdWerneoColors
+        $inverseColor: $wdWerneoWhite
+        @if $name == 'white' or $name == 'light-grey'
+            $inverseColor: $wdWerneoGreyMedium
+        &.#{$name}
+            &:hover
+                .wd-dropdown-value
+                    background-color: lighten($color,10%)
+            .wd-dropdown-list
+                background-color: $color
+            .wd-dropdown-value
+                &.active
+                    background-color: $color
+            a
+                &:hover
+                    background-color: darken($color,20%)
+    /// extra properties for 'strange' colors (white, grey, black)
+    &.white
+        .wd-dropdown-list
+            background-color: $wdWerneoWhite
+        a
+            &:hover
+                color: $wdWerneoGreyDark
+
+.wd-dropdown-value
+    display: inline-block
+    width: 100%
+    padding: 0 2rem 0 1rem
+    box-sizing: border-box
+    transition: all 400ms ease-in-out
+    +hellip
+    &:hover,&:focus,&:active,&.active
+        outline: 0
+    &.active
+
+.wd-dropdown-handle
+    position: absolute
+    right: 0
+    top: 0
+    height: 6rem
+    width: 2rem
+    line-height: 6rem
+    padding: 0 0.5rem
+    text-align: center
+    box-sizing: border-box
+
+.wd-dropdown-list
+    display: none
+    position: absolute
+    left: 0
+    top: 6rem
+    width: 100%
+    margin: 0
+    padding: 0
+    z-index: 9
+    box-sizing: border-box
+    transition: all 400ms ease-in-out
+    border-radius: 0 0 0.5rem 0.5rem
+    overflow: hidden
+    &.active
+        display: block
+
+.wd-dropdown-option
+    display: block
+    padding: 0 1.5rem
+    transition: all 400ms ease-in-out
+    box-sizing: border-box
+    +hellip
+    &.level-1
+        padding-left: 2rem
+        font-size: 1.4rem
+    &.level-2
+        padding-left: 4rem
+        font-size: 1.2rem
+    &.level-3
+        padding-left: 5rem
+        font-size: 1.1rem
+
+.wd-dropdown-level
+    display: none
+
+.wd-dropdown-divider
+    display: block
+    height: 0.1rem
+    margin: 0 0.5rem
+    background-color: $wdWerneoGreyLight
+
+.chevron
+    width: 0
+    height: 0
+    border-left: 0.4rem solid transparent
+    border-right: 0.4rem solid transparent
+    border-top: 0.4rem solid $wdWerneoWhite
+    display: block
+    margin: 3rem 0

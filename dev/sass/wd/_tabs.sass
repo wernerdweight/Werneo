@@ -1,0 +1,89 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD TABS
+///////////////////////////////////////////////////////////////////////////////////
+
+.wd-tabs
+    &.vertical
+        .wd-tab-nav
+            position: relative
+            border-bottom: none
+            border-right: 0.1rem solid $wdWerneoGreyLight
+            z-index: 2
+            .nav
+                display: block
+                border-bottom: 0.1rem solid $wdWerneoGreyLight
+                border-right: none
+                margin-bottom: 0.2rem
+                padding: 0.5rem 1rem
+                &.active
+                    border-left: 0.2rem solid $wdWerneoTurquoise
+                    border-right: 0.1rem solid $wdWerneoWhite
+                    margin-right: -0.1rem
+                    margin-bottom: 0
+                    border-bottom: 0.1rem solid $wdWerneoGreyLight
+                    border-top: 0.1rem solid $wdWerneoGreyLight
+                    span
+                        &.badge
+                            opacity: 1
+                            color: $wdWerneoWhite
+                            text-shadow: 0.1rem 0.1rem 0.2rem rgba($wdWerneoBlack,0.5)
+                            border: 0.1rem solid $wdWerneoGreyMedium
+                p
+                    display: inline-block
+                span
+                    display: inline-block
+                    &.badge
+                        opacity: 0.5
+                        text-shadow: none
+                        border: 0.1rem solid transparent
+            &.hide-title
+                .title
+                    display: none
+        .wd-tab-content
+            border-top: 0.1rem solid $wdWerneoGreyLight
+            position: relative
+            z-index: 1
+            margin-left: -0.1rem
+
+.wd-tab-nav
+    border-bottom: 0.1rem solid $wdWerneoGreyLight
+    .nav
+        display: inline-block
+        background-color: darken($wdWerneoGreyLight,20%)
+        border: 0.1rem solid $wdWerneoGreyLight
+        border-bottom: none
+        &:hover
+            background-color: darken($wdWerneoGreyLight,10%)
+        &.active
+            background-color: $wdWerneoWhite
+            border-top: 0.2rem solid $wdWerneoTurquoise
+            border-bottom: 0.1rem solid $wdWerneoWhite
+            margin-bottom: -0.1rem
+            label
+                color: $wdWerneoGreyDark
+                &::before
+                    color: $wdWerneoTurquoise
+        & > *
+            padding: 0.5rem 1rem
+            line-height: 1.6rem
+            font-size: 1.4rem
+            cursor: pointer
+        label
+            display: block
+            margin: 0
+            color: $wdWerneoWhite
+            &::before
+                color: $wdWerneoWhite
+    .error
+        display: inline-block
+
+.wd-tab-content
+    background-color: $wdWerneoWhite
+    border: 0.1rem solid $wdWerneoGreyLight
+    border-top: none
+    padding: 2rem
+
+.wd-tab
+    display: none
+    &.active
+        display: block

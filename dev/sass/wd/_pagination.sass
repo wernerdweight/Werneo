@@ -1,0 +1,92 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD PAGINATION
+///////////////////////////////////////////////////////////////////////////////////
+
+.wd-pagination
+    display: inline-block
+    text-align: center
+    &.client
+        counter-reset: pagination
+        li
+            counter-increment: pagination
+            &:nth-child(2)
+                counter-reset: pagination
+            a,span
+                display: none
+                &:after
+                    content: ' ' counter(pagination) ' '
+
+            +display-child(7)
+
+            &:first-child,&:last-child
+                a,span
+                    display: inline-block
+            &:nth-last-child(2)
+                a,span
+                    display: inline-block
+            &:nth-last-child(3):nth-child(n+9)
+                display: inline-block
+                &:after
+                    padding: 0 1rem
+                    content: '\2026'
+
+    &.server
+        li
+            a,span
+                display: inline-block
+            &.dots
+                display: none
+                &:after
+                    padding: 0 0.25rem
+                    content: '\2026'
+                    +responsive(desktop)
+                        padding: 0 0.5rem
+                +responsive(tablet)
+                    display: block
+
+    ul
+        width: 100%
+    ul,li
+        list-style: none
+        display: inline
+        padding-left: 0
+    li
+        &:hover
+            a
+                color: $wdWerneoGreyDark
+        &.active
+            a,span
+                color: $wdWerneoTeal
+                display: inline-block
+                font-weight: $wdWerneoBold
+        a,span
+            color: $wdWerneoGreyMedium
+            text-decoration: none
+            display: inline-block
+            text-align: center
+            padding: 0.5rem
+        span
+            color: $wdWerneoGreyLightest
+        &:first-child
+            float: left
+            margin-right: 0.5rem
+            a,span
+                &:after
+                    font-family: $wdWerneoIconFontFamily
+                    content: '\f104'
+                    font-size: 3rem
+                    line-height: 2rem
+        &:last-child
+            float: right
+            margin-left: 0.5rem
+            a,span
+                &:after
+                    font-family: $wdWerneoIconFontFamily
+                    content: '\f105'
+                    font-size: 3rem
+                    line-height: 2rem
+        &:nth-child(1n)
+            a,span
+                display: none
+                +responsive(tablet)
+                    display: inline-block

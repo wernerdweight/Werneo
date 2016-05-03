@@ -1,0 +1,16 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD BADGES
+///////////////////////////////////////////////////////////////////////////////////
+
+.wd-badge
+    display: inline-block
+    padding: 0.5rem 1rem
+    &.small
+        padding: 0.25rem 0.5rem
+    @each $name, $color, in $wdWerneoColors
+        $inverseColor: $wdWerneoWhite
+        @if $name == 'white' or $name == 'grey-light'
+            $inverseColor: $wdWerneoGreyMedium
+        &.#{$name}
+            background-color: $color
+            color: $inverseColor

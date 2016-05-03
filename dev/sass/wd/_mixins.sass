@@ -1,0 +1,57 @@
+/// smooth font rendering
+=font-smoothing
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+/// center an absolute positioned element
+=center-element($direction: both)
+    @if $direction == both
+        left: 50%
+        top: 50%
+        bottom: auto
+        right: auto
+        transform: translateX(-50%) translateY(-50%)
+    @else if $direction == horizontal
+        left: 50%
+        right: auto
+        transform: translateX(-50%)
+    @else if $direction == vertical
+        top: 50%
+        bottom: auto
+        transform: translateY(-50%)
+
+=diagonal-split-background($color1,$color2)
+    background: $color1     /// old browsers
+    background: linear-gradient(-45deg,  $color1 0%,$color1 50%,$color2 50%,$color2 100%)
+    background-size: 300% 300%
+    background-position: 0% 0%
+    background-repeat: no-repeat
+    transition: all 400ms ease-in-out
+
+=diagonal-split-background-hover
+    background-position: 100% 100%
+
+=diagonal-split-background-none
+    background: inherit !important
+
+=hellip
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+
+/// pagination show-hide mixin
+=display-child($n)
+    @for $i from 1 through $n
+        &:nth-child(#{$n})
+            a
+                display: inline-block
+
+=text-aligns($scopeName)
+    .#{$scopeName}ta-l
+        text-align: left
+    .#{$scopeName}ta-r
+        text-align: right
+    .#{$scopeName}ta-c
+        text-align: center
+    .#{$scopeName}ta-j
+        text-align: justify

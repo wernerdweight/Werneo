@@ -1,0 +1,54 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD TREE VIEW
+///////////////////////////////////////////////////////////////////////////////////
+
+.wd-tree-view
+    padding: 2rem 0
+    .node
+        margin-left: 1rem
+        position: relative
+        &::before
+            content: ""
+            width: 1rem
+            height: 100%
+            display: block
+            border-left: 0.1rem solid darken($wdWerneoGreyLight,10%)
+            position: absolute
+            left: -0.5rem
+        .node
+            display: none
+        .label
+            display: block
+            background-color: $wdWerneoWhite
+            padding: 1rem
+            border: 0.1rem solid $wdWerneoGreyLightest
+            position: relative
+            height: 6.4rem
+            transition: all 300ms ease-out
+            &::before
+                content: "-"
+                width: 1rem
+                height: 100%
+                display: block
+                position: absolute
+                left: -0.5rem
+                top: 0
+                color: darken($wdWerneoGreyLight,10%)
+            .selector
+                margin: 0.6rem
+            .icon
+                margin: 1rem
+                color: darken($wdWerneoGreyLight,10%)
+            &.folder
+                cursor: pointer
+                &:hover
+                    border-bottom: 0.2rem solid $wdWerneoTurquoise
+                &.active
+                    border: 0.1rem solid $wdWerneoTurquoise
+                    border-bottom: 0.4rem solid $wdWerneoTurquoise
+                    background-color: lighten($wdWerneoTurquoise,10%)
+                    color: $wdWerneoWhite
+                    .icon
+                        color: $wdWerneoWhite
+    a
+        color: $wdWerneoGreyDark

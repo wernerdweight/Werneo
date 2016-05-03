@@ -1,0 +1,25 @@
+{
+  "name": "werneo",
+  "description": "SASS component library",
+  "main": "dev/sass/werneo.sass",
+  "authors": [
+    "Werner Dweight"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "sass",
+    "component",
+    "library"
+  ],
+  "homepage": "https://github.com/wernerdweight/Werneo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dev-dependencies": {
+    "flexer": "^0.2.0"
+  }
+}
