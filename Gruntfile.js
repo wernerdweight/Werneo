@@ -40,6 +40,7 @@ module.exports = function (grunt) {
                 '<%= dirs.dest_generated.javascript %>/werneo.js': [
                     '<%= dirs.src.javascript %>/wd/core.js',
                     '<%= dirs.src.javascript %>/wd/dropdowns.js',
+                    '<%= dirs.src.javascript %>/wd/dynaFilter.js',
                     '<%= dirs.src.javascript %>/wd/main.js',
                 ]
             }

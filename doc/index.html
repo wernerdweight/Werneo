@@ -183,8 +183,9 @@
 				<div class="r">
 					<div class="c-12">
 						<div>
-							<button type="button" class="btn grey-light">.btn</button>
+							<button type="button" class="btn xs grey-light">&amp;.xs</button>
 							<button type="button" class="btn sm grey-light">&amp;.sm</button>
+							<button type="button" class="btn grey-light">.btn</button>
 							<button type="button" class="btn lg grey-light">&amp;.lg</button>
 							<button type="button" class="btn xl grey-light">&amp;.xl</button>
 							<button type="button" class="btn full grey-light mt-1">&amp;.full</button>
@@ -821,12 +822,88 @@
 					</div>
 				</div>
 
-				<h2 class="h2">Dynamic Filters</h2>
+				<h2 class="h2">Dynamic Filters <small class="text-orange">(requires dynaFilter.js)</small></h2>
+				<p>Triggers may be anything you want (buttons, dropdown, spans, whatever).</p>
 
 				<div class="r">
-					<div class="c-12">
-						<div>
+					<div class="c-8">
+						<div class="dynafilter" data-target="#dynafilter-test">
+							<span class="dynafilter-trigger btn orange active" data-class="">All</span>
+							<span class="dynafilter-trigger btn orange" data-class="group-1">Group 1</span>
+							<span class="dynafilter-trigger btn orange" data-class="group-2">Group 2</span>
+							<span class="dynafilter-trigger btn orange" data-class="group-3">Group 3</span>
+							<span class="dynafilter-trigger btn orange" data-class="group-4">Group 4</span>
+							<span class="dynafilter-trigger btn orange" data-class="group-5">Group 5</span>
+							<span class="dynafilter-trigger btn orange" data-class="group-6">Group 6</span>
 						</div>
+					</div>
+					<div class="c-4">
+						<div class="dropdown mauve full-colored dynafilter" data-target="#dynafilter-test">
+							<span class="dropdown-value">All</span>
+							<div class="dropdown-handle">
+								<i class="fa fa-chevron-down"></i>
+							</div>
+							<div class="dropdown-list">
+								<span class="dynafilter-trigger dropdown-option active" data-class="">All</span>
+								<span class="dynafilter-trigger dropdown-option" data-class="group-1">Group 1</span>
+								<span class="dynafilter-trigger dropdown-option" data-class="group-2">Group 2</span>
+								<span class="dynafilter-trigger dropdown-option" data-class="group-3">Group 3</span>
+								<span class="dynafilter-trigger dropdown-option" data-class="group-4">Group 4</span>
+								<span class="dynafilter-trigger dropdown-option" data-class="group-5">Group 5</span>
+								<span class="dynafilter-trigger dropdown-option" data-class="group-6">Group 6</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="r">
+					<div class="c-12 ta-c">
+						<div class="dynafilter" data-target="#dynafilter-test">
+							<span class="dynafilter-trigger active" data-class="">All</span>
+							<span class="dynafilter-trigger" data-class="group-1">Group 1</span>
+							<span class="dynafilter-trigger" data-class="group-2">Group 2</span>
+							<span class="dynafilter-trigger" data-class="group-3">Group 3</span>
+							<span class="dynafilter-trigger" data-class="group-4">Group 4</span>
+							<span class="dynafilter-trigger" data-class="group-5">Group 5</span>
+							<span class="dynafilter-trigger" data-class="group-6">Group 6</span>
+						</div>
+					</div>
+				</div>
+				<div class="r r-nm r-4 r-jc-s" id="dynafilter-test">
+					<div class="dynafilter-item group-1 group-2 group-6">
+						<img src="http://loremflickr.com/g/480/360/people/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-2 group-5">
+						<img src="http://loremflickr.com/g/480/360/cars/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-3 group-5 group-6">
+						<img src="http://loremflickr.com/g/480/360/boys/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-5">
+						<img src="http://loremflickr.com/g/480/360/girls/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-1 group-3 group-4">
+						<img src="http://loremflickr.com/g/480/360/bike/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-2 group-4">
+						<img src="http://loremflickr.com/g/480/360/beach/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-3 group-5">
+						<img src="http://loremflickr.com/g/480/360/cartoon/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-2 group-5">
+						<img src="http://loremflickr.com/g/480/360/model/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-3 group-5">
+						<img src="http://loremflickr.com/g/480/360/artist/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-6">
+						<img src="http://loremflickr.com/g/480/360/computer/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-2 group-3 group-6">
+						<img src="http://loremflickr.com/g/480/360/sport/all" width="100%">
+					</div>
+					<div class="dynafilter-item group-3 group-4">
+						<img src="http://loremflickr.com/g/480/360/landscape/all" width="100%">
 					</div>
 				</div>
 
