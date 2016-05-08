@@ -18,15 +18,62 @@ module.exports = function (grunt) {
             src: {
                 root: '',
                 stylesheets: 'dev/sass',
+                javascript: 'dev/js',
             },
             dest: {
                 root: 'dist',
                 stylesheets: 'dist/css',
+                javascript: 'dist/js',
             },
             dest_generated: {
                 root: 'dist',
                 stylesheets: 'dist/css',
+                javascript: 'dist/js',
             },
+        },
+
+        /// [JAVASCRIPT]
+        javascript: {
+            files: {
+
+                /// [Werner Dweight's Werneo]
+                '<%= dirs.dest_generated.javascript %>/werneo.js': [
+                    '<%= dirs.src.javascript %>/wd/core.js',
+                    '<%= dirs.src.javascript %>/wd/dropdowns.js',
+                    '<%= dirs.src.javascript %>/wd/main.js',
+                ]
+            }
+        },
+
+        uglify: {
+            options: {
+                banner: '<%= banner %>',
+                sourceMap: false,
+                mangle: false,
+                compress: {
+                    warnings: true
+                },
+                beautify: false,
+                wrap: false,
+                exportAll: true,
+                preserveComments: false
+            },
+            dist: {
+                options: {
+                    sourceMap: false,
+                    mangle: false,
+                    beautify: false
+                },
+                files: '<%= javascript.files %>'
+            },
+            dev: {
+                options: {
+                    sourceMap: false,
+                    mangle: false,
+                    beautify: false
+                },
+                files: '<%= javascript.files %>'
+            }
         },
 
         compass: {
@@ -65,6 +112,7 @@ module.exports = function (grunt) {
         clean: {
             base: [
                 '<%= dirs.dest_generated.stylesheets %>/*',
+                '<%= dirs.dest_generated.javascript %>/*',
             ],
         },
 
@@ -88,6 +136,14 @@ module.exports = function (grunt) {
                 },
                 files: '<%= compass.dev.options.sassDir %>/**/*.{sass,scss}',
                 tasks: ['compass:dev', 'autoprefixer', 'notify:compass']
+            },
+
+            javascript: {
+                options: {
+                    spawn: true
+                },
+                files: '<%= dirs.src.javascript %>/**/*.js',
+                tasks: ['newer:jshint:theme', 'newer:uglify:dev', 'notify:uglify']
             },
 
         },
@@ -116,6 +172,12 @@ module.exports = function (grunt) {
                     message: 'Compass + Autoprefixer tasks successfully finished!'
                 }
             },
+            uglify: {
+                options: {
+                    title: 'Uglify done!',
+                    message: 'Uglify task successfully finished!'
+                }
+            },
         },
 
         notify_hooks: {
@@ -124,6 +186,20 @@ module.exports = function (grunt) {
                 success: true, // whether successful grunt executions should be notified automatically
             }
         },
+
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc'
+            },
+            grunt: {
+                src: ['Gruntfile.js']
+            },
+            theme: {
+                src: [
+                    '<%= dirs.src.javascript %>/**/*.js',
+                ]
+            }
+        }
 
     };
 
@@ -140,6 +216,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.task.run('notify_hooks');
 
@@ -158,7 +236,9 @@ module.exports = function (grunt) {
 
     // [BUILD]
     grunt.registerTask('build', [
+        'jshint:theme',
         'clean:base',
+        'uglify:dist',
         'build_css',
         'notify:build_finish'
     ]);
@@ -166,12 +246,15 @@ module.exports = function (grunt) {
 
     // dev
     grunt.registerTask('build_dev', [
+        'jshint:theme',
         'clean:base',
+        'uglify:dev',
         'compass:dev',
         'autoprefixer',
         'notify:build_finish'
     ]);
     grunt.registerTask('build_dev_css', ['compass:dev', 'autoprefixer']);
+    grunt.registerTask('build_dev_js', ['jshint:theme', 'uglify:dev']);
     grunt.registerTask('build_dev_watch', ['build_dev', 'watch']);
 
 }
