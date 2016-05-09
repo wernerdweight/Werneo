@@ -2,59 +2,55 @@
 ////            WD FLASH MESSAGES
 ///////////////////////////////////////////////////////////////////////////////////
 
-.wd-flash-message-queue
+.flash-message-queue
     display: block
     position: fixed
-    top: 7rem
+    bottom: 2rem
     right: 2rem
     width: 20%
     min-width: 24rem
     z-index: 999999
 
-.wd-flash-message
+.flash-message
     display: block
-    background-color: $wdWerneoWhite
-    margin-bottom: 0.5rem
+    position: relative
     overflow: hidden
-    div.wd-flash-message-header
-        display: block
-        height: 3rem
-        padding: 0.5rem
-    div.wd-flash-message-body
-        display: block
-        padding: 0.5rem
+    border: 0.4rem solid darken($wdWerneoGreyDark,5%)
+    border-width: 0
+    background-color: $wdWerneoGreyDark
+    color: $wdWerneoWhite
+    transition: margin-left 300ms ease-in-out, max-height 300ms 300ms, padding 300ms 300ms, border 300ms 300ms, margin-bottom 300ms 300ms
+    padding: 0
+    margin-left: calc(100% + 2rem)
+    margin-bottom: 0
+    width: 100%
+    max-height: 0
+    &.active
+        margin-left: 0
+        margin-bottom: 0.5rem
+        padding: 1rem
+        max-height: 100vh
+        transition: margin-left 300ms ease-in-out, max-height 0ms 0ms, padding 0ms 0ms, border 0ms 0ms, margin-bottom 0ms 0ms
+        border-width: 0.4rem
     &.success
-        border: 0.2rem solid $wdWerneoTeal
-        div.wd-flash-message-header
-            background-color: $wdWerneoTeal
-        div.wd-flash-message-body
-            background-color: $wdWerneoWhite
-            p
-                color: $wdWerneoWhite
+        border-color: darken($wdWerneoTeal,5%)
+        background-color: $wdWerneoTeal
     &.info
-        border: 0.2rem solid $wdWerneoTurquoise
-        div.wd-flash-message-header
-            background-color: $wdWerneoTurquoise
+        border-color: darken($wdWerneoTurquoise,5%)
+        background-color: $wdWerneoTurquoise
     &.error
-        border: 0.2rem solid $wdWerneoCrimson
-        div.wd-flash-message-header
-            background-color: $wdWerneoCrimson
-    a.close
-        line-height: 2rem
+        border-color: darken($wdWerneoCrimson,5%)
+        background-color: $wdWerneoCrimson
+    > .close
+        position: absolute
+        cursor: pointer
+        top: 0
+        right: 0
         height: 2rem
         width: 2rem
-        color: $wdWerneoWhite
-        display: block
-        float: right
         font-size: 2rem
-        text-decoration: none
+        line-height: 2rem
+        display: block
         text-align: center
-        text-shadow: 0.2rem 0.2rem 0 $wdWerneoGreyMedium
         &:hover
             text-shadow: 0.2rem 0.2rem 0 $wdWerneoBlack
-    p
-        font-size: 80%
-        padding: 0.5rem
-        line-height: 100%
-        margin: 0
-        color: $wdWerneoGreyDark

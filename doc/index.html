@@ -909,10 +909,35 @@
 
 				<h2 class="h2">Flash Messages</h2>
 
-				<div class="r">
-					<div class="c-12">
-						<div>
-						</div>
+				<h3>Types</h3>
+				<div class="r r-4">
+					<div>
+						<button class="btn full light-grey" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>Some boring text that you want to show</p>',null);">Trigger default message</button>
+					</div>
+					<div>
+						<button class="btn full teal" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><strong>You\'ve done it!</strong> You are now the president of the world!</p>','success');">Trigger success message</button>
+					</div>
+					<div>
+						<button class="btn full turquoise" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>You have a new message from your Mum. You better read it quick!</p>','info');">Trigger info message</button>
+					</div>
+					<div>
+						<button class="btn full crimson" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><strong>Oh no!</strong> You got fired right now. Better luck next time!</p>','error');">Trigger error message</button>
+					</div>
+				</div>
+				<h3>Contents</h3>
+				<p>You can put practically anything inside the flash message, it accepts HTML content and message type.</p>
+				<div class="r r-4">
+					<div>
+						<button class="btn full light-grey" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>Some boring text that you want to show</p>',null);">Trigger default message</button>
+					</div>
+					<div>
+						<button class="btn full teal" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><strong>You\'ve done it!</strong> You are now the president of the world!</p>','success');">Trigger success message</button>
+					</div>
+					<div>
+						<button class="btn full turquoise" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>You have a new message from your Mum. You better read it quick!</p>','info');">Trigger info message</button>
+					</div>
+					<div>
+						<button class="btn full crimson" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><strong>Oh no!</strong> You got fired right now. Better luck next time!</p>','error');">Trigger error message</button>
 					</div>
 				</div>
 
