@@ -943,12 +943,220 @@
 
 				<h2 class="h2">Forms</h2>
 
-				<div class="r">
-					<div class="c-12">
+				<h3>Fields</h3>
+				<div class="r r-3">
+					<div>
+						<label for="t0">Text</label>
+						<input id="t0" type="text" name="t0" value="" placeholder="Placeholder">
+					</div>
+					<div>
+						<label for="t1">Select</label>
+						<select name="t1">
+							<option value=""></option>
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+							<option value="3">Option 3</option>
+							<option value="4">Option 4</option>
+						</select>
+					</div>
+					<div>
+						<label>Dropdown select (via hidden input)</label>
+						<input type="hidden" name="t7" id="t7" value="">
+						<div class="dropdown white " data-input-id="t7">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<i class="fa fa-chevron-down"></i>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<label for="t4">Textarea</label>
+						<textarea name="t4" id="t4" placeholder="Placeholder" rows="4"></textarea>
+					</div>
+					<div>
+						<label for="t5">Multi-select</label>
+						<select name="t5" multiple="multiple">
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+							<option value="3">Option 3</option>
+							<option value="4">Option 4</option>
+						</select>
+					</div>
+					<div>
+						<label for="t8">File input</label>
+						<input type="file" name="t8" id="t8" placeholder="Placeholder">
+					</div>
+					<div>
+						<label>Checkboxes</label>
 						<div>
+							<div class="ib">
+								<input id="t2_0" type="checkbox" name="t2_0" value="0">
+								<label for="t2_0">Option 1</label>	
+							</div>
+							<div class="ib">
+								<input id="t2_1" type="checkbox" name="t2_1" value="1">
+								<label for="t2_1">Option 2</label>
+							</div>
+							<div class="ib">
+								<input id="t2_2" type="checkbox" name="t2_2" value="2">
+								<label for="t2_2">Option 3</label>
+							</div>
+						</div>
+					</div>
+					<div>
+						<label>Radios</label>
+						<div>
+							<div class="ib">
+								<input id="t3_0" type="radio" name="t3" value="0">
+								<label for="t3_0">Option 1</label>	
+							</div>
+							<div class="ib">
+								<input id="t3_1" type="radio" name="t3" value="1">
+								<label for="t3_1">Option 2</label>
+							</div>
+							<div class="ib">
+								<input id="t3_2" type="radio" name="t3" value="2">
+								<label for="t3_2">Option 3</label>
+							</div>
+						</div>
+					</div>
+					<div>
+						<label>Switches (checkboxes)</label>
+						<div>
+							<div class="ib">
+								<label for="t6_0" class="switch">
+									<input id="t6_0" type="checkbox" name="t6_0" value="0">
+									<span class="check"></span>
+									<span class="label">Option 1</span>
+								</label>
+							</div>
+							<div class="ib">
+								<label for="t6_1" class="switch">
+									<input id="t6_1" type="checkbox" name="t6_1" value="1">
+									<span class="check"></span>
+									<span class="label">Option 2</span>
+								</label>
+							</div>
 						</div>
 					</div>
 				</div>
+				<h3>Colors</h3>
+				<div class="r r-3">
+					<div>
+						<input type="text" placeholder="Placeholder" class="turquoise">
+					</div>
+					<div>
+						<input type="text" placeholder="Placeholder" class="teal">
+					</div>
+					<div>
+						<input type="text" placeholder="Placeholder" class="yellow">
+					</div>
+					<div>
+						<input type="text" placeholder="Placeholder" class="orange">
+					</div>
+					<div>
+						<input type="text" placeholder="Placeholder" class="crimson">
+					</div>
+					<div>
+						<input type="text" placeholder="Placeholder" class="mauve">
+					</div>
+					<div>
+						<input type="text" placeholder="Placeholder" class="black">
+					</div>
+					<div>
+						<input type="text" placeholder="Placeholder" class="grey-dark">
+					</div>
+					<div>
+						<input type="text" placeholder="Placeholder" class="grey-light">
+					</div>
+					<div>
+						<input type="text" placeholder="Placeholder" class="white">
+					</div>
+				</div>
+				<div class="r">
+					<div class="c-12">
+						<div>
+							<div class="ib">
+								<label for="t9_0" class="switch turquoise">
+									<input id="t9_0" type="checkbox" name="t9_0">
+									<span class="check"></span>
+									<span class="label">turquoise</span>
+								</label>
+							</div>
+							<div class="ib">
+								<label for="t9_1" class="switch teal">
+									<input id="t9_1" type="checkbox" name="t9_1">
+									<span class="check"></span>
+									<span class="label">teal</span>
+								</label>
+							</div>
+							<div class="ib">
+								<label for="t9_2" class="switch yellow">
+									<input id="t9_2" type="checkbox" name="t9_2">
+									<span class="check"></span>
+									<span class="label">yellow</span>
+								</label>
+							</div>
+							<div class="ib">
+								<label for="t9_3" class="switch orange">
+									<input id="t9_3" type="checkbox" name="t9_3">
+									<span class="check"></span>
+									<span class="label">orange</span>
+								</label>
+							</div>
+							<div class="ib">
+								<label for="t9_4" class="switch crimson">
+									<input id="t9_4" type="checkbox" name="t9_4">
+									<span class="check"></span>
+									<span class="label">crimson</span>
+								</label>
+							</div>
+							<div class="ib">
+								<label for="t9_5" class="switch mauve">
+									<input id="t9_5" type="checkbox" name="t9_5">
+									<span class="check"></span>
+									<span class="label">mauve</span>
+								</label>
+							</div>
+							<div class="ib">
+								<label for="t9_6" class="switch black">
+									<input id="t9_6" type="checkbox" name="t9_6">
+									<span class="check"></span>
+									<span class="label">black</span>
+								</label>
+							</div>
+							<div class="ib">
+								<label for="t9_7" class="switch grey-dark">
+									<input id="t9_7" type="checkbox" name="t9_7">
+									<span class="check"></span>
+									<span class="label">grey-dark</span>
+								</label>
+							</div>
+							<div class="ib">
+								<label for="t9_8" class="switch grey-light">
+									<input id="t9_8" type="checkbox" name="t9_8">
+									<span class="check"></span>
+									<span class="label">grey-light</span>
+								</label>
+							</div>
+							<div class="ib">
+								<label for="t9_9" class="switch white">
+									<input id="t9_9" type="checkbox" name="t9_9">
+									<span class="check"></span>
+									<span class="label">white</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h3>Groups</h3>
+				<h3>Validation elements</h3>
 
 				<h2 class="h2">Lists</h2>
 

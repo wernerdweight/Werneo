@@ -862,6 +862,11 @@ body {
   font-size: 1.6rem;
 }
 
+/* line 17, ../../dev/sass/wd/_core.sass */
+.ib {
+  display: inline-block;
+}
+
 /* line 5, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown {
   display: inline-block;
@@ -2162,40 +2167,39 @@ body {
   text-shadow: 0.2rem 0.2rem 0 #000;
 }
 
-/* line 6, ../../dev/sass/wd/_forms.sass */
-form#login-form {
-  margin-top: 0;
-  margin-bottom: 0;
+/* line 5, ../../dev/sass/wd/_forms.sass */
+label {
+  display: block;
 }
-/* line 9, ../../dev/sass/wd/_forms.sass */
-form.wd-form {
-  margin: 0;
-  padding: 0;
-}
-/* line 13, ../../dev/sass/wd/_forms.sass */
-form .required > label:after, form label.required:after {
+/* line 8, ../../dev/sass/wd/_forms.sass */
+label.required:after {
   content: "*";
   display: inline-block;
   color: #dc143c;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
+}
+
+/* line 14, ../../dev/sass/wd/_forms.sass */
+input, select, textarea, option {
+  color: #666;
+  font-size: 1.6rem;
+  font-family: Helevtica, Arial, sans-serif;
 }
 
 /* line 19, ../../dev/sass/wd/_forms.sass */
-input, select, textarea, option {
-  font-weight: 400;
-  font-family: Helevtica, Arial, sans-serif;
-  color: #666;
+input, select {
+  height: 5rem;
 }
 
-/* line 24, ../../dev/sass/wd/_forms.sass */
+/* line 22, ../../dev/sass/wd/_forms.sass */
 input, select, textarea {
   display: inline-block;
   margin: 0;
   padding: 0 1rem;
-  border: .1rem solid #c4c4c4;
-  border-radius: .3rem;
+  border: 0.4rem solid #c4c4c4;
   -webkit-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out;
+  width: 100%;
 }
 /* line 61, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 input:-moz-placeholder, select:-moz-placeholder, textarea:-moz-placeholder {
@@ -2234,353 +2238,247 @@ input:hover:-ms-input-placeholder, input:focus:-ms-input-placeholder, input:acti
 input:hover::-webkit-input-placeholder, input:focus::-webkit-input-placeholder, input:active::-webkit-input-placeholder, select:hover::-webkit-input-placeholder, select:focus::-webkit-input-placeholder, select:active::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder, textarea:active::-webkit-input-placeholder {
   color: #666;
 }
-/* line 37, ../../dev/sass/wd/_forms.sass */
+/* line 35, ../../dev/sass/wd/_forms.sass */
 input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active {
   outline: 0;
   border-color: #333;
 }
-/* line 40, ../../dev/sass/wd/_forms.sass */
+/* line 38, ../../dev/sass/wd/_forms.sass */
 input[disabled], input[readonly], select[disabled], select[readonly], textarea[disabled], textarea[readonly] {
   background-color: #eee;
   color: #666;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 41, ../../dev/sass/wd/_forms.sass */
+input.big, select.big, textarea.big {
+  height: 4rem;
+  font-size: 1.6rem;
+}
+/* line 44, ../../dev/sass/wd/_forms.sass */
+input.medium, select.medium, textarea.medium {
+  height: 2.8rem;
+  font-size: 1.4rem;
+}
+/* line 47, ../../dev/sass/wd/_forms.sass */
+input.small, select.small, textarea.small {
+  height: 2.4rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.turquoise:focus, input.turquoise:active, select.turquoise:focus, select.turquoise:active, textarea.turquoise:focus, textarea.turquoise:active {
   border-color: #5af;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.teal:focus, input.teal:active, select.teal:focus, select.teal:active, textarea.teal:focus, textarea.teal:active {
   border-color: #028428;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.yellow:focus, input.yellow:active, select.yellow:focus, select.yellow:active, textarea.yellow:focus, textarea.yellow:active {
   border-color: #ffc200;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.crimson:focus, input.crimson:active, select.crimson:focus, select.crimson:active, textarea.crimson:focus, textarea.crimson:active {
   border-color: #dc143c;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.mauve:focus, input.mauve:active, select.mauve:focus, select.mauve:active, textarea.mauve:focus, textarea.mauve:active {
   border-color: #d473d4;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.grey-dark:focus, input.grey-dark:active, select.grey-dark:focus, select.grey-dark:active, textarea.grey-dark:focus, textarea.grey-dark:active {
   border-color: #333;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.grey-light:focus, input.grey-light:active, select.grey-light:focus, select.grey-light:active, textarea.grey-light:focus, textarea.grey-light:active {
   border-color: #ddd;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.orange:focus, input.orange:active, select.orange:focus, select.orange:active, textarea.orange:focus, textarea.orange:active {
   border-color: #f45633;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.white:focus, input.white:active, select.white:focus, select.white:active, textarea.white:focus, textarea.white:active {
   border-color: #fff;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.black:focus, input.black:active, select.black:focus, select.black:active, textarea.black:focus, textarea.black:active {
   border-color: #000;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.facebook-blue:focus, input.facebook-blue:active, select.facebook-blue:focus, select.facebook-blue:active, textarea.facebook-blue:focus, textarea.facebook-blue:active {
   border-color: #3b5998;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.twitter-blue:focus, input.twitter-blue:active, select.twitter-blue:focus, select.twitter-blue:active, textarea.twitter-blue:focus, textarea.twitter-blue:active {
   border-color: #00aced;
 }
-/* line 45, ../../dev/sass/wd/_forms.sass */
+/* line 53, ../../dev/sass/wd/_forms.sass */
 input.google-orange:focus, input.google-orange:active, select.google-orange:focus, select.google-orange:active, textarea.google-orange:focus, textarea.google-orange:active {
   border-color: #dd4b39;
 }
 
-/* line 48, ../../dev/sass/wd/_forms.sass */
-input {
-  width: 100%;
-  height: 3.2rem;
-  font-size: 1.1rem;
-}
-/* line 52, ../../dev/sass/wd/_forms.sass */
-input.big {
-  height: 4rem;
-  font-size: 1.6rem;
-}
-/* line 55, ../../dev/sass/wd/_forms.sass */
-input.medium {
-  height: 2.8rem;
-  font-size: 1.4rem;
-}
-/* line 58, ../../dev/sass/wd/_forms.sass */
-input.small {
-  height: 2.4rem;
-  font-size: 1rem;
-  padding: 0 .5rem;
-}
-/* line 62, ../../dev/sass/wd/_forms.sass */
-input.wd-input-btn {
-  text-align: center;
-}
-/* line 64, ../../dev/sass/wd/_forms.sass */
+/* line 57, ../../dev/sass/wd/_forms.sass */
 input[type="radio"], input[type="checkbox"] {
   display: none;
 }
-/* line 66, ../../dev/sass/wd/_forms.sass */
+/* line 59, ../../dev/sass/wd/_forms.sass */
 input[type="radio"] + label, input[type="checkbox"] + label {
   display: inline-block;
   cursor: pointer;
   margin-right: 1.5rem;
 }
-/* line 70, ../../dev/sass/wd/_forms.sass */
+/* line 63, ../../dev/sass/wd/_forms.sass */
 input[type="radio"] + label p, input[type="checkbox"] + label p {
   display: inline-block;
   margin-left: 2rem;
 }
-/* line 73, ../../dev/sass/wd/_forms.sass */
+/* line 66, ../../dev/sass/wd/_forms.sass */
 input[type="radio"] + label::before, input[type="checkbox"] + label::before {
   content: "";
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  border: .1rem solid #ddd;
+  border: 0.1rem solid #ddd;
   background-color: #eee;
   color: #333;
-  font-size: 100%;
   line-height: 1.2rem;
   text-indent: -0.1rem;
   text-align: center;
   vertical-align: middle;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
-/* line 88, ../../dev/sass/wd/_forms.sass */
+/* line 80, ../../dev/sass/wd/_forms.sass */
 input[type="radio"] + label.required::after, input[type="checkbox"] + label.required::after {
   content: none;
 }
-/* line 92, ../../dev/sass/wd/_forms.sass */
+/* line 84, ../../dev/sass/wd/_forms.sass */
 input[type="radio"] + label::before {
-  font-size: 300%;
   border-radius: 50%;
 }
-/* line 97, ../../dev/sass/wd/_forms.sass */
+/* line 88, ../../dev/sass/wd/_forms.sass */
 input[type="radio"]:checked + label::before {
   content: "•";
-  border: .1rem solid #333;
+  border: 0.1rem solid #333;
 }
-/* line 103, ../../dev/sass/wd/_forms.sass */
+/* line 94, ../../dev/sass/wd/_forms.sass */
 input[type="checkbox"]:checked + label::before {
   content: "✓";
-  border: .1rem solid #333;
+  border: 0.1rem solid #333;
 }
-/* line 106, ../../dev/sass/wd/_forms.sass */
+/* line 97, ../../dev/sass/wd/_forms.sass */
 input[type="number"] {
   padding-right: 0;
 }
 
-/* line 109, ../../dev/sass/wd/_forms.sass */
+/* line 100, ../../dev/sass/wd/_forms.sass */
 textarea {
-  width: 100%;
-  padding: .5rem 1rem;
-  font-size: 1.1rem;
-}
-/* line 61, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
-textarea:-moz-placeholder {
-  font-size: 1.1rem;
-}
-/* line 64, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
-textarea::-moz-placeholder {
-  font-size: 1.1rem;
-}
-/* line 67, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
-textarea:-ms-input-placeholder {
-  font-size: 1.1rem;
-}
-/* line 56, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
-textarea::-webkit-input-placeholder {
-  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
 }
 
-/* line 116, ../../dev/sass/wd/_forms.sass */
-select {
-  height: 3.2rem;
-  width: 100%;
-  font-size: 1.1rem;
-}
-/* line 120, ../../dev/sass/wd/_forms.sass */
-select.big {
-  height: 4rem;
-  font-size: 1.6rem;
-}
-/* line 123, ../../dev/sass/wd/_forms.sass */
-select.medium {
-  height: 2.8rem;
-  font-size: 1.4rem;
-}
-/* line 126, ../../dev/sass/wd/_forms.sass */
-select.small {
-  height: 2.4rem;
-  font-size: 1rem;
-}
-/* line 129, ../../dev/sass/wd/_forms.sass */
+/* line 104, ../../dev/sass/wd/_forms.sass */
 select[multiple="multiple"] {
   height: auto;
 }
-/* line 132, ../../dev/sass/wd/_forms.sass */
+/* line 107, ../../dev/sass/wd/_forms.sass */
 select option[value=""] {
   color: #ddd;
   -webkit-transition: color 300ms ease-in-out;
           transition: color 300ms ease-in-out;
 }
 
-/* line 136, ../../dev/sass/wd/_forms.sass */
-.wd-input-bound {
+/* line 111, ../../dev/sass/wd/_forms.sass */
+.input-bound {
   position: relative;
 }
-/* line 140, ../../dev/sass/wd/_forms.sass */
-.wd-input-bound.textarea input.wd-input-btn {
+/* line 115, ../../dev/sass/wd/_forms.sass */
+.input-bound.textarea input.input-btn {
   height: 100%;
 }
-/* line 144, ../../dev/sass/wd/_forms.sass */
-.wd-input-bound.double input:first-child, .wd-input-bound.double textarea:first-child, .wd-input-bound.double select:first-child {
+/* line 119, ../../dev/sass/wd/_forms.sass */
+.input-bound.double input:first-child, .input-bound.double textarea:first-child, .input-bound.double select:first-child {
   padding-right: 10rem;
 }
-/* line 146, ../../dev/sass/wd/_forms.sass */
-.wd-input-bound .wd-btn-group {
+/* line 121, ../../dev/sass/wd/_forms.sass */
+.input-bound .btn-group {
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
-  padding: .1rem;
+  padding: 0.1rem;
   box-sizing: border-box;
 }
-/* line 153, ../../dev/sass/wd/_forms.sass */
-.wd-input-bound .wd-btn-group .wd-btn {
+/* line 128, ../../dev/sass/wd/_forms.sass */
+.input-bound .btn-group .btn {
   width: 4rem;
   float: right;
   height: 100%;
-  font-size: 1.6rem;
   text-align: center;
 }
-/* line 159, ../../dev/sass/wd/_forms.sass */
-.wd-input-bound .wd-btn-group .wd-btn:first-child {
+/* line 133, ../../dev/sass/wd/_forms.sass */
+.input-bound .btn-group .btn:first-child {
   float: left;
 }
-/* line 161, ../../dev/sass/wd/_forms.sass */
-.wd-input-bound input, .wd-input-bound textarea, .wd-input-bound select {
+/* line 135, ../../dev/sass/wd/_forms.sass */
+.input-bound input, .input-bound textarea, .input-bound select {
   color: #333;
 }
-/* line 163, ../../dev/sass/wd/_forms.sass */
-.wd-input-bound input:first-child, .wd-input-bound textarea:first-child, .wd-input-bound select:first-child {
+/* line 137, ../../dev/sass/wd/_forms.sass */
+.input-bound input:first-child, .input-bound textarea:first-child, .input-bound select:first-child {
   padding-right: 5rem;
 }
 
-/* line 166, ../../dev/sass/wd/_forms.sass */
-label {
-  display: block;
-  font-size: 1.3rem;
-  line-height: 1.8rem;
-}
-/* line 171, ../../dev/sass/wd/_forms.sass */
-label[data-after]::after {
-  content: " " attr(data-after);
-}
-/* line 173, ../../dev/sass/wd/_forms.sass */
-label.small {
-  font-size: 1.2rem;
-}
-/* line 176, ../../dev/sass/wd/_forms.sass */
-label + ul {
-  margin: 0;
-  padding: 0;
-  border: .1rem solid #c4c4c4;
-  border-bottom: none;
-}
-/* line 181, ../../dev/sass/wd/_forms.sass */
-label + ul li {
-  font-size: 1.2rem;
-  background-color: #dc143c;
-  padding: .5rem 1rem;
-  color: #fff;
-  list-style: none;
-}
-
-/* line 188, ../../dev/sass/wd/_forms.sass */
-.wd-form-error {
-  padding: .5rem 1rem;
-  background-color: #d473d4;
-  color: #fff;
-}
-
-/* line 193, ../../dev/sass/wd/_forms.sass */
+/* line 140, ../../dev/sass/wd/_forms.sass */
 .form-errors {
   margin: 0;
   padding: 0;
 }
-/* line 196, ../../dev/sass/wd/_forms.sass */
+/* line 143, ../../dev/sass/wd/_forms.sass */
 .form-errors ul {
   margin: 0;
   padding: 0;
 }
-/* line 199, ../../dev/sass/wd/_forms.sass */
+/* line 146, ../../dev/sass/wd/_forms.sass */
 .form-errors li {
   list-style: none;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   color: #dc143c;
 }
 
-/* line 205, ../../dev/sass/wd/_forms.sass */
-.wd-form-tab p, .wd-form-tab label {
-  position: relative;
-  display: inline-block;
-  background-color: #5af;
-  color: #fff;
-  padding: .5rem 1rem;
-  font-size: 1.2rem;
-  margin-bottom: 0;
+/* line 153, ../../dev/sass/wd/_forms.sass */
+.switch {
+  cursor: pointer;
+  height: 5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-/* line 213, ../../dev/sass/wd/_forms.sass */
-.wd-form-tab p.wd-form-error, .wd-form-tab label.wd-form-error {
-  padding: .5rem 1rem;
-  background-color: #dc143c;
-  color: #fff;
-}
-/* line 217, ../../dev/sass/wd/_forms.sass */
-.wd-form-tab label.section-label {
-  display: block;
-  font-size: 1.8rem;
-  padding: 0;
-  color: #333;
-  background-color: transparent;
-  margin-bottom: .5rem;
-}
-/* line 224, ../../dev/sass/wd/_forms.sass */
-.wd-form-tab label.section-label:after {
-  content: ":";
-}
-
-/* line 228, ../../dev/sass/wd/_forms.sass */
-.wd-switch input[type="checkbox"] {
+/* line 158, ../../dev/sass/wd/_forms.sass */
+.switch input[type="checkbox"] {
   position: absolute;
   opacity: 0;
-  width: .1rem;
-  height: .1rem;
+  width: 0.1rem;
+  height: 0.1rem;
 }
-/* line 234, ../../dev/sass/wd/_forms.sass */
-.wd-switch input[type="checkbox"]:checked + .check {
-  background-color: #5af;
+/* line 164, ../../dev/sass/wd/_forms.sass */
+.switch input[type="checkbox"]:checked + .check {
+  background-color: #666;
 }
-/* line 236, ../../dev/sass/wd/_forms.sass */
-.wd-switch input[type="checkbox"]:checked + .check::after {
+/* line 166, ../../dev/sass/wd/_forms.sass */
+.switch input[type="checkbox"]:checked + .check::after {
   left: 4.1rem;
 }
-/* line 238, ../../dev/sass/wd/_forms.sass */
-.wd-switch .check {
+/* line 168, ../../dev/sass/wd/_forms.sass */
+.switch .check {
   position: relative;
   width: 5rem;
   height: 2rem;
-  outline: .1rem solid #ddd;
-  border: .1rem solid #fff;
+  outline: 0.1rem solid #ddd;
+  border: 0.1rem solid #fff;
   cursor: pointer;
   background-color: #ddd;
   display: inline-block;
@@ -2588,8 +2486,8 @@ label + ul li {
   -webkit-transition: background-color 200ms ease-in-out;
           transition: background-color 200ms ease-in-out;
 }
-/* line 249, ../../dev/sass/wd/_forms.sass */
-.wd-switch .check::after {
+/* line 179, ../../dev/sass/wd/_forms.sass */
+.switch .check::after {
   content: "";
   position: absolute;
   left: -0.1rem;
@@ -2597,53 +2495,70 @@ label + ul li {
   display: block;
   width: 1rem;
   height: 2rem;
-  outline: .1rem solid #333;
+  outline: 0.1rem solid #333;
   background-color: #333;
   z-index: 2;
   -webkit-transition: left 200ms ease-in-out;
           transition: left 200ms ease-in-out;
 }
-
-/* line 262, ../../dev/sass/wd/_forms.sass */
-.wd-form {
-  padding-bottom: 3rem;
+/* line 191, ../../dev/sass/wd/_forms.sass */
+.switch .label {
+  line-height: 2rem;
+  height: 2rem;
+  vertical-align: top;
+  padding: 0 1rem;
 }
-/* line 264, ../../dev/sass/wd/_forms.sass */
-.wd-form button {
-  margin: 2rem 1rem 0 0;
-}
-/* line 266, ../../dev/sass/wd/_forms.sass */
-.wd-form label {
-  display: block;
-  line-height: 3.2rem;
-}
-/* line 270, ../../dev/sass/wd/_forms.sass */
-.wd-form .padded-left label {
-  padding-left: 1rem;
-}
-/* line 272, ../../dev/sass/wd/_forms.sass */
-.wd-form .wd-nested-label {
-  display: block;
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.turquoise input[type="checkbox"]:checked + .check {
   background-color: #5af;
-  color: #fff;
-  font-size: 125%;
-  border-bottom: .5rem solid #88c4ff;
-  padding: 1rem 1rem .5rem 1rem;
 }
-/* line 279, ../../dev/sass/wd/_forms.sass */
-.wd-form .wd-nested-label::before {
-  content: "";
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.teal input[type="checkbox"]:checked + .check {
+  background-color: #028428;
 }
-/* line 281, ../../dev/sass/wd/_forms.sass */
-.wd-form .wd-nested-form {
-  padding: 1rem;
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.yellow input[type="checkbox"]:checked + .check {
+  background-color: #ffc200;
+}
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.crimson input[type="checkbox"]:checked + .check {
+  background-color: #dc143c;
+}
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.mauve input[type="checkbox"]:checked + .check {
+  background-color: #d473d4;
+}
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.grey-dark input[type="checkbox"]:checked + .check {
+  background-color: #333;
+}
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.grey-light input[type="checkbox"]:checked + .check {
+  background-color: #ddd;
+}
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.orange input[type="checkbox"]:checked + .check {
+  background-color: #f45633;
+}
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.white input[type="checkbox"]:checked + .check {
   background-color: #fff;
-  border: .1rem solid #ddd;
-  border-top: none;
 }
-/* line 287, ../../dev/sass/wd/_forms.sass */
-.wd-form .wd-nested-form .controls .wd-btn {
-  font-size: 2rem;
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.black input[type="checkbox"]:checked + .check {
+  background-color: #000;
+}
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.facebook-blue input[type="checkbox"]:checked + .check {
+  background-color: #3b5998;
+}
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.twitter-blue input[type="checkbox"]:checked + .check {
+  background-color: #00aced;
+}
+/* line 200, ../../dev/sass/wd/_forms.sass */
+.switch.google-orange input[type="checkbox"]:checked + .check {
+  background-color: #dd4b39;
 }
 
 /* line 5, ../../dev/sass/wd/_lists.sass */
@@ -4224,7 +4139,7 @@ p.subheadline, p.h2, h1.subheadline, h1.h2, h2.subheadline, h2.h2, h3.subheadlin
 
 /* line 36, ../../dev/sass/wd/_typography.sass */
 p, h1, h2, h3, h4, h5, h6 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   line-height: 150%;
   font-weight: 200;
   margin: 0;

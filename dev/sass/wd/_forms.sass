@@ -2,14 +2,9 @@
 ////            WD FORMS
 ///////////////////////////////////////////////////////////////////////////////////
 
-form
-    &#login-form
-        margin-top: 0
-        margin-bottom: 0
-    &.wd-form
-        margin: 0
-        padding: 0
-    .required > label,label.required
+label
+    display: block
+    &.required
         &:after
             content: '*'
             display: inline-block
@@ -17,17 +12,20 @@ form
             margin-left: 0.5rem
 
 input,select,textarea,option
-    font-weight: $wdWerneoNormal
-    font-family: $wdWerneoBasicFontFamily
     color: $wdWerneoGreyMedium
+    font-size: $wdWerneoBasicFontSize
+    font-family: $wdWerneoBasicFontFamily
+
+input,select
+    height: 5rem
 
 input,select,textarea
     display: inline-block
     margin: 0
     padding: 0 1rem
-    border: 0.1rem solid darken($wdWerneoGreyLight,10%)
-    border-radius: 0.3rem
+    border: 0.4rem solid darken($wdWerneoGreyLight,10%)
     transition: all 300ms ease-in-out
+    width: 100%
     +input-placeholder
         color: $wdWerneoGreyLight
         transition: color 300ms ease-in-out
@@ -40,15 +38,6 @@ input,select,textarea
     &[disabled],&[readonly]
         background-color: $wdWerneoGreyLightest
         color: $wdWerneoGreyMedium
-    @each $name, $color, in $wdWerneoColors
-        &.#{$name}
-            &:focus,&:active
-                border-color: $color
-
-input
-    width: 100%
-    height: 3.2rem
-    font-size: 1.1rem
     &.big
         height: 4rem
         font-size: 1.6rem
@@ -59,8 +48,12 @@ input
         height: 2.4rem
         font-size: 1rem
         padding: 0 0.5rem
-    &.wd-input-btn
-        text-align: center
+    @each $name, $color, in $wdWerneoColors
+        &.#{$name}
+            &:focus,&:active
+                border-color: $color
+
+input
     &[type="radio"],&[type="checkbox"]
         display: none
         & + label
@@ -78,7 +71,6 @@ input
                 border: 0.1rem solid $wdWerneoGreyLight
                 background-color: $wdWerneoGreyLightest
                 color: $wdWerneoGreyDark
-                font-size: 100%
                 line-height: 1.2rem
                 text-indent: -0.1rem
                 text-align: center
@@ -90,7 +82,6 @@ input
     &[type="radio"]
         & + label
             &::before
-                font-size: 300%
                 border-radius: 50%
         &:checked
             & + label
@@ -107,25 +98,9 @@ input
         padding-right: 0
 
 textarea
-    width: 100%
     padding: 0.5rem 1rem
-    font-size: 1.1rem
-    +input-placeholder
-        font-size: 1.1rem
 
 select
-    height: 3.2rem
-    width: 100%
-    font-size: 1.1rem
-    &.big
-        height: 4rem
-        font-size: 1.6rem
-    &.medium
-        height: 2.8rem
-        font-size: 1.4rem
-    &.small
-        height: 2.4rem
-        font-size: 1rem
     &[multiple="multiple"]
         height: auto
     option
@@ -133,28 +108,27 @@ select
             color: $wdWerneoGreyLight
             transition: color 300ms ease-in-out
 
-.wd-input-bound
+.input-bound
     position: relative
     &.textarea
         input
-            &.wd-input-btn
+            &.input-btn
                 height: 100%
     &.double
         input,textarea,select
             &:first-child
                 padding-right: 10rem
-    .wd-btn-group
+    .btn-group
         position: absolute
         right: 0
         top: 0
         height: 100%
         padding: 0.1rem
         box-sizing: border-box
-        .wd-btn
+        .btn
             width: 4rem
             float: right
             height: 100%
-            font-size: 1.6rem
             text-align: center
             &:first-child
                 float: left
@@ -162,33 +136,6 @@ select
         color: $wdWerneoGreyDark
         &:first-child
             padding-right: 5rem
-
-label
-    display: block
-    font-size: 1.3rem
-    line-height: 1.8rem
-    &[data-after]
-        &::after
-            content: " " attr(data-after)
-    &.small
-        font-size: 1.2rem
-    /// validation errors
-    & + ul
-        margin: 0
-        padding: 0
-        border: 0.1rem solid darken($wdWerneoGreyLight,10%)
-        border-bottom: none
-        li
-            font-size: 1.2rem
-            background-color: $wdWerneoCrimson
-            padding: 0.5rem 1rem
-            color: $wdWerneoWhite
-            list-style: none
-
-.wd-form-error
-    padding: 0.5rem 1rem
-    background-color: $wdWerneoMauve
-    color: $wdWerneoWhite
 
 .form-errors
     margin: 0
@@ -201,30 +148,13 @@ label
         padding: 0.5rem 1rem
         color: $wdWerneoCrimson
 
-.wd-form-tab
-    p,label
-        position: relative
-        display: inline-block
-        background-color: $wdWerneoTurquoise
-        color: $wdWerneoWhite
-        padding: 0.5rem 1rem
-        font-size: 1.2rem
-        margin-bottom: 0
-        &.wd-form-error
-            padding: 0.5rem 1rem
-            background-color: $wdWerneoCrimson
-            color: $wdWerneoWhite
-    label.section-label
-        display: block
-        font-size: 1.8rem
-        padding: 0
-        color: $wdWerneoGreyDark
-        background-color: transparent
-        margin-bottom: 0.5rem
-        &:after
-            content: ":"
+/// switch-like checkbox
 
-.wd-switch
+.switch
+    cursor: pointer
+    height: 5rem
+    display: flex
+    align-items: center
     input[type="checkbox"]
         position: absolute
         opacity: 0
@@ -232,7 +162,7 @@ label
         height: 0.1rem
         &:checked
             & + .check
-                background-color: $wdWerneoTurquoise
+                background-color: $wdWerneoGreyMedium
                 &::after
                     left: 4.1rem
     .check
@@ -258,31 +188,14 @@ label
             background-color: $wdWerneoGreyDark
             z-index: 2
             transition: left 200ms ease-in-out
-
-.wd-form
-    padding-bottom: 3rem
-    button
-        margin: 2rem 1rem 0 0
-    label
-        display: block
-        line-height: 3.2rem
-    .padded-left
-        label
-            padding-left: 1rem
-    .wd-nested-label
-        display: block
-        background-color: $wdWerneoTurquoise
-        color: $wdWerneoWhite
-        font-size: 125%
-        border-bottom: 0.5rem solid lighten($wdWerneoTurquoise,10%)
-        padding: 1rem 1rem 0.5rem 1rem
-        &::before
-            content: ''
-    .wd-nested-form
-        padding: 1rem
-        background-color: $wdWerneoWhite
-        border: 0.1rem solid $wdWerneoGreyLight
-        border-top: none
-        .controls
-            .wd-btn
-                font-size: 2rem
+    .label
+        line-height: 2rem
+        height: 2rem
+        vertical-align: top
+        padding: 0 1rem
+    @each $name, $color, in $wdWerneoColors
+        &.#{$name}
+            input[type="checkbox"]
+                &:checked
+                    & + .check
+                        background-color: $color
