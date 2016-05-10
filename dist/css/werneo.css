@@ -2561,6 +2561,41 @@ select option[value=""] {
   background-color: #dd4b39;
 }
 
+/* line 5, ../../dev/sass/wd/_gallery.sass */
+.gallery {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+          transition: opacity 300ms ease-in-out;
+  overflow: hidden;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  position: relative;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+/* line 14, ../../dev/sass/wd/_gallery.sass */
+.gallery.showing {
+  opacity: 1;
+}
+
+/* line 17, ../../dev/sass/wd/_gallery.sass */
+.gallery-item {
+  display: block;
+}
+/* line 19, ../../dev/sass/wd/_gallery.sass */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
 /* line 5, ../../dev/sass/wd/_lists.sass */
 .wd-list-item-container {
   margin: 0 1rem 1rem 0;
