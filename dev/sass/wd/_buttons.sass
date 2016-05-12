@@ -29,8 +29,9 @@
             &:focus,&:active,&.active
                 color: desaturate($inverseColor,10%)
                 background-color: desaturate($color,10%)
-                +diagonal-split-background(darken($color,10%),darken($color,5%))
-                +diagonal-split-background-hover
+                outline: 0
+                animation: diagonalSplitBackgroundHover 1000ms
+                +diagonal-split-background(darken($color,10%),$color)
     /// abnormalities
     &.white
         color: $wdWerneoGreyMedium
