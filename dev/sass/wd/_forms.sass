@@ -50,7 +50,7 @@ input,select,textarea
         padding: 0 0.5rem
     @each $name, $color, in $wdWerneoColors
         &.#{$name}
-            &:focus,&:active
+            &:focus,&:active,&.full-colored
                 border-color: $color
 
 input
@@ -108,35 +108,6 @@ select
             color: $wdWerneoGreyLight
             transition: color 300ms ease-in-out
 
-.input-bound
-    position: relative
-    &.textarea
-        input
-            &.input-btn
-                height: 100%
-    &.double
-        input,textarea,select
-            &:first-child
-                padding-right: 10rem
-    .btn-group
-        position: absolute
-        right: 0
-        top: 0
-        height: 100%
-        padding: 0.1rem
-        box-sizing: border-box
-        .btn
-            width: 4rem
-            float: right
-            height: 100%
-            text-align: center
-            &:first-child
-                float: left
-    input,textarea,select
-        color: $wdWerneoGreyDark
-        &:first-child
-            padding-right: 5rem
-
 .form-errors
     margin: 0
     padding: 0
@@ -147,6 +118,10 @@ select
         list-style: none
         padding: 0.5rem 1rem
         color: $wdWerneoCrimson
+
+.input-like
+    height: 5rem
+    line-height: 5rem
 
 /// switch-like checkbox
 
