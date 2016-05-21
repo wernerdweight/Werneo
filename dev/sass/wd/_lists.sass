@@ -2,13 +2,11 @@
 ////            WD LISTS
 ///////////////////////////////////////////////////////////////////////////////////
 
-.wd-list-item-container
+.list-item-container
     margin: 0 1rem 1rem 0
     display: inline-block
-    &:hover .wd-list-item
-        box-shadow: 0 0 0 0.3rem $wdWerneoGreyLight
     &.table-like
-        .wd-list-item
+        .list-item
             width: 100%
             height: 6.4rem
             & > a
@@ -23,36 +21,66 @@
             width: 100%
             height: 6.4rem
 
-.wd-list-item
+.list-item
     display: block
     position: relative
-    border: 0.1rem solid $wdWerneoGreyLight
+    border-width: 0.1rem
+    border-style: solid
     padding: 1rem
-    background-color: $wdWerneoWhite
     text-decoration: none
-    color: $wdWerneoGreyDark
     width: 30rem
     height: 10rem
     overflow: hidden
-    +box-sizing(border-box)
+    box-sizing: border-box
+    transition: all 300ms ease-in-out
+    @each $name, $color, in $wdWerneoColors
+        &.bg-#{$name}
+            $inverseColor: $wdWerneoWhite
+            @if $name == 'white' or $name == 'grey-light'
+                $inverseColor: $wdWerneoGreyMedium
+            border-color: $color
+            .list-item-container:hover &
+                box-shadow: 0 0 0 0.3rem rgba($color,0.75)
+            &:focus,&.checked
+                border-color: $inverseColor
+            &.checked
+                &::before
+                    background-color: $inverseColor
+                    border-right-color: $inverseColor
+                    border-top-color: $inverseColor
+                    border-bottom-color: $color
+                    border-left-color: $color
+                &::after
+                    color: $color
+            .icon
+                color: $color
+                background-color: $inverseColor
+                &.split
+                    +diagonal-split-background($inverseColor,darken($inverseColor,4%))
+                    background-position: 50% 50%
     &:focus
         outline: none
-        border: 0.1rem dashed $wdWerneoTurquoise
+        border-style: dashed
+        border-width: 0.1rem
     &.checked
-        border: 0.4rem solid $wdWerneoTurquoise
+        border-style: solid
+        border-width: 0.4rem
         padding: 0.6rem
         &::before
             display: block
             width: 4rem
             height: 4rem
-            background-color: $wdWerneoTurquoise
             position: absolute
             right: 0
             top: 0
-            border-right: 2rem solid $wdWerneoTurquoise
-            border-top: 2rem solid $wdWerneoTurquoise
-            border-bottom: 2rem solid $wdWerneoWhite
-            border-left: 2rem solid $wdWerneoWhite
+            border-right-width: 2rem
+            border-right-style: solid
+            border-top-width: 2rem
+            border-top-style: solid
+            border-bottom-width: 2rem
+            border-bottom-style: solid
+            border-left-width: 2rem
+            border-left-style: solid
             content: " "
         &::after
             position: absolute
@@ -60,7 +88,6 @@
             top: 0
             font-family: $wdWerneoIconFontFamily
             content: "\f00c"
-            color: $wdWerneoWhite
         &.checked-disabled
             border-color: $wdWerneoTeal
             &::before
@@ -74,12 +101,9 @@
         height: 8rem
         float: left
         text-align: center
-        color: $wdWerneoWhite
         display: flex
         align-items: center
         align-content: center
-        &.split
-            +diagonal-split-background($wdWerneoTurquoise,darken($wdWerneoTurquoise,4%))
         i
             &.fa
                 line-height: 8rem
@@ -107,9 +131,8 @@
             font-size: 1.4rem
             line-height: 1.6rem
             +hellip
-            &.counts
+            &.byline
                 margin-top: 0.5rem
-                color: $wdWerneoGreyDark
                 font-size: 1rem
                 position: absolute
                 bottom: 0.5rem
@@ -119,15 +142,6 @@
             &.error
                 color: $wdWerneoCrimson
                 font-weight: normal
-            &.badge
-                padding: 0 0.6rem
-                height: 1.8rem
-                line-height: 1.8rem
-                font-size: 1.2rem
-                margin-bottom: 0.4rem
-                color: $wdWerneoWhite
-                text-shadow: 0.1rem 0.1rem 0.2rem rgba($wdWerneoBlack,0.5)
-                border: 0.1rem solid $wdWerneoGreyMedium
         input
             margin-bottom: 0.5rem
     input

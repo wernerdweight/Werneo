@@ -2,7 +2,7 @@
 ////            WD MODAL BUTTONS
 ///////////////////////////////////////////////////////////////////////////////////
 
-.wd-modal-btn
+.modal-btn
     display: inline-block
     position: relative
     &:hover
@@ -56,9 +56,6 @@
         pointer-events: none
         transition-timing-function: cubic-bezier(0.7,0,0.3,1)
         transition: opacity 400ms 600ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms
-        &.wd-list-item-modal
-            width: 30rem
-            height: 10rem
         & > *
             opacity: 0
             transition: opacity 300ms 0
@@ -141,8 +138,8 @@
             left: 50% !important
             margin-left: -25rem
             margin-top: -15rem
-            width: 50rem
-            height: 30rem
+            width: 50rem !important
+            height: 30rem !important
             opacity: 1
             pointer-events: auto
             box-sizing: border-box
@@ -150,11 +147,3 @@
             & > *
                 opacity: 1
                 transition: opacity 400ms 500ms
-
-    /// colors
-    @each $name, $color, in $wdWerneoColors
-        &.#{$name}
-            .modal-btn-trigger
-                background-color: $color
-            .modal-btn-content
-                background-color: $color
