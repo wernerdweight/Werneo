@@ -39,7 +39,8 @@
             color: darken($wdWerneoGreyDark,10%)
         &:focus,&:active,&.active
             color: $wdWerneoGreyDark
-            +diagonal-split-background($wdWerneoWhite,$wdWerneoWhite)
+            animation: diagonalSplitBackgroundHover 1000ms
+            +diagonal-split-background($wdWerneoWhite,darken($wdWerneoWhite,4%))
     
     /// sizes
     &.xs

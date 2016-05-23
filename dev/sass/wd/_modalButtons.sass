@@ -5,11 +5,21 @@
 .modal-btn
     display: inline-block
     position: relative
-    &:hover
-        .modal-btn-overlay
-            height: 3.2rem
+    @each $name, $color, in $wdWerneoColors
+        &.#{$name}
+            $inverseColor: $wdWerneoWhite
+            @if $name == 'white' or $name == 'grey-light'
+                $inverseColor: $wdWerneoGreyMedium
+            &::before
+                background: rgba(darken($color,50%),0.5)
+            .modal-btn-content
+                .header
+                    background-color: $color
+                    color: $inverseColor
+                    border-bottom: 0.4rem solid lighten($color,20%)
+                    .close
+                        color: $inverseColor
     &::before
-        background: rgba(darken($wdWerneoTurquoise,50%),0.5)
         opacity: 0
         pointer-events: none
         position: fixed
@@ -26,30 +36,8 @@
         transition: opacity 300ms 300ms
         & > *
             transition: opacity 300ms 500ms
-    .modal-btn-overlay
-        display: block
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 100%
-        height: 0
-        overflow: hidden
-        background-color: $wdWerneoGreyLight
-        color: $wdWerneoWhite
-        text-align: center
-        line-height: 3.2rem
-        text-decoration: none
-        z-index: 700
-        +diagonal-split-background($wdWerneoTurquoise,darken($wdWerneoTurquoise,3%))
-        box-sizing: border-box
-        transition: height 300ms 300ms, opacity 300ms 100ms, background-position 300ms 0
-        &:hover
-            +diagonal-split-background-hover
-            & ~ .modal-btn-trigger
-                opacity: 0.5
     .modal-btn-content
         position: fixed
-        display: block
         overflow: hidden
         opacity: 0
         z-index: 1000
@@ -59,13 +47,12 @@
         & > *
             opacity: 0
             transition: opacity 300ms 0
-        .close
+        .close-times
             display: block
             position: absolute
             top: 1rem
             right: 1rem
-            color: $wdWerneoWhite
-            z-index: 1100
+            z-index: 1101
             opacity: 0.3
             transition: opacity 400ms ease-in-out
             &:hover
@@ -77,25 +64,11 @@
             width: 100%
             padding: 1rem 3.5rem 0.5rem 1rem
             margin: 0
-            background-color: $wdWerneoTurquoise
-            color: $wdWerneoWhite
-            border-bottom: 0.4rem solid lighten($wdWerneoTurquoise,20%)
             z-index: 1100
             p
                 font-size: 2.4rem
                 margin: 0
                 +hellip
-            .close
-                display: block
-                position: absolute
-                top: 1rem
-                right: 1rem
-                color: $wdWerneoWhite
-                z-index: 1101
-                opacity: 0.3
-                +transition(opacity 400ms ease-in-out)
-                &:hover
-                    opacity: 1
         .body
             margin-top: 4.3rem
             padding: 1rem 2rem 2rem 2rem
@@ -121,11 +94,6 @@
             opacity: 1
             pointer-events: auto
             transition: opacity 400ms 100ms
-        .modal-btn-overlay
-            opacity: 0
-            pointer-events: none
-            height: 0
-            transition: all 300ms 0
         .modal-btn-trigger
             opacity: 0
             pointer-events: none
@@ -134,12 +102,6 @@
                 opacity: 0
                 transition: opacity 300ms
         .modal-btn-content
-            top: 50% !important
-            left: 50% !important
-            margin-left: -25rem
-            margin-top: -15rem
-            width: 50rem !important
-            height: 30rem !important
             opacity: 1
             pointer-events: auto
             box-sizing: border-box
@@ -147,3 +109,8 @@
             & > *
                 opacity: 1
                 transition: opacity 400ms 500ms
+        .list-item-overlay
+            opacity: 0
+            pointer-events: none
+            height: 0
+            transition: all 300ms 0

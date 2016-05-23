@@ -1177,7 +1177,7 @@
 				<h3>Sizes</h3>
 				<div class="r">
 					<div class="c-3">
-						<input type="text" name="t14" value="" placeholder="&.small" class="yellow small">
+						<input type="text" name="t14" value="" placeholder="&.sm" class="yellow sm">
 					</div>
 					<div class="c-3">
 						<input type="text" name="t14" value="" placeholder="basic" class="orange">
@@ -1186,7 +1186,7 @@
 						<input type="text" name="t14" value="" placeholder="&.medium" class="medium crimson">
 					</div>
 					<div class="c-3">
-						<input type="text" name="t14" value="" placeholder="&.big" class="big mauve">
+						<input type="text" name="t14" value="" placeholder="&.lg" class="lg mauve">
 					</div>
 				</div>
 				<h3>States and validation</h3>
@@ -1215,7 +1215,7 @@
 				<div class="r">
 					<div class="c-12">
 						<p>Mind that some settings are logically mutually exclusive (e.g. if you wanted to have max. 3 items per line each 10px high with 1000px gallery width - max-height will be overriden in this case).</p>
-						<div class="gallery" data-gutter="5" data-max-items-per-line="4" data-min-height="300" data-max-height="50">
+						<div class="gallery" data-gutter="5" data-max-items-per-line="4" data-min-height="300" data-max-height="50" data-loading-text="Loading...">
 							<a class="gallery-item" href="#">
 								<img src="http://placehold.it/350x150">
 							</a>
@@ -1351,110 +1351,521 @@
 
 				<h2 class="h2">Lists</h2>
 
-				<div class="r">
-					<div class="c-12">
-						<div>
-							
-						</div>
+				<h3>Colors <small class="text-yellow">(right-click to select an item)</small></h3>
+				<div class="r r-4 r-jc-s">
+					<div class="list-item-container">
+						<a href="#" title="Some item" class="list-item bg-turquoise">
+							<div class="icon split">
+								<img src="http://placehold.it/80x80" alt="Some item" width="100%">
+							</div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t17-0" id="t17-0">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a href="#" title="Some item" class="list-item bg-teal">
+							<div class="icon split">
+								<i class="fa fa-folder"></i>
+							</div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t17-1" id="t17-1">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a href="#" title="Some item" class="list-item bg-yellow">
+							<div class="icon split">
+								<i class="fa fa-cog fa-spin"></i>
+							</div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t17-2" id="t17-2">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a href="#" title="Some item" class="list-item bg-orange">
+							<div class="icon split">
+								<i class="fa fa-image"></i>
+							</div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t17-3" id="t17-3">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a href="#" title="Some item" class="list-item bg-crimson">
+							<div class="icon split">
+								<i class="fa fa-dollar"></i>
+							</div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t17-4" id="t17-4">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a href="#" title="Some item" class="list-item bg-mauve">
+							<div class="icon split">
+								<i class="fa fa-truck"></i>
+							</div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t17-5" id="t17-5">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a href="#" title="Some item" class="list-item bg-black">
+							<div class="icon split">
+								<i class="fa fa-file-pdf-o"></i>
+							</div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t17-6" id="t17-6">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a href="#" title="Some item" class="list-item bg-grey-dark">
+							<div class="icon split">
+								<i class="fa fa-cloud"></i>
+							</div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t17-7" id="t17-7">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a href="#" title="Some item" class="list-item bg-grey-light">
+							<div class="icon split">
+								<i class="fa fa-home"></i>
+							</div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t17-8" id="t17-8">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a href="#" title="Some item" class="list-item bg-white">
+							<div class="icon split"></div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t17-9" id="t17-9">
+						</a>
+					</div>
+				</div>
+				<h3>Colored overlays <small class="text-yellow">(hover over list item to see it)</small></h3>
+				<div class="r r-3 r-jc-s">
+					<div class="list-item-container">
+						<a class="list-item-overlay bg-turquoise" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="list-item bg-white">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t23-0" id="t23-0">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a class="list-item-overlay bg-teal" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="list-item bg-white">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t23-1" id="t23-1">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a class="list-item-overlay bg-yellow" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="list-item bg-white">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t23-2" id="t23-2">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a class="list-item-overlay bg-orange" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="list-item bg-white">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t23-3" id="t23-3">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a class="list-item-overlay bg-crimson" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="list-item bg-white">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t23-4" id="t23-4">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a class="list-item-overlay bg-mauve" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="list-item bg-white">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t23-5" id="t23-5">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a class="list-item-overlay bg-black" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="list-item bg-white">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t23-6" id="t23-6">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a class="list-item-overlay bg-grey-dark" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="list-item bg-white">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t23-7" id="t23-7">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a class="list-item-overlay bg-grey-light" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="list-item bg-white">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t23-8" id="t23-8">
+						</a>
+					</div>
+					<div class="list-item-container">
+						<a class="list-item-overlay bg-white" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="list-item bg-white">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t23-9" id="t23-9">
+						</a>
 					</div>
 				</div>
 
 				<h2 class="h2">Modal Buttons</h2>
 
-				<div class="r">
-					<div class="c-12">
-						<div>
-							<div class="modal-btn list-item-container" draggable="true">
-								<a class="modal-btn-overlay" href="#" title="show more">show more</a>
-								<a href="#" title="Some folder" class="modal-btn-trigger list-item bg-white checked">
-									<div class="icon split">
-										<i class="fa fa-folder-open"></i>
-									</div>
-									<div class="info">
-										<p class="title">Some folder</p>
-										<span>July 25, 2015, 3:10am</span>
-										<span>
-											<i class="fa fa-check-circle-o text-teal"></i>
-											Active,&nbsp;<i class="fa fa-check-circle-o text-teal"></i>
-											Released
-										</span>
-										<span class="byline">
-											<i class="fa fa-folder-open"></i>
-											11&nbsp;<i class="fa fa-file"></i>
-											377&nbsp;
-										</span>
-									</div>
-									<input type="checkbox" name="t17-0" id="t17-0">
+				<div class="r r-2 r-jc-s">
+					<div class="modal-btn orange list-item-container">
+						<a class="list-item-overlay bg-orange" href="#" title="show more">show more</a>
+						<a href="#" title="Some folder" class="modal-btn-trigger list-item bg-white checked">
+							<div class="icon split">
+								<i class="fa fa-folder-open"></i>
+							</div>
+							<div class="info">
+								<p class="title">Some folder</p>
+								<span>July 25, 2015, 3:10am</span>
+								<span>
+									<i class="fa fa-check-circle-o text-teal"></i>
+									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+									Released
+								</span>
+								<span class="byline">
+									<i class="fa fa-folder-open"></i>
+									11&nbsp;<i class="fa fa-file"></i>
+									377&nbsp;
+								</span>
+							</div>
+							<input type="checkbox" name="t24-0" id="t24-0">
+						</a>
+						<div class="modal-btn-content list-item-modal bg-white" data-width="100rem" data-height="40rem">
+							<div class="r header">
+								<a href="#" title="" class="close close-times">
+									<i class="fa fa-times"></i>
 								</a>
-								<div class="modal-btn-content list-item-modal bg-white">
-									<div class="r header">
-										<a href="#" title="" class="close">
-											<i class="fa fa-times"></i>
-										</a>
-										<div class="c-12">
-											<p>Some folder</p>
-										</div>
+								<div class="c-12">
+									<p>Some folder</p>
+								</div>
+							</div>
+							<div class="r body">
+								<div class="c-12 mt-1">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+							</div>
+							<div class="r footer">
+								<div class="c-4">
+									<a class="btn turquoise full" href="#" title="edit">edit</a>
+								</div>
+								<div class="c-4">
+									<a class="btn grey-light full" href="#" title="release">
+										<i class="fa fa-times-circle-o text-crimson"></i> release
+									</a>
+								</div>
+								<div class="c-4">
+									<a class="btn crimson full" href="#" title="delete">delete</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-btn mauve list-item-container">
+						<a href="#" title="Some item" class="modal-btn-trigger list-item bg-mauve checked">
+							<div class="icon split">
+								<img src="http://placehold.it/80x80" alt="Some item" width="100%">
+							</div>
+							<div class="info">
+								<p class="title">Headline</p>
+								<span>Subheadline line 1</span>
+								<span>Subheadline line 2</span>
+								<span class="byline">Byline</span>
+							</div>
+							<input type="checkbox" name="t24-1" id="t24-1">
+						</a>
+						<div class="modal-btn-content list-item-modal bg-mauve r r-ac-c" data-width="100%" data-height="100vh">
+							<a href="#" title="" class="close close-times text-white">
+								<i class="fa fa-times"></i>
+							</a>
+							<div class="c-12 ptb-6 plr-6">
+								<div class="text-box plr-6 r r-ac-c">
+									<div class="c-3">
+										<img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Slugs_1896.png" alt="Slug" class="mw-full bg-white">
 									</div>
-									<div class="r body">
-										<div class="c-12">
-											<p></p>
-										</div>
-									</div>
-									<div class="r footer">
-										<div class="c-4">
-											<a class="btn turquoise big full" href="#" title="edit">edit</a>
-										</div>
-										<div class="c-4">
-											<a class="btn grey big full" href="#" title="release">
-												<i class="fa fa-check-circle-o teal"></i> release
-											</a>
-										</div>
-										<div class="c-4">
-											<a class="btn crimson big full" href="#" title="delete">delete</a>
+									<div class="c-9 pl-4">
+										<p class="h1">Behaviour of a Slug</p>
+										<p>When attacked, slugs can contract their body, making themselves harder and more compact and more still and round. By doing this, they become firmly attached to the substrate. This, combined with the slippery mucus they produce, makes slugs more difficult for predators to grasp. The unpleasant taste of the mucus is also a deterrent. Some species present different response behaviors when attacked, such as the Kerry slug. In contrast to the general behavioral pattern, the Kerry slug retracts its head, lets go of the substrate, rolls up completely, and stays contracted in a ball-like shape. This is a unique feature among all the Arionidae, and among most other slugs. Some slugs can self-amputate (autotomy) a portion of their tail to help the slug escape from a predator. Some slug species hibernate underground during the winter in temperate climates, but in other species, the adults die in the autumn.</p>
+										<p>Intra and inter-specific agonistic behavior is documented, but varies greatly among slug species. Slugs often resort to aggression, attacking both conspecifics and individuals from other species when competing for resources. This aggressiveness is also influenced by seasonality, because the availability of resources such as shelter and food may be compromised due to climatic conditions. Slugs are prone to attack during the summer, when the availability of resources is reduced. During winter, the aggressive responses are substituted by a gregarious behavior.</p>
+										<p>Source: wikipedia.org</p>
+										<div class="mt-2 wd-ta-c">
+											<button type="button" class="btn white lg">Slug on!</button>
+											<button type="button" class="close btn grey-dark lg">Hide this!</button>
 										</div>
 									</div>
 								</div>
 							</div>
-
-							<div class="modal-btn white list-item-container" draggable="true">
-								<a href="#" title="Some item" class="modal-btn-trigger list-item bg-turquoise checked">
-									<div class="icon split">
-										<img src="http://placehold.it/80x80" alt="Some item" width="100%">
+						</div>
+					</div>
+				</div>
+				<div class="r">
+					<div class="c-12">
+						<div>
+							<div class="modal-btn black">
+								<a href="#" title="Some item" class="btn black modal-btn-trigger">Click me!</a>
+								<div class="modal-btn-content bg-black r r-ac-c" data-width="40rem" data-height="10rem">
+									<a href="#" title="" class="close close-times text-white">
+										<i class="fa fa-times"></i>
+									</a>
+									<div class="c-12 plr-3">
+										<div class="group">
+											<input type="text" name="t18" value="" placeholder="Your favourite number?" class="yellow">
+											<button type="submit" class="btn yellow">Submit</button>
+										</div>
 									</div>
-									<div class="info">
-										<p class="title">Headline</p>
-										<span>Subheadline line 1</span>
-										<span>Subheadline line 2</span>
-										<span class="byline">Byline</span>
+								</div>
+							</div>
+							<div class="modal-btn yellow">
+								<a href="#" title="Some item" class="btn yellow modal-btn-trigger">Or me!</a>
+								<div class="modal-btn-content bg-yellow r r-ac-c" data-width="40rem" data-height="40rem">
+									<a href="#" title="" class="close close-times text-white">
+										<i class="fa fa-times"></i>
+									</a>
+									<div class="c-12 plr-3">
+										<p class="h1 mb-1">Let's give us some info!</p>
+										<input type="text" name="t19" value="" placeholder="Your favourite number?" class="black mb-1">
+										<input type="text" name="t20" value="" placeholder="Your favourite actor?" class="black mb-1">
+										<input type="text" name="t21" value="" placeholder="Your favourite disease?" class="black mb-1">
+										<button type="submit" class="btn black">Submit</button>
 									</div>
-									<input type="checkbox" name="t17-1" id="t17-1">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="r">
+					<div class="c-12">
+						<div>
+							<div class="modal-btn white">
+								<a href="#" title="Some item" class="btn grey-light modal-btn-trigger">
+									<img src="https://media4.giphy.com/media/3o7WTJn8VVkJDdSyB2/200.gif" alt="click me...">
 								</a>
-								<div class="modal-btn-content list-item-modal bg-turquoise">
-									<div class="r header">
-										<a href="#" title="" class="close">
-											<i class="fa fa-times"></i>
-										</a>
-										<div class="c-12">
-											<p>Some item</p>
-										</div>
-									</div>
-									<div class="r body">
-										<div class="c-12">
-											<p></p>
-										</div>
-									</div>
-									<div class="r footer">
-										<div class="c-4">
-											<a class="btn turquoise big full" href="#" title="edit">edit</a>
-										</div>
-										<div class="c-4">
-											<a class="btn grey big full" href="#" title="release">
-												<i class="fa fa-check-circle-o teal"></i> release
-											</a>
-										</div>
-										<div class="c-4">
-											<a class="btn crimson big full" href="#" title="delete">delete</a>
-										</div>
+								<div class="modal-btn-content bg-white r r-ac-c" data-width="30rem" data-height="20rem">
+									<a href="#" title="" class="close close-times text-crimson">
+										<i class="fa fa-times"></i>
+									</a>
+									<div class="c-12 plr-3">
+										<p>I'm sorry but I'm tired right now so I don't really have an idea what else to put in this modal. Hope you get it by now, anyway.</p>
 									</div>
 								</div>
 							</div>

@@ -3,8 +3,8 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
 .list-item-container
-    margin: 0 1rem 1rem 0
-    display: inline-block
+    position: relative
+    overflow: hidden
     &.table-like
         .list-item
             width: 100%
@@ -20,6 +20,34 @@
         & ~ .sortable-placeholder
             width: 100%
             height: 6.4rem
+    &:hover
+        .list-item-overlay
+            height: 3.2rem
+    .list-item-overlay
+        display: block
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 0
+        overflow: hidden
+        text-align: center
+        line-height: 3.2rem
+        text-decoration: none
+        z-index: 700
+        box-sizing: border-box
+        transition: height 300ms 300ms, opacity 300ms 100ms, background-position 300ms 0
+        @each $name, $color, in $wdWerneoColors
+            &.bg-#{$name}
+                $inverseColor: $wdWerneoWhite
+                @if $name == 'white' or $name == 'grey-light'
+                    $inverseColor: $wdWerneoGreyMedium
+                color: $inverseColor
+                +diagonal-split-background($color,darken($color,3%))
+        &:hover
+            +diagonal-split-background-hover
+            & ~ .list-item
+                opacity: 0.5
 
 .list-item
     display: block
@@ -28,7 +56,6 @@
     border-style: solid
     padding: 1rem
     text-decoration: none
-    width: 30rem
     height: 10rem
     overflow: hidden
     box-sizing: border-box
@@ -96,10 +123,15 @@
                 border-top-color: $wdWerneoTeal
             &::after
                 content: "\f0c1"
+        .icon
+            top: 0.5rem
+            left: 0.5rem
     .icon
         width: 8rem
         height: 8rem
-        float: left
+        position: absolute
+        top: 1rem
+        left: 1rem
         text-align: center
         display: flex
         align-items: center
@@ -116,10 +148,9 @@
         hr
             margin: 0.2rem 0
     .info
-        margin-left: 1rem
-        float: left
-        width: 18rem
+        width: 100%
         height: 8rem
+        padding-left: 9rem
         p
             display: block
             margin: 0 0 0.5rem 0

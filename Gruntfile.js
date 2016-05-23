@@ -44,6 +44,7 @@ module.exports = function (grunt) {
                     '<%= dirs.src.javascript %>/wd/flashMessages.js',
                     '<%= dirs.src.javascript %>/wd/gallery.js',
                     '<%= dirs.src.javascript %>/wd/modalButtons.js',
+                    '<%= dirs.src.javascript %>/wd/lists.js',
                     '<%= dirs.src.javascript %>/wd/main.js',
                 ]
             }

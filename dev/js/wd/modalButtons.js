@@ -5,10 +5,6 @@ function WerneoModalButtons(){
 	this.modalTriggers = null;
 	this.modalClosers = null;
 
-	WerneoModalButtons.prototype.toggle = function(trigger,triggers,target){
-		
-	};
-
 	WerneoModalButtons.prototype.handle = function(){
 		var _this = this;
 		var i;
@@ -33,6 +29,16 @@ function WerneoModalButtons(){
 					setTimeout(function(){
 						modalContent.classList.remove('disable-transition');
 						parent.classList.add('open');
+						if(typeof modalContent.dataset.width !==  typeof undefined){
+							modalContent.style.width = modalContent.dataset.width;
+							modalContent.style.left = '50%';
+							modalContent.style.marginLeft = '-' + (parseInt(modalContent.dataset.width) / 2) + modalContent.dataset.width.replace(/^[\d]+(.*)$/,'$1');
+						}
+						if(typeof modalContent.dataset.height !== typeof undefined){
+							modalContent.style.height = modalContent.dataset.height;
+							modalContent.style.top = '50%';
+							modalContent.style.marginTop = '-' + (parseInt(modalContent.dataset.height) / 2) + modalContent.dataset.height.replace(/^[\d]+(.*)$/,'$1');
+						}
 					},50);
 				});
 			}
@@ -51,6 +57,15 @@ function WerneoModalButtons(){
 						modalButton = modalButton.parentElement;
 					}
 
+					var modalContent = modalButton.querySelector('.modal-btn-content');
+					var offset = modalButton.getBoundingClientRect();
+					/// position the element to dwell directly under its trigger
+					modalContent.style.top = offset.top + 'px';
+					modalContent.style.left = offset.left + 'px';
+					modalContent.style.width = offset.width + 'px';
+					modalContent.style.height = offset.height + 'px';
+					modalContent.style.marginLeft = 0;
+					modalContent.style.marginTop = 0;
 					modalButton.classList.remove('open');
 				});
 			}
@@ -68,4 +83,4 @@ function WerneoModalButtons(){
 }
 
 /// register plugin to Werneo core
-werneo.registerPlugin('modalButton',new WerneoModalButtons());
+werneo.registerPlugin('modalButtons',new WerneoModalButtons());
