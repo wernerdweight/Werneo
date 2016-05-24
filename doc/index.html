@@ -1349,7 +1349,7 @@
 					</div>
 				</div>
 
-				<h2 class="h2">Lists</h2>
+				<h2 class="h2">Lists <small class="text-orange">(requires lists.js)</small></h2>
 
 				<h3>Colors <small class="text-yellow">(right-click to select an item)</small></h3>
 				<div class="r r-4 r-jc-s">
@@ -1726,7 +1726,7 @@
 					</div>
 				</div>
 
-				<h2 class="h2">Modal Buttons</h2>
+				<h2 class="h2">Modal Buttons <small class="text-orange">(requires modalButtons.js)</small></h2>
 
 				<div class="r r-2 r-jc-s">
 					<div class="modal-btn orange list-item-container">
@@ -1873,11 +1873,18 @@
 					</div>
 				</div>
 
-				<h2 class="h2">Modals</h2>
+				<h2 class="h2">Modals <small class="text-orange">(requires modals.js)</small></h2>
 
 				<div class="r">
 					<div class="c-12">
 						<div>
+							<button type="button" data-modal="partials/modalContent.html" class="btn orange">Basic modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-size="tall" class="btn mauve">Tall modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-size="wide" class="btn turquoise">Wide modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-size="medium" class="btn teal">Medium modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-size="large" class="btn yellow">Large modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-size="full" class="btn crimson">Full modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-close="false" class="btn black">No close button</button>
 						</div>
 					</div>
 				</div>
@@ -1963,6 +1970,15 @@
 					</div>
 				</div>
 
+			</div>
+		</div>
+
+		<div id="modal-container" class="modal-container">
+			<div class="modal">
+				<a href="#" class="close">
+					<i class="fa fa-times"></i>
+				</a>
+				<iframe src="" data-link="" name="modal"></iframe>
 			</div>
 		</div>
 
