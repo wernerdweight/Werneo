@@ -36,13 +36,6 @@
     white-space: nowrap
     overflow: hidden
 
-/// pagination show-hide mixin
-=display-child($n)
-    @for $i from 1 through $n
-        &:nth-child(#{$n})
-            a
-                display: inline-block
-
 =text-aligns($scopeName)
     .#{$scopeName}ta-l
         text-align: left

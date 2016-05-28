@@ -2,21 +2,21 @@
 ////            WD PROGRESSBAR
 ///////////////////////////////////////////////////////////////////////////////////
 
-.wd-progressbar
+.progressbar
     width: 100%
     display: block
-    height: 10px
-    padding: 3px
+    height: 1.5rem
+    padding: 0.3rem
     background-color: $wdWerneoGreyLight
     box-sizing: border-box
 
     /// size
-    &.small
-        height: 0.6rem
+    &.sm
+        height: 1rem
         padding: 0.2rem
-    &.big
-        height: 1.5rem
-        padding: 0.5rem
+    &.lg
+        height: 2rem
+        padding: 0.4rem
 
     /// color
     @each $name, $color, in $wdWerneoColors
