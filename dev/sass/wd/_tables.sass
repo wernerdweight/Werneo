@@ -3,31 +3,57 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
 table
-	&.wd-table
+	&.table
 		width: 100%
-		background-color: $wdWerneoWhite
 		border-collapse: collapse
 		border-spacing: 0
 		th
 			padding: 1rem
-			color: $wdWerneoWhite
 			font-weight: $wdWerneoNormal
 		td
 			padding: 0.5rem 1rem
-			font-weight: $wdWerneoLighter
 		th,td
 			text-align: center
-			&:first-child
-				text-align: left
-			&:last-child
-				text-align: right
+		&.first-left
+			th,td
+				&:first-child
+					text-align: left
+		&.last-right
+			th,td
+				&:last-child
+					text-align: right
+		&.striped
+			tr
+				&:nth-child(2n)
+					td
+						background-color: rgba($wdWerneoGreyLightest,0.1)
+		&.lined
+			tr
+				border-bottom: 0.1rem solid $wdWerneoGreyLightest
+			thead
+				tr
+					border-bottom: none
+		&.bordered
+			th,td
+				border: 0.1rem solid $wdWerneoGreyLightest
 		
 		/// colors
 		@each $name, $color, in $wdWerneoColors
+			$inverseColor: $wdWerneoWhite
+			@if $name == 'white' or $name == 'grey-light'
+				$inverseColor: $wdWerneoGreyMedium
 			&.#{$name}
 				th
 					background-color: $color
-				tr
-					&:nth-child(2n)
-						td
-							background-color: rgba($color,0.1)
+					color: $inverseColor
+				&.striped
+					tr
+						&:nth-child(2n)
+							td
+								background-color: rgba($color,0.1)
+				&.lined
+					tr
+						border-bottom-color: $color
+				&.bordered
+					th,td
+						border-color: $color
