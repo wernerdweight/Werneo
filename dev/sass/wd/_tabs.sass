@@ -7,7 +7,6 @@
         .tab-nav
             position: relative
             border-bottom: none
-            border-right: 0.1rem solid $wdWerneoGreyLight
             z-index: 2
             .nav
                 display: block
@@ -15,35 +14,48 @@
                 border-right: none
                 margin-bottom: 0.2rem
                 padding: 0.5rem 1rem
+                margin-right: -0.1rem
                 &.active
-                    border-left: 0.2rem solid $wdWerneoTurquoise
-                    border-right: 0.1rem solid $wdWerneoWhite
-                    margin-right: -0.1rem
-                    margin-bottom: 0
+                    border-left: 0.4rem solid $wdWerneoGreyDark
+                    margin-right: -0.2rem
                     border-bottom: 0.1rem solid $wdWerneoGreyLight
                     border-top: 0.1rem solid $wdWerneoGreyLight
-                    span
-                        &.badge
-                            opacity: 1
-                            color: $wdWerneoWhite
-                            text-shadow: 0.1rem 0.1rem 0.2rem rgba($wdWerneoBlack,0.5)
-                            border: 0.1rem solid $wdWerneoGreyMedium
-                p
-                    display: inline-block
-                span
-                    display: inline-block
-                    &.badge
-                        opacity: 0.5
-                        text-shadow: none
-                        border: 0.1rem solid transparent
-            &.hide-title
-                .title
-                    display: none
         .tab-content
             border-top: 0.1rem solid $wdWerneoGreyLight
+            border-left: 0.1rem solid $wdWerneoGreyLight
             position: relative
             z-index: 1
-            margin-left: -0.1rem
+
+    /// colors
+    @each $name, $color, in $wdWerneoColors
+        $inverseColor: $wdWerneoWhite
+        @if $name == 'white' or $name == 'grey-light'
+            $inverseColor: $wdWerneoGreyMedium
+        &.#{$name}
+            .tab-nav
+                border-bottom-color: $color
+                .nav
+                    background-color: darken($color,20%)
+                    border-color: $color
+                    &:hover
+                        background-color: darken($color,10%)
+                    &.active
+                        background-color: $inverseColor
+                        border-top-color: $color
+                        border-bottom-color: $inverseColor
+                        label
+                            color: $color
+            .tab-content
+                border-color: $color
+            &.full-colored
+                .tab-nav
+                    .nav
+                        &.active
+                            background-color: $color
+                            border-top-color: $inverseColor
+                            border-bottom-color: $color
+                            label
+                                color: $inverseColor
 
 .tab-nav
     border-bottom: 0.1rem solid $wdWerneoGreyLight
@@ -70,25 +82,6 @@
             display: block
             margin: 0
             color: $wdWerneoWhite
-
-    /// colors
-    @each $name, $color, in $wdWerneoColors
-        $inverseColor: $wdWerneoWhite
-        @if $name == 'white' or $name == 'grey-light'
-            $inverseColor: $wdWerneoGreyMedium
-        &.#{$name}
-            border-bottom-color: $color
-            .nav
-                background-color: darken($color,20%)
-                border-color: $color
-                &:hover
-                    background-color: darken($color,10%)
-                &.active
-                    background-color: $color
-                    border-top-color: $inverseColor
-                    border-bottom-color: $color
-                    label
-                        color: $inverseColor
 
 .tab-content
     border: 0.1rem solid $wdWerneoGreyLight
