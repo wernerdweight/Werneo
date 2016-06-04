@@ -47,6 +47,7 @@ module.exports = function (grunt) {
                     '<%= dirs.src.javascript %>/wd/modalButtons.js',
                     '<%= dirs.src.javascript %>/wd/modals.js',
                     '<%= dirs.src.javascript %>/wd/tabs.js',
+                    '<%= dirs.src.javascript %>/wd/timeline.js',
                     '<%= dirs.src.javascript %>/wd/main.js',
                 ]
             }

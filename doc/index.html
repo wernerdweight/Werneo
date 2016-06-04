@@ -931,7 +931,7 @@
 				<h3>Types</h3>
 				<div class="r r-4">
 					<div>
-						<button class="btn full light-grey" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>Some boring text that you want to show</p>',null);">Trigger default message</button>
+						<button class="btn full grey-light" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>Some boring text that you want to show</p>',null);">Trigger default message</button>
 					</div>
 					<div>
 						<button class="btn full teal" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><strong>You\'ve done it!</strong> You are now the president of the world!</p>','success');">Trigger success message</button>
@@ -947,7 +947,7 @@
 				<p>You can put practically anything inside the flash message, it accepts HTML content and message type.</p>
 				<div class="r r-4">
 					<div>
-						<button class="btn full light-grey" type="button" onclick="werneo.plugins.flashMessages.createMessage('<img src=\'https://media1.giphy.com/media/FxufOs6bQwxO0/200.gif\' width=\'100%\'>',null);">What about an image?</button>
+						<button class="btn full grey-light" type="button" onclick="werneo.plugins.flashMessages.createMessage('<img src=\'https://media1.giphy.com/media/FxufOs6bQwxO0/200.gif\' width=\'100%\'>',null);">What about an image?</button>
 					</div>
 					<div>
 						<button class="btn full teal" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><i class=\'fa fa-check\'></i> <strong>You\'ve done it!</strong></p>','success');">Icons?</button>
@@ -4292,11 +4292,105 @@
 					</div>
 				</div>
 
-				<h2 class="h2">Timeline</h2>
+				<h2 class="h2">Timeline <small class="text-orange">(requires timeline.js)</small></h2>
+				<p>Color classes change color of the vertical line and borders around milestone icon (default is white).</p>
+				<p class="text-yellow">Use .bg-[color] classes to adjust milestone's icon and content color.</p>
 
 				<div class="r">
 					<div class="c-12">
 						<div>
+							<div class="timeline">
+								<div class="timeline-milestone">
+									<div class="timeline-milestone-icon bg-turquoise">
+										<i class="fa fa-building"></i>
+									</div>
+									<div class="timeline-milestone-content bg-turquoise">
+										<p class="subheadline mb-1">Heading</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div>
+								<div class="timeline-milestone">
+									<div class="timeline-milestone-icon bg-teal">
+										<i class="fa fa-laptop"></i>
+									</div>
+									<div class="timeline-milestone-content bg-teal">
+										<p class="subheadline mb-1">Heading</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div>
+								<div class="timeline-milestone">
+									<div class="timeline-milestone-icon bg-yellow">
+										<i class="fa fa-video-camera"></i>
+									</div>
+									<div class="timeline-milestone-content bg-yellow">
+										<p class="subheadline mb-1">Heading</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div>
+								<div class="timeline-milestone">
+									<div class="timeline-milestone-icon bg-orange">
+										<i class="fa fa-tint"></i>
+									</div>
+									<div class="timeline-milestone-content bg-orange">
+										<p class="subheadline mb-1">Heading</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div>
+								<div class="timeline-milestone">
+									<div class="timeline-milestone-icon bg-crimson">
+										<i class="fa fa-diamond"></i>
+									</div>
+									<div class="timeline-milestone-content bg-crimson">
+										<p class="subheadline mb-1">Heading</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div>
+								<div class="timeline-milestone">
+									<div class="timeline-milestone-icon bg-mauve">
+										<i class="fa fa-bullhorn"></i>
+									</div>
+									<div class="timeline-milestone-content bg-mauve">
+										<p class="subheadline mb-1">Heading</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div>
+								<div class="timeline-milestone">
+									<div class="timeline-milestone-icon bg-black">
+										<i class="fa fa-eye"></i>
+									</div>
+									<div class="timeline-milestone-content bg-black">
+										<p class="subheadline mb-1">Heading</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div>
+								<div class="timeline-milestone">
+									<div class="timeline-milestone-icon bg-grey-dark">
+										<i class="fa fa-eye"></i>
+									</div>
+									<div class="timeline-milestone-content bg-grey-dark">
+										<p class="subheadline mb-1">Heading</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div>
+								<div class="timeline-milestone">
+									<div class="timeline-milestone-icon bg-grey-light">
+										<i class="fa fa-eye"></i>
+									</div>
+									<div class="timeline-milestone-content bg-grey-light">
+										<p class="subheadline mb-1">Heading</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div>
+								<div class="timeline-milestone">
+									<div class="timeline-milestone-icon bg-white">
+										<i class="fa fa-eye"></i>
+									</div>
+									<div class="timeline-milestone-content bg-white">
+										<p class="subheadline mb-1">Heading</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
