@@ -55,15 +55,24 @@
             $inverseColor: $wdWerneoGreyMedium
         &.#{$name}
             .label
-                background-color: lighten($color,5%)
-                color: darken($inverseColor,5%)
-                border-bottom-color: $color
                 &.folder
-                    background-color: $color
-                    border-bottom-color: darken($color,10%)
                     &:hover
-                        border-bottom-color: $inverseColor
+                        border-bottom-color: $color
                 &.active
+                    border-bottom-color: lighten($color,10%)
+                    background-color: $color
+                    color: $inverseColor
+            &.full-colored
+                .label
+                    background-color: lighten($color,5%)
+                    color: darken($inverseColor,5%)
                     border-bottom-color: $color
-                    background-color: $inverseColor
-                    color: $color
+                    &.folder
+                        background-color: $color
+                        border-bottom-color: darken($color,10%)
+                        &:hover
+                            border-bottom-color: $inverseColor
+                    &.active
+                        border-bottom-color: $color
+                        background-color: $inverseColor
+                        color: $color

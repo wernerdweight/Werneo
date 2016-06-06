@@ -2,88 +2,53 @@
 ////            WD TYPOGRAPHY
 ///////////////////////////////////////////////////////////////////////////////////
 
-/// placeholders
-%headline
+p,h1,h2,h3,h4,h5,h6,label
+    font-size: $wdWerneoBasicFontSize
+    line-height: 150%
     font-weight: $wdWerneoNormal
-    font-size: 2.2rem !important
-    +responsive(desktop)
-        font-size: 2.6rem !important
-%subheadline
-    font-size: 2rem !important
-    font-weight: $wdWerneoNormal
+    margin: 0
+    &.h1
+        font-weight: $wdWerneoBold
+        font-size: 175%
+    &.h2
+        font-size: 150%
+        font-weight: $wdWerneoBold
+    &.h3
+        font-size: 125%
+        font-weight: $wdWerneoBold
+    &.h4
+        font-weight: $wdWerneoBold
+    &.h5
+        text-decoration: underline
+    &.h6
+        font-size: 85%
+        text-decoration: underline
+    article &
+        margin-bottom: 0.5em
 
+big
+    font-size: 120%
+small
+    font-size: 80%
 
 /// default alignment (non-responsive)
 +text-aligns('')
-
 /// responsive alignment
 @each $scope, $name in $wdFlexerScopes
     +responsive($scope)
         +text-aligns($name + '-')
 
-/// overrides
-.no-ellipsis
+/// ellipsis
+.no-hellip
     white-space: normal !important
 .hellip
     +hellip
 
 /// transformations
-.wd-tt-uc
+.tt-uc
     text-transform: uppercase
-.wd-tt-no
-    text-transform: none
-
-p,h1,h2,h3,h4,h5,h6,label
-    font-size: $wdWerneoBasicFontSize
-    line-height: 150%
-    font-weight: $wdWerneoLighter
-    margin: 0
-    +responsive(tablet)
-        font-size: 1.3rem
-    +responsive(desktop)
-        font-size: 1.6rem
-    &.normal    /// to normalize when overriden by parent
-        font-size: 1.6rem
-    &.headline,&.h1
-        @extend %headline
-    &.subheadline,&.h2
-        @extend %subheadline
-    &.h3
-        font-size: 1.8rem
-        font-weight: $wdWerneoBold
-        margin-bottom: 0.8rem
-    &.h4
-        font-weight: $wdWerneoBold
-        margin-bottom: 0.5rem
-    &.h5
-        text-decoration: underline
-        margin-bottom: 0.5rem
-    &.h6
-        font-size: 1.25rem
-        text-decoration: underline
-        margin-bottom: 0.25rem
-    &.emph
-        font-size: 1.75rem
-        font-weight: $wdWerneoNormal
-        margin-bottom: 1rem
-    &.small
-        font-size: 1.1rem
-    .text-box &
-        margin-bottom: 0.5em
-    small,big
-        display: inline
-
-big
-    font-size: 120%
-    display: inline-block
-small
-    font-size: 80%
-    display: inline-block
-
-.headline
-    @extend %headline
-.subheadline
-    @extend %subheadline
+.tt-lc
+    text-transform: lowercase
 
 /// colors
 @each $name,$color in $wdWerneoColors
