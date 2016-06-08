@@ -243,6 +243,44 @@
 					</div>
 				</div>
 
+				<h2 class="h2">Code</h2>
+				<p class="text-yellow">User .bg-[color] classes and .text-[color] classes to change colors of <code>code</code> and <code>pre</code> elements.</p>
+				<div class="r">
+					<div class="c-12">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <code>display: inline;</code> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <code>&lt;code&gt;foo();&lt;/code&gt;</code> nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+				<div class="r">
+					<div class="c-12">
+						<pre class="bg-black">
+							<code>
+<span class="text-grey-light">/// dev/wd/core.js</span>
+
+<span class="text-turquoise">function</span> <span class="text-yellow">Werneo</span>(){
+
+	this.plugins <span class="text-crimson">=</span> [];
+	this.pluginNames <span class="text-crimson">=</span> [];
+
+	this.<span class="text-yellow">registerPlugin</span> <span class="text-crimson">=</span> <span class="text-turquoise">function</span>(<span class="text-orange">name</span>,<span class="text-orange">plugin</span>){
+		this.plugins[name] <span class="text-crimson">=</span> plugin;
+		this.pluginNames.<span class="text-turquoise">push</span>(name);
+	};
+
+	this.<span class="text-yellow">invoke</span> = <span class="text-turquoise">function</span>(){
+		<span class="text-turquoise">var</span> i;
+		<span class="text-crimson">for</span> (i <span class="text-crimson">=</span> <span class="text-mauve">0</span>; i <span class="text-crimson">&lt;</span> this.pluginNames.length; i<span class="text-crimson">++</span>) {
+			this.plugins[this.pluginNames[i]].invoke();
+		}
+	};
+
+}
+
+<span class="text-turquoise">var</span> werneo = <span class="text-crimson">new</span> Werneo();
+							</code>
+						</pre>
+					</div>
+				</div>
+
 				<h2 class="h2">Dropdowns <small class="text-orange">(requires dropdowns.js)</small></h2>
 
 				<h3>Multilevel dropdown that submits its parent form on select</h3>
@@ -6738,7 +6776,7 @@
 						</div>
 					</div>
 					<div class="widget bg-white ta-c">
-						<img src="http://loremflickr.com/g/480/360/married+couple/all" width="100%">
+						<img src="http://loremflickr.com/g/480/360/wedding/all" width="100%">
 						<div class="widget-section bg-mauve">
 							<p class="h3">Caption</p>
 						</div>
