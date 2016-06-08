@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Werner Dweight's Werneo</title>
+		<link rel="stylesheet" href="../dist/css/werneo.css">
+		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+		<link rel="stylesheet" href="doc.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header class="bg-mauve fixed-header">
+			<div class="r mtb-0">
+				<div class="c-12">
+					<div class="r r-fixed">
+						<div class="c-8">
+							<div class="title">
+								<small class="ib">Werner<br>Dweight's</small>
+								<h1 class="h1 tt-uc ib ml-1">
+									Werneo <small class="tt-lc text-grey-light">/ Dropdowns</small>
+								</h1>
+							</div>
+						</div>
+						<div class="c-4">
+							<div class="dropdown mauve full-colored">
+								<span class="dropdown-value"></span>
+								<div class="dropdown-handle">
+									<div class="dropdown-chevron"></div>
+								</div>
+								<div class="dropdown-list">
+									<a href="index.html" class="dropdown-option sm">Home</a>
+									<a href="backgrounds.html" class="dropdown-option sm">Backgrounds</a>
+									<a href="badges.html" class="dropdown-option sm">Badges</a>
+									<a href="breadcrumbs.html" class="dropdown-option sm">Breadcrumbs</a>
+									<a href="buttons.html" class="dropdown-option sm">Buttons</a>
+									<a href="code.html" class="dropdown-option sm">Code</a>
+									<a href="dropdowns.html" class="dropdown-option sm active">Dropdowns</a>
+									<a href="dynamicFilters.html" class="dropdown-option sm">Dynamic Filters</a>
+									<a href="flashMessages.html" class="dropdown-option sm">Flash Messages</a>
+									<a href="forms.html" class="dropdown-option sm">Forms</a>
+									<a href="gallery.html" class="dropdown-option sm">Gallery</a>
+									<a href="groups.html" class="dropdown-option sm">Groups</a>
+									<a href="lists.html" class="dropdown-option sm">Lists</a>
+									<a href="modalButtons.html" class="dropdown-option sm">Modal Buttons</a>
+									<a href="modals.html" class="dropdown-option sm">Modals</a>
+									<a href="pagination.html" class="dropdown-option sm">Pagination</a>
+									<a href="progressbars.html" class="dropdown-option sm">Progressbars</a>
+									<a href="scrollbars.html" class="dropdown-option sm">Scrollbars</a>
+									<a href="tables.html" class="dropdown-option sm">Tables</a>
+									<a href="tabs.html" class="dropdown-option sm">Tabs</a>
+									<a href="timeline.html" class="dropdown-option sm">Timeline</a>
+									<a href="treeView.html" class="dropdown-option sm">Tree View</a>
+									<a href="typography.html" class="dropdown-option sm">Typography</a>
+									<a href="widgets.html" class="dropdown-option sm">Widgets</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="r r-fixed">
+			<div class="c-12">
+
+				<h2 class="h2">Dropdowns <small class="text-orange">(requires dropdowns.js)</small></h2>
+
+				<h3>Multilevel dropdown that submits its parent form on select</h3>
+				<div class="r">
+					<div class="c-12">
+						<form action="dropdowns.html" method="get">
+							<input type="hidden" name="dropdown-test-field" id="dropdown-test-field" value="">
+							<div class="dropdown turquoise" data-input-id="dropdown-test-field" data-submit="true">
+								<span class="dropdown-value">Choose</span>
+								<div class="dropdown-handle">
+									<div class="dropdown-chevron"></div>
+								</div>
+								<div class="dropdown-list">
+									<span class="dropdown-option" data-value="1">Option 1</span>
+									<div class="dropdown-level">
+										<span class="dropdown-option" data-value="1.1">Option 1.1</span>
+										<div class="dropdown-level">
+											<span class="dropdown-option" data-value="1-1-1" data-label="Different 1.1.1">Option 1.1.1</span>
+											<span class="dropdown-option" data-value="1-1-2" data-label="Different 1.1.2">Option 1.1.2</span>
+											<span class="dropdown-option" data-value="1-1-3" data-label="Different 1.1.3">Option 1.1.3</span>
+											<span class="dropdown-option" data-value="1-1-4" data-label="Different 1.1.4">Option 1.1.4</span>
+											<span class="dropdown-option" data-value="1-1-5" data-label="Different 1.1.5">Option 1.1.5</span>
+										</div>
+										<span class="dropdown-option" data-value="1.2">Option 1.2</span>
+										<span class="dropdown-option" data-value="1.3">Option 1.3</span>
+										<span class="dropdown-option" data-value="1.4">Option 1.4</span>
+										<span class="dropdown-option" data-value="1.5">Option 1.5</span>
+									</div>
+									<span class="dropdown-option" data-value="2">Option 2</span>
+									<span class="dropdown-option" data-value="3">Option 3</span>
+									<span class="dropdown-option" data-value="4">Option 4</span>
+									<span class="dropdown-divider"></span>
+									<span class="dropdown-option" data-value="5">After divider 1</span>
+									<span class="dropdown-option" data-value="6">After divider 2</span>
+									<span class="dropdown-option" data-value="7">After divider 3</span>
+									<span class="dropdown-option" data-value="8">After divider 4</span>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<h3>Different colored dropdowns</h3>
+				<h4>Basic</h4>
+				<div class="r r-4">
+					<div class="c-0">
+						<div class="dropdown turquoise">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown teal">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown yellow">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown orange">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown crimson">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown mauve">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown black">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown grey-dark">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown grey-light">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown white">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h4>&amp;.half-colored</h4>
+				<div class="r r-4">
+					<div class="c-0">
+						<div class="dropdown turquoise half-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown teal half-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown yellow half-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown orange half-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown crimson half-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown mauve half-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown black half-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown grey-dark half-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown grey-light half-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown white half-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h4>&amp;.full-colored</h4>
+				<div class="r r-4">
+					<div class="c-0">
+						<div class="dropdown turquoise full-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown teal full-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown yellow full-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown orange full-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown crimson full-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown mauve full-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown black full-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown grey-dark full-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown grey-light full-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+					<div class="c-0">
+						<div class="dropdown white full-colored">
+							<span class="dropdown-value">Choose</span>
+							<div class="dropdown-handle">
+								<div class="dropdown-chevron"></div>
+							</div>
+							<div class="dropdown-list">
+								<span class="dropdown-option" data-value="1">Option 1</span>
+								<span class="dropdown-option" data-value="2">Option 2</span>
+								<span class="dropdown-option" data-value="3">Option 3</span>
+								<span class="dropdown-option" data-value="4">Option 4</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../dist/js/werneo.js"></script>
+
+	</body>
+</html>

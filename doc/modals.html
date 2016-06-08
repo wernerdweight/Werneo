@@ -18,7 +18,7 @@
 							<div class="title">
 								<small class="ib">Werner<br>Dweight's</small>
 								<h1 class="h1 tt-uc ib ml-1">
-									Werneo
+									Werneo <small class="tt-lc text-grey-light">/ Modals</small>
 								</h1>
 							</div>
 						</div>
@@ -29,7 +29,7 @@
 									<div class="dropdown-chevron"></div>
 								</div>
 								<div class="dropdown-list">
-									<a href="index.html" class="dropdown-option sm active">Home</a>
+									<a href="index.html" class="dropdown-option sm">Home</a>
 									<a href="backgrounds.html" class="dropdown-option sm">Backgrounds</a>
 									<a href="badges.html" class="dropdown-option sm">Badges</a>
 									<a href="breadcrumbs.html" class="dropdown-option sm">Breadcrumbs</a>
@@ -43,7 +43,7 @@
 									<a href="groups.html" class="dropdown-option sm">Groups</a>
 									<a href="lists.html" class="dropdown-option sm">Lists</a>
 									<a href="modalButtons.html" class="dropdown-option sm">Modal Buttons</a>
-									<a href="modals.html" class="dropdown-option sm">Modals</a>
+									<a href="modals.html" class="dropdown-option sm active">Modals</a>
 									<a href="pagination.html" class="dropdown-option sm">Pagination</a>
 									<a href="progressbars.html" class="dropdown-option sm">Progressbars</a>
 									<a href="scrollbars.html" class="dropdown-option sm">Scrollbars</a>
@@ -63,8 +63,31 @@
 		<div class="r r-fixed">
 			<div class="c-12">
 
-				<p class="h2 text-orange">Under development (navigate through the dropdown menu in header to see components)</p>
+				<h2 class="h2">Modals <small class="text-orange">(requires modals.js)</small></h2>
 
+				<div class="r">
+					<div class="c-12">
+						<div>
+							<button type="button" data-modal="partials/modalContent.html" class="btn orange">Basic modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-size="tall" class="btn mauve">Tall modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-size="wide" class="btn turquoise">Wide modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-size="medium" class="btn teal">Medium modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-size="large" class="btn yellow">Large modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-size="full" class="btn crimson">Full modal</button>
+							<button type="button" data-modal="partials/modalContent.html" data-close="false" class="btn black">No close button</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="modal-container" class="modal-container">
+			<div class="modal">
+				<a href="#" class="close">
+					<i class="fa fa-times"></i>
+				</a>
+				<iframe src="" data-link="" name="modal"></iframe>
 			</div>
 		</div>
 

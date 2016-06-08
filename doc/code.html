@@ -18,7 +18,7 @@
 							<div class="title">
 								<small class="ib">Werner<br>Dweight's</small>
 								<h1 class="h1 tt-uc ib ml-1">
-									Werneo
+									Werneo <small class="tt-lc text-grey-light">/ Code</small>
 								</h1>
 							</div>
 						</div>
@@ -29,12 +29,12 @@
 									<div class="dropdown-chevron"></div>
 								</div>
 								<div class="dropdown-list">
-									<a href="index.html" class="dropdown-option sm active">Home</a>
+									<a href="index.html" class="dropdown-option sm">Home</a>
 									<a href="backgrounds.html" class="dropdown-option sm">Backgrounds</a>
 									<a href="badges.html" class="dropdown-option sm">Badges</a>
 									<a href="breadcrumbs.html" class="dropdown-option sm">Breadcrumbs</a>
 									<a href="buttons.html" class="dropdown-option sm">Buttons</a>
-									<a href="code.html" class="dropdown-option sm">Code</a>
+									<a href="code.html" class="dropdown-option sm active">Code</a>
 									<a href="dropdowns.html" class="dropdown-option sm">Dropdowns</a>
 									<a href="dynamicFilters.html" class="dropdown-option sm">Dynamic Filters</a>
 									<a href="flashMessages.html" class="dropdown-option sm">Flash Messages</a>
@@ -63,7 +63,43 @@
 		<div class="r r-fixed">
 			<div class="c-12">
 
-				<p class="h2 text-orange">Under development (navigate through the dropdown menu in header to see components)</p>
+				<h2 class="h2">Code</h2>
+				<p class="text-yellow">User .bg-[color] classes and .text-[color] classes to change colors of <code>code</code> and <code>pre</code> elements.</p>
+				<div class="r">
+					<div class="c-12">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <code>display: inline;</code> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <code>&lt;code&gt;foo();&lt;/code&gt;</code> nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+				<div class="r">
+					<div class="c-12">
+						<pre class="bg-black">
+							<code>
+<span class="text-grey-light">/// dev/wd/core.js</span>
+
+<span class="text-turquoise">function</span> <span class="text-yellow">Werneo</span>(){
+
+	this.plugins <span class="text-crimson">=</span> [];
+	this.pluginNames <span class="text-crimson">=</span> [];
+
+	this.<span class="text-yellow">registerPlugin</span> <span class="text-crimson">=</span> <span class="text-turquoise">function</span>(<span class="text-orange">name</span>,<span class="text-orange">plugin</span>){
+		this.plugins[name] <span class="text-crimson">=</span> plugin;
+		this.pluginNames.<span class="text-turquoise">push</span>(name);
+	};
+
+	this.<span class="text-yellow">invoke</span> = <span class="text-turquoise">function</span>(){
+		<span class="text-turquoise">var</span> i;
+		<span class="text-crimson">for</span> (i <span class="text-crimson">=</span> <span class="text-mauve">0</span>; i <span class="text-crimson">&lt;</span> this.pluginNames.length; i<span class="text-crimson">++</span>) {
+			this.plugins[this.pluginNames[i]].invoke();
+		}
+	};
+
+}
+
+<span class="text-turquoise">var</span> werneo = <span class="text-crimson">new</span> Werneo();
+							</code>
+						</pre>
+					</div>
+				</div>
 
 			</div>
 		</div>
