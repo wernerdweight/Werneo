@@ -969,35 +969,36 @@ html {
 body {
   font-family: Helevtica, Arial, sans-serif;
   font-size: 1.6rem;
+  margin: 0;
 }
 
-/* line 17, ../../dev/sass/wd/_core.sass */
-.ib {
-  display: inline-block;
-}
-
-/* line 20, ../../dev/sass/wd/_core.sass */
+/* line 18, ../../dev/sass/wd/_core.sass */
 .disable-transition {
   -webkit-transition: none !important;
           transition: none !important;
 }
 
-/* line 23, ../../dev/sass/wd/_core.sass */
+/* line 21, ../../dev/sass/wd/_core.sass */
+.ib {
+  display: inline-block;
+}
+
+/* line 24, ../../dev/sass/wd/_core.sass */
 .w-full {
   width: 100%;
 }
 
-/* line 25, ../../dev/sass/wd/_core.sass */
+/* line 26, ../../dev/sass/wd/_core.sass */
 .h-full {
   height: 100%;
 }
 
-/* line 27, ../../dev/sass/wd/_core.sass */
+/* line 28, ../../dev/sass/wd/_core.sass */
 .mw-full {
   max-width: 100%;
 }
 
-/* line 29, ../../dev/sass/wd/_core.sass */
+/* line 30, ../../dev/sass/wd/_core.sass */
 .mh-full {
   max-height: 100%;
 }
@@ -1029,52 +1030,56 @@ body {
   color: #fff;
   background-color: #5af;
 }
-/* line 31, ../../dev/sass/wd/_dropdowns.sass */
+/* line 32, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.turquoise .dropdown-handle.active .dropdown-chevron:before, .dropdown.turquoise .dropdown-handle.active .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 34, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-handle:focus, .dropdown.turquoise .dropdown-handle:active, .dropdown.turquoise .dropdown-handle.active {
   border-color: #5af;
 }
-/* line 34, ../../dev/sass/wd/_dropdowns.sass */
+/* line 37, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-value.active {
   border-color: #5af;
 }
-/* line 36, ../../dev/sass/wd/_dropdowns.sass */
+/* line 39, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-option {
   color: #fff;
   border-top-color: #69b4ff;
 }
-/* line 39, ../../dev/sass/wd/_dropdowns.sass */
+/* line 42, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-option:hover {
   background-color: #6fb7ff;
 }
-/* line 41, ../../dev/sass/wd/_dropdowns.sass */
+/* line 44, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-option.active {
   background-color: #5af;
 }
-/* line 44, ../../dev/sass/wd/_dropdowns.sass */
+/* line 47, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-level .dropdown-option {
   background-color: #3c9dff;
 }
-/* line 46, ../../dev/sass/wd/_dropdowns.sass */
+/* line 49, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-level .dropdown-option:hover {
   background-color: #64b2ff;
 }
-/* line 49, ../../dev/sass/wd/_dropdowns.sass */
+/* line 52, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-level .dropdown-level .dropdown-option {
   background-color: #2c96ff;
 }
-/* line 51, ../../dev/sass/wd/_dropdowns.sass */
+/* line 54, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #5af;
 }
-/* line 54, ../../dev/sass/wd/_dropdowns.sass */
+/* line 57, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   background-color: #1d8eff;
 }
-/* line 56, ../../dev/sass/wd/_dropdowns.sass */
+/* line 59, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise .dropdown-level .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #5af;
 }
-/* line 59, ../../dev/sass/wd/_dropdowns.sass */
+/* line 62, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise.half-colored .dropdown-handle, .dropdown.turquoise.full-colored .dropdown-handle {
   color: #fff;
   border-color: #5af;
@@ -1087,11 +1092,15 @@ body {
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
 }
-/* line 63, ../../dev/sass/wd/_dropdowns.sass */
+/* line 66, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise.half-colored .dropdown-handle:hover, .dropdown.turquoise.half-colored .dropdown-handle:focus, .dropdown.turquoise.half-colored .dropdown-handle:active, .dropdown.turquoise.half-colored .dropdown-handle.active, .dropdown.turquoise.full-colored .dropdown-handle:hover, .dropdown.turquoise.full-colored .dropdown-handle:focus, .dropdown.turquoise.full-colored .dropdown-handle:active, .dropdown.turquoise.full-colored .dropdown-handle.active {
   background-position: 100% 100%;
 }
-/* line 66, ../../dev/sass/wd/_dropdowns.sass */
+/* line 69, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.turquoise.half-colored .dropdown-chevron:before, .dropdown.turquoise.half-colored .dropdown-chevron:after, .dropdown.turquoise.full-colored .dropdown-chevron:before, .dropdown.turquoise.full-colored .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 72, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.turquoise.full-colored .dropdown-value {
   background-color: #5af;
   border-color: #5af;
@@ -1107,52 +1116,56 @@ body {
   color: #fff;
   background-color: #028428;
 }
-/* line 31, ../../dev/sass/wd/_dropdowns.sass */
+/* line 32, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.teal .dropdown-handle.active .dropdown-chevron:before, .dropdown.teal .dropdown-handle.active .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 34, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-handle:focus, .dropdown.teal .dropdown-handle:active, .dropdown.teal .dropdown-handle.active {
   border-color: #028428;
 }
-/* line 34, ../../dev/sass/wd/_dropdowns.sass */
+/* line 37, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-value.active {
   border-color: #028428;
 }
-/* line 36, ../../dev/sass/wd/_dropdowns.sass */
+/* line 39, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-option {
   color: #fff;
   border-top-color: #02982e;
 }
-/* line 39, ../../dev/sass/wd/_dropdowns.sass */
+/* line 42, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-option:hover {
   background-color: #029d30;
 }
-/* line 41, ../../dev/sass/wd/_dropdowns.sass */
+/* line 44, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-option.active {
   background-color: #028428;
 }
-/* line 44, ../../dev/sass/wd/_dropdowns.sass */
+/* line 47, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-level .dropdown-option {
   background-color: #026b20;
 }
-/* line 46, ../../dev/sass/wd/_dropdowns.sass */
+/* line 49, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-level .dropdown-option:hover {
   background-color: #02932d;
 }
-/* line 49, ../../dev/sass/wd/_dropdowns.sass */
+/* line 52, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-level .dropdown-level .dropdown-option {
   background-color: #015c1c;
 }
-/* line 51, ../../dev/sass/wd/_dropdowns.sass */
+/* line 54, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #028428;
 }
-/* line 54, ../../dev/sass/wd/_dropdowns.sass */
+/* line 57, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   background-color: #014d17;
 }
-/* line 56, ../../dev/sass/wd/_dropdowns.sass */
+/* line 59, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal .dropdown-level .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #028428;
 }
-/* line 59, ../../dev/sass/wd/_dropdowns.sass */
+/* line 62, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal.half-colored .dropdown-handle, .dropdown.teal.full-colored .dropdown-handle {
   color: #fff;
   border-color: #028428;
@@ -1165,11 +1178,15 @@ body {
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
 }
-/* line 63, ../../dev/sass/wd/_dropdowns.sass */
+/* line 66, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal.half-colored .dropdown-handle:hover, .dropdown.teal.half-colored .dropdown-handle:focus, .dropdown.teal.half-colored .dropdown-handle:active, .dropdown.teal.half-colored .dropdown-handle.active, .dropdown.teal.full-colored .dropdown-handle:hover, .dropdown.teal.full-colored .dropdown-handle:focus, .dropdown.teal.full-colored .dropdown-handle:active, .dropdown.teal.full-colored .dropdown-handle.active {
   background-position: 100% 100%;
 }
-/* line 66, ../../dev/sass/wd/_dropdowns.sass */
+/* line 69, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.teal.half-colored .dropdown-chevron:before, .dropdown.teal.half-colored .dropdown-chevron:after, .dropdown.teal.full-colored .dropdown-chevron:before, .dropdown.teal.full-colored .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 72, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.teal.full-colored .dropdown-value {
   background-color: #028428;
   border-color: #028428;
@@ -1185,52 +1202,56 @@ body {
   color: #fff;
   background-color: #ffc200;
 }
-/* line 31, ../../dev/sass/wd/_dropdowns.sass */
+/* line 32, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.yellow .dropdown-handle.active .dropdown-chevron:before, .dropdown.yellow .dropdown-handle.active .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 34, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-handle:focus, .dropdown.yellow .dropdown-handle:active, .dropdown.yellow .dropdown-handle.active {
   border-color: #ffc200;
 }
-/* line 34, ../../dev/sass/wd/_dropdowns.sass */
+/* line 37, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-value.active {
   border-color: #ffc200;
 }
-/* line 36, ../../dev/sass/wd/_dropdowns.sass */
+/* line 39, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-option {
   color: #fff;
   border-top-color: #ffc714;
 }
-/* line 39, ../../dev/sass/wd/_dropdowns.sass */
+/* line 42, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-option:hover {
   background-color: #ffc81a;
 }
-/* line 41, ../../dev/sass/wd/_dropdowns.sass */
+/* line 44, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-option.active {
   background-color: #ffc200;
 }
-/* line 44, ../../dev/sass/wd/_dropdowns.sass */
+/* line 47, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-level .dropdown-option {
   background-color: #e6af00;
 }
-/* line 46, ../../dev/sass/wd/_dropdowns.sass */
+/* line 49, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-level .dropdown-option:hover {
   background-color: #ffc60f;
 }
-/* line 49, ../../dev/sass/wd/_dropdowns.sass */
+/* line 52, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-level .dropdown-level .dropdown-option {
   background-color: #d6a300;
 }
-/* line 51, ../../dev/sass/wd/_dropdowns.sass */
+/* line 54, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #ffc200;
 }
-/* line 54, ../../dev/sass/wd/_dropdowns.sass */
+/* line 57, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   background-color: #c79700;
 }
-/* line 56, ../../dev/sass/wd/_dropdowns.sass */
+/* line 59, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow .dropdown-level .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #ffc200;
 }
-/* line 59, ../../dev/sass/wd/_dropdowns.sass */
+/* line 62, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow.half-colored .dropdown-handle, .dropdown.yellow.full-colored .dropdown-handle {
   color: #fff;
   border-color: #ffc200;
@@ -1243,11 +1264,15 @@ body {
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
 }
-/* line 63, ../../dev/sass/wd/_dropdowns.sass */
+/* line 66, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow.half-colored .dropdown-handle:hover, .dropdown.yellow.half-colored .dropdown-handle:focus, .dropdown.yellow.half-colored .dropdown-handle:active, .dropdown.yellow.half-colored .dropdown-handle.active, .dropdown.yellow.full-colored .dropdown-handle:hover, .dropdown.yellow.full-colored .dropdown-handle:focus, .dropdown.yellow.full-colored .dropdown-handle:active, .dropdown.yellow.full-colored .dropdown-handle.active {
   background-position: 100% 100%;
 }
-/* line 66, ../../dev/sass/wd/_dropdowns.sass */
+/* line 69, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.yellow.half-colored .dropdown-chevron:before, .dropdown.yellow.half-colored .dropdown-chevron:after, .dropdown.yellow.full-colored .dropdown-chevron:before, .dropdown.yellow.full-colored .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 72, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.yellow.full-colored .dropdown-value {
   background-color: #ffc200;
   border-color: #ffc200;
@@ -1263,52 +1288,56 @@ body {
   color: #fff;
   background-color: #dc143c;
 }
-/* line 31, ../../dev/sass/wd/_dropdowns.sass */
+/* line 32, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.crimson .dropdown-handle.active .dropdown-chevron:before, .dropdown.crimson .dropdown-handle.active .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 34, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-handle:focus, .dropdown.crimson .dropdown-handle:active, .dropdown.crimson .dropdown-handle.active {
   border-color: #dc143c;
 }
-/* line 34, ../../dev/sass/wd/_dropdowns.sass */
+/* line 37, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-value.active {
   border-color: #dc143c;
 }
-/* line 36, ../../dev/sass/wd/_dropdowns.sass */
+/* line 39, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-option {
   color: #fff;
   border-top-color: #ea1a44;
 }
-/* line 39, ../../dev/sass/wd/_dropdowns.sass */
+/* line 42, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-option:hover {
   background-color: #eb1f48;
 }
-/* line 41, ../../dev/sass/wd/_dropdowns.sass */
+/* line 44, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-option.active {
   background-color: #dc143c;
 }
-/* line 44, ../../dev/sass/wd/_dropdowns.sass */
+/* line 47, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-level .dropdown-option {
   background-color: #c51236;
 }
-/* line 46, ../../dev/sass/wd/_dropdowns.sass */
+/* line 49, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-level .dropdown-option:hover {
   background-color: #ea1640;
 }
-/* line 49, ../../dev/sass/wd/_dropdowns.sass */
+/* line 52, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-level .dropdown-level .dropdown-option {
   background-color: #b71132;
 }
-/* line 51, ../../dev/sass/wd/_dropdowns.sass */
+/* line 54, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #dc143c;
 }
-/* line 54, ../../dev/sass/wd/_dropdowns.sass */
+/* line 57, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   background-color: #a90f2e;
 }
-/* line 56, ../../dev/sass/wd/_dropdowns.sass */
+/* line 59, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson .dropdown-level .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #dc143c;
 }
-/* line 59, ../../dev/sass/wd/_dropdowns.sass */
+/* line 62, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson.half-colored .dropdown-handle, .dropdown.crimson.full-colored .dropdown-handle {
   color: #fff;
   border-color: #dc143c;
@@ -1321,11 +1350,15 @@ body {
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
 }
-/* line 63, ../../dev/sass/wd/_dropdowns.sass */
+/* line 66, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson.half-colored .dropdown-handle:hover, .dropdown.crimson.half-colored .dropdown-handle:focus, .dropdown.crimson.half-colored .dropdown-handle:active, .dropdown.crimson.half-colored .dropdown-handle.active, .dropdown.crimson.full-colored .dropdown-handle:hover, .dropdown.crimson.full-colored .dropdown-handle:focus, .dropdown.crimson.full-colored .dropdown-handle:active, .dropdown.crimson.full-colored .dropdown-handle.active {
   background-position: 100% 100%;
 }
-/* line 66, ../../dev/sass/wd/_dropdowns.sass */
+/* line 69, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.crimson.half-colored .dropdown-chevron:before, .dropdown.crimson.half-colored .dropdown-chevron:after, .dropdown.crimson.full-colored .dropdown-chevron:before, .dropdown.crimson.full-colored .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 72, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.crimson.full-colored .dropdown-value {
   background-color: #dc143c;
   border-color: #dc143c;
@@ -1341,52 +1374,56 @@ body {
   color: #fff;
   background-color: #d473d4;
 }
-/* line 31, ../../dev/sass/wd/_dropdowns.sass */
+/* line 32, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.mauve .dropdown-handle.active .dropdown-chevron:before, .dropdown.mauve .dropdown-handle.active .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 34, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-handle:focus, .dropdown.mauve .dropdown-handle:active, .dropdown.mauve .dropdown-handle.active {
   border-color: #d473d4;
 }
-/* line 34, ../../dev/sass/wd/_dropdowns.sass */
+/* line 37, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-value.active {
   border-color: #d473d4;
 }
-/* line 36, ../../dev/sass/wd/_dropdowns.sass */
+/* line 39, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-option {
   color: #fff;
   border-top-color: #d983d9;
 }
-/* line 39, ../../dev/sass/wd/_dropdowns.sass */
+/* line 42, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-option:hover {
   background-color: #da87da;
 }
-/* line 41, ../../dev/sass/wd/_dropdowns.sass */
+/* line 44, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-option.active {
   background-color: #d473d4;
 }
-/* line 44, ../../dev/sass/wd/_dropdowns.sass */
+/* line 47, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-level .dropdown-option {
   background-color: #ce5fce;
 }
-/* line 46, ../../dev/sass/wd/_dropdowns.sass */
+/* line 49, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-level .dropdown-option:hover {
   background-color: #d87fd8;
 }
-/* line 49, ../../dev/sass/wd/_dropdowns.sass */
+/* line 52, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-level .dropdown-level .dropdown-option {
   background-color: #ca54ca;
 }
-/* line 51, ../../dev/sass/wd/_dropdowns.sass */
+/* line 54, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #d473d4;
 }
-/* line 54, ../../dev/sass/wd/_dropdowns.sass */
+/* line 57, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   background-color: #c748c7;
 }
-/* line 56, ../../dev/sass/wd/_dropdowns.sass */
+/* line 59, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve .dropdown-level .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #d473d4;
 }
-/* line 59, ../../dev/sass/wd/_dropdowns.sass */
+/* line 62, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve.half-colored .dropdown-handle, .dropdown.mauve.full-colored .dropdown-handle {
   color: #fff;
   border-color: #d473d4;
@@ -1399,11 +1436,15 @@ body {
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
 }
-/* line 63, ../../dev/sass/wd/_dropdowns.sass */
+/* line 66, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve.half-colored .dropdown-handle:hover, .dropdown.mauve.half-colored .dropdown-handle:focus, .dropdown.mauve.half-colored .dropdown-handle:active, .dropdown.mauve.half-colored .dropdown-handle.active, .dropdown.mauve.full-colored .dropdown-handle:hover, .dropdown.mauve.full-colored .dropdown-handle:focus, .dropdown.mauve.full-colored .dropdown-handle:active, .dropdown.mauve.full-colored .dropdown-handle.active {
   background-position: 100% 100%;
 }
-/* line 66, ../../dev/sass/wd/_dropdowns.sass */
+/* line 69, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.mauve.half-colored .dropdown-chevron:before, .dropdown.mauve.half-colored .dropdown-chevron:after, .dropdown.mauve.full-colored .dropdown-chevron:before, .dropdown.mauve.full-colored .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 72, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.mauve.full-colored .dropdown-value {
   background-color: #d473d4;
   border-color: #d473d4;
@@ -1419,52 +1460,56 @@ body {
   color: #fff;
   background-color: #333;
 }
-/* line 31, ../../dev/sass/wd/_dropdowns.sass */
+/* line 32, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.grey-dark .dropdown-handle.active .dropdown-chevron:before, .dropdown.grey-dark .dropdown-handle.active .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 34, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-handle:focus, .dropdown.grey-dark .dropdown-handle:active, .dropdown.grey-dark .dropdown-handle.active {
   border-color: #333;
 }
-/* line 34, ../../dev/sass/wd/_dropdowns.sass */
+/* line 37, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-value.active {
   border-color: #333;
 }
-/* line 36, ../../dev/sass/wd/_dropdowns.sass */
+/* line 39, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-option {
   color: #fff;
   border-top-color: #3d3d3d;
 }
-/* line 39, ../../dev/sass/wd/_dropdowns.sass */
+/* line 42, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-option:hover {
   background-color: #404040;
 }
-/* line 41, ../../dev/sass/wd/_dropdowns.sass */
+/* line 44, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-option.active {
   background-color: #333;
 }
-/* line 44, ../../dev/sass/wd/_dropdowns.sass */
+/* line 47, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-level .dropdown-option {
   background-color: #262626;
 }
-/* line 46, ../../dev/sass/wd/_dropdowns.sass */
+/* line 49, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-level .dropdown-option:hover {
   background-color: #3b3b3b;
 }
-/* line 49, ../../dev/sass/wd/_dropdowns.sass */
+/* line 52, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-level .dropdown-level .dropdown-option {
   background-color: #1f1f1f;
 }
-/* line 51, ../../dev/sass/wd/_dropdowns.sass */
+/* line 54, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #333;
 }
-/* line 54, ../../dev/sass/wd/_dropdowns.sass */
+/* line 57, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   background-color: #171717;
 }
-/* line 56, ../../dev/sass/wd/_dropdowns.sass */
+/* line 59, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark .dropdown-level .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #333;
 }
-/* line 59, ../../dev/sass/wd/_dropdowns.sass */
+/* line 62, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark.half-colored .dropdown-handle, .dropdown.grey-dark.full-colored .dropdown-handle {
   color: #fff;
   border-color: #333;
@@ -1477,11 +1522,15 @@ body {
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
 }
-/* line 63, ../../dev/sass/wd/_dropdowns.sass */
+/* line 66, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark.half-colored .dropdown-handle:hover, .dropdown.grey-dark.half-colored .dropdown-handle:focus, .dropdown.grey-dark.half-colored .dropdown-handle:active, .dropdown.grey-dark.half-colored .dropdown-handle.active, .dropdown.grey-dark.full-colored .dropdown-handle:hover, .dropdown.grey-dark.full-colored .dropdown-handle:focus, .dropdown.grey-dark.full-colored .dropdown-handle:active, .dropdown.grey-dark.full-colored .dropdown-handle.active {
   background-position: 100% 100%;
 }
-/* line 66, ../../dev/sass/wd/_dropdowns.sass */
+/* line 69, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.grey-dark.half-colored .dropdown-chevron:before, .dropdown.grey-dark.half-colored .dropdown-chevron:after, .dropdown.grey-dark.full-colored .dropdown-chevron:before, .dropdown.grey-dark.full-colored .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 72, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-dark.full-colored .dropdown-value {
   background-color: #333;
   border-color: #333;
@@ -1497,52 +1546,56 @@ body {
   color: #666;
   background-color: #ddd;
 }
-/* line 31, ../../dev/sass/wd/_dropdowns.sass */
+/* line 32, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.grey-light .dropdown-handle.active .dropdown-chevron:before, .dropdown.grey-light .dropdown-handle.active .dropdown-chevron:after {
+  background-color: #666;
+}
+/* line 34, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-handle:focus, .dropdown.grey-light .dropdown-handle:active, .dropdown.grey-light .dropdown-handle.active {
   border-color: #ddd;
 }
-/* line 34, ../../dev/sass/wd/_dropdowns.sass */
+/* line 37, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-value.active {
   border-color: #ddd;
 }
-/* line 36, ../../dev/sass/wd/_dropdowns.sass */
+/* line 39, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-option {
   color: #666;
   border-top-color: #e7e7e7;
 }
-/* line 39, ../../dev/sass/wd/_dropdowns.sass */
+/* line 42, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-option:hover {
   background-color: #eaeaea;
 }
-/* line 41, ../../dev/sass/wd/_dropdowns.sass */
+/* line 44, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-option.active {
   background-color: #ddd;
 }
-/* line 44, ../../dev/sass/wd/_dropdowns.sass */
+/* line 47, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-level .dropdown-option {
   background-color: #d0d0d0;
 }
-/* line 46, ../../dev/sass/wd/_dropdowns.sass */
+/* line 49, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-level .dropdown-option:hover {
   background-color: #e5e5e5;
 }
-/* line 49, ../../dev/sass/wd/_dropdowns.sass */
+/* line 52, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-level .dropdown-level .dropdown-option {
   background-color: #c9c9c9;
 }
-/* line 51, ../../dev/sass/wd/_dropdowns.sass */
+/* line 54, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #ddd;
 }
-/* line 54, ../../dev/sass/wd/_dropdowns.sass */
+/* line 57, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   background-color: #c1c1c1;
 }
-/* line 56, ../../dev/sass/wd/_dropdowns.sass */
+/* line 59, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light .dropdown-level .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #ddd;
 }
-/* line 59, ../../dev/sass/wd/_dropdowns.sass */
+/* line 62, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light.half-colored .dropdown-handle, .dropdown.grey-light.full-colored .dropdown-handle {
   color: #666;
   border-color: #ddd;
@@ -1555,11 +1608,15 @@ body {
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
 }
-/* line 63, ../../dev/sass/wd/_dropdowns.sass */
+/* line 66, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light.half-colored .dropdown-handle:hover, .dropdown.grey-light.half-colored .dropdown-handle:focus, .dropdown.grey-light.half-colored .dropdown-handle:active, .dropdown.grey-light.half-colored .dropdown-handle.active, .dropdown.grey-light.full-colored .dropdown-handle:hover, .dropdown.grey-light.full-colored .dropdown-handle:focus, .dropdown.grey-light.full-colored .dropdown-handle:active, .dropdown.grey-light.full-colored .dropdown-handle.active {
   background-position: 100% 100%;
 }
-/* line 66, ../../dev/sass/wd/_dropdowns.sass */
+/* line 69, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.grey-light.half-colored .dropdown-chevron:before, .dropdown.grey-light.half-colored .dropdown-chevron:after, .dropdown.grey-light.full-colored .dropdown-chevron:before, .dropdown.grey-light.full-colored .dropdown-chevron:after {
+  background-color: #666;
+}
+/* line 72, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.grey-light.full-colored .dropdown-value {
   background-color: #ddd;
   border-color: #ddd;
@@ -1575,52 +1632,56 @@ body {
   color: #fff;
   background-color: #f45633;
 }
-/* line 31, ../../dev/sass/wd/_dropdowns.sass */
+/* line 32, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.orange .dropdown-handle.active .dropdown-chevron:before, .dropdown.orange .dropdown-handle.active .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 34, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-handle:focus, .dropdown.orange .dropdown-handle:active, .dropdown.orange .dropdown-handle.active {
   border-color: #f45633;
 }
-/* line 34, ../../dev/sass/wd/_dropdowns.sass */
+/* line 37, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-value.active {
   border-color: #f45633;
 }
-/* line 36, ../../dev/sass/wd/_dropdowns.sass */
+/* line 39, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-option {
   color: #fff;
   border-top-color: #f56646;
 }
-/* line 39, ../../dev/sass/wd/_dropdowns.sass */
+/* line 42, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-option:hover {
   background-color: #f56a4b;
 }
-/* line 41, ../../dev/sass/wd/_dropdowns.sass */
+/* line 44, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-option.active {
   background-color: #f45633;
 }
-/* line 44, ../../dev/sass/wd/_dropdowns.sass */
+/* line 47, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-level .dropdown-option {
   background-color: #f3421b;
 }
-/* line 46, ../../dev/sass/wd/_dropdowns.sass */
+/* line 49, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-level .dropdown-option:hover {
   background-color: #f56242;
 }
-/* line 49, ../../dev/sass/wd/_dropdowns.sass */
+/* line 52, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-level .dropdown-level .dropdown-option {
   background-color: #f1360d;
 }
-/* line 51, ../../dev/sass/wd/_dropdowns.sass */
+/* line 54, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #f45633;
 }
-/* line 54, ../../dev/sass/wd/_dropdowns.sass */
+/* line 57, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   background-color: #e3330c;
 }
-/* line 56, ../../dev/sass/wd/_dropdowns.sass */
+/* line 59, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange .dropdown-level .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #f45633;
 }
-/* line 59, ../../dev/sass/wd/_dropdowns.sass */
+/* line 62, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange.half-colored .dropdown-handle, .dropdown.orange.full-colored .dropdown-handle {
   color: #fff;
   border-color: #f45633;
@@ -1633,11 +1694,15 @@ body {
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
 }
-/* line 63, ../../dev/sass/wd/_dropdowns.sass */
+/* line 66, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange.half-colored .dropdown-handle:hover, .dropdown.orange.half-colored .dropdown-handle:focus, .dropdown.orange.half-colored .dropdown-handle:active, .dropdown.orange.half-colored .dropdown-handle.active, .dropdown.orange.full-colored .dropdown-handle:hover, .dropdown.orange.full-colored .dropdown-handle:focus, .dropdown.orange.full-colored .dropdown-handle:active, .dropdown.orange.full-colored .dropdown-handle.active {
   background-position: 100% 100%;
 }
-/* line 66, ../../dev/sass/wd/_dropdowns.sass */
+/* line 69, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.orange.half-colored .dropdown-chevron:before, .dropdown.orange.half-colored .dropdown-chevron:after, .dropdown.orange.full-colored .dropdown-chevron:before, .dropdown.orange.full-colored .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 72, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.orange.full-colored .dropdown-value {
   background-color: #f45633;
   border-color: #f45633;
@@ -1653,52 +1718,56 @@ body {
   color: #666;
   background-color: #fff;
 }
-/* line 31, ../../dev/sass/wd/_dropdowns.sass */
+/* line 32, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.white .dropdown-handle.active .dropdown-chevron:before, .dropdown.white .dropdown-handle.active .dropdown-chevron:after {
+  background-color: #666;
+}
+/* line 34, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-handle:focus, .dropdown.white .dropdown-handle:active, .dropdown.white .dropdown-handle.active {
   border-color: #fff;
 }
-/* line 34, ../../dev/sass/wd/_dropdowns.sass */
+/* line 37, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-value.active {
   border-color: #fff;
 }
-/* line 36, ../../dev/sass/wd/_dropdowns.sass */
+/* line 39, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-option {
   color: #666;
   border-top-color: white;
 }
-/* line 39, ../../dev/sass/wd/_dropdowns.sass */
+/* line 42, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-option:hover {
   background-color: white;
 }
-/* line 41, ../../dev/sass/wd/_dropdowns.sass */
+/* line 44, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-option.active {
   background-color: #fff;
 }
-/* line 44, ../../dev/sass/wd/_dropdowns.sass */
+/* line 47, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-level .dropdown-option {
   background-color: #f2f2f2;
 }
-/* line 46, ../../dev/sass/wd/_dropdowns.sass */
+/* line 49, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-level .dropdown-option:hover {
   background-color: white;
 }
-/* line 49, ../../dev/sass/wd/_dropdowns.sass */
+/* line 52, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-level .dropdown-level .dropdown-option {
   background-color: #ebebeb;
 }
-/* line 51, ../../dev/sass/wd/_dropdowns.sass */
+/* line 54, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #fff;
 }
-/* line 54, ../../dev/sass/wd/_dropdowns.sass */
+/* line 57, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   background-color: #e3e3e3;
 }
-/* line 56, ../../dev/sass/wd/_dropdowns.sass */
+/* line 59, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-level .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #fff;
 }
-/* line 59, ../../dev/sass/wd/_dropdowns.sass */
+/* line 62, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white.half-colored .dropdown-handle, .dropdown.white.full-colored .dropdown-handle {
   color: #666;
   border-color: #fff;
@@ -1711,11 +1780,15 @@ body {
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
 }
-/* line 63, ../../dev/sass/wd/_dropdowns.sass */
+/* line 66, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white.half-colored .dropdown-handle:hover, .dropdown.white.half-colored .dropdown-handle:focus, .dropdown.white.half-colored .dropdown-handle:active, .dropdown.white.half-colored .dropdown-handle.active, .dropdown.white.full-colored .dropdown-handle:hover, .dropdown.white.full-colored .dropdown-handle:focus, .dropdown.white.full-colored .dropdown-handle:active, .dropdown.white.full-colored .dropdown-handle.active {
   background-position: 100% 100%;
 }
-/* line 66, ../../dev/sass/wd/_dropdowns.sass */
+/* line 69, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.white.half-colored .dropdown-chevron:before, .dropdown.white.half-colored .dropdown-chevron:after, .dropdown.white.full-colored .dropdown-chevron:before, .dropdown.white.full-colored .dropdown-chevron:after {
+  background-color: #666;
+}
+/* line 72, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white.full-colored .dropdown-value {
   background-color: #fff;
   border-color: #fff;
@@ -1731,52 +1804,56 @@ body {
   color: #fff;
   background-color: #000;
 }
-/* line 31, ../../dev/sass/wd/_dropdowns.sass */
+/* line 32, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.black .dropdown-handle.active .dropdown-chevron:before, .dropdown.black .dropdown-handle.active .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 34, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-handle:focus, .dropdown.black .dropdown-handle:active, .dropdown.black .dropdown-handle.active {
   border-color: #000;
 }
-/* line 34, ../../dev/sass/wd/_dropdowns.sass */
+/* line 37, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-value.active {
   border-color: #000;
 }
-/* line 36, ../../dev/sass/wd/_dropdowns.sass */
+/* line 39, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-option {
   color: #fff;
   border-top-color: #0a0a0a;
 }
-/* line 39, ../../dev/sass/wd/_dropdowns.sass */
+/* line 42, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-option:hover {
   background-color: #0d0d0d;
 }
-/* line 41, ../../dev/sass/wd/_dropdowns.sass */
+/* line 44, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-option.active {
   background-color: #000;
 }
-/* line 44, ../../dev/sass/wd/_dropdowns.sass */
+/* line 47, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-level .dropdown-option {
   background-color: black;
 }
-/* line 46, ../../dev/sass/wd/_dropdowns.sass */
+/* line 49, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-level .dropdown-option:hover {
   background-color: #080808;
 }
-/* line 49, ../../dev/sass/wd/_dropdowns.sass */
+/* line 52, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-level .dropdown-level .dropdown-option {
   background-color: black;
 }
-/* line 51, ../../dev/sass/wd/_dropdowns.sass */
+/* line 54, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #000;
 }
-/* line 54, ../../dev/sass/wd/_dropdowns.sass */
+/* line 57, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   background-color: black;
 }
-/* line 56, ../../dev/sass/wd/_dropdowns.sass */
+/* line 59, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-level .dropdown-level .dropdown-level .dropdown-option:hover {
   background-color: #000;
 }
-/* line 59, ../../dev/sass/wd/_dropdowns.sass */
+/* line 62, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black.half-colored .dropdown-handle, .dropdown.black.full-colored .dropdown-handle {
   color: #fff;
   border-color: #000;
@@ -1789,46 +1866,50 @@ body {
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
 }
-/* line 63, ../../dev/sass/wd/_dropdowns.sass */
+/* line 66, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black.half-colored .dropdown-handle:hover, .dropdown.black.half-colored .dropdown-handle:focus, .dropdown.black.half-colored .dropdown-handle:active, .dropdown.black.half-colored .dropdown-handle.active, .dropdown.black.full-colored .dropdown-handle:hover, .dropdown.black.full-colored .dropdown-handle:focus, .dropdown.black.full-colored .dropdown-handle:active, .dropdown.black.full-colored .dropdown-handle.active {
   background-position: 100% 100%;
 }
-/* line 66, ../../dev/sass/wd/_dropdowns.sass */
+/* line 69, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown.black.half-colored .dropdown-chevron:before, .dropdown.black.half-colored .dropdown-chevron:after, .dropdown.black.full-colored .dropdown-chevron:before, .dropdown.black.full-colored .dropdown-chevron:after {
+  background-color: #fff;
+}
+/* line 72, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black.full-colored .dropdown-value {
   background-color: #000;
   border-color: #000;
   color: #fff;
 }
-/* line 72, ../../dev/sass/wd/_dropdowns.sass */
+/* line 78, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-list {
   border-color: #f2f2f2;
   background-color: #fff;
 }
-/* line 75, ../../dev/sass/wd/_dropdowns.sass */
+/* line 81, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-option {
   border-top-color: whitesmoke;
 }
-/* line 77, ../../dev/sass/wd/_dropdowns.sass */
+/* line 83, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-option:hover {
   background-color: #f2f2f2;
 }
-/* line 79, ../../dev/sass/wd/_dropdowns.sass */
+/* line 85, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.white .dropdown-option.active {
   background-color: #f2f2f2;
 }
-/* line 82, ../../dev/sass/wd/_dropdowns.sass */
+/* line 88, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-option {
   border-top-color: #1a1a1a;
 }
-/* line 84, ../../dev/sass/wd/_dropdowns.sass */
+/* line 90, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-option:hover {
   background-color: #1a1a1a;
 }
-/* line 86, ../../dev/sass/wd/_dropdowns.sass */
+/* line 92, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black .dropdown-option.active {
   background-color: #1a1a1a;
 }
-/* line 89, ../../dev/sass/wd/_dropdowns.sass */
+/* line 95, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown.black.half-colored .dropdown-handle, .dropdown.black.full-colored .dropdown-handle {
   background: #000;
   background: -webkit-linear-gradient(135deg, #000000 0%, #000000 50%, #1a1a1a 50%, #1a1a1a 100%);
@@ -1840,14 +1921,14 @@ body {
           transition: all 400ms ease-in-out;
 }
 
-/* line 92, ../../dev/sass/wd/_dropdowns.sass */
+/* line 98, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-value {
   display: inline-block;
   width: 100%;
   height: 5rem;
   line-height: 4.4rem;
   padding: 0 5rem 0 1rem;
-  border: .4rem solid #eee;
+  border: 0.4rem solid #eee;
   color: #666;
   background-color: #fff;
   box-sizing: border-box;
@@ -1857,13 +1938,13 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 104, ../../dev/sass/wd/_dropdowns.sass */
+/* line 110, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-value:hover, .dropdown-value:focus, .dropdown-value:active, .dropdown-value.active {
   outline: 0;
   color: #333;
 }
 
-/* line 108, ../../dev/sass/wd/_dropdowns.sass */
+/* line 114, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-handle {
   position: absolute;
   right: 0;
@@ -1872,7 +1953,7 @@ body {
   height: 5rem;
   line-height: 5rem;
   padding: 0 1rem;
-  border: .1rem solid #eee;
+  border: 0.1rem solid #eee;
   text-align: center;
   color: #666;
   box-sizing: border-box;
@@ -1881,7 +1962,48 @@ body {
   background-color: whitesmoke;
 }
 
-/* line 123, ../../dev/sass/wd/_dropdowns.sass */
+/* line 129, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown-chevron {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 136, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown-chevron:before, .dropdown-chevron:after {
+  display: block;
+  content: "";
+  width: 1.2rem;
+  height: 0.4rem;
+  background-color: #666;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.2rem;
+  -webkit-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
+}
+/* line 147, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown-chevron:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-left: -0.9rem;
+}
+/* line 150, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown-chevron:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-left: -0.3rem;
+}
+/* line 154, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown-handle.active .dropdown-chevron:before, .dropdown-handle.active .dropdown-chevron:after {
+  width: 2rem;
+  margin-left: -1rem;
+}
+
+/* line 158, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-list {
   display: none;
   position: absolute;
@@ -1895,18 +2017,21 @@ body {
   box-sizing: border-box;
   -webkit-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out;
+  max-height: calc(90vh - 5rem);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-/* line 135, ../../dev/sass/wd/_dropdowns.sass */
+/* line 173, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-list.active {
   display: block;
 }
 
-/* line 138, ../../dev/sass/wd/_dropdowns.sass */
+/* line 176, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-option {
   display: block;
   height: 5rem;
   line-height: 5rem;
-  border-top: .1rem solid #ddd;
+  border-top: 0.1rem solid #ddd;
   padding: 0 1.5rem;
   color: #fff;
   -webkit-transition: all 300ms ease-in-out;
@@ -1916,40 +2041,40 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 148, ../../dev/sass/wd/_dropdowns.sass */
+/* line 186, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-option:first-child {
   border-top: none;
 }
-/* line 150, ../../dev/sass/wd/_dropdowns.sass */
+/* line 188, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-option:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
-/* line 152, ../../dev/sass/wd/_dropdowns.sass */
+/* line 190, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-option.active {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
 }
-/* line 154, ../../dev/sass/wd/_dropdowns.sass */
-.dropdown-option.small {
+/* line 192, ../../dev/sass/wd/_dropdowns.sass */
+.dropdown-option.sm {
   height: 4rem;
   line-height: 4rem;
 }
-/* line 157, ../../dev/sass/wd/_dropdowns.sass */
+/* line 195, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-level .dropdown-option {
   padding-left: 2rem;
   font-size: 90%;
   height: 3.2rem;
   line-height: 3.2rem;
 }
-/* line 162, ../../dev/sass/wd/_dropdowns.sass */
+/* line 200, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-level .dropdown-level .dropdown-option {
   padding-left: 4rem;
   font-size: 80%;
   height: 2.6rem;
   line-height: 2.6rem;
 }
-/* line 167, ../../dev/sass/wd/_dropdowns.sass */
+/* line 205, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-level .dropdown-level .dropdown-level .dropdown-option {
   padding-left: 5rem;
   font-size: 75%;
@@ -1957,23 +2082,23 @@ body {
   line-height: 2.2rem;
 }
 
-/* line 173, ../../dev/sass/wd/_dropdowns.sass */
+/* line 211, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-level {
   display: none;
 }
-/* line 175, ../../dev/sass/wd/_dropdowns.sass */
+/* line 213, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-level.active {
   display: block;
 }
 
-/* line 178, ../../dev/sass/wd/_dropdowns.sass */
+/* line 216, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-divider {
   display: block;
-  margin: .5rem 0;
-  height: .1rem;
+  margin: 0.5rem 0;
+  height: 0.1rem;
   background-color: #ddd;
 }
-/* line 183, ../../dev/sass/wd/_dropdowns.sass */
+/* line 221, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-divider + .dropdown-option {
   border-top: none;
 }

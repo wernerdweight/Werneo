@@ -1,6 +1,17 @@
-body {
+body{
 	background-color: #393F5F;
 	color: white;
+	padding-top: 8rem;
+}
+header .title{
+	margin-top: 0.5rem;
+}
+.fixed-header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
 }
 .scrollbars-demo-outer{
 	overflow: scroll;
