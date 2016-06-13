@@ -33,11 +33,27 @@ function WerneoModalButtons(){
 							modalContent.style.width = modalContent.dataset.width;
 							modalContent.style.left = '50%';
 							modalContent.style.marginLeft = '-' + (parseInt(modalContent.dataset.width) / 2) + modalContent.dataset.width.replace(/^[\d]+(.*)$/,'$1');
+							/// set full width if resulting modal is wider than viewport
+							setTimeout(function(){
+								if(modalContent.offsetWidth > window.innerWidth){
+									modalContent.style.width = '100%';
+									modalContent.style.left = 0;
+									modalContent.style.marginLeft = 0;
+								}
+							},500);
 						}
 						if(typeof modalContent.dataset.height !== typeof undefined){
 							modalContent.style.height = modalContent.dataset.height;
 							modalContent.style.top = '50%';
 							modalContent.style.marginTop = '-' + (parseInt(modalContent.dataset.height) / 2) + modalContent.dataset.height.replace(/^[\d]+(.*)$/,'$1');
+							/// set full height if resulting modal is higher than viewport
+							setTimeout(function(){
+								if(modalContent.offsetHeight > window.innerHeight){
+									modalContent.style.height = '100%';
+									modalContent.style.top = 0;
+									modalContent.style.marginTop = 0;
+								}
+							},500);
 						}
 					},50);
 				});

@@ -57,11 +57,8 @@
                 border-color: $inverseColor
             &.checked
                 &::before
-                    background-color: $inverseColor
                     border-right-color: $inverseColor
                     border-top-color: $inverseColor
-                    border-bottom-color: $color
-                    border-left-color: $color
                 &::after
                     color: $color
             .icon
@@ -93,6 +90,8 @@
             border-bottom-style: solid
             border-left-width: 2rem
             border-left-style: solid
+            border-bottom-color: transparent
+            border-left-color: transparent
             content: " "
         &::after
             position: absolute

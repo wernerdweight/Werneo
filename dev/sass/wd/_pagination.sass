@@ -12,6 +12,31 @@
         display: inline
         padding-left: 0
     li
+        &:nth-child(n)
+            a,span
+                display: none
+                +responsive(tablet)
+                    display: inline-block
+        &:first-child
+            float: left
+            margin-right: 0.5rem
+            a,span
+                display: inline-block
+                &:after
+                    font-family: $wdWerneoIconFontFamily
+                    content: '\f104'
+                    font-size: 3rem
+                    line-height: 2rem
+        &:last-child
+            float: right
+            margin-left: 0.5rem
+            a,span
+                display: inline-block
+                &:after
+                    font-family: $wdWerneoIconFontFamily
+                    content: '\f105'
+                    font-size: 3rem
+                    line-height: 2rem
         &.active
             a,span
                 display: inline-block
@@ -35,29 +60,6 @@
             color: inherit
         span
             color: $wdWerneoGreyLightest
-        &:first-child
-            float: left
-            margin-right: 0.5rem
-            a,span
-                &:after
-                    font-family: $wdWerneoIconFontFamily
-                    content: '\f104'
-                    font-size: 3rem
-                    line-height: 2rem
-        &:last-child
-            float: right
-            margin-left: 0.5rem
-            a,span
-                &:after
-                    font-family: $wdWerneoIconFontFamily
-                    content: '\f105'
-                    font-size: 3rem
-                    line-height: 2rem
-        &:nth-child(1n)
-            a,span
-                display: none
-                +responsive(tablet)
-                    display: inline-block
     @each $name, $color, in $wdWerneoColors
         &.#{$name}
             $inverseColor: $wdWerneoWhite

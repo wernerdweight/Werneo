@@ -67,28 +67,31 @@
             margin-top: 0
     &.wide
         .modal
-            left: 10%
             top: 25%
-            width: 80%
             height: 50%
-            margin-left: 0
             margin-top: 0
+            +responsive(tablet)
+                width: 80%
+                left: 10%
+                margin-left: 0
     &.medium
         .modal
             top: 25%
-            left: 25%
-            width: 50%
             height: 50%
             margin-top: 0
-            margin-left: 0
+            +responsive(tablet)
+                left: 25%
+                width: 50%
+                margin-left: 0
     &.large
         .modal
             top: 10%
-            left: 10%
-            width: 80%
             height: 80%
             margin-top: 0
-            margin-left: 0
+            +responsive(tablet)
+                left: 10%
+                width: 80%
+                margin-left: 0
     &.full
         .modal
             top: 0
