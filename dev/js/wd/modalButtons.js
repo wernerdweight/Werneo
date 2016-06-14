@@ -19,6 +19,9 @@ function WerneoModalButtons(){
 					var parent = this.parentNode;
 					var modalContent = parent.querySelector('.modal-btn-content');
 					var offset = this.getBoundingClientRect();
+					var modalBody = modalContent.querySelector('.body');
+					var modalHeader = modalContent.querySelector('.header');
+					var modalFooter = modalContent.querySelector('.footer');
 					/// position the element to dwell directly under its trigger
 					modalContent.classList.add('disable-transition');
 					modalContent.style.top = offset.top + 'px';
@@ -29,6 +32,7 @@ function WerneoModalButtons(){
 					setTimeout(function(){
 						modalContent.classList.remove('disable-transition');
 						parent.classList.add('open');
+						/// set width
 						if(typeof modalContent.dataset.width !==  typeof undefined){
 							modalContent.style.width = modalContent.dataset.width;
 							modalContent.style.left = '50%';
@@ -42,6 +46,7 @@ function WerneoModalButtons(){
 								}
 							},500);
 						}
+						/// set height
 						if(typeof modalContent.dataset.height !== typeof undefined){
 							modalContent.style.height = modalContent.dataset.height;
 							modalContent.style.top = '50%';
@@ -52,6 +57,13 @@ function WerneoModalButtons(){
 									modalContent.style.height = '100%';
 									modalContent.style.top = 0;
 									modalContent.style.marginTop = 0;
+								}
+								/// adjust body height if modal has body
+								if(null !== modalBody){
+									var headerHeight = (null !== modalHeader ? modalHeader.getBoundingClientRect().height : 0);
+									var footerHeight = (null !== modalFooter ? modalFooter.getBoundingClientRect().height : 0);
+									var modalHeight = modalContent.getBoundingClientRect().height;
+									modalBody.style.height = (modalHeight - (headerHeight + footerHeight)) + 'px';
 								}
 							},500);
 						}
