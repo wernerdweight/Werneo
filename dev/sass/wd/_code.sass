@@ -2,21 +2,23 @@
 ////            WD CODE
 ///////////////////////////////////////////////////////////////////////////////////
 
-code
-	font-family: monospace
-	display: inline-block
-	padding: 0.25rem 1rem
-	font-size: $wdWerneoBasicFontSize
-	pre &
-		background-color: transparent
-		display: block
+@if $wdWerneoUseCode == true
+
+	code
+		font-family: monospace
+		display: inline-block
+		padding: 0.25rem 1rem
+		font-size: $wdWerneoBasicFontSize
+		pre &
+			background-color: transparent
+			display: block
+			margin: 0
+			padding: 0
+
+	code,pre
+		background-color: rgba($wdWerneoBlack,0.25)
+
+	pre
 		margin: 0
-		padding: 0
-
-code,pre
-	background-color: rgba($wdWerneoBlack,0.25)
-
-pre
-	margin: 0
-	padding: 0 2rem
-	overflow: auto
+		padding: 0 2rem
+		overflow: auto

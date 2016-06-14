@@ -2,31 +2,33 @@
 ////            WD PROGRESSBAR
 ///////////////////////////////////////////////////////////////////////////////////
 
-.progressbar
-    width: 100%
-    display: block
-    height: 1.5rem
-    border: 0.3rem solid $wdWerneoGreyLightest
-    background-color: $wdWerneoGreyLightest
-    box-sizing: border-box
-    position: relative
-    /// size
-    &.sm
-        height: 1rem
-        border-width: 0.2rem
-    &.lg
-        height: 2rem
-        border-width: 0.4rem
+@if $wdWerneoUseProgressBar == true
 
-    /// progress element
-    span
-        display: block
-        height: 100%
-        transition: width 600ms ease-in-out
-        position: absolute
-        top: 0
-        left: 0
-        /// color
-        @each $name, $color, in $wdWerneoColors
-            &.#{$name}
-                background-color: $color
+	.progressbar
+		width: 100%
+		display: block
+		height: 1.5rem
+		border: 0.3rem solid $wdWerneoGreyLightest
+		background-color: $wdWerneoGreyLightest
+		box-sizing: border-box
+		position: relative
+		/// size
+		&.sm
+			height: 1rem
+			border-width: 0.2rem
+		&.lg
+			height: 2rem
+			border-width: 0.4rem
+
+		/// progress element
+		span
+			display: block
+			height: 100%
+			transition: width 600ms ease-in-out
+			position: absolute
+			top: 0
+			left: 0
+			/// color
+			@each $name, $color, in $wdWerneoColors
+				&.#{$name}
+					background-color: $color

@@ -2,59 +2,61 @@
 ////            WD BREADCRUMBS
 ///////////////////////////////////////////////////////////////////////////////////
 
-.breadcrumbs
-    padding: 0.5rem 0 2.5rem 0
-    margin: 0
-    &.light
-        a
-            color: $wdWerneoWhite
-        .subcrumb
-            a
-                color: $wdWerneoGreyDark
-    li
-        color: darken($wdWerneoGreyLight,20%)
-        display: inline-block
-        list-style: none
-        &::before
-            content: " \\ "
-            color: $wdWerneoGreyLight
-            display: inline-block
-        &:first-child
-            &::before
-                content: "\\\\ "
-    a
-        color: $wdWerneoGreyDark
-        display: inline-block
-        text-decoration: none
-        &:hover
-            text-decoration: underline
-        &.subcrumb-trigger
-            margin-left: 0.5rem
-            color: $wdWerneoGreyLight
-            &:hover,&:focus
-                color: $wdWerneoGreyDark
-            &:focus
-                & + .subcrumb
-                    opacity: 1
-                    max-height: 20rem
-                    transition: max-height 100ms 0ms
-    .subcrumb
-        position: absolute
-        padding: 0.5rem 1rem
-        margin: 0
-        border: 0.1rem solid $wdWerneoGreyMedium
-        background-color: $wdWerneoWhite
-        opacity: 0
-        max-height: 0rem
-        max-width: 30rem
-        overflow: auto
-        z-index: 2
-        transition: max-height 100ms 100ms
-        a
-            display: block
-            +hellip
-        li
-            display: block
-            &::before
-                content: ""
-                display: none
+@if $wdWerneoUseBreadcrumbs == true
+
+	.breadcrumbs
+		padding: 0.5rem 0 2.5rem 0
+		margin: 0
+		&.light
+			a
+				color: $wdWerneoWhite
+			.subcrumb
+				a
+					color: $wdWerneoGreyDark
+		li
+			color: darken($wdWerneoGreyLight,20%)
+			display: inline-block
+			list-style: none
+			&::before
+				content: " \\ "
+				color: $wdWerneoGreyLight
+				display: inline-block
+			&:first-child
+				&::before
+					content: "\\\\ "
+		a
+			color: $wdWerneoGreyDark
+			display: inline-block
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+			&.subcrumb-trigger
+				margin-left: 0.5rem
+				color: $wdWerneoGreyLight
+				&:hover,&:focus
+					color: $wdWerneoGreyDark
+				&:focus
+					& + .subcrumb
+						opacity: 1
+						max-height: 20rem
+						transition: max-height 100ms 0ms
+		.subcrumb
+			position: absolute
+			padding: 0.5rem 1rem
+			margin: 0
+			border: 0.1rem solid $wdWerneoGreyMedium
+			background-color: $wdWerneoWhite
+			opacity: 0
+			max-height: 0rem
+			max-width: 30rem
+			overflow: auto
+			z-index: 2
+			transition: max-height 100ms 100ms
+			a
+				display: block
+				+hellip
+			li
+				display: block
+				&::before
+					content: ""
+					display: none

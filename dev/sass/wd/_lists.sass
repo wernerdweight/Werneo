@@ -2,173 +2,175 @@
 ////            WD LISTS
 ///////////////////////////////////////////////////////////////////////////////////
 
-.list-item-container
-    position: relative
-    overflow: hidden
-    &:hover
-        .list-item-overlay
-            height: 3.2rem
-    .list-item-overlay
-        display: block
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 100%
-        height: 0
-        overflow: hidden
-        text-align: center
-        line-height: 3.2rem
-        text-decoration: none
-        z-index: 700
-        box-sizing: border-box
-        transition: height 300ms 300ms, opacity 300ms 100ms, background-position 300ms 0
-        @each $name, $color, in $wdWerneoColors
-            &.bg-#{$name}
-                $inverseColor: $wdWerneoWhite
-                @if $name == 'white' or $name == 'grey-light'
-                    $inverseColor: $wdWerneoGreyMedium
-                color: $inverseColor
-                +diagonal-split-background($color,darken($color,3%))
-        &:hover
-            +diagonal-split-background-hover
-            & ~ .list-item
-                opacity: 0.5
+@if $wdWerneoUseLists == true
 
-.list-item
-    display: block
-    position: relative
-    border-width: 0.1rem
-    border-style: solid
-    padding: 1rem
-    text-decoration: none
-    height: 10rem
-    overflow: hidden
-    box-sizing: border-box
-    transition: all 300ms ease-in-out
-    @each $name, $color, in $wdWerneoColors
-        &.bg-#{$name}
-            $inverseColor: $wdWerneoWhite
-            @if $name == 'white' or $name == 'grey-light'
-                $inverseColor: $wdWerneoGreyMedium
-            border-color: $color
-            .list-item-container:hover &
-                box-shadow: 0 0 0 0.3rem rgba($color,0.75)
-            &:focus,&.checked
-                border-color: $inverseColor
-            &.checked
-                &::before
-                    border-right-color: $inverseColor
-                    border-top-color: $inverseColor
-                &::after
-                    color: $color
-            .icon
-                color: $color
-                background-color: $inverseColor
-                &.split
-                    +diagonal-split-background($inverseColor,darken($inverseColor,4%))
-                    background-position: 50% 50%
-    &:focus
-        outline: none
-        border-style: dashed
-        border-width: 0.1rem
-    &.checked
-        border-style: solid
-        border-width: 0.4rem
-        padding: 0.6rem
-        &::before
-            display: block
-            width: 4rem
-            height: 4rem
-            position: absolute
-            right: 0
-            top: 0
-            border-right-width: 2rem
-            border-right-style: solid
-            border-top-width: 2rem
-            border-top-style: solid
-            border-bottom-width: 2rem
-            border-bottom-style: solid
-            border-left-width: 2rem
-            border-left-style: solid
-            border-bottom-color: transparent
-            border-left-color: transparent
-            content: " "
-        &::after
-            position: absolute
-            right: 0
-            top: 0
-            font-family: $wdWerneoIconFontFamily
-            content: "\f00c"
-        &.checked-disabled
-            border-color: $wdWerneoTeal
-            &::before
-                background-color: $wdWerneoTeal
-                border-right-color: $wdWerneoTeal
-                border-top-color: $wdWerneoTeal
-            &::after
-                content: "\f0c1"
-        .icon
-            top: 0.5rem
-            left: 0.5rem
-    .icon
-        width: 8rem
-        height: 8rem
-        position: absolute
-        top: 1rem
-        left: 1rem
-        text-align: center
-        display: flex
-        align-items: center
-        align-content: center
-        i
-            &.fa
-                line-height: 8rem
-                font-size: 3.2rem
-        > *
-            width: 100%
-            text-align: center
-        p
-            line-height: 100%
-        hr
-            margin: 0.2rem 0
-    .info
-        width: 100%
-        height: 8rem
-        padding-left: 9rem
-        p
-            display: block
-            margin: 0 0 0.5rem 0
-            font-size: 1.6rem
-            line-height: 2rem
-            +hellip
-        span
-            display: block
-            font-size: 1.4rem
-            line-height: 1.6rem
-            +hellip
-            &.byline
-                margin-top: 0.5rem
-                font-size: 1rem
-                position: absolute
-                bottom: 0.5rem
-                right: 1rem
-                &.big
-                    font-size: 1.4rem
-            &.error
-                color: $wdWerneoCrimson
-                font-weight: normal
-        input
-            margin-bottom: 0.5rem
-    input
-        &[type="checkbox"]
-            width: 0
-            height: 0
-            overflow: hidden
-            display: block
-            border: none
-            padding: 0
-            margin: 0
-            z-index: -1
-            position: absolute
-            bottom: 0
-            right: 0
+	.list-item-container
+		position: relative
+		overflow: hidden
+		&:hover
+			.list-item-overlay
+				height: 3.2rem
+		.list-item-overlay
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 0
+			overflow: hidden
+			text-align: center
+			line-height: 3.2rem
+			text-decoration: none
+			z-index: 700
+			box-sizing: border-box
+			transition: height 300ms 300ms, opacity 300ms 100ms, background-position 300ms 0
+			@each $name, $color, in $wdWerneoColors
+				&.bg-#{$name}
+					$inverseColor: $wdWerneoWhite
+					@if $name == 'white' or $name == 'grey-light'
+						$inverseColor: $wdWerneoGreyMedium
+					color: $inverseColor
+					+diagonal-split-background($color,darken($color,3%))
+			&:hover
+				+diagonal-split-background-hover
+				& ~ .list-item
+					opacity: 0.5
+
+	.list-item
+		display: block
+		position: relative
+		border-width: 0.1rem
+		border-style: solid
+		padding: 1rem
+		text-decoration: none
+		height: 10rem
+		overflow: hidden
+		box-sizing: border-box
+		transition: all 300ms ease-in-out
+		@each $name, $color, in $wdWerneoColors
+			&.bg-#{$name}
+				$inverseColor: $wdWerneoWhite
+				@if $name == 'white' or $name == 'grey-light'
+					$inverseColor: $wdWerneoGreyMedium
+				border-color: $color
+				.list-item-container:hover &
+					box-shadow: 0 0 0 0.3rem rgba($color,0.75)
+				&:focus,&.checked
+					border-color: $inverseColor
+				&.checked
+					&::before
+						border-right-color: $inverseColor
+						border-top-color: $inverseColor
+					&::after
+						color: $color
+				.icon
+					color: $color
+					background-color: $inverseColor
+					&.split
+						+diagonal-split-background($inverseColor,darken($inverseColor,4%))
+						background-position: 50% 50%
+		&:focus
+			outline: none
+			border-style: dashed
+			border-width: 0.1rem
+		&.checked
+			border-style: solid
+			border-width: 0.4rem
+			padding: 0.6rem
+			&::before
+				display: block
+				width: 4rem
+				height: 4rem
+				position: absolute
+				right: 0
+				top: 0
+				border-right-width: 2rem
+				border-right-style: solid
+				border-top-width: 2rem
+				border-top-style: solid
+				border-bottom-width: 2rem
+				border-bottom-style: solid
+				border-left-width: 2rem
+				border-left-style: solid
+				border-bottom-color: transparent
+				border-left-color: transparent
+				content: " "
+			&::after
+				position: absolute
+				right: 0
+				top: 0
+				font-family: $wdWerneoIconFontFamily
+				content: "\f00c"
+			&.checked-disabled
+				border-color: $wdWerneoTeal
+				&::before
+					background-color: $wdWerneoTeal
+					border-right-color: $wdWerneoTeal
+					border-top-color: $wdWerneoTeal
+				&::after
+					content: "\f0c1"
+			.icon
+				top: 0.5rem
+				left: 0.5rem
+		.icon
+			width: 8rem
+			height: 8rem
+			position: absolute
+			top: 1rem
+			left: 1rem
+			text-align: center
+			display: flex
+			align-items: center
+			align-content: center
+			i
+				&.fa
+					line-height: 8rem
+					font-size: 3.2rem
+			> *
+				width: 100%
+				text-align: center
+			p
+				line-height: 100%
+			hr
+				margin: 0.2rem 0
+		.info
+			width: 100%
+			height: 8rem
+			padding-left: 9rem
+			p
+				display: block
+				margin: 0 0 0.5rem 0
+				font-size: 1.6rem
+				line-height: 2rem
+				+hellip
+			span
+				display: block
+				font-size: 1.4rem
+				line-height: 1.6rem
+				+hellip
+				&.byline
+					margin-top: 0.5rem
+					font-size: 1rem
+					position: absolute
+					bottom: 0.5rem
+					right: 1rem
+					&.big
+						font-size: 1.4rem
+				&.error
+					color: $wdWerneoCrimson
+					font-weight: normal
+			input
+				margin-bottom: 0.5rem
+		input
+			&[type="checkbox"]
+				width: 0
+				height: 0
+				overflow: hidden
+				display: block
+				border: none
+				padding: 0
+				margin: 0
+				z-index: -1
+				position: absolute
+				bottom: 0
+				right: 0

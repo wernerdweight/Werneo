@@ -2,10 +2,12 @@
 ////            WD WIDGETS
 ///////////////////////////////////////////////////////////////////////////////////
 
-.widget
-	overflow: hidden
-	border: 0.1rem solid $wdWerneoGreyLight
-	img
-		display: block
-.widget-section
-	padding: 2rem
+@if $wdWerneoUseWidgets == true
+
+	.widget
+		overflow: hidden
+		border: 0.1rem solid $wdWerneoGreyLight
+		img
+			display: block
+	.widget-section
+		padding: 2rem

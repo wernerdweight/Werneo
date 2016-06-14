@@ -2,11 +2,13 @@
 ////            WD BACKGROUNDS
 ///////////////////////////////////////////////////////////////////////////////////
 
-@each $name, $color, in $wdWerneoColors
-    $inverseColor: $wdWerneoWhite
-    @if $name == 'white' or $name == 'grey-light'
-        $inverseColor: $wdWerneoGreyMedium
-    .bg-#{$name}
-        background-color: $color
-        color: $inverseColor
+@if $wdWerneoUseBackgrounds == true
+
+	@each $name, $color, in $wdWerneoColors
+		$inverseColor: $wdWerneoWhite
+		@if $name == 'white' or $name == 'grey-light'
+			$inverseColor: $wdWerneoGreyMedium
+		.bg-#{$name}
+			background-color: $color
+			color: $inverseColor
 

@@ -2,17 +2,19 @@
 ////            WD BADGES
 ///////////////////////////////////////////////////////////////////////////////////
 
-.badge
-    display: inline-block
-    padding: 0.5rem 1rem
-    &.sm
-        padding: 0.25rem 0.5rem
-    &.lg
-        padding: 1rem 2rem
-    @each $name, $color, in $wdWerneoColors
-        $inverseColor: $wdWerneoWhite
-        @if $name == 'white' or $name == 'grey-light'
-            $inverseColor: $wdWerneoGreyMedium
-        &.#{$name}
-            background-color: $color
-            color: $inverseColor
+@if $wdWerneoUseBadges == true
+
+	.badge
+		display: inline-block
+		padding: 0.5rem 1rem
+		&.sm
+			padding: 0.25rem 0.5rem
+		&.lg
+			padding: 1rem 2rem
+		@each $name, $color, in $wdWerneoColors
+			$inverseColor: $wdWerneoWhite
+			@if $name == 'white' or $name == 'grey-light'
+				$inverseColor: $wdWerneoGreyMedium
+			&.#{$name}
+				background-color: $color
+				color: $inverseColor

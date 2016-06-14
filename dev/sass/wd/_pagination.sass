@@ -2,80 +2,82 @@
 ////            WD PAGINATION
 ///////////////////////////////////////////////////////////////////////////////////
 
-.pagination
-    display: block
-    text-align: center
-    ul
-        width: 100%
-    ul,li
-        list-style: none
-        display: inline
-        padding-left: 0
-    li
-        &:nth-child(n)
-            a,span
-                display: none
-                +responsive(tablet)
-                    display: inline-block
-        &:first-child
-            float: left
-            margin-right: 0.5rem
-            a,span
-                display: inline-block
-                &:after
-                    font-family: $wdWerneoIconFontFamily
-                    content: '\f104'
-                    font-size: 3rem
-                    line-height: 2rem
-        &:last-child
-            float: right
-            margin-left: 0.5rem
-            a,span
-                display: inline-block
-                &:after
-                    font-family: $wdWerneoIconFontFamily
-                    content: '\f105'
-                    font-size: 3rem
-                    line-height: 2rem
-        &.active
-            a,span
-                display: inline-block
-                font-weight: $wdWerneoBold
-        &.dots
-            display: none
-            &:after
-                padding: 0 0.25rem
-                content: '\2026'
-                +responsive(desktop)
-                    padding: 0 0.5rem
-            +responsive(tablet)
-                display: inline-block
-        a,span
-            text-decoration: none
-            display: inline-block
-            text-align: center
-            padding: 1rem 2rem
-            line-height: 2rem
-            height: 4rem
-            color: inherit
-        span
-            color: $wdWerneoGreyLightest
-    @each $name, $color, in $wdWerneoColors
-        &.#{$name}
-            $inverseColor: $wdWerneoWhite
-            @if $name == 'white' or $name == 'grey-light'
-                $inverseColor: $wdWerneoGreyMedium
-            li
-                &:hover
-                    a
-                        +diagonal-split-background-hover
-                &.active
-                    a,span
-                        color: $color
-                        +diagonal-split-background(darken($inverseColor,10%),$inverseColor)
-                a,span
-                    +diagonal-split-background(darken($color,10%),$color)
-                a
-                    color: $inverseColor
-                span
-                    color: darken($inverseColor,20%)
+@if $wdWerneoUsePagination == true
+
+	.pagination
+		display: block
+		text-align: center
+		ul
+			width: 100%
+		ul,li
+			list-style: none
+			display: inline
+			padding-left: 0
+		li
+			&:nth-child(n)
+				a,span
+					display: none
+					+responsive(tablet)
+						display: inline-block
+			&:first-child
+				float: left
+				margin-right: 0.5rem
+				a,span
+					display: inline-block
+					&:after
+						font-family: $wdWerneoIconFontFamily
+						content: '\f104'
+						font-size: 3rem
+						line-height: 2rem
+			&:last-child
+				float: right
+				margin-left: 0.5rem
+				a,span
+					display: inline-block
+					&:after
+						font-family: $wdWerneoIconFontFamily
+						content: '\f105'
+						font-size: 3rem
+						line-height: 2rem
+			&.active
+				a,span
+					display: inline-block
+					font-weight: $wdWerneoBold
+			&.dots
+				display: none
+				&:after
+					padding: 0 0.25rem
+					content: '\2026'
+					+responsive(desktop)
+						padding: 0 0.5rem
+				+responsive(tablet)
+					display: inline-block
+			a,span
+				text-decoration: none
+				display: inline-block
+				text-align: center
+				padding: 1rem 2rem
+				line-height: 2rem
+				height: 4rem
+				color: inherit
+			span
+				color: $wdWerneoGreyLightest
+		@each $name, $color, in $wdWerneoColors
+			&.#{$name}
+				$inverseColor: $wdWerneoWhite
+				@if $name == 'white' or $name == 'grey-light'
+					$inverseColor: $wdWerneoGreyMedium
+				li
+					&:hover
+						a
+							+diagonal-split-background-hover
+					&.active
+						a,span
+							color: $color
+							+diagonal-split-background(darken($inverseColor,10%),$inverseColor)
+					a,span
+						+diagonal-split-background(darken($color,10%),$color)
+					a
+						color: $inverseColor
+					span
+						color: darken($inverseColor,20%)

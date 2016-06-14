@@ -2,58 +2,60 @@
 ////            WD TABLES
 ///////////////////////////////////////////////////////////////////////////////////
 
-table
-	&.table
-		width: 100%
-		border-collapse: collapse
-		border-spacing: 0
-		th
-			padding: 1rem
-			font-weight: $wdWerneoNormal
-		td
-			padding: 0.5rem 1rem
-		th,td
-			text-align: center
-		&.first-left
+@if $wdWerneoUseTables == true
+
+	table
+		&.table
+			width: 100%
+			border-collapse: collapse
+			border-spacing: 0
+			th
+				padding: 1rem
+				font-weight: $wdWerneoNormal
+			td
+				padding: 0.5rem 1rem
 			th,td
-				&:first-child
-					text-align: left
-		&.last-right
-			th,td
-				&:last-child
-					text-align: right
-		&.striped
-			tr
-				&:nth-child(2n)
-					td
-						background-color: rgba($wdWerneoGreyLightest,0.1)
-		&.lined
-			tr
-				border-bottom: 0.1rem solid $wdWerneoGreyLightest
-			thead
+				text-align: center
+			&.first-left
+				th,td
+					&:first-child
+						text-align: left
+			&.last-right
+				th,td
+					&:last-child
+						text-align: right
+			&.striped
 				tr
-					border-bottom: none
-		&.bordered
-			th,td
-				border: 0.1rem solid $wdWerneoGreyLightest
-		
-		/// colors
-		@each $name, $color, in $wdWerneoColors
-			$inverseColor: $wdWerneoWhite
-			@if $name == 'white' or $name == 'grey-light'
-				$inverseColor: $wdWerneoGreyMedium
-			&.#{$name}
-				th
-					background-color: $color
-					color: $inverseColor
-				&.striped
+					&:nth-child(2n)
+						td
+							background-color: rgba($wdWerneoGreyLightest,0.1)
+			&.lined
+				tr
+					border-bottom: 0.1rem solid $wdWerneoGreyLightest
+				thead
 					tr
-						&:nth-child(2n)
-							td
-								background-color: rgba($color,0.1)
-				&.lined
-					tr
-						border-bottom-color: $color
-				&.bordered
-					th,td
-						border-color: $color
+						border-bottom: none
+			&.bordered
+				th,td
+					border: 0.1rem solid $wdWerneoGreyLightest
+			
+			/// colors
+			@each $name, $color, in $wdWerneoColors
+				$inverseColor: $wdWerneoWhite
+				@if $name == 'white' or $name == 'grey-light'
+					$inverseColor: $wdWerneoGreyMedium
+				&.#{$name}
+					th
+						background-color: $color
+						color: $inverseColor
+					&.striped
+						tr
+							&:nth-child(2n)
+								td
+									background-color: rgba($color,0.1)
+					&.lined
+						tr
+							border-bottom-color: $color
+					&.bordered
+						th,td
+							border-color: $color

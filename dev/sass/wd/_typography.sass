@@ -2,55 +2,57 @@
 ////            WD TYPOGRAPHY
 ///////////////////////////////////////////////////////////////////////////////////
 
-p,h1,h2,h3,h4,h5,h6,label
-    font-size: $wdWerneoBasicFontSize
-    line-height: 150%
-    font-weight: $wdWerneoNormal
-    margin: 0
-    &.h1
-        font-weight: $wdWerneoBold
-        font-size: 175%
-    &.h2
-        font-size: 150%
-        font-weight: $wdWerneoBold
-    &.h3
-        font-size: 125%
-        font-weight: $wdWerneoBold
-    &.h4
-        font-weight: $wdWerneoBold
-    &.h5
-        text-decoration: underline
-    &.h6
-        font-size: 85%
-        text-decoration: underline
-    article &
-        margin-bottom: 0.5em
+@if $wdWerneoUseTypography == true
 
-big
-    font-size: 120%
-small
-    font-size: 80%
+	p,h1,h2,h3,h4,h5,h6,label
+		font-size: $wdWerneoBasicFontSize
+		line-height: 150%
+		font-weight: $wdWerneoNormal
+		margin: 0
+		&.h1
+			font-weight: $wdWerneoBold
+			font-size: 175%
+		&.h2
+			font-size: 150%
+			font-weight: $wdWerneoBold
+		&.h3
+			font-size: 125%
+			font-weight: $wdWerneoBold
+		&.h4
+			font-weight: $wdWerneoBold
+		&.h5
+			text-decoration: underline
+		&.h6
+			font-size: 85%
+			text-decoration: underline
+		article &
+			margin-bottom: 0.5em
 
-/// default alignment (non-responsive)
-+text-aligns('')
-/// responsive alignment
-@each $scope, $name in $wdFlexerScopes
-    +responsive($scope)
-        +text-aligns($name + '-')
+	big
+		font-size: 120%
+	small
+		font-size: 80%
 
-/// ellipsis
-.no-hellip
-    white-space: normal !important
-.hellip
-    +hellip
+	/// default alignment (non-responsive)
+	+text-aligns('')
+	/// responsive alignment
+	@each $scope, $name in $wdFlexerScopes
+		+responsive($scope)
+			+text-aligns($name + '-')
 
-/// transformations
-.tt-uc
-    text-transform: uppercase
-.tt-lc
-    text-transform: lowercase
+	/// ellipsis
+	.no-hellip
+		white-space: normal !important
+	.hellip
+		+hellip
 
-/// colors
-@each $name,$color in $wdWerneoColors
-    .text-#{$name}
-        color: $color !important
+	/// transformations
+	.tt-uc
+		text-transform: uppercase
+	.tt-lc
+		text-transform: lowercase
+
+	/// colors
+	@each $name,$color in $wdWerneoColors
+		.text-#{$name}
+			color: $color !important
