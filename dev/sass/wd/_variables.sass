@@ -1,6 +1,8 @@
-/// switches (plus additional size if minified)
-/// minimal size is 2.5 kB
-/// maximal size is 123 kB
+///////////////////////////////////////////////////////////////////////////////////
+///            SWITCHES (plus additional size if minified)
+///            minimal size is 2.5 kB
+///            maximal size is 123 kB
+///////////////////////////////////////////////////////////////////////////////////
 
 /// use backgrounds ~ 0.5 kB
 $wdWerneoUseBackgrounds: true !default
@@ -10,9 +12,11 @@ $wdWerneoUseBadges: true !default
 $wdWerneoUseBreadcrumbs: true !default
 /// use buttons ~ 13 kB
 $wdWerneoUseButtons: true !default
+/// use chevrons ~ 1 kB
+$wdWerneoUseChevrons: true !default
 /// use code ~ 0.25 kB
 $wdWerneoUseCode: true !default
-/// use dropdowns ~ 29 kB
+/// use dropdowns ~ 28 kB
 $wdWerneoUseDropdowns: true !default
 /// use dynamic filters ~ 0.25 kB
 $wdWerneoUseDynaFilter: true !default
@@ -49,7 +53,13 @@ $wdWerneoUseTypography: true !default
 /// use widgets ~ 0.1 kB
 $wdWerneoUseWidgets: true !default
 
+///////////////////////////////////////////////////////////////////////////////////
+///            GENERAL VARIABLES
+///////////////////////////////////////////////////////////////////////////////////
 
+/// base variables
+$wdWerneoBorderRadius: 0 !default
+$wdWerneoElementSize: 5rem !default
 
 /// colors
 $wdWerneoBlack: #000 !default
@@ -73,8 +83,62 @@ $wdWerneoLighter: 200 !default
 $wdWerneoNormal: 400 !default
 $wdWerneoBold: 700 !default
 
+///////////////////////////////////////////////////////////////////////////////////
+///            COMPONENT VARIABLES
+///////////////////////////////////////////////////////////////////////////////////
+
+/// badges
+$wdWerneoBadgesPaddingVertical: 0.5rem !default
+$wdWerneoBadgesPaddingHorizontal: 1rem !default
+
+/// breadcrumbs
+$wdWerneoBreadcrumbsRoot: "\\\\ " !default
+$wdWerneoBreadcrumbsSeparator: " \\ " !default
+$wdWerneoBreadcrumbsSubcrumbBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoBreadcrumbsSubcrumbBorderStyle: solid !default
+$wdWerneoBreadcrumbsSubcrumbBorderWidth: 0.1rem !default
+$wdWerneoBreadcrumbsSubcrumbMaxHeight: 20rem !default
+$wdWerneoBreadcrumbsSubcrumbMaxWidth: 30rem !default
+$wdWerneoBreadcrumbsSubcrumbPaddingHorizontal: 1rem !default
+$wdWerneoBreadcrumbsSubcrumbPaddingVertical: 0.5rem !default
+$wdWerneoBreadcrumbsSubcrumbTriggerHeight: 1rem !default
+$wdWerneoBreadcrumbsSubcrumbTriggerWidth: 1rem !default
+
+/// buttons
+$wdWerneoButtonsBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoButtonsFocusAnimationDuration: 1000ms !default
+$wdWerneoButtonsFocusAnimationFunction: diagonalSplitBackgroundHover !default
+$wdWerneoButtonsLoadingAnimationDuration: 1000ms !default
+$wdWerneoButtonsLoadingAnimationFunction: loadMoreSpinner !default
+$wdWerneoButtonsLoadingSize: $wdWerneoElementSize !default
+$wdWerneoButtonsOutlineStyle: solid !default
+$wdWerneoButtonsOutlineWidth: 0.2rem !default
+$wdWerneoButtonsPaddingVertical: 1.6rem !default
+$wdWerneoButtonsPaddingHorizontal: 3rem !default
+
+/// chevrons
+$wdWerneoChevronsHeight: 0.4rem !default
+$wdWerneoChevronsWidth: 1.2rem !default
+
+/// code
+$wdWerneoCodePaddingHorizontal: 1rem !default
+$wdWerneoCodePaddingVertical: 0.25rem !default
+$wdWerneoPreePaddingHorizontal: 2rem !default
+$wdWerneoPreePaddingVertical: 0 !default
+
+/// dropdowns
+$wdWerneoDropdownsBorderWidth: 0.4rem
+$wdWerneoDropdownsHeight: $wdWerneoElementSize !default
+
+/// forms
+$wdWerneoFormsInputSize: $wdWerneoElementSize !default
+$wdWerneoFormsBorderRadius: $wdWerneoBorderRadius !default
+
 /// typography
 $wdWerneoBasicFontFamily: Helevtica, Arial, sans-serif !default
 $wdWerneoAccentFontFamily: Helevtica, Arial, sans-serif !default
 $wdWerneoIconFontFamily: 'FontAwesome' !default
 $wdWerneoBasicFontSize: 1.6rem !default
+
+/// widgets
+$wdWerneoWidgetsBorderRadius: $wdWerneoBorderRadius !default

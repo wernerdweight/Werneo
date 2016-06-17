@@ -5,18 +5,21 @@
 @if $wdWerneoUseButtons == true
 
 	.btn
-		padding: 1.6rem 3rem
-		font-size: 1.5rem
-		line-height: 1.8rem
+		padding: $wdWerneoButtonsPaddingVertical $wdWerneoButtonsPaddingHorizontal
+		font-size: $wdWerneoBasicFontSize
+		line-height: $wdWerneoBasicFontSize * 1.125
 		display: inline-block
 		text-decoration: none
+		text-align: center
 		cursor: pointer
 		border: none
 		box-sizing: border-box
 		transition: all 300ms ease-in-out
+		@if $wdWerneoButtonsBorderRadius != 0
+			border-radius: $wdWerneoButtonsBorderRadius
 		&.outline
-			border-width: 0.2rem
-			border-style: solid
+			border-width: $wdWerneoButtonsOutlineWidth
+			border-style: $wdWerneoButtonsOutlineStyle
 			background: transparent !important
 		
 		/// colors
@@ -37,7 +40,7 @@
 					color: desaturate($inverseColor,10%)
 					background-color: desaturate($color,10%)
 					outline: 0
-					animation: diagonalSplitBackgroundHover 1000ms
+					animation: $wdWerneoButtonsFocusAnimationFunction $wdWerneoButtonsFocusAnimationDuration
 					+diagonal-split-background(darken($color,10%),$color)
 				&.outline
 					color: $color
@@ -51,7 +54,7 @@
 				color: darken($wdWerneoGreyDark,10%)
 			&:focus,&:active,&.active
 				color: $wdWerneoGreyDark
-				animation: diagonalSplitBackgroundHover 1000ms
+				animation: $wdWerneoButtonsFocusAnimationFunction $wdWerneoButtonsFocusAnimationDuration
 				+diagonal-split-background($wdWerneoWhite,darken($wdWerneoWhite,4%))
 			&.outline
 				&:hover
@@ -60,51 +63,46 @@
 		
 		/// sizes
 		&.xs
-			font-size: 1.3rem
-			line-height: 1.6rem
-			padding: 0.6rem 1.2rem
+			font-size: $wdWerneoBasicFontSize * 0.8125
+			line-height: $wdWerneoBasicFontSize
+			padding: $wdWerneoButtonsPaddingVertical * 0.375 $wdWerneoButtonsPaddingHorizontal * 0.4
 		&.sm
-			font-size: 1.4rem
-			line-height: 1.8rem
-			padding: 1rem 1.8rem
+			font-size: $wdWerneoBasicFontSize * 0.875
+			line-height: $wdWerneoBasicFontSize * 1.125
+			padding: $wdWerneoButtonsPaddingVertical * 0.625 $wdWerneoButtonsPaddingHorizontal * 0.6
 		&.lg
-			padding: 1.8rem 2.6rem
-			font-size: 2.4rem
-			line-height: 2.6rem
+			font-size: $wdWerneoBasicFontSize * 1.5
+			line-height: $wdWerneoBasicFontSize * 1.625
+			padding: $wdWerneoButtonsPaddingVertical * 1.125 $wdWerneoButtonsPaddingHorizontal * 1.1
 		&.xl
-			font-size: 3.5rem
-			line-height: 3.8rem
-			padding: 1.8rem 4rem
+			font-size: $wdWerneoBasicFontSize * 2.1875
+			line-height: $wdWerneoBasicFontSize * 2.375
+			padding: $wdWerneoButtonsPaddingVertical * 1.125 $wdWerneoButtonsPaddingHorizontal * (4/3)
 		&.full
 			width: 100%
 			padding-left: 0
 			padding-right: 0
 			text-align: center
 		&.input
-			font-size: 1.6rem
-			line-height: 2rem
-			padding: 1rem 2rem
+			line-height: $wdWerneoFormsInputSize
+			height: $wdWerneoFormsInputSize
+			padding-top: 0
+			padding-bottom: 0
 		
 		/// functional
 		&.loading
-			width: 3rem
-			height: 3rem
-			padding: 0
-			overflow: hidden
-			border-radius: 50%
-			text-indent: -999rem
-			white-space: nowrap
-			background-position: 50% 50%
-			outline: 0
-			animation: loadMoreSpinner 1s infinite
-			&:hover,&:focus
+			&,&:hover,&:focus
+				width: $wdWerneoButtonsLoadingSize
+				height: $wdWerneoButtonsLoadingSize
+				padding: 0
+				overflow: hidden
+				border-radius: 50%
+				text-indent: -999rem
+				white-space: nowrap
 				background-position: 50% 50%
+				outline: 0
+				animation: $wdWerneoButtonsLoadingAnimationFunction $wdWerneoButtonsLoadingAnimationDuration infinite
 		&[disabled="disabled"]
-			background: $wdWerneoGreyLight
-			color: darken($wdWerneoGreyLight,10%)
-			&:hover
+			&,&:hover,&:focus,&:active,&.active
 				background: $wdWerneoGreyLight
-				color: darken($wdWerneoGreyLight,10%)
-			&:focus,&:active,&.active
-				background: $wdWerneoGreyLight
-				color: darken($wdWerneoGreyLight,10%)
+				color: darken($wdWerneoGreyLight,20%)

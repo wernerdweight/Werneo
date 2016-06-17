@@ -7,6 +7,9 @@
 	.widget
 		overflow: hidden
 		border: 0.1rem solid $wdWerneoGreyLight
+		@if $wdWerneoWidgetsBorderRadius != 0
+			border-radius: $wdWerneoWidgetsBorderRadius
+			overflow: hidden
 		img
 			display: block
 	.widget-section

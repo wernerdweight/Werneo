@@ -26,7 +26,7 @@
 							<div class="dropdown mauve full-colored">
 								<span class="dropdown-value"></span>
 								<div class="dropdown-handle">
-									<div class="dropdown-chevron"></div>
+									<div class="chevron"></div>
 								</div>
 								<div class="dropdown-list">
 									<a href="index.html" class="dropdown-option sm">Home</a>
@@ -65,6 +65,8 @@
 
 				<h2 class="h2">Buttons</h2>
 
+				<h3 class="h3">Sizes</h3>
+
 				<div class="r">
 					<div class="c-12">
 						<div>
@@ -77,6 +79,8 @@
 						</div>
 					</div>
 				</div>
+
+				<h3 class="h3">Colors</h3>
 
 				<div class="r r-1 t-3 d-5 ta-c">
 					<span class="btn turquoise">&amp;.turquoise</span>
@@ -91,6 +95,8 @@
 					<span class="btn white">&amp;.white</span>
 				</div>
 
+				<h3 class="h3">Outline</h3>
+
 				<div class="r r-1 t-3 d-5 ta-c">
 					<span class="btn outline turquoise">&amp;.outline.turquoise</span>
 					<span class="btn outline teal">&amp;.outline.teal</span>
@@ -104,10 +110,12 @@
 					<span class="btn outline white">&amp;.outline.white</span>
 				</div>
 
+				<h3 class="h3">States</h3>
+
 				<div class="r">
 					<div class="c-12">
 						<div>
-							<button type="button" class="btn turquoise loading">&amp;.loading</button>
+							<button type="button" class="btn turquoise" id="loading">click me to simulate loading</button>
 							<button type="button" class="btn turquoise" disabled="disabled">&amp;[disabled="disabled"]</button>
 						</div>
 					</div>
@@ -117,6 +125,20 @@
 		</div>
 
 		<script type="text/javascript" src="../dist/js/werneo.js"></script>
+		<script type="text/javascript">
+			/// simulate loading
+			document.addEventListener('DOMContentLoaded',function(){
+				var loadingButton = document.getElementById('loading');
+				loadingButton.addEventListener('click',function(event){
+					event.preventDefault();
+					var button = this;
+					button.classList.add('loading');
+					setTimeout(function(){
+						button.classList.remove('loading');
+					},2000);
+				});
+			});
+		</script>
 
 	</body>
 </html>

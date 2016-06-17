@@ -22,13 +22,13 @@
 		font-family: $wdWerneoBasicFontFamily
 
 	input,select
-		height: 5rem
+		height: $wdWerneoFormsInputSize
 		&.lg
-			height: 8rem
+			height: $wdWerneoFormsInputSize * 1.6
 		&.medium
-			height: 6rem
+			height: $wdWerneoFormsInputSize * 1.2
 		&.sm
-			height: 3rem
+			height: $wdWerneoFormsInputSize * 0.6
 
 	input,select,textarea
 		display: inline-block
@@ -37,6 +37,8 @@
 		border: 0.4rem solid darken($wdWerneoGreyLight,10%)
 		transition: all 300ms ease-in-out
 		width: 100%
+		@if $wdWerneoFormsBorderRadius != 0
+			border-radius: $wdWerneoFormsBorderRadius
 		+input-placeholder
 			color: $wdWerneoGreyLight
 			transition: color 300ms ease-in-out
@@ -142,14 +144,14 @@
 			display: inline-block
 
 	.input-like
-		height: 5rem
-		line-height: 5rem
+		height: $wdWerneoFormsInputSize
+		line-height: $wdWerneoFormsInputSize
 
 	/// switch-like checkbox
 
 	.switch
 		cursor: pointer
-		height: 5rem
+		height: $wdWerneoFormsInputSize
 		display: flex
 		align-items: center
 		input[type="checkbox"]
@@ -164,7 +166,7 @@
 						left: 4.1rem
 		.check
 			position: relative
-			width: 5rem
+			width: $wdWerneoFormsInputSize
 			height: 2rem
 			outline: 0.1rem solid $wdWerneoGreyLight
 			border: 0.1rem solid $wdWerneoWhite
@@ -173,6 +175,9 @@
 			display: inline-block
 			z-index: 1
 			transition: background-color 200ms ease-in-out
+			@if $wdWerneoFormsBorderRadius != 0
+				border-radius: $wdWerneoFormsBorderRadius
+				outline: none
 			&::after
 				content: ''
 				position: absolute

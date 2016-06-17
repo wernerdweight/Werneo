@@ -6,11 +6,11 @@
 
 	.badge
 		display: inline-block
-		padding: 0.5rem 1rem
+		padding: $wdWerneoBadgesPaddingVertical $wdWerneoBadgesPaddingHorizontal
 		&.sm
-			padding: 0.25rem 0.5rem
+			padding: $wdWerneoBadgesPaddingVertical * 0.5 $wdWerneoBadgesPaddingHorizontal * 0.5
 		&.lg
-			padding: 1rem 2rem
+			padding: $wdWerneoBadgesPaddingVertical * 2 $wdWerneoBadgesPaddingHorizontal * 2
 		@each $name, $color, in $wdWerneoColors
 			$inverseColor: $wdWerneoWhite
 			@if $name == 'white' or $name == 'grey-light'
