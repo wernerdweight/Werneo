@@ -63,7 +63,6 @@
 				&.half-colored,&.full-colored
 					.dropdown-handle
 						color: $inverseColor
-						border-color: $color
 						+diagonal-split-background($color,darken($color,4%))
 						&:hover,&:focus,&:active,&.active
 							+diagonal-split-background-hover
@@ -102,13 +101,17 @@
 		width: 100%
 		height: $wdWerneoDropdownsHeight
 		line-height: $wdWerneoDropdownsHeight - (2 * $wdWerneoDropdownsBorderWidth)
-		padding: 0 $wdWerneoDropdownsHeight 0 1rem
+		padding: 0 $wdWerneoDropdownsHeight 0 $wdWerneoDropdownsValuePaddingHorizontal
 		border: $wdWerneoDropdownsBorderWidth solid $wdWerneoGreyLightest
 		color: $wdWerneoGreyMedium
 		background-color: $wdWerneoWhite
 		box-sizing: border-box
 		transition: all 300ms ease-in-out
 		+hellip
+		@if $wdWerneoDropdownsBorderRadius != 0
+			border-radius: $wdWerneoDropdownsBorderRadius
+			&.active
+				border-radius: $wdWerneoDropdownsBorderRadius $wdWerneoDropdownsBorderRadius 0 0
 		&:hover,&:focus,&:active,&.active
 			outline: 0
 			color: $wdWerneoGreyDark
@@ -120,13 +123,16 @@
 		width: $wdWerneoDropdownsHeight
 		height: $wdWerneoDropdownsHeight
 		line-height: $wdWerneoDropdownsHeight
-		padding: 0 1rem
-		border: 0.1rem solid $wdWerneoGreyLightest
+		padding: 0
 		text-align: center
 		color: $wdWerneoGreyMedium
 		box-sizing: border-box
 		transition: all 300ms ease-in-out
 		background-color: darken($wdWerneoWhite,4%)
+		@if $wdWerneoDropdownsBorderRadius != 0
+			border-radius: 0 $wdWerneoDropdownsBorderRadius $wdWerneoDropdownsBorderRadius 0
+			&.active
+				border-radius: 0 $wdWerneoDropdownsBorderRadius 0 0
 
 	.dropdown-list
 		display: none
@@ -140,9 +146,11 @@
 		border-top: none
 		box-sizing: border-box
 		transition: all 300ms ease-in-out
-		max-height: calc(90vh - $wdWerneoDropdownsHeight)
+		max-height: calc(#{$wdWerneoDropdownsMaxViewportHeight} - #{$wdWerneoDropdownsHeight})
 		overflow-x: hidden
 		overflow-y: auto
+		@if $wdWerneoDropdownsBorderRadius != 0
+			border-radius: 0 0 $wdWerneoDropdownsBorderRadius $wdWerneoDropdownsBorderRadius
 		&.active
 			display: block
 
@@ -150,36 +158,34 @@
 		display: block
 		height: $wdWerneoDropdownsHeight
 		line-height: $wdWerneoDropdownsHeight
-		border-top: 0.1rem solid $wdWerneoGreyLight
-		padding: 0 1.5rem
+		border-top: $wdWerneoDropdownsOptionBorderTopWidth solid $wdWerneoGreyLight
+		padding: $wdWerneoDropdownsOptionPaddingVertical $wdWerneoDropdownsOptionPaddingHorizontal
 		color: $wdWerneoWhite
 		transition: all 300ms ease-in-out
 		box-sizing: border-box
 		+hellip
 		&:first-child
 			border-top: none
-		&:hover
-			transform: scale(1.02)
 		&.active
 			transform: scale(1.01)
 		&.sm
-			height: 4rem
-			line-height: 4rem
+			height: $wdWerneoDropdownsHeight * 0.8
+			line-height: $wdWerneoDropdownsHeight * 0.8
 		.dropdown-level &
-			padding-left: 2rem
+			padding-left: $wdWerneoDropdownsValuePaddingHorizontal * 2
 			font-size: 90%
-			height: 3.2rem
-			line-height: 3.2rem
+			height: $wdWerneoDropdownsHeight * 0.64
+			line-height: $wdWerneoDropdownsHeight * 0.64
 			.dropdown-level &
-				padding-left: 4rem
+				padding-left: $wdWerneoDropdownsValuePaddingHorizontal * 3
 				font-size: 80%
-				height: 2.6rem
-				line-height: 2.6rem
+				height: $wdWerneoDropdownsHeight * 0.52
+				line-height: $wdWerneoDropdownsHeight * 0.52
 				.dropdown-level &
-					padding-left: $wdWerneoDropdownsHeight
+					padding-left: $wdWerneoDropdownsValuePaddingHorizontal * 4
 					font-size: 75%
-					height: 2.2rem
-					line-height: 2.2rem
+					height: $wdWerneoDropdownsHeight * 0.44
+					line-height: $wdWerneoDropdownsHeight * 0.44
 
 	.dropdown-level
 		display: none
@@ -188,8 +194,8 @@
 
 	.dropdown-divider
 		display: block
-		margin: 0.5rem 0
-		height: 0.1rem
+		margin: $wdWerneoDropdownsDividerMarginVertical $wdWerneoDropdownsDividerMarginHorizontal
+		height: $wdWerneoDropdownsDividerHeight
 		background-color: $wdWerneoGreyLight
 		& + .dropdown-option
 			border-top: none

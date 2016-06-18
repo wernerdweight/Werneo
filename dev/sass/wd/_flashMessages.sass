@@ -4,36 +4,41 @@
 
 @if $wdWerneoUseFlashMessages == true
 
+	$wdWerneoFlashMessagesQueuePositionHorizontalSign: 1
+	@if $wdWerneoFlashMessagesQueuePositionHorizontal == left
+		$wdWerneoFlashMessagesQueuePositionHorizontalSign: -1
+
 	.flash-message-queue
 		display: block
 		position: fixed
-		bottom: 2rem
-		right: 2rem
-		width: 20%
-		min-width: 24rem
+		#{$wdWerneoFlashMessagesQueuePositionVertical}: $wdWerneoFlashMessagesQueueOffsetVertical
+		#{$wdWerneoFlashMessagesQueuePositionHorizontal}: $wdWerneoFlashMessagesQueueOffsetHorizontal
+		width: $wdWerneoFlashMessagesQueueWidth
+		min-width: $wdWerneoFlashMessagesQueueMinWidth
 		z-index: 999999
 
 	.flash-message
 		display: block
 		position: relative
 		overflow: hidden
-		border: 0.4rem solid darken($wdWerneoGreyDark,5%)
+		border-style: solid
+		border-color: darken($wdWerneoGreyDark,5%)
 		border-width: 0
 		background-color: $wdWerneoGreyDark
 		color: $wdWerneoWhite
 		transition: margin-left 300ms ease-in-out, max-height 300ms 300ms, padding 300ms 300ms, border 300ms 300ms, margin-bottom 300ms 300ms
 		padding: 0
-		margin-left: calc(100% + 2rem)
+		margin-left: calc(#{$wdWerneoFlashMessagesQueuePositionHorizontalSign * 100%} + #{$wdWerneoFlashMessagesQueuePositionHorizontalSign * $wdWerneoFlashMessagesQueueOffsetHorizontal})
 		margin-bottom: 0
 		width: 100%
 		max-height: 0
 		&.active
 			margin-left: 0
-			margin-bottom: 0.5rem
-			padding: 1rem
+			margin-bottom: $wdWerneoFlashMessagesMessageMarginBottom
+			padding: $wdWerneoFlashMessagesMessagePaddingVertical $wdWerneoFlashMessagesMessagePaddingHorizontal
 			max-height: 100vh
 			transition: margin-left 300ms ease-in-out, max-height 0ms 0ms, padding 0ms 0ms, border 0ms 0ms, margin-bottom 0ms 0ms
-			border-width: 0.4rem
+			border-width: $wdWerneoFlashMessagesMessageBorder
 		&.success
 			border-color: darken($wdWerneoTeal,5%)
 			background-color: $wdWerneoTeal
@@ -48,10 +53,10 @@
 			cursor: pointer
 			top: 0
 			right: 0
-			height: 2rem
-			width: 2rem
-			font-size: 2rem
-			line-height: 2rem
+			height: $wdWerneoFlashMessagesMessageCloseSize
+			width: $wdWerneoFlashMessagesMessageCloseSize
+			font-size: $wdWerneoFlashMessagesMessageCloseSize
+			line-height: $wdWerneoFlashMessagesMessageCloseSize
 			display: block
 			text-align: center
 			&:hover
