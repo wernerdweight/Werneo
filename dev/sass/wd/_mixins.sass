@@ -20,6 +20,7 @@
         bottom: auto
         transform: translateY(-50%)
 
+/// diagonally split backgrounds
 =diagonal-split-background($color1,$color2)
     background: $color1     /// old browsers
     background: linear-gradient(-45deg,  $color1 0%,$color1 50%,$color2 50%,$color2 100%)
@@ -28,14 +29,17 @@
     background-repeat: no-repeat
     transition: all 400ms ease-in-out
 
+/// animate diagonally split backgrounds (used on hover)
 =diagonal-split-background-hover
     background-position: 100% 100%
 
+/// create ellipsis
 =hellip
     text-overflow: ellipsis
     white-space: nowrap
     overflow: hidden
 
+/// create text alignment classes
 =text-aligns($scopeName)
     .#{$scopeName}ta-l
         text-align: left

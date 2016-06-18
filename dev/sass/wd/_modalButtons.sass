@@ -18,7 +18,7 @@
 					.header
 						background-color: $color
 						color: $inverseColor
-						border-bottom: 0.4rem solid lighten($color,20%)
+						border-bottom-color: lighten($color,20%)
 						.close
 							color: $inverseColor
 		&::before
@@ -48,12 +48,12 @@
 			transition: opacity 400ms 600ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms
 			& > *
 				opacity: 0
-				transition: opacity 300ms 0
+				transition: opacity 300ms 0ms
 			.close-times
 				display: block
 				position: absolute
-				top: 1rem
-				right: 1rem
+				top: $wdWerneoModalButtonsCloseButtonOffsetVertical
+				right: $wdWerneoModalButtonsCloseButtonOffsetHorizontal
 				z-index: 1101
 				opacity: 0.3
 				transition: opacity 400ms ease-in-out
@@ -64,31 +64,30 @@
 				top: 0
 				left: 0
 				width: 100%
-				padding: 1rem 3.5rem 0.5rem 1rem
+				padding: $wdWerneoModalButtonsHeaderPaddingTop $wdWerneoModalButtonsHeaderPaddingRight $wdWerneoModalButtonsHeaderPaddingBottom $wdWerneoModalButtonsHeaderPaddingLeft
 				margin: 0
 				z-index: 1100
+				border-bottom-width: $wdWerneoModalButtonsHeaderBorderBottomWidth
+				border-bottom-style: solid
 				p
-					font-size: 2.4rem
+					font-size: 150%
 					margin: 0
 					+hellip
 			.body
-				margin-top: 4.3rem
-				padding: 1rem 2rem 2rem 2rem
+				margin-top: ($wdWerneoBasicFontSize * 1.5 * 1.5) + $wdWerneoModalButtonsHeaderPaddingTop + $wdWerneoModalButtonsHeaderPaddingBottom + $wdWerneoModalButtonsHeaderBorderBottomWidth
+				padding: $wdWerneoModalButtonsBodyPaddingVertical $wdWerneoModalButtonsBodyPaddingHorizontal
 				z-index: 1099
-				height: 20.2rem
 				overflow: auto
-				p
-					margin: 0
 			.footer
 				z-index: 1100
 				position: absolute
 				bottom: 0
 				left: 0
 				width: 100%
-				padding: 0.5rem
+				padding: $wdWerneoModalButtonsFooterPaddingVertical $wdWerneoModalButtonsFooterPaddingHorizontal
 				margin: 0
 				background-color: $wdWerneoGreyLightest
-				border-top: 0.1rem solid $wdWerneoGreyLight
+				border-top: $wdWerneoModalButtonsHeaderBorderTopWidth solid $wdWerneoGreyLight
 
 		/// functional
 		&.open
