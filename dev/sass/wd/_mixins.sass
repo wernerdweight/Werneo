@@ -49,3 +49,8 @@
         text-align: center
     .#{$scopeName}ta-j
         text-align: justify
+
+/// create rotation transformation by steps
+=rotation-transformation($degrees)
+    [data-rotate="#{$degrees}"]
+        transform: rotate($degrees)
