@@ -5,11 +5,11 @@
 @if $wdWerneoUseScrollbars == true
 
 	::-webkit-scrollbar
-		width: 10px
-		height: 10px
+		width: $wdWerneoScrollbarsWidth
+		height: $wdWerneoScrollbarsHeight
 	::-webkit-scrollbar-thumb
 		background: darken($wdWerneoGreyLight,10%)
-		border: 0.2rem solid $wdWerneoGreyLightest
+		border: $wdWerneoScrollbarsBorderWidth solid $wdWerneoGreyLightest
 	::-webkit-scrollbar-track
 		background: $wdWerneoGreyLightest
 

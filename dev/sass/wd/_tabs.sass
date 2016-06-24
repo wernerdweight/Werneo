@@ -9,21 +9,20 @@
 			.tab-nav
 				position: relative
 				border-bottom: none
+				border-right: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
 				z-index: 2
 				.nav
 					display: block
-					margin-bottom: 0.2rem
-					padding: 0.5rem 1rem
-					margin-right: -0.1rem
+					margin-bottom: $wdWerneoTabsVarticalMarginBottom
 					&.active
-						border-left: 0.4rem solid $wdWerneoGreyDark
-						margin-right: -0.1rem
-						border-bottom: 0.1rem solid $wdWerneoGreyLight
-						border-top: 0.1rem solid $wdWerneoGreyLight
+						border-left: $wdWerneoTabsBorderWidthActive solid $wdWerneoGreyDark
+						margin-right: -$wdWerneoTabsBorderWidth
+						border-bottom: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
+						border-top: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
 						border-right: none
 			.tab-content
-				border-top: 0.1rem solid $wdWerneoGreyLight
-				border-left: 0.1rem solid $wdWerneoGreyLight
+				border-top: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
+				border-left: none
 				position: relative
 				z-index: 1
 
@@ -57,6 +56,7 @@
 									color: $inverseColor
 				&.vertical
 					.tab-nav
+						border-right-color: $color
 						.nav
 							&.active
 								border-bottom-color: $color
@@ -78,7 +78,7 @@
 								color: $wdWerneoGreyDark
 
 	.tab-nav
-		border-bottom: 0.1rem solid $wdWerneoGreyLight
+		border-bottom: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
 		.nav
 			display: inline-block
 			background-color: darken($wdWerneoGreyLight,20%)
@@ -86,15 +86,15 @@
 				background-color: darken($wdWerneoGreyLight,10%)
 			&.active
 				background-color: $wdWerneoWhite
-				border-top: 0.4rem solid $wdWerneoGreyDark
-				border-left: 0.1rem solid $wdWerneoGreyLight
-				border-right: 0.1rem solid $wdWerneoGreyLight
-				border-bottom: 0.1rem solid $wdWerneoWhite
-				margin-bottom: -0.1rem
+				border-top: $wdWerneoTabsBorderWidthActive solid $wdWerneoGreyDark
+				border-left: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
+				border-right: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
+				border-bottom: $wdWerneoTabsBorderWidth solid $wdWerneoWhite
+				margin-bottom: -$wdWerneoTabsBorderWidth
 				label
 					color: $wdWerneoGreyDark
 			& > *
-				padding: 0.5rem 1rem
+				padding: $wdWerneoTabsNavigationPaddingVertical $wdWerneoTabsNavigationPaddingHorizontal
 				cursor: pointer
 			label
 				display: block
@@ -102,9 +102,9 @@
 				color: $wdWerneoWhite
 
 	.tab-content
-		border: 0.1rem solid $wdWerneoGreyLight
+		border: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
 		border-top: none
-		padding: 2rem
+		padding: $wdWerneoTabsContentPaddingVertical $wdWerneoTabsContentPaddingHorizontal
 
 	.tab
 		display: none

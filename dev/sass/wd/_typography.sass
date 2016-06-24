@@ -5,8 +5,8 @@
 @if $wdWerneoUseTypography == true
 
 	p,h1,h2,h3,h4,h5,h6,label
-		font-size: $wdWerneoBasicFontSize
-		line-height: 150%
+		font-size: $wdWerneoTypographyBasicFontSize
+		line-height: $wdWerneoTypographyBasicLineHeight
 		font-weight: $wdWerneoNormal
 		margin: 0
 		&.h1
@@ -26,12 +26,12 @@
 			font-size: 85%
 			text-decoration: underline
 		article &
-			margin-bottom: 0.5em
+			margin-bottom: $wdWerneoTypographyArticleParagraphMarginBottom
 
 	big
-		font-size: 120%
+		font-size: $wdWerneoTypographyBigFontSize
 	small
-		font-size: 80%
+		font-size: $wdWerneoTypographySmallFontSize
 
 	/// default alignment (non-responsive)
 	+text-aligns('')

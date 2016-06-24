@@ -10,10 +10,10 @@
 			border-collapse: collapse
 			border-spacing: 0
 			th
-				padding: 1rem
+				padding: $wdWerneoTablesHeaderCellPaddingVertical $wdWerneoTablesHeaderCellPaddingHorizontal
 				font-weight: $wdWerneoNormal
 			td
-				padding: 0.5rem 1rem
+				padding: $wdWerneoTablesBodyCellPaddingVertical $wdWerneoTablesBodyCellPaddingHorizontal
 			th,td
 				text-align: center
 			&.first-left
@@ -31,13 +31,13 @@
 							background-color: rgba($wdWerneoGreyLightest,0.1)
 			&.lined
 				tr
-					border-bottom: 0.1rem solid $wdWerneoGreyLightest
+					border-bottom: $wdWerneoTablesLinedBorderWidth solid $wdWerneoGreyLightest
 				thead
 					tr
 						border-bottom: none
 			&.bordered
 				th,td
-					border: 0.1rem solid $wdWerneoGreyLightest
+					border: $wdWerneoTablesBorderedBorderWidth solid $wdWerneoGreyLightest
 			
 			/// colors
 			@each $name, $color, in $wdWerneoColors

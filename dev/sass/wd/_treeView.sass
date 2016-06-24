@@ -5,51 +5,51 @@
 @if $wdWerneoUseTreeView == true
 
 	.tree-view
-		padding: 2rem 0
 		.node
-			margin-left: 1rem
+			margin-left: $wdWerneoTreeViewNodeStep
 			position: relative
 			&::before
 				content: ""
-				width: 1rem
+				width: $wdWerneoTreeViewNodeStep
 				height: 100%
 				display: block
-				border-left: 0.1rem solid darken($wdWerneoGreyLight,10%)
+				border-left: $wdWerneoTreeViewBranchWidth solid darken($wdWerneoGreyLight,10%)
 				position: absolute
-				left: -0.5rem
+				left: -$wdWerneoTreeViewNodeStep / 2
 			.node
 				display: none
 				&.opened
 					display: block
 		.label
-			padding: 1rem
-			border-bottom: 0.1rem solid $wdWerneoGreyLightest
+			padding: $wdWerneoTreeViewLabelPaddingVertical $wdWerneoTreeViewLabelPaddingHorizontal
+			border-bottom: $wdWerneoTreeViewLabelBorderWidth solid $wdWerneoGreyLightest
 			position: relative
 			transition: all 300ms ease-out
 			background-color: $wdWerneoWhite
 			color: lighten($wdWerneoGreyDark,10%)
 			&::before
-				content: "-"
-				width: 1rem
-				height: 100%
+				content: ""
+				width: $wdWerneoTreeViewNodeStep / 2
+				height: $wdWerneoTreeViewBranchWidth
+				border-bottom: $wdWerneoTreeViewBranchWidth solid darken($wdWerneoGreyLight,10%)
 				display: block
 				position: absolute
-				left: -0.5rem
-				top: 0
-				color: darken($wdWerneoGreyLight,10%)
+				left: -$wdWerneoTreeViewNodeStep / 2
+				top: 50%
+				margin-top: -$wdWerneoTreeViewBranchWidth / 2
 			&.folder
 				cursor: pointer
 				color: $wdWerneoGreyDark
-				border-bottom-width: 0.2rem
+				border-bottom-width: $wdWerneoTreeViewLabelBorderWidth * 2
 				&:hover
 					border-bottom-color: $wdWerneoGreyLight
 			&.active
-				border-bottom-width: 0.4rem
+				border-bottom-width: $wdWerneoTreeViewLabelBorderWidth * 4
 				border-bottom-color: $wdWerneoGreyLight
 				background-color: lighten($wdWerneoGreyLight,10%)
 				color: $wdWerneoGreyDark
 				&:hover
-					border-bottom-width: 0.4rem
+					border-bottom-width: $wdWerneoTreeViewLabelBorderWidth * 4
 		/// colors
 		@each $name, $color, in $wdWerneoColors
 			$inverseColor: $wdWerneoWhite

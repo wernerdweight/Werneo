@@ -7,18 +7,18 @@
 	.progressbar
 		width: 100%
 		display: block
-		height: 1.5rem
-		border: 0.3rem solid $wdWerneoGreyLightest
+		height: $wdWerneoProgressBarHeight
+		border: $wdWerneoProgressBarBorderWidth solid $wdWerneoGreyLightest
 		background-color: $wdWerneoGreyLightest
 		box-sizing: border-box
 		position: relative
 		/// size
 		&.sm
-			height: 1rem
-			border-width: 0.2rem
+			height: $wdWerneoProgressBarHeight * (2/3)
+			border-width: $wdWerneoProgressBarBorderWidth * (2/3)
 		&.lg
-			height: 2rem
-			border-width: 0.4rem
+			height: $wdWerneoProgressBarHeight * (4/3)
+			border-width: $wdWerneoProgressBarBorderWidth * (4/3)
 
 		/// progress element
 		span
