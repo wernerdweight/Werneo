@@ -61,7 +61,7 @@
 						border-right-color: $inverseColor
 						border-top-color: $inverseColor
 					&::after
-						color: $color
+						border-color: $color
 				.icon
 					color: $color
 					background-color: $inverseColor
@@ -93,18 +93,20 @@
 				content: " "
 			&::after
 				position: absolute
-				right: 0
-				top: 0
-				font-family: $wdWerneoTypographyIconFontFamily
-				content: "\f00c"
+				right: $wdWerneoListsCheckOffsetHorizontal
+				top: $wdWerneoListsCheckOffsetVertical
+				content: ""
+				display: block
+				width: $wdWerneoListsCheckWidth
+				height: $wdWerneoListsCheckHeight
+				border-style: solid
+				border-width: 0 0 $wdWerneoListsCheckBorderWidth $wdWerneoListsCheckBorderWidth
+				transform: rotate(-45deg)
 			&.checked-disabled
-				border-color: $wdWerneoTeal
+				border-color: $wdWerneoGreyMedium
 				&::before
-					background-color: $wdWerneoTeal
-					border-right-color: $wdWerneoTeal
-					border-top-color: $wdWerneoTeal
-				&::after
-					content: "\f0c1"
+					border-right-color: $wdWerneoGreyMedium
+					border-top-color: $wdWerneoGreyMedium
 
 		.icon
 			width: $wdWerneoListsItemHeight - (2 * ($wdWerneoListsItemPaddingVertical + $wdWerneoListsItemBorderWidth))
