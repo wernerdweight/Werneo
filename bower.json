@@ -19,7 +19,7 @@
     "test",
     "tests"
   ],
-  "dev-dependencies": {
-    "flexer": "^0.2.0"
+  "devDependencies": {
+    "flexer": "^0.3.0"
   }
 }
