@@ -54,3 +54,12 @@
 =rotation-transformation($degrees)
     [data-rotate="#{$degrees}"]
         transform: rotate($degrees)
+
+/// media query generator, usual version (minimal width)
+=responsive($scope)
+    @if $scope == desktop
+        @media only screen and (min-width: $wdWerneoResponsiveWidthDesktop)
+            @content
+    @else if $scope == tablet
+        @media only screen and (min-width: $wdWerneoResponsiveWidthTablet)
+            @content
