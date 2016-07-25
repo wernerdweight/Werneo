@@ -6,40 +6,43 @@
 
 	table
 		&.table
-			width: 100%
 			border-collapse: collapse
 			border-spacing: 0
+			width: 100%
 			th
-				padding: $wdWerneoTablesHeaderCellPaddingVertical $wdWerneoTablesHeaderCellPaddingHorizontal
 				font-weight: $wdWerneoNormal
+				padding: $wdWerneoTablesHeaderCellPaddingVertical $wdWerneoTablesHeaderCellPaddingHorizontal
 			td
 				padding: $wdWerneoTablesBodyCellPaddingVertical $wdWerneoTablesBodyCellPaddingHorizontal
-			th,td
+			th,
+			td
 				text-align: center
 			&.first-left
-				th,td
+				th,
+				td
 					&:first-child
 						text-align: left
 			&.last-right
-				th,td
+				th,
+				td
 					&:last-child
 						text-align: right
 			&.striped
 				tr
 					&:nth-child(2n)
 						td
-							background-color: rgba($wdWerneoGreyLightest,0.1)
+							background-color: rgba($wdWerneoGreyLightest, 0.1)
 			&.lined
 				tr
 					border-bottom: $wdWerneoTablesLinedBorderWidth solid $wdWerneoGreyLightest
 				thead
 					tr
-						border-bottom: none
+						border-bottom: 0
 			&.bordered
-				th,td
+				th,
+				td
 					border: $wdWerneoTablesBorderedBorderWidth solid $wdWerneoGreyLightest
-			
-			/// colors
+
 			@each $name, $color, in $wdWerneoColors
 				$inverseColor: $wdWerneoWhite
 				@if $name == 'white' or $name == 'grey-light'
@@ -52,10 +55,11 @@
 						tr
 							&:nth-child(2n)
 								td
-									background-color: rgba($color,0.1)
+									background-color: rgba($color, 0.1)
 					&.lined
 						tr
 							border-bottom-color: $color
 					&.bordered
-						th,td
+						th,
+						td
 							border-color: $color

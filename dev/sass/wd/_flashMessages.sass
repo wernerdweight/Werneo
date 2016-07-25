@@ -10,54 +10,54 @@
 
 	.flash-message-queue
 		display: block
+		min-width: $wdWerneoFlashMessagesQueueMinWidth
 		position: fixed
+		width: $wdWerneoFlashMessagesQueueWidth
+		z-index: 999999
 		#{$wdWerneoFlashMessagesQueuePositionVertical}: $wdWerneoFlashMessagesQueueOffsetVertical
 		#{$wdWerneoFlashMessagesQueuePositionHorizontal}: $wdWerneoFlashMessagesQueueOffsetHorizontal
-		width: $wdWerneoFlashMessagesQueueWidth
-		min-width: $wdWerneoFlashMessagesQueueMinWidth
-		z-index: 999999
 
 	.flash-message
-		display: block
-		position: relative
-		overflow: hidden
-		border-style: solid
-		border-color: darken($wdWerneoGreyDark,5%)
-		border-width: 0
 		background-color: $wdWerneoGreyDark
+		border-color: darken($wdWerneoGreyDark, 5%)
+		border-style: solid
+		border-width: 0
 		color: $wdWerneoWhite
-		transition: margin-left 300ms ease-in-out, max-height 300ms 300ms, padding 300ms 300ms, border 300ms 300ms, margin-bottom 300ms 300ms
-		padding: 0
-		margin-left: calc(#{$wdWerneoFlashMessagesQueuePositionHorizontalSign * 100%} + #{$wdWerneoFlashMessagesQueuePositionHorizontalSign * $wdWerneoFlashMessagesQueueOffsetHorizontal})
+		display: block
 		margin-bottom: 0
-		width: 100%
+		margin-left: calc(#{$wdWerneoFlashMessagesQueuePositionHorizontalSign * 100%} + #{$wdWerneoFlashMessagesQueuePositionHorizontalSign * $wdWerneoFlashMessagesQueueOffsetHorizontal})
 		max-height: 0
+		overflow: hidden
+		padding: 0
+		position: relative
+		transition: margin-left 300ms ease-in-out, max-height 300ms 300ms, padding 300ms 300ms, border 300ms 300ms, margin-bottom 300ms 300ms
+		width: 100%
 		&.active
-			margin-left: 0
-			margin-bottom: $wdWerneoFlashMessagesMessageMarginBottom
-			padding: $wdWerneoFlashMessagesMessagePaddingVertical $wdWerneoFlashMessagesMessagePaddingHorizontal
-			max-height: 100vh
-			transition: margin-left 300ms ease-in-out, max-height 0ms 0ms, padding 0ms 0ms, border 0ms 0ms, margin-bottom 0ms 0ms
 			border-width: $wdWerneoFlashMessagesMessageBorder
+			margin-bottom: $wdWerneoFlashMessagesMessageMarginBottom
+			margin-left: 0
+			max-height: 100vh
+			padding: $wdWerneoFlashMessagesMessagePaddingVertical $wdWerneoFlashMessagesMessagePaddingHorizontal
+			transition: margin-left 300ms ease-in-out, max-height 0ms 0ms, padding 0ms 0ms, border 0ms 0ms, margin-bottom 0ms 0ms
 		&.success
-			border-color: darken($wdWerneoTeal,5%)
 			background-color: $wdWerneoTeal
+			border-color: darken($wdWerneoTeal, 5%)
 		&.info
-			border-color: darken($wdWerneoTurquoise,5%)
 			background-color: $wdWerneoTurquoise
+			border-color: darken($wdWerneoTurquoise, 5%)
 		&.error
-			border-color: darken($wdWerneoCrimson,5%)
 			background-color: $wdWerneoCrimson
+			border-color: darken($wdWerneoCrimson, 5%)
 		> .close
-			position: absolute
 			cursor: pointer
-			top: 0
-			right: 0
-			height: $wdWerneoFlashMessagesMessageCloseSize
-			width: $wdWerneoFlashMessagesMessageCloseSize
-			font-size: $wdWerneoFlashMessagesMessageCloseSize
-			line-height: $wdWerneoFlashMessagesMessageCloseSize
 			display: block
+			font-size: $wdWerneoFlashMessagesMessageCloseSize
+			height: $wdWerneoFlashMessagesMessageCloseSize
+			line-height: $wdWerneoFlashMessagesMessageCloseSize
+			position: absolute
+			right: 0
 			text-align: center
+			top: 0
+			width: $wdWerneoFlashMessagesMessageCloseSize
 			&:hover
 				text-shadow: 0.2rem 0.2rem 0 $wdWerneoBlack

@@ -5,20 +5,21 @@
 @if $wdWerneoUseCode == true
 
 	code
-		font-family: monospace
 		display: inline-block
-		padding: $wdWerneoCodePaddingVertical $wdWerneoCodePaddingHorizontal
+		font-family: monospace
 		font-size: $wdWerneoTypographyBasicFontSize
+		padding: $wdWerneoCodePaddingVertical $wdWerneoCodePaddingHorizontal
 		pre &
 			background-color: transparent
 			display: block
 			margin: 0
 			padding: 0
 
-	code,pre
-		background-color: rgba($wdWerneoBlack,0.25)
+	code,
+	pre
+		background-color: rgba($wdWerneoBlack, 0.25)
 
 	pre
 		margin: 0
-		padding: $wdWerneoPreePaddingVertical $wdWerneoPreePaddingHorizontal
 		overflow: auto
+		padding: $wdWerneoPreePaddingVertical $wdWerneoPreePaddingHorizontal

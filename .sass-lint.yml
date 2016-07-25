@@ -1,0 +1,66 @@
+# Rule Configuration
+files:
+  ignore:
+      - 'dev/sass/wd/_animations.sass'  # until keyframes issue fixed (https://github.com/sasstools/sass-lint/issues/797)
+rules:
+  empty-line-between-blocks: 0
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  placeholder-in-extend: 2
+  no-transition-all: 0
+  mixins-before-declarations:
+    - 2
+    -
+      exclude:
+        - responsive
+        - input-placeholder
+  variable-name-format:
+    - 1
+    -
+      convention: camelcase
+  nesting-depth:
+    - 1
+    -
+      max-depth: 3
+  no-warn: 1
+  no-debug: 1
+  no-ids: 2
+  no-important: 1
+  no-color-literals:
+    - 1
+    -
+      allow-rgba: true
+  no-vendor-prefixes: 0
+  no-misspelled-properties:
+    - 2
+    -
+      extra-properties:
+        - scrollbar-track-color
+        - scrollbar-face-color
+  shorthand-values:
+    - 1
+    -
+      allowed-shorthands:
+        - 1
+        - 2
+  leading-zero:
+    - 2
+    -
+      include: true
+  hex-notation:
+    - 2
+    -
+      style: lowercase
+  indentation:
+    - 2
+    -
+      size: tab
+  property-sort-order:
+    - 2
+    -
+      order: alphabetical
+  no-qualifying-elements:
+    - 2
+    -
+      allow-element-with-attribute: true
+      allow-element-with-class: true  # remove this as soon as possible (fix it in werneo)

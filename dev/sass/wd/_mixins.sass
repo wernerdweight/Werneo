@@ -1,65 +1,66 @@
 /// smooth font rendering
 =font-smoothing
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
+	-moz-osx-font-smoothing: grayscale
+	-webkit-font-smoothing: antialiased
 
 /// center an absolute positioned element
 =center-element($direction: both)
-    @if $direction == both
-        left: 50%
-        top: 50%
-        bottom: auto
-        right: auto
-        transform: translateX(-50%) translateY(-50%)
-    @else if $direction == horizontal
-        left: 50%
-        right: auto
-        transform: translateX(-50%)
-    @else if $direction == vertical
-        top: 50%
-        bottom: auto
-        transform: translateY(-50%)
+	@if $direction == both
+		bottom: auto
+		left: 50%
+		right: auto
+		top: 50%
+		transform: translateX(-50%) translateY(-50%)
+	@else if $direction == horizontal
+		left: 50%
+		right: auto
+		transform: translateX(-50%)
+	@else if $direction == vertical
+		bottom: auto
+		top: 50%
+		transform: translateY(-50%)
 
 /// diagonally split backgrounds
-=diagonal-split-background($color1,$color2)
-    background: $color1     /// old browsers
-    background: linear-gradient(-45deg,  $color1 0%,$color1 50%,$color2 50%,$color2 100%)
-    background-size: 300% 300%
-    background-position: 0% 0%
-    background-repeat: no-repeat
-    transition: all 400ms ease-in-out
+=diagonal-split-background($color1, $color2)
+	background: linear-gradient(-45deg,  $color1 0%, $color1 50%, $color2 50%, $color2 100%)
+	background-position: 0% 0%
+	background-repeat: no-repeat
+	background-size: 300% 300%
+	transition: all 400ms ease-in-out
 
 /// animate diagonally split backgrounds (used on hover)
 =diagonal-split-background-hover
-    background-position: 100% 100%
+	background-position: 100% 100%
 
 /// create ellipsis
 =hellip
-    text-overflow: ellipsis
-    white-space: nowrap
-    overflow: hidden
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
 
 /// create text alignment classes
 =text-aligns($scopeName)
-    .#{$scopeName}ta-l
-        text-align: left
-    .#{$scopeName}ta-r
-        text-align: right
-    .#{$scopeName}ta-c
-        text-align: center
-    .#{$scopeName}ta-j
-        text-align: justify
+	.#{$scopeName}ta-l
+		text-align: left
+	.#{$scopeName}ta-r
+		text-align: right
+	.#{$scopeName}ta-c
+		text-align: center
+	.#{$scopeName}ta-j
+		text-align: justify
 
 /// create rotation transformation by steps
 =rotation-transformation($degrees)
-    [data-rotate="#{$degrees}"]
-        transform: rotate($degrees)
+	[data-rotate='#{$degrees}']
+		transform: rotate($degrees)
 
 /// media query generator, usual version (minimal width)
 =responsive($scope)
-    @if $scope == desktop
-        @media only screen and (min-width: $wdWerneoResponsiveWidthDesktop)
-            @content
-    @else if $scope == tablet
-        @media only screen and (min-width: $wdWerneoResponsiveWidthTablet)
-            @content
+	@if $scope == desktop
+		@media only screen and (min-width: $wdWerneoResponsiveWidthDesktop)
+			/// this dummy comment is added for the linter to let this pass (https://github.com/sasstools/sass-lint/issues/749)
+			@content
+			/// this dummy comment is added for the linter to let this pass (https://github.com/sasstools/sass-lint/issues/749)
+	@else if $scope == tablet
+		@media only screen and (min-width: $wdWerneoResponsiveWidthTablet)
+			@content

@@ -5,8 +5,8 @@
 @if $wdWerneoUseBreadcrumbs == true
 
 	.breadcrumbs
-		padding: 0
 		margin: 0
+		padding: 0
 		&.light
 			a
 				color: $wdWerneoWhite
@@ -14,12 +14,12 @@
 				a
 					color: $wdWerneoGreyDark
 		li
-			color: darken($wdWerneoGreyLight,20%)
+			color: darken($wdWerneoGreyLight, 20%)
 			display: inline-block
 			list-style: none
 			&::before
-				content: $wdWerneoBreadcrumbsSeparator
 				color: $wdWerneoGreyLight
+				content: $wdWerneoBreadcrumbsSeparator
 				display: inline-block
 			&:first-child
 				&::before
@@ -32,35 +32,36 @@
 				text-decoration: underline
 			&.subcrumb-trigger
 				color: $wdWerneoGreyLight
+				height: $wdWerneoBreadcrumbsSubcrumbTriggerHeight
 				position: relative
 				width: $wdWerneoBreadcrumbsSubcrumbTriggerWidth
-				height: $wdWerneoBreadcrumbsSubcrumbTriggerHeight
-				&:hover,&:focus
+				&:hover,
+				&:focus
 					color: $wdWerneoGreyDark
 				&:focus
 					& + .subcrumb
-						opacity: 1
 						max-height: $wdWerneoBreadcrumbsSubcrumbMaxHeight
+						opacity: 1
 						transition: max-height 100ms 0ms
 		.subcrumb
-			position: absolute
-			padding: $wdWerneoBreadcrumbsSubcrumbPaddingVertical $wdWerneoBreadcrumbsSubcrumbPaddingHorizontal
-			margin: 0
-			border: $wdWerneoBreadcrumbsSubcrumbBorderWidth $wdWerneoBreadcrumbsSubcrumbBorderStyle $wdWerneoGreyMedium
 			background-color: $wdWerneoWhite
-			opacity: 0
-			max-height: 0rem
+			border: $wdWerneoBreadcrumbsSubcrumbBorderWidth $wdWerneoBreadcrumbsSubcrumbBorderStyle $wdWerneoGreyMedium
+			margin: 0
+			max-height: 0
 			max-width: $wdWerneoBreadcrumbsSubcrumbMaxWidth
+			opacity: 0
 			overflow: auto
-			z-index: 2
+			padding: $wdWerneoBreadcrumbsSubcrumbPaddingVertical $wdWerneoBreadcrumbsSubcrumbPaddingHorizontal
+			position: absolute
 			transition: max-height 100ms 100ms
+			z-index: 2
 			@if $wdWerneoBreadcrumbsSubcrumbBorderRadius != 0
 				border-radius: $wdWerneoBreadcrumbsSubcrumbBorderRadius
 			a
-				display: block
 				+hellip
+				display: block
 			li
 				display: block
 				&::before
-					content: ""
+					content: ''
 					display: none

@@ -7,103 +7,102 @@
 	.tabs
 		&.vertical
 			.tab-nav
-				position: relative
-				border-bottom: none
+				border-bottom: 0
 				border-right: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
+				position: relative
 				z-index: 2
-				.nav
-					display: block
-					margin-bottom: $wdWerneoTabsVarticalMarginBottom
-					&.active
-						border-left: $wdWerneoTabsBorderWidthActive solid $wdWerneoGreyDark
-						margin-right: -$wdWerneoTabsBorderWidth
-						border-bottom: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
-						border-top: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
-						border-right: none
+			.nav
+				display: block
+				margin-bottom: $wdWerneoTabsVarticalMarginBottom
+				&.active
+					border-bottom: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
+					border-left: $wdWerneoTabsBorderWidthActive solid $wdWerneoGreyDark
+					border-right: 0
+					border-top: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
+					margin-right: -$wdWerneoTabsBorderWidth
 			.tab-content
+				border-left: 0
 				border-top: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
-				border-left: none
 				position: relative
 				z-index: 1
 
-		/// colors
+		.nav
+			background-color: darken($wdWerneoGreyLight, 20%)
+			display: inline-block
+			&:hover
+				background-color: darken($wdWerneoGreyLight, 10%)
+			&.active
+				background-color: $wdWerneoWhite
+				border-bottom: $wdWerneoTabsBorderWidth solid $wdWerneoWhite
+				border-left: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
+				border-right: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
+				border-top: $wdWerneoTabsBorderWidthActive solid $wdWerneoGreyDark
+				margin-bottom: -$wdWerneoTabsBorderWidth
+				label
+					color: $wdWerneoGreyDark
+			& > *
+				cursor: pointer
+				padding: $wdWerneoTabsNavigationPaddingVertical $wdWerneoTabsNavigationPaddingHorizontal
+			label
+				color: $wdWerneoWhite
+				display: block
+				margin: 0
+
 		@each $name, $color, in $wdWerneoColors
 			$inverseColor: $wdWerneoWhite
 			&.#{$name}
 				.tab-nav
 					border-bottom-color: $color
-					.nav
-						background-color: desaturate(darken($color,20%),40%)
-						border-color: $color
-						&:hover
-							background-color: desaturate(darken($color,10%),20%)
-						&.active
-							background-color: $inverseColor
-							border-top-color: $color
-							border-bottom-color: $inverseColor
-							label
-								color: $color
+				.nav
+					background-color: desaturate(darken($color, 20%), 40%)
+					border-color: $color
+					&:hover
+						background-color: desaturate(darken($color, 10%), 20%)
+					&.active
+						background-color: $inverseColor
+						border-bottom-color: $inverseColor
+						border-top-color: $color
+						label
+							color: $color
 				.tab-content
 					border-color: $color
 				&.full-colored
-					.tab-nav
-						.nav
-							&.active
-								background-color: $color
-								border-top-color: $inverseColor
-								border-bottom-color: $color
-								label
-									color: $inverseColor
+					.nav
+						&.active
+							background-color: $color
+							border-bottom-color: $color
+							border-top-color: $inverseColor
+							label
+								color: $inverseColor
 				&.vertical
 					.tab-nav
 						border-right-color: $color
-						.nav
-							&.active
-								border-bottom-color: $color
-								border-left-color: $color
-								border-right-color: $inverseColor
-					&.full-colored
-						.tab-nav
-							.nav
-								&.active
-									border-top-color: $color
-									border-left-color: $inverseColor
-		/// specialities
-		&.white,&.grey-light
-			&,&.full-colored
-				.tab-nav
 					.nav
 						&.active
-							label
-								color: $wdWerneoGreyDark
+							border-bottom-color: $color
+							border-left-color: $color
+							border-right-color: $inverseColor
+					&.full-colored
+						.nav
+							&.active
+								border-left-color: $inverseColor
+								border-top-color: $color
+		/// specialities
+		&.white,
+		&.grey-light
+			&,
+			&.full-colored
+				.nav
+					&.active
+						label
+							color: $wdWerneoGreyDark
 
 	.tab-nav
 		border-bottom: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
-		.nav
-			display: inline-block
-			background-color: darken($wdWerneoGreyLight,20%)
-			&:hover
-				background-color: darken($wdWerneoGreyLight,10%)
-			&.active
-				background-color: $wdWerneoWhite
-				border-top: $wdWerneoTabsBorderWidthActive solid $wdWerneoGreyDark
-				border-left: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
-				border-right: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
-				border-bottom: $wdWerneoTabsBorderWidth solid $wdWerneoWhite
-				margin-bottom: -$wdWerneoTabsBorderWidth
-				label
-					color: $wdWerneoGreyDark
-			& > *
-				padding: $wdWerneoTabsNavigationPaddingVertical $wdWerneoTabsNavigationPaddingHorizontal
-				cursor: pointer
-			label
-				display: block
-				margin: 0
-				color: $wdWerneoWhite
 
 	.tab-content
 		border: $wdWerneoTabsBorderWidth solid $wdWerneoGreyLight
-		border-top: none
+		border-top: 0
 		padding: $wdWerneoTabsContentPaddingVertical $wdWerneoTabsContentPaddingHorizontal
 
 	.tab

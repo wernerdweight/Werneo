@@ -5,63 +5,62 @@
 @if $wdWerneoUseButtons == true
 
 	.btn
-		padding: $wdWerneoButtonsPaddingVertical $wdWerneoButtonsPaddingHorizontal
+		border: 0
+		box-sizing: border-box
+		cursor: pointer
+		display: inline-block
 		font-size: $wdWerneoTypographyBasicFontSize
 		line-height: $wdWerneoTypographyBasicFontSize * 1.125
-		display: inline-block
-		text-decoration: none
+		padding: $wdWerneoButtonsPaddingVertical $wdWerneoButtonsPaddingHorizontal
 		text-align: center
-		cursor: pointer
-		border: none
-		box-sizing: border-box
+		text-decoration: none
 		transition: all 300ms ease-in-out
 		@if $wdWerneoButtonsBorderRadius != 0
 			border-radius: $wdWerneoButtonsBorderRadius
 		&.outline
-			border-width: $wdWerneoButtonsOutlineWidth
-			border-style: $wdWerneoButtonsOutlineStyle
 			background: transparent !important
-		
-		/// colors
+			border-style: $wdWerneoButtonsOutlineStyle
+			border-width: $wdWerneoButtonsOutlineWidth
+
 		@each $name, $color, in $wdWerneoColors
 			$inverseColor: $wdWerneoWhite
 			@if $name == 'white' or $name == 'grey-light'
 				$inverseColor: $wdWerneoGreyMedium
 			&.#{$name}
-				background-color: $color
-				color: $inverseColor
+				+diagonal-split-background(lighten($color, 4%), $color)
 				border-color: $color
-				+diagonal-split-background(lighten($color,4%),$color)
+				color: $inverseColor
 				&:hover
-					color: darken($inverseColor,10%)
-					background-color: darken($color,10%)
 					+diagonal-split-background-hover
-				&:focus,&:active,&.active
-					color: desaturate($inverseColor,10%)
-					background-color: desaturate($color,10%)
-					outline: 0
+					color: darken($inverseColor, 10%)
+				&:focus,
+				&:active,
+				&.active
+					+diagonal-split-background(darken($color, 10%), $color)
 					animation: $wdWerneoButtonsFocusAnimationFunction $wdWerneoButtonsFocusAnimationDuration
-					+diagonal-split-background(darken($color,10%),$color)
+					color: desaturate($inverseColor, 10%)
+					outline: 0
 				&.outline
 					color: $color
 					&:hover
-						color: lighten($color,10%)
-						border-color: lighten($color,10%)
+						border-color: lighten($color, 10%)
+						color: lighten($color, 10%)
 		/// abnormalities
 		&.white
 			color: $wdWerneoGreyMedium
 			&:hover
-				color: darken($wdWerneoGreyDark,10%)
-			&:focus,&:active,&.active
-				color: $wdWerneoGreyDark
+				color: darken($wdWerneoGreyDark, 10%)
+			&:focus,
+			&:active,
+			&.active
+				+diagonal-split-background($wdWerneoWhite, darken($wdWerneoWhite, 4%))
 				animation: $wdWerneoButtonsFocusAnimationFunction $wdWerneoButtonsFocusAnimationDuration
-				+diagonal-split-background($wdWerneoWhite,darken($wdWerneoWhite,4%))
+				color: $wdWerneoGreyDark
 			&.outline
 				&:hover
-					color: darken($wdWerneoWhite,20%)
-					border-color: darken($wdWerneoWhite,20%)
-		
-		/// sizes
+					border-color: darken($wdWerneoWhite, 20%)
+					color: darken($wdWerneoWhite, 20%)
+
 		&.xs
 			font-size: $wdWerneoTypographyBasicFontSize * 0.8125
 			line-height: $wdWerneoTypographyBasicFontSize
@@ -77,32 +76,37 @@
 		&.xl
 			font-size: $wdWerneoTypographyBasicFontSize * 2.1875
 			line-height: $wdWerneoTypographyBasicFontSize * 2.375
-			padding: $wdWerneoButtonsPaddingVertical * 1.125 $wdWerneoButtonsPaddingHorizontal * (4/3)
+			padding: $wdWerneoButtonsPaddingVertical * 1.125 $wdWerneoButtonsPaddingHorizontal * (4 / 3)
 		&.full
-			width: 100%
 			padding-left: 0
 			padding-right: 0
 			text-align: center
+			width: 100%
 		&.input
-			line-height: $wdWerneoFormsInputSize
 			height: $wdWerneoFormsInputSize
-			padding-top: 0
+			line-height: $wdWerneoFormsInputSize
 			padding-bottom: 0
-		
-		/// functional
+			padding-top: 0
+
 		&.loading
-			&,&:hover,&:focus
-				width: $wdWerneoButtonsLoadingSize
-				height: $wdWerneoButtonsLoadingSize
-				padding: 0
-				overflow: hidden
+			&,
+			&:hover,
+			&:focus
+				animation: $wdWerneoButtonsLoadingAnimationFunction $wdWerneoButtonsLoadingAnimationDuration infinite
+				background-position: 50% 50%
 				border-radius: 50%
+				height: $wdWerneoButtonsLoadingSize
+				outline: 0
+				overflow: hidden
+				padding: 0
 				text-indent: -999rem
 				white-space: nowrap
-				background-position: 50% 50%
-				outline: 0
-				animation: $wdWerneoButtonsLoadingAnimationFunction $wdWerneoButtonsLoadingAnimationDuration infinite
-		&[disabled="disabled"]
-			&,&:hover,&:focus,&:active,&.active
+				width: $wdWerneoButtonsLoadingSize
+		&[disabled='disabled']
+			&,
+			&:hover,
+			&:focus,
+			&:active,
+			&.active
 				background: $wdWerneoGreyLight
-				color: darken($wdWerneoGreyLight,20%)
+				color: darken($wdWerneoGreyLight, 20%)

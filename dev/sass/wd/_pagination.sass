@@ -9,58 +9,66 @@
 		text-align: center
 		ul
 			width: 100%
-		ul,li
-			list-style: none
+		ul,
+		li
 			display: inline
+			list-style: none
 			padding-left: 0
 		li
 			&:nth-child(n)
-				a,span
+				a,
+				span
 					display: none
 					+responsive(tablet)
 						display: inline-block
 			&:first-child
 				float: left
 				margin-right: $wdWerneoPaginationDirectionNavigationMargin
-				a,span
+				a,
+				span
 					display: inline-block
 			&:last-child
 				float: right
 				margin-left: $wdWerneoPaginationDirectionNavigationMargin
-				a,span
+				a,
+				span
 					display: inline-block
 			&.active
-				a,span
+				a,
+				span
 					display: inline-block
 					font-weight: $wdWerneoBold
 			&.dots
 				display: none
-				&:after
-					padding: $wdWerneoPaginationDotsMarginVertical / 2 $wdWerneoPaginationDotsMarginHorizontal / 2
+				&::after
 					content: '\2026'
+					padding: $wdWerneoPaginationDotsMarginVertical / 2 $wdWerneoPaginationDotsMarginHorizontal / 2
 					+responsive(desktop)
 						padding: $wdWerneoPaginationDotsMarginVertical $wdWerneoPaginationDotsMarginHorizontal
 				+responsive(tablet)
 					display: inline-block
-			a,span
-				text-decoration: none
-				display: inline-block
-				text-align: center
-				padding: $wdWerneoPaginationItemPaddingVertical $wdWerneoPaginationItemPaddingHorizontal
-				line-height: $wdWerneoPaginationItemHeight - (2 * $wdWerneoPaginationItemPaddingVertical)
-				height: $wdWerneoPaginationItemHeight
+			a,
+			span
 				color: inherit
+				display: inline-block
+				height: $wdWerneoPaginationItemHeight
+				line-height: $wdWerneoPaginationItemHeight - (2 * $wdWerneoPaginationItemPaddingVertical)
+				padding: $wdWerneoPaginationItemPaddingVertical $wdWerneoPaginationItemPaddingHorizontal
 				position: relative
+				text-align: center
+				text-decoration: none
 				@if $wdWerneoPaginationItemBorderRadius != 0
 					border-radius: $wdWerneoPaginationItemBorderRadius
 			span
 				color: $wdWerneoGreyLightest
 				.chevron
-					&:after,&:before
+					&::after,
+					&::before
 						background-color: $wdWerneoGreyLightest
 			a
 				.chevron
-					&:after,&:before
+					&::after,
+					&::before
 						background-color: $wdWerneoWhite
 		@each $name, $color, in $wdWerneoColors
 			&.#{$name}
@@ -71,19 +79,25 @@
 					&:hover
 						a
 							+diagonal-split-background-hover
+
 					&.active
-						a,span
+						a,
+						span
+							+diagonal-split-background(darken($inverseColor, 10%), $inverseColor)
 							color: $color
-							+diagonal-split-background(darken($inverseColor,10%),$inverseColor)
-					a,span
-						+diagonal-split-background(darken($color,10%),$color)
+					a,
+					span
+						+diagonal-split-background(darken($color, 10%), $color)
+
 					a
 						color: $inverseColor
 						.chevron
-							&:after,&:before
+							&::after,
+							&::before
 								background-color: $inverseColor
 					span
-						color: darken($inverseColor,20%)
+						color: darken($inverseColor, 20%)
 						.chevron
-							&:after,&:before
-								background-color: darken($inverseColor,20%)
+							&::after,
+							&::before
+								background-color: darken($inverseColor, 20%)

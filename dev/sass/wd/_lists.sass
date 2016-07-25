@@ -10,41 +10,41 @@
 			.list-item-overlay
 				height: $wdWerneoListsItemOverlayHeight
 		.list-item-overlay
-			display: block
-			position: absolute
 			bottom: 0
-			left: 0
-			width: 100%
-			height: 0
-			overflow: hidden
-			text-align: center
-			line-height: $wdWerneoListsItemOverlayHeight
-			text-decoration: none
-			z-index: 700
 			box-sizing: border-box
+			display: block
+			height: 0
+			left: 0
+			line-height: $wdWerneoListsItemOverlayHeight
+			overflow: hidden
+			position: absolute
+			text-align: center
+			text-decoration: none
 			transition: height 300ms 300ms, opacity 300ms 100ms, background-position 300ms 0
+			width: 100%
+			z-index: 700
 			@each $name, $color, in $wdWerneoColors
 				&.bg-#{$name}
 					$inverseColor: $wdWerneoWhite
 					@if $name == 'white' or $name == 'grey-light'
 						$inverseColor: $wdWerneoGreyMedium
+					+diagonal-split-background($color, darken($color, 3%))
 					color: $inverseColor
-					+diagonal-split-background($color,darken($color,3%))
 			&:hover
 				+diagonal-split-background-hover
 				& ~ .list-item
 					opacity: 0.5
 
 	.list-item
-		display: block
-		position: relative
-		border-width: $wdWerneoListsItemBorderWidth
 		border-style: solid
-		padding: $wdWerneoListsItemPaddingVertical $wdWerneoListsItemPaddingHorizontal
-		text-decoration: none
+		border-width: $wdWerneoListsItemBorderWidth
+		box-sizing: border-box
+		display: block
 		height: $wdWerneoListsItemHeight
 		overflow: hidden
-		box-sizing: border-box
+		padding: $wdWerneoListsItemPaddingVertical $wdWerneoListsItemPaddingHorizontal
+		position: relative
+		text-decoration: none
 		transition: all 300ms ease-in-out
 		@each $name, $color, in $wdWerneoColors
 			&.bg-#{$name}
@@ -52,9 +52,11 @@
 				@if $name == 'white' or $name == 'grey-light'
 					$inverseColor: $wdWerneoGreyMedium
 				border-color: $color
-				.list-item-container:hover &
-					box-shadow: 0 0 0 $wdWerneoListsItemHoverShadowWidth rgba($color,0.75)
-				&:focus,&.checked
+				.list-item-container
+					&:hover &
+						box-shadow: 0 0 0 $wdWerneoListsItemHoverShadowWidth rgba($color, 0.75)
+				&:focus,
+				&.checked
 					border-color: $inverseColor
 				&.checked
 					&::before
@@ -63,45 +65,45 @@
 					&::after
 						border-color: $color
 				.icon
-					color: $color
 					background-color: $inverseColor
+					color: $color
 					&.split
-						+diagonal-split-background($inverseColor,darken($inverseColor,4%))
+						+diagonal-split-background($inverseColor, darken($inverseColor, 4%))
 						background-position: 50% 50%
 		&:focus
-			outline: none
 			border-style: dotted
+			outline: none
 		&.checked
 			border-style: solid
 			&::before
+				border-bottom-color: transparent
+				border-bottom-style: solid
+				border-bottom-width: $wdWerneoListsItemCheckerSize / 2
+				border-left-color: transparent
+				border-left-style: solid
+				border-left-width: $wdWerneoListsItemCheckerSize / 2
+				border-right-style: solid
+				border-right-width: $wdWerneoListsItemCheckerSize / 2
+				border-top-style: solid
+				border-top-width: $wdWerneoListsItemCheckerSize / 2
+				content: ' '
 				display: block
-				width: $wdWerneoListsItemCheckerSize
 				height: $wdWerneoListsItemCheckerSize
 				position: absolute
 				right: 0
 				top: 0
-				border-right-width: $wdWerneoListsItemCheckerSize / 2
-				border-right-style: solid
-				border-top-width: $wdWerneoListsItemCheckerSize / 2
-				border-top-style: solid
-				border-bottom-width: $wdWerneoListsItemCheckerSize / 2
-				border-bottom-style: solid
-				border-left-width: $wdWerneoListsItemCheckerSize / 2
-				border-left-style: solid
-				border-bottom-color: transparent
-				border-left-color: transparent
-				content: " "
+				width: $wdWerneoListsItemCheckerSize
 			&::after
+				border-style: solid
+				border-width: 0 0 $wdWerneoListsCheckBorderWidth $wdWerneoListsCheckBorderWidth
+				content: ''
+				display: block
+				height: $wdWerneoListsCheckHeight
 				position: absolute
 				right: $wdWerneoListsCheckOffsetHorizontal
 				top: $wdWerneoListsCheckOffsetVertical
-				content: ""
-				display: block
-				width: $wdWerneoListsCheckWidth
-				height: $wdWerneoListsCheckHeight
-				border-style: solid
-				border-width: 0 0 $wdWerneoListsCheckBorderWidth $wdWerneoListsCheckBorderWidth
 				transform: rotate(-45deg)
+				width: $wdWerneoListsCheckWidth
 			&.checked-disabled
 				border-color: $wdWerneoGreyMedium
 				&::before
@@ -109,41 +111,41 @@
 					border-top-color: $wdWerneoGreyMedium
 
 		.icon
-			width: $wdWerneoListsItemHeight - (2 * ($wdWerneoListsItemPaddingVertical + $wdWerneoListsItemBorderWidth))
-			height: $wdWerneoListsItemHeight - (2 * ($wdWerneoListsItemPaddingVertical + $wdWerneoListsItemBorderWidth))
-			position: absolute
-			top: $wdWerneoListsItemPaddingVertical
-			left: $wdWerneoListsItemPaddingHorizontal
-			text-align: center
+			align-content: center
+			align-items: center
 			display: flex
 			flex-wrap: wrap
-			align-items: center
-			align-content: center
+			height: $wdWerneoListsItemHeight - (2 * ($wdWerneoListsItemPaddingVertical + $wdWerneoListsItemBorderWidth))
+			left: $wdWerneoListsItemPaddingHorizontal
+			position: absolute
+			text-align: center
+			top: $wdWerneoListsItemPaddingVertical
+			width: $wdWerneoListsItemHeight - (2 * ($wdWerneoListsItemPaddingVertical + $wdWerneoListsItemBorderWidth))
 			i
 				&.fa
-					line-height: $wdWerneoListsItemHeight - (2 * ($wdWerneoListsItemPaddingVertical + $wdWerneoListsItemBorderWidth))
 					font-size: ($wdWerneoListsItemHeight - (2 * ($wdWerneoListsItemPaddingVertical + $wdWerneoListsItemBorderWidth))) * 0.4
+					line-height: $wdWerneoListsItemHeight - (2 * ($wdWerneoListsItemPaddingVertical + $wdWerneoListsItemBorderWidth))
 			> *
-				width: 100%
-				text-align: center
 				line-height: 100%
+				text-align: center
+				width: 100%
 		.info
-			width: 100%
 			height: $wdWerneoListsItemHeight - (2 * ($wdWerneoListsItemPaddingVertical + $wdWerneoListsItemBorderWidth))
 			padding-left: $wdWerneoListsItemHeight - (2 * ($wdWerneoListsItemPaddingVertical + $wdWerneoListsItemBorderWidth)) + 1rem
+			width: 100%
 			p
+				+hellip
 				display: block
 				line-height: 125%
-				+hellip
 			span
+				+hellip
 				display: block
 				font-size: 85%
 				line-height: 115%
-				+hellip
 				&.byline
+					bottom: $wdWerneoListsItemPaddingVertical
 					font-size: 65%
 					position: absolute
-					bottom: $wdWerneoListsItemPaddingVertical
 					right: $wdWerneoListsItemPaddingHorizontal
 					&.lg
 						font-size: 85%
@@ -151,15 +153,15 @@
 					color: $wdWerneoCrimson
 					font-weight: normal
 		input
-			&[type="checkbox"]
-				width: 0
-				height: 0
-				overflow: hidden
-				display: block
-				border: none
-				padding: 0
-				margin: 0
-				z-index: -1
-				position: absolute
+			&[type='checkbox']
+				border: 0
 				bottom: 0
+				display: block
+				height: 0
+				margin: 0
+				overflow: hidden
+				padding: 0
+				position: absolute
 				right: 0
+				width: 0
+				z-index: -1

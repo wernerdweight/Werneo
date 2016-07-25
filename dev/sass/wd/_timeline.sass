@@ -7,39 +7,38 @@
 	.timeline
 		position: relative
 		&::before
+			background-color: $wdWerneoWhite
 			content: ''
+			height: 100%
+			left: ($wdWerneoTimelineIconSize - $wdWerneoTimelineLineWidth) / 2
 			position: absolute
 			top: 0
-			left: ($wdWerneoTimelineIconSize - $wdWerneoTimelineLineWidth) / 2
-			height: 100%
 			width: $wdWerneoTimelineLineWidth
-			background-color: $wdWerneoWhite
 			+responsive(desktop)
 				left: 50%
 				margin-left: -$wdWerneoTimelineLineWidth / 2
 
-		/// colors
-		@each $name,$color in $wdWerneoColors
+		@each $name, $color in $wdWerneoColors
 			&.#{$name}
-				&:before
+				&::before
 					background-color: $color
 				.timeline-milestone-icon
 					border-color: $color
 
 	.timeline-milestone
-		position: relative
 		+clearfix
+		position: relative
 
 	.timeline-milestone-icon
-		position: absolute
-		top: $wdWerneoTimelineIconOffset
-		left: 0
-		width: $wdWerneoTimelineIconSize
+		border: $wdWerneoTimelineLineWidth solid $wdWerneoWhite
 		height: $wdWerneoTimelineIconSize
+		left: 0
+		position: absolute
+		text-align: center
+		top: $wdWerneoTimelineIconOffset
+		width: $wdWerneoTimelineIconSize
 		@if $wdWerneoTimelineIconBorderRadius != 0
 			border-radius: $wdWerneoTimelineIconBorderRadius
-		border: $wdWerneoTimelineLineWidth solid $wdWerneoWhite
-		text-align: center
 		i
 			&.fa
 				height: $wdWerneoTimelineIconSize - (2 * $wdWerneoTimelineLineWidth)
@@ -49,57 +48,56 @@
 					line-height: ($wdWerneoTimelineIconSize * 1.5) - (2 * $wdWerneoTimelineLineWidth)
 
 		+responsive(desktop)
-			width: $wdWerneoTimelineIconSize * 1.5
+			backface-visibility: hidden
 			height: $wdWerneoTimelineIconSize * 1.5
 			left: 50%
 			margin-left: -($wdWerneoTimelineIconSize * 1.5) / 2
-			/// force hardware acceleration
-			-webkit-transform: translateZ(0)
-			-webkit-backface-visibility: hidden
+			transform: translateZ(0)
+			width: $wdWerneoTimelineIconSize * 1.5
 			&.hidden
 				visibility: hidden
 			&.animate
-				visibility: visible
 				animation: bounceScaleIn 600ms
+				visibility: visible
 
 	.timeline-milestone-content
-		position: relative
 		margin-left: $wdWerneoTimelineIconSize * 1.5
 		padding: $wdWerneoTimelineContentPaddingVertical * 0.5 $wdWerneoTimelineContentPaddingHorizontal * 0.75
+		position: relative
 		@if $wdWerneoTimelineContentBorderRadius != 0
 			border-radius: $wdWerneoTimelineContentBorderRadius
 		&::before
-			content: ''
-			position: absolute
-			top: ($wdWerneoTimelineIconOffset + ($wdWerneoTimelineIconSize / 2)) - $wdWerneoTimelineArrowSize
-			right: 100%
-			height: 0
-			width: 0
 			border: $wdWerneoTimelineArrowSize solid transparent
 			border-right-color: $wdWerneoWhite
+			content: ''
+			height: 0
+			position: absolute
+			right: 100%
+			top: ($wdWerneoTimelineIconOffset + ($wdWerneoTimelineIconSize / 2)) - $wdWerneoTimelineArrowSize
+			width: 0
 		+responsive(desktop)
 			margin-left: 0
 			padding: $wdWerneoTimelineContentPaddingVertical $wdWerneoTimelineContentPaddingHorizontal
 			width: $wdWerneoTimelineContentWidth
 			&::before
-				top: ($wdWerneoTimelineIconOffset + (($wdWerneoTimelineIconSize * 1.5) / 2)) - $wdWerneoTimelineArrowSize
-				left: 100%
 				border-color: transparent
 				border-left-color: $wdWerneoWhite
+				left: 100%
+				top: ($wdWerneoTimelineIconOffset + (($wdWerneoTimelineIconSize * 1.5) / 2)) - $wdWerneoTimelineArrowSize
 			.timeline-milestone:nth-child(even) &
 				float: right
 				&::before
-					left: auto
-					right: 100%
 					border-color: transparent
 					border-right-color: $wdWerneoWhite
+					left: auto
+					right: 100%
 			&.hidden
 				visibility: hidden
 			&.animate
-				visibility: visible
 				animation: bounceSlideInLeft 600ms
+				visibility: visible
 
-		@each $name,$color in $wdWerneoColors
+		@each $name, $color in $wdWerneoColors
 			&.bg-#{$name}
 				&::before
 					border-right-color: $color
@@ -107,10 +105,13 @@
 					&::before
 						border-color: transparent
 						border-left-color: $color
-					.timeline-milestone:nth-child(even) &
-						&::before
-							border-right-color: $color
+					.timeline-milestone
+						&:nth-child(even) &
+							&::before
+								border-right-color: $color
 
 	+responsive(desktop)
-		.timeline-milestone:nth-child(even) .timeline-milestone-content.animate
-			animation: bounceSlideInRight 600ms
+		.timeline-milestone:nth-child(even)
+			.timeline-milestone-content
+				&.animate
+					animation: bounceSlideInRight 600ms

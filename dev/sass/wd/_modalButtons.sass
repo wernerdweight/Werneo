@@ -10,28 +10,29 @@
 		@each $name, $color, in $wdWerneoColors
 			&.#{$name}
 				$inverseColor: $wdWerneoWhite
+				$darkerColor: darken($color, 50%)
 				@if $name == 'white' or $name == 'grey-light'
 					$inverseColor: $wdWerneoGreyMedium
 				&::before
-					background: rgba(darken($color,50%),0.5)
+					background: rgba($darkerColor, 0.5)
 				.modal-btn-content
 					.header
 						background-color: $color
+						border-bottom-color: lighten($color, 20%)
 						color: $inverseColor
-						border-bottom-color: lighten($color,20%)
 						.close
 							color: $inverseColor
 		&::before
+			content: ''
+			height: 100%
+			left: 0
 			opacity: 0
 			pointer-events: none
 			position: fixed
 			top: 0
-			left: 0
-			z-index: 800
-			width: 100%
-			height: 100%
-			content: ''
 			transition: opacity 400ms 400ms
+			width: 100%
+			z-index: 800
 		.modal-btn-trigger
 			display: block
 			pointer-events: auto
@@ -39,57 +40,56 @@
 			& > *
 				transition: opacity 300ms 500ms
 		.modal-btn-content
-			position: fixed
-			overflow: hidden
 			opacity: 0
-			z-index: 1000
+			overflow: hidden
 			pointer-events: none
-			transition-timing-function: cubic-bezier(0.7,0,0.3,1)
+			position: fixed
 			transition: opacity 400ms 600ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms
+			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+			z-index: 1000
 			& > *
 				opacity: 0
 				transition: opacity 300ms 0ms
 			.close-times
 				display: block
-				position: absolute
-				top: $wdWerneoModalButtonsCloseButtonOffsetVertical
-				right: $wdWerneoModalButtonsCloseButtonOffsetHorizontal
-				z-index: 1101
 				opacity: 0.3
+				position: absolute
+				right: $wdWerneoModalButtonsCloseButtonOffsetHorizontal
+				top: $wdWerneoModalButtonsCloseButtonOffsetVertical
 				transition: opacity 400ms ease-in-out
+				z-index: 1101
 				&:hover
 					opacity: 1
 			.header
+				border-bottom-style: solid
+				border-bottom-width: $wdWerneoModalButtonsHeaderBorderBottomWidth
+				left: 0
+				margin: 0
+				padding: $wdWerneoModalButtonsHeaderPaddingTop $wdWerneoModalButtonsHeaderPaddingRight $wdWerneoModalButtonsHeaderPaddingBottom $wdWerneoModalButtonsHeaderPaddingLeft
 				position: absolute
 				top: 0
-				left: 0
 				width: 100%
-				padding: $wdWerneoModalButtonsHeaderPaddingTop $wdWerneoModalButtonsHeaderPaddingRight $wdWerneoModalButtonsHeaderPaddingBottom $wdWerneoModalButtonsHeaderPaddingLeft
-				margin: 0
 				z-index: 1100
-				border-bottom-width: $wdWerneoModalButtonsHeaderBorderBottomWidth
-				border-bottom-style: solid
 				p
+					+hellip
 					font-size: 150%
 					margin: 0
-					+hellip
 			.body
 				margin-top: ($wdWerneoTypographyBasicFontSize * 1.5 * 1.5) + $wdWerneoModalButtonsHeaderPaddingTop + $wdWerneoModalButtonsHeaderPaddingBottom + $wdWerneoModalButtonsHeaderBorderBottomWidth
+				overflow: auto
 				padding: $wdWerneoModalButtonsBodyPaddingVertical $wdWerneoModalButtonsBodyPaddingHorizontal
 				z-index: 1099
-				overflow: auto
 			.footer
-				z-index: 1100
-				position: absolute
-				bottom: 0
-				left: 0
-				width: 100%
-				padding: $wdWerneoModalButtonsFooterPaddingVertical $wdWerneoModalButtonsFooterPaddingHorizontal
-				margin: 0
 				background-color: $wdWerneoGreyLightest
 				border-top: $wdWerneoModalButtonsHeaderBorderTopWidth solid $wdWerneoGreyLight
+				bottom: 0
+				left: 0
+				margin: 0
+				padding: $wdWerneoModalButtonsFooterPaddingVertical $wdWerneoModalButtonsFooterPaddingHorizontal
+				position: absolute
+				width: 100%
+				z-index: 1100
 
-		/// functional
 		&.open
 			&::before
 				opacity: 1
@@ -103,15 +103,15 @@
 					opacity: 0
 					transition: opacity 300ms
 			.modal-btn-content
+				box-sizing: border-box
 				opacity: 1
 				pointer-events: auto
-				box-sizing: border-box
 				transition: opacity 100ms 100ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms
 				& > *
 					opacity: 1
 					transition: opacity 400ms 500ms
 			.list-item-overlay
+				height: 0
 				opacity: 0
 				pointer-events: none
-				height: 0
 				transition: all 300ms 0

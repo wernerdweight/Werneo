@@ -5,100 +5,99 @@
 @if $wdWerneoUseModals == true
 
 	.modal-container
+		background-color: rgba($wdWerneoModalsBackgroundColor, 0.75)
 		display: block
+		height: 100%
+		left: 0
+		max-height: 0
+		max-width: 0
 		opacity: 0
+		overflow: hidden
 		position: fixed
 		top: 0
-		left: 0
-		max-width: 0
-		max-height: 0
-		width: 100%
-		height: 100%
-		overflow: hidden
-		background-color: rgba($wdWerneoModalsBackgroundColor,0.75)
-		z-index: 99999
 		transition: opacity 400ms 200ms, max-width 0ms 600ms, max-height 0ms 600ms
+		width: 100%
+		z-index: 99999
 		&.active
-			opacity: 1
-			max-width: 100%
 			max-height: 100%
+			max-width: 100%
+			opacity: 1
 			transition: opacity 400ms
 			.modal
 				opacity: 1
 		.modal
+			background-color: $wdWerneoWhite
+			box-shadow: 0 0 $wdWerneoModalsBoxShadowFeather 0 rgba($wdWerneoModalsBackgroundColor, 25%)
+			height: $wdWerneoModalsBasicHeight
+			left: 0
+			margin-left: 0
+			margin-top: -$wdWerneoModalsBasicHeight / 2
+			opacity: 0
+			overflow: hidden
 			position: absolute
 			top: 50%
-			left: 0
-			width: 100%
-			height: $wdWerneoModalsBasicHeight
-			margin-top: -$wdWerneoModalsBasicHeight / 2
-			margin-left: 0
-			background-color: $wdWerneoWhite
-			box-shadow: 0 0 $wdWerneoModalsBoxShadowFeather 0 rgba($wdWerneoModalsBackgroundColor,25%)
-			overflow: hidden
-			opacity: 0
 			transition: opacity 400ms
+			width: 100%
 			+responsive(tablet)
-				width: $wdWerneoModalsBasicWidth
-				margin-left: -$wdWerneoModalsBasicWidth / 2
 				left: 50%
-			& > a.close
-				position: absolute
-				top: $wdWerneoModalsCloseButtonOffsetVertical
-				right: $wdWerneoModalsCloseButtonOffsetHorizontal
-				padding: $wdWerneoModalsCloseButtonPaddingVertical $wdWerneoModalsCloseButtonPaddingHorizontal
+				margin-left: -$wdWerneoModalsBasicWidth / 2
+				width: $wdWerneoModalsBasicWidth
+			& > .close
 				color: $wdWerneoWhite
 				opacity: 0.5
-				transition: opacity 400ms
+				padding: $wdWerneoModalsCloseButtonPaddingVertical $wdWerneoModalsCloseButtonPaddingHorizontal
+				position: absolute
+				right: $wdWerneoModalsCloseButtonOffsetHorizontal
 				text-decoration: none
+				top: $wdWerneoModalsCloseButtonOffsetVertical
+				transition: opacity 400ms
 				&:hover
 					opacity: 1
 			& > iframe
-				width: 100%
-				height: 100%
-				padding: 0
-				margin: 0
 				border: 0
+				height: 100%
+				margin: 0
 				overflow: auto
+				padding: 0
+				width: 100%
 
-		/// sizes
 		&.tall
 			.modal
-				top: calc((100% - #{$wdWerneoModalsTallHeight}) / 2)
 				height: $wdWerneoModalsTallHeight
 				margin-top: 0
+				top: calc((100% - #{$wdWerneoModalsTallHeight}) / 2)
 		&.wide
 			.modal
-				top: calc((100% - #{$wdWerneoModalsWideHeight}) / 2)
 				height: $wdWerneoModalsWideHeight
 				margin-top: 0
+				top: calc((100% - #{$wdWerneoModalsWideHeight}) / 2)
 				+responsive(tablet)
-					width: $wdWerneoModalsWideWidth
 					left: calc((100% - #{$wdWerneoModalsWideWidth}) / 2)
 					margin-left: 0
+					width: $wdWerneoModalsWideWidth
 		&.medium
 			.modal
-				top: calc((100% - #{$wdWerneoModalsMediumHeight}) / 2)
 				height: $wdWerneoModalsMediumHeight
 				margin-top: 0
+				top: calc((100% - #{$wdWerneoModalsMediumHeight}) / 2)
 				+responsive(tablet)
 					left: calc((100% - #{$wdWerneoModalsMediumWidth}) / 2)
-					width: $wdWerneoModalsMediumWidth
 					margin-left: 0
+					width: $wdWerneoModalsMediumWidth
 		&.large
 			.modal
-				top: calc((100% - #{$wdWerneoModalsLargeHeight}) / 2)
 				height: $wdWerneoModalsLargeHeight
 				margin-top: 0
+				top: calc((100% - #{$wdWerneoModalsLargeHeight}) / 2)
 				+responsive(tablet)
 					left: calc((100% - #{$wdWerneoModalsLargeWidth}) / 2)
-					width: $wdWerneoModalsLargeWidth
 					margin-left: 0
+					width: $wdWerneoModalsLargeWidth
 		&.full
 			.modal
-				top: calc((100% - #{$wdWerneoModalsFullHeight}) / 2)
-				left: calc((100% - #{$wdWerneoModalsFullWidth}) / 2)
-				width: $wdWerneoModalsFullWidth
 				height: $wdWerneoModalsFullHeight
-				margin-top: 0
+				left: calc((100% - #{$wdWerneoModalsFullWidth}) / 2)
 				margin-left: 0
+				margin-top: 0
+				top: calc((100% - #{$wdWerneoModalsFullHeight}) / 2)
+				width: $wdWerneoModalsFullWidth

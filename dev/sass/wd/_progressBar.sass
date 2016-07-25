@@ -5,29 +5,29 @@
 @if $wdWerneoUseProgressBar == true
 
 	.progressbar
-		width: 100%
+		background-color: $wdWerneoGreyLightest
+		border: $wdWerneoProgressBarBorderWidth solid $wdWerneoGreyLightest
+		box-sizing: border-box
 		display: block
 		height: $wdWerneoProgressBarHeight
-		border: $wdWerneoProgressBarBorderWidth solid $wdWerneoGreyLightest
-		background-color: $wdWerneoGreyLightest
-		box-sizing: border-box
 		position: relative
+		width: 100%
 		/// size
 		&.sm
-			height: $wdWerneoProgressBarHeight * (2/3)
-			border-width: $wdWerneoProgressBarBorderWidth * (2/3)
+			border-width: $wdWerneoProgressBarBorderWidth * (2 / 3)
+			height: $wdWerneoProgressBarHeight * (2 / 3)
 		&.lg
-			height: $wdWerneoProgressBarHeight * (4/3)
-			border-width: $wdWerneoProgressBarBorderWidth * (4/3)
+			border-width: $wdWerneoProgressBarBorderWidth * (4 / 3)
+			height: $wdWerneoProgressBarHeight * (4 / 3)
 
 		/// progress element
 		span
 			display: block
 			height: 100%
-			transition: width 600ms ease-in-out
+			left: 0
 			position: absolute
 			top: 0
-			left: 0
+			transition: width 600ms ease-in-out
 			/// color
 			@each $name, $color, in $wdWerneoColors
 				&.#{$name}

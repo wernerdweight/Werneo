@@ -7,21 +7,25 @@
 	label
 		display: block
 		&.required
-			&:after
+			&::after
+				color: $wdWerneoCrimson
 				content: '*'
 				display: inline-block
-				color: $wdWerneoCrimson
-				margin-left: 0.5rem
-				line-height: 50%
 				font-size: 200%
+				line-height: 50%
+				margin-left: 0.5rem
 				vertical-align: middle
 
-	input,select,textarea,option
+	input,
+	select,
+	textarea,
+	option
 		color: $wdWerneoGreyMedium
-		font-size: $wdWerneoTypographyBasicFontSize
 		font-family: $wdWerneoTypographyBasicFontFamily
+		font-size: $wdWerneoTypographyBasicFontSize
 
-	input,select
+	input,
+	select
 		height: $wdWerneoFormsInputSize
 		&.lg
 			height: $wdWerneoFormsInputSize * 1.6
@@ -30,11 +34,13 @@
 		&.sm
 			height: $wdWerneoFormsInputSize * 0.6
 
-	input,select,textarea
+	input,
+	select,
+	textarea
+		border: $wdWerneoFormsBorderWidth $wdWerneoFormsBorderStyle darken($wdWerneoGreyLight, 10%)
 		display: inline-block
 		margin: 0
 		padding: $wdWerneoFormsInputPaddingVertical $wdWerneoFormsInputPaddingHorizontal
-		border: $wdWerneoFormsBorderWidth $wdWerneoFormsBorderStyle darken($wdWerneoGreyLight,10%)
 		transition: all 300ms ease-in-out
 		width: 100%
 		@if $wdWerneoFormsBorderRadius != 0
@@ -42,22 +48,30 @@
 		+input-placeholder
 			color: $wdWerneoGreyLight
 			transition: color 300ms ease-in-out
-		&:hover,&:focus,&:active
+		&:hover,
+		&:focus,
+		&:active
 			+input-placeholder
 				color: $wdWerneoGreyMedium
-		&:focus,&:active
-			outline: 0
+		&:focus,
+		&:active
 			border-color: $wdWerneoGreyDark
-		&[disabled],&[readonly]
-			&,&:focus,&:hover,&:active
+			outline: 0
+		&[disabled],
+		&[readonly]
+			&,
+			&:focus,
+			&:hover,
+			&:active
 				background-color: $wdWerneoGreyLightest
 				border-color: $wdWerneoGreyLight
 				color: $wdWerneoGreyMedium
 				+input-placeholder
 					color: $wdWerneoGreyLight
-		&.invalid,&:invalid
-			color: $wdWerneoCrimson
+		&.invalid,
+		&:invalid
 			border-color: $wdWerneoCrimson
+			color: $wdWerneoCrimson
 		&.lg
 			font-size: 150%
 		&.medium
@@ -67,64 +81,68 @@
 			padding: $wdWerneoFormsInputPaddingVertical / 2 $wdWerneoFormsInputPaddingHorizontal / 2
 		@each $name, $color, in $wdWerneoColors
 			&.#{$name}
-				&:focus,&:active,&.full-colored
+				&:focus,
+				&:active,
+				&.full-colored
 					border-color: $color
-				&.invalid,&:invalid
+				&.invalid,
+				&:invalid
 					border-color: $wdWerneoCrimson
 
 	input
-		&[type="radio"],&[type="checkbox"]
+		&[type='radio'],
+		&[type='checkbox']
 			display: none
 			& + label
-				display: inline-block
 				cursor: pointer
+				display: inline-block
 				margin-right: $wdWerneoFormsExpandedChoiceLabelMarginRight
 				&::before
+					background-color: $wdWerneoGreyLightest
+					border: $wdWerneoFormsExpandedChoiceBorderWidth solid $wdWerneoGreyLight
+					color: $wdWerneoGreyDark
 					content: ''
 					display: inline-block
-					width: $wdWerneoFormsExpandedChoiceSize
-					height: $wdWerneoFormsExpandedChoiceSize
-					border: $wdWerneoFormsExpandedChoiceBorderWidth solid $wdWerneoGreyLight
-					background-color: $wdWerneoGreyLightest
-					color: $wdWerneoGreyDark
 					font-size: $wdWerneoFormsExpandedChoiceSize
 					font-weight: $wdWerneoBold
+					height: $wdWerneoFormsExpandedChoiceSize
 					line-height: $wdWerneoFormsExpandedChoiceSize * 0.8
+					margin-right: $wdWerneoFormsExpandedChoiceMarginRight
 					text-align: center
 					vertical-align: middle
-					margin-right: $wdWerneoFormsExpandedChoiceMarginRight
+					width: $wdWerneoFormsExpandedChoiceSize
 				&.required
 					&::after
 						content: none
-		&[type="radio"]
+		&[type='radio']
 			& + label
 				&::before
 					border-radius: 50%
 			&:checked
 				& + label
 					&::before
-						content: '\25cf'
 						border-color: $wdWerneoGreyDark
-		&[type="checkbox"]
+						content: '\25cf'
+		&[type='checkbox']
 			&:checked
 				& + label
 					&::before
-						content: '\2713'
 						border-color: $wdWerneoGreyDark
-		&[type="number"]
+						content: '\2713'
+		&[type='number']
 			padding-right: 0
-		&[type="file"]
-			padding-top: ($wdWerneoFormsInputSize - (2 * $wdWerneoFormsBorderWidth) - 2.5rem) / 2
+		&[type='file']
 			padding-bottom: ($wdWerneoFormsInputSize - (2 * $wdWerneoFormsBorderWidth) - 2.5rem) / 2
+			padding-top: ($wdWerneoFormsInputSize - (2 * $wdWerneoFormsBorderWidth) - 2.5rem) / 2
 
 	textarea
 		padding: $wdWerneoFormsTextareaPaddingVertical $wdWerneoFormsTextareaPaddingHorizontal
 
 	select
-		&[multiple="multiple"]
+		&[multiple='multiple']
 			height: auto
 		option
-			&[value=""]
+			&[value='']
 				color: $wdWerneoGreyLight
 				transition: color 300ms ease-in-out
 
@@ -135,28 +153,28 @@
 			margin: 0
 			padding: 0
 		li
-			list-style: none
-			padding: $wdWerneoFormsErrorPadding
 			background-color: $wdWerneoCrimson
 			color: $wdWerneoWhite
 			display: inline-block
+			list-style: none
+			padding: $wdWerneoFormsErrorPadding
 
 	.input-like
 		height: $wdWerneoFormsInputSize
 		line-height: $wdWerneoFormsInputSize
 
 	/// switch-like checkbox
-
 	.switch
-		cursor: pointer
-		height: $wdWerneoFormsInputSize
-		display: flex
 		align-items: center
-		input[type="checkbox"]
-			position: absolute
-			opacity: 0
-			width: 0.1rem
-			height: 0.1rem
+		cursor: pointer
+		display: flex
+		height: $wdWerneoFormsInputSize
+		input
+			&[type='checkbox']
+				height: 0.1rem
+				opacity: 0
+				position: absolute
+				width: 0.1rem
 			&:checked
 				& + .check
 					background-color: $wdWerneoGreyMedium
@@ -164,39 +182,39 @@
 					&::after
 						left: ($wdWerneoFormsInputSize + $wdWerneoFormsSwitchOutlineWidth) - $wdWerneoFormsSwitchWidth
 		.check
-			position: relative
-			width: $wdWerneoFormsInputSize
-			height: $wdWerneoFormsSwitchHeight
-			outline: $wdWerneoFormsSwitchOutlineWidth solid $wdWerneoGreyLight
+			background-color: $wdWerneoGreyLight
 			border: 0.1rem solid $wdWerneoWhite
 			cursor: pointer
-			background-color: $wdWerneoGreyLight
 			display: inline-block
-			z-index: 1
+			height: $wdWerneoFormsSwitchHeight
+			outline: $wdWerneoFormsSwitchOutlineWidth solid $wdWerneoGreyLight
+			position: relative
 			transition: background-color 200ms ease-in-out
+			width: $wdWerneoFormsInputSize
+			z-index: 1
 			@if $wdWerneoFormsBorderRadius != 0
 				border-radius: $wdWerneoFormsBorderRadius
 				outline: none
 			&::after
-				content: ''
-				position: absolute
-				left: -$wdWerneoFormsSwitchOutlineWidth
-				top: -$wdWerneoFormsSwitchOutlineWidth
-				display: block
-				width: $wdWerneoFormsSwitchWidth
-				height: $wdWerneoFormsSwitchHeight
-				outline: $wdWerneoFormsSwitchOutlineWidth solid $wdWerneoGreyDark
 				background-color: $wdWerneoGreyDark
-				z-index: 2
+				content: ''
+				display: block
+				height: $wdWerneoFormsSwitchHeight
+				left: -$wdWerneoFormsSwitchOutlineWidth
+				outline: $wdWerneoFormsSwitchOutlineWidth solid $wdWerneoGreyDark
+				position: absolute
+				top: -$wdWerneoFormsSwitchOutlineWidth
 				transition: left 200ms ease-in-out
+				width: $wdWerneoFormsSwitchWidth
+				z-index: 2
 		.label
-			line-height: $wdWerneoFormsSwitchHeight
 			height: $wdWerneoFormsSwitchHeight
-			vertical-align: top
+			line-height: $wdWerneoFormsSwitchHeight
 			padding: $wdWerneoFormsSwitchPaddingVertical $wdWerneoFormsSwitchPaddingHorizontal
+			vertical-align: top
 		@each $name, $color, in $wdWerneoColors
 			&.#{$name}
-				input[type="checkbox"]
+				input
 					&:checked
 						& + .check
 							background-color: $color

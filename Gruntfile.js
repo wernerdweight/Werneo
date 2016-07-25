@@ -144,7 +144,7 @@ module.exports = function (grunt) {
                     livereload: true
                 },
                 files: '<%= compass.dev.options.sassDir %>/**/*.{sass,scss}',
-                tasks: ['compass:dev', 'autoprefixer', 'notify:compass']
+                tasks: ['sasslint', 'compass:dev', 'autoprefixer', 'notify:compass']
             },
 
             javascript: {
@@ -208,6 +208,12 @@ module.exports = function (grunt) {
                     '<%= dirs.src.javascript %>/**/*.js',
                 ]
             }
+        },
+
+        sasslint: {
+            target: [
+                '<%= dirs.src.stylesheets %>/**/*.sass'
+            ]
         }
 
     };
@@ -227,6 +233,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-sass-lint');
 
     grunt.task.run('notify_hooks');
 
@@ -251,18 +258,19 @@ module.exports = function (grunt) {
         'build_css',
         'notify:build_finish'
     ]);
-    grunt.registerTask('build_css', ['compass:dist', 'autoprefixer']);
+    grunt.registerTask('build_css', ['sasslint', 'compass:dist', 'autoprefixer']);
 
     // dev
     grunt.registerTask('build_dev', [
         'jshint:theme',
         'clean:base',
         'uglify:dev',
+        'sasslint',
         'compass:dev',
         'autoprefixer',
         'notify:build_finish'
     ]);
-    grunt.registerTask('build_dev_css', ['compass:dev', 'autoprefixer']);
+    grunt.registerTask('build_dev_css', ['sasslint', 'compass:dev', 'autoprefixer']);
     grunt.registerTask('build_dev_js', ['jshint:theme', 'uglify:dev']);
     grunt.registerTask('build_dev_watch', ['build_dev', 'watch']);
 
