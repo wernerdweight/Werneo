@@ -34,6 +34,7 @@
 				width: calc(100% - 20%)
 		li
 			border-top: 0.1rem solid rgba($wdWerneoGreyDark, 0.25)
+			position: relative
 			&:first-child
 				border-top: 0
 		ul
@@ -41,7 +42,8 @@
 			list-style: none
 			margin: 0
 			max-height: calc(100% - 4rem)
-			overflow: auto
+			overflow-x: hidden
+			overflow-y: auto
 			padding: 0
 			position: absolute
 			top: 4rem
@@ -62,8 +64,17 @@
 					color: $inverseColor
 					&:hover
 						background-color: lighten($color, 5%)
+				.navigation-pane-opener
+					background-color: $color
+					border-left-color: rgba($inverseColor, 0.25)
+					&:hover
+						background-color: lighten($color, 5%)
+					.chevron
+						&::after,
+						&::before
+							background-color: $inverseColor
 
-	.navigation-close
+	.navigation-header
 		background-color: $wdWerneoGreyDark
 		color: $wdWerneoWhite
 		display: block
@@ -74,12 +85,36 @@
 		width: 100%
 		&:hover
 			background-color: lighten($wdWerneoGreyDark, 5%)
+		.navigation-trigger
+			position: absolute
+			right: 0
+			top: 0
+			span
+				&,
+				&::after,
+				&::before
+					height: (0.5rem / 2)
+					width: (4rem / 2)
 
 	.navigation-item
 		color: $wdWerneoGreyDark
 		display: block
 		padding: 1rem 2rem
 		text-decoration: none
+		&:hover
+			background-color: darken($wdWerneoWhite, 5%)
+
+	.navigation-pane-opener
+		background-color: $wdWerneoWhite
+		border-bottom: 1rem solid transparent
+		border-left: 0.1rem solid rgba($wdWerneoGreyDark, 0.25)
+		border-top: 1rem solid transparent
+		display: block
+		height: 100%
+		position: absolute
+		right: 0
+		top: 0
+		width: 4rem
 		&:hover
 			background-color: darken($wdWerneoWhite, 5%)
 
