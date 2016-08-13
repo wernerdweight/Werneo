@@ -9,18 +9,36 @@ function WerneoNavigation(){
 	this.navigationPaneOpeners = null;
 	this.navigationTriggers = null;
 
-	WerneoNavigation.prototype.insertNavigationPaneOpener = function(pane){
-		var chevron = document.createElement('div');
-		chevron.classList.add('chevron');
-		chevron.dataset.rotate = '-90deg';
+	WerneoNavigation.prototype.insertNavigationPaneOpener = function(pane,parentPane,navigation){
+		/// opener
+		var openerChevron = document.createElement('div');
+		openerChevron.classList.add('chevron');
+		openerChevron.dataset.rotate = '-90deg';
 
 		var opener = document.createElement('a');
 		opener.href = '#';
 		opener.classList.add('navigation-pane-opener');
 		opener.dataset.navigationPane = pane.dataset.id;
+		opener.dataset.title = pane.parentNode.querySelector('.navigation-item').textContent;
 
-		opener.appendChild(chevron);
+		opener.appendChild(openerChevron);
 		pane.parentNode.insertBefore(opener,pane);
+
+		/// closer
+		var closerChevron = document.createElement('div');
+		closerChevron.classList.add('chevron');
+		closerChevron.dataset.rotate = '90deg';
+
+		var closer = document.createElement('a');
+		closer.href = '#';
+		closer.id = 'navigation-pane-closer-' + pane.dataset.id;
+		closer.classList.add('navigation-pane-opener');
+		closer.dataset.navigationPane = parentPane.dataset.id;
+		closer.dataset.title = parentPane.parentNode.querySelector('.navigation-header .title, .navigation-item').textContent;
+
+		closer.appendChild(closerChevron);
+		var header = navigation.querySelector('.navigation-header');
+		header.appendChild(closer);
 	};
 
 	WerneoNavigation.prototype.moveNavigationPane = function(pane,navigation){
@@ -37,6 +55,7 @@ function WerneoNavigation(){
 		pane.dataset.id = _this.navigationPanesId;
 		pane.style.left = (level * 100) + '%';
 		pane.dataset.level = level;
+		pane.dataset.navigationId = navigation.id;
 		_this.navigationPanes[_this.navigationPanesId] = pane;
 
 		_this.navigationPanesId++;
@@ -47,8 +66,8 @@ function WerneoNavigation(){
 			for (i = 0; i < subPanes.length; i++) {
 				/// prepare sub-navigation panes
 				_this.prepareNavigationPanes(subPanes[i],level + 1,navigation);
-				/// insert sub-navigation opener
-				_this.insertNavigationPaneOpener(subPanes[i]);
+				/// insert sub-navigation opener (and closer)
+				_this.insertNavigationPaneOpener(subPanes[i],pane,navigation);
 				/// move pane in DOM
 				_this.moveNavigationPane(subPanes[i],navigation);
 			}
@@ -90,14 +109,29 @@ function WerneoNavigation(){
 					/// change offset (animate navigation)
 					var newPane = _this.navigationPanes[parseInt(this.dataset.navigationPane)];
 					var navigation = newPane.parentNode;
+					var currentCloser = navigation.querySelector('#navigation-pane-closer-' + _this.currentPanes[navigation.id].dataset.id);
+					var newCloser = navigation.querySelector('#navigation-pane-closer-' + newPane.dataset.id);
 					var currentLevel = parseInt(_this.currentPanes[navigation.id].dataset.level);
 					var newLevel = parseInt(newPane.dataset.level);
 					var delta = currentLevel > newLevel ? 100 : -100;
-					_this.currentPanes[navigation.id].style.left = (parseInt(_this.currentPanes[navigation.id].style.left) + (Math.max(currentLevel,1) * delta)) + '%';
+					/// animate all panes
+					for (j = 0; j < _this.navigationPanes.length; j++) {
+						if(_this.navigationPanes[j].dataset.navigationId === navigation.id){
+							_this.navigationPanes[j].style.left = (parseInt(_this.navigationPanes[j].style.left) + delta) + '%';
+						}
+					}
+					/// currently active pane
 					_this.currentPanes[navigation.id].classList.remove('active');
+					if(null !== currentCloser){
+						currentCloser.classList.remove('showing');
+					}
+					/// newly active pane
 					_this.currentPanes[navigation.id] = newPane;
 					_this.currentPanes[navigation.id].classList.add('active');
-					_this.currentPanes[navigation.id].style.left = (parseInt(_this.currentPanes[navigation.id].style.left) + (Math.max(newLevel,1) * delta)) + '%';
+					navigation.querySelector('.navigation-header .title').textContent = this.dataset.title;
+					if(null !== newCloser){
+						newCloser.classList.add('showing');
+					}
 				});
 			}
 		}
@@ -140,9 +174,6 @@ function WerneoNavigation(){
 
 		/// activate navigation triggers
 		_this.activateNavigationTriggers();
-
-		console.log(_this);
-
 	};
 
 	WerneoNavigation.prototype.invoke = function(){
