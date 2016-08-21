@@ -363,8 +363,8 @@
   padding: 1.6rem 3rem;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
 }
 /* line 20, ../../dev/sass/wd/_buttons.sass */
 .btn.outline {
@@ -875,8 +875,8 @@
   margin-top: -0.2rem;
   position: absolute;
   top: 50%;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
   width: 1.2rem;
 }
 /* line 26, ../../dev/sass/wd/_chevrons.sass */
@@ -1011,8 +1011,8 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
   width: 100%;
 }
 /* line 17, ../../dev/sass/wd/_dropdowns.sass */
@@ -1912,8 +1912,8 @@ body {
   height: 5rem;
   line-height: 4.2rem;
   padding: 0 5rem 0 1rem;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
   width: 100%;
 }
 /* line 125, ../../dev/sass/wd/_dropdowns.sass */
@@ -1934,8 +1934,8 @@ body {
   right: 0;
   text-align: center;
   top: 0;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
   width: 5rem;
 }
 
@@ -1952,8 +1952,8 @@ body {
   padding: 0;
   position: absolute;
   top: 5rem;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
   width: 100%;
   z-index: 9;
 }
@@ -1974,8 +1974,8 @@ body {
   height: 5rem;
   line-height: 5rem;
   padding: 0 1.5rem;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
 }
 /* line 180, ../../dev/sass/wd/_dropdowns.sass */
 .dropdown-option:first-child {
@@ -2039,8 +2039,8 @@ body {
   max-height: 50rem;
   max-width: 50rem;
   opacity: 1;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
 }
 
 /* line 13, ../../dev/sass/wd/_dynaFilter.sass */
@@ -2078,8 +2078,8 @@ body {
   overflow: hidden;
   padding: 0;
   position: relative;
-  -webkit-transition: margin-left 300ms ease-in-out, max-height 300ms 300ms, padding 300ms 300ms, border 300ms 300ms, margin-bottom 300ms 300ms;
-          transition: margin-left 300ms ease-in-out, max-height 300ms 300ms, padding 300ms 300ms, border 300ms 300ms, margin-bottom 300ms 300ms;
+  -webkit-transition: margin-left 400ms ease-in-out, max-height 400ms 400ms, padding 400ms 400ms, border 400ms 400ms, margin-bottom 400ms 400ms;
+          transition: margin-left 400ms ease-in-out, max-height 400ms 400ms, padding 400ms 400ms, border 400ms 400ms, margin-bottom 400ms 400ms;
   width: 100%;
 }
 /* line 35, ../../dev/sass/wd/_flashMessages.sass */
@@ -2089,8 +2089,8 @@ body {
   margin-left: 0;
   max-height: 100vh;
   padding: 1rem 1rem;
-  -webkit-transition: margin-left 300ms ease-in-out, max-height 0ms 0ms, padding 0ms 0ms, border 0ms 0ms, margin-bottom 0ms 0ms;
-          transition: margin-left 300ms ease-in-out, max-height 0ms 0ms, padding 0ms 0ms, border 0ms 0ms, margin-bottom 0ms 0ms;
+  -webkit-transition: margin-left 400ms ease-in-out, max-height 0ms 0ms, padding 0ms 0ms, border 0ms 0ms, margin-bottom 0ms 0ms;
+          transition: margin-left 400ms ease-in-out, max-height 0ms 0ms, padding 0ms 0ms, border 0ms 0ms, margin-bottom 0ms 0ms;
 }
 /* line 42, ../../dev/sass/wd/_flashMessages.sass */
 .flash-message.success {
@@ -2122,7 +2122,7 @@ body {
 }
 /* line 62, ../../dev/sass/wd/_flashMessages.sass */
 .flash-message > .close:hover {
-  text-shadow: .2rem .2rem 0 #000;
+  text-shadow: 0.2rem 0.2rem 0 #000;
 }
 
 /* line 7, ../../dev/sass/wd/_forms.sass */
@@ -2179,8 +2179,8 @@ textarea {
   display: inline-block;
   margin: 0;
   padding: 0 1rem;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
   width: 100%;
 }
 /* line 61, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
@@ -2188,29 +2188,29 @@ input:-moz-placeholder,
 select:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #ddd;
-  transition: color 300ms ease-in-out;
+  transition: color 400ms ease-in-out;
 }
 /* line 64, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 input::-moz-placeholder,
 select::-moz-placeholder,
 textarea::-moz-placeholder {
   color: #ddd;
-  transition: color 300ms ease-in-out;
+  transition: color 400ms ease-in-out;
 }
 /* line 67, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 input:-ms-input-placeholder,
 select:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #ddd;
-  transition: color 300ms ease-in-out;
+  transition: color 400ms ease-in-out;
 }
 /* line 56, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 input::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #ddd;
-  -webkit-transition: color 300ms ease-in-out;
-          transition: color 300ms ease-in-out;
+  -webkit-transition: color 400ms ease-in-out;
+          transition: color 400ms ease-in-out;
 }
 /* line 61, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 input:hover:-moz-placeholder, input:focus:-moz-placeholder, input:active:-moz-placeholder,
@@ -2648,8 +2648,8 @@ select[multiple='multiple'] {
 /* line 155, ../../dev/sass/wd/_forms.sass */
 select option[value=''] {
   color: #ddd;
-  -webkit-transition: color 300ms ease-in-out;
-          transition: color 300ms ease-in-out;
+  -webkit-transition: color 400ms ease-in-out;
+          transition: color 400ms ease-in-out;
 }
 
 /* line 159, ../../dev/sass/wd/_forms.sass */
@@ -2791,8 +2791,8 @@ select option[value=''] {
 /* line 14, ../../dev/sass/wd/_gallery.sass */
 .gallery > * {
   opacity: 0;
-  -webkit-transition: opacity 300ms ease-in-out;
-          transition: opacity 300ms ease-in-out;
+  -webkit-transition: opacity 400ms ease-in-out;
+          transition: opacity 400ms ease-in-out;
 }
 /* line 17, ../../dev/sass/wd/_gallery.sass */
 .gallery::before {
@@ -2884,8 +2884,8 @@ select option[value=''] {
   position: absolute;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: height 300ms 300ms, opacity 300ms 100ms, background-position 300ms 0;
-          transition: height 300ms 300ms, opacity 300ms 100ms, background-position 300ms 0;
+  -webkit-transition: height 400ms 400ms, opacity 400ms 100ms, background-position 400ms 0;
+          transition: height 400ms 400ms, opacity 400ms 100ms, background-position 400ms 0;
   width: 100%;
   z-index: 700;
 }
@@ -3005,7 +3005,7 @@ select option[value=''] {
 }
 /* line 35, ../../dev/sass/wd/_lists.sass */
 .list-item-container .list-item-overlay:hover ~ .list-item {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 /* line 38, ../../dev/sass/wd/_lists.sass */
@@ -3019,8 +3019,8 @@ select option[value=''] {
   padding: 0.6rem 0.6rem;
   position: relative;
   text-decoration: none;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
 }
 /* line 50, ../../dev/sass/wd/_lists.sass */
 .list-item.bg-turquoise {
@@ -3691,13 +3691,13 @@ select option[value=''] {
 .modal-btn .modal-btn-trigger {
   display: block;
   pointer-events: auto;
-  -webkit-transition: opacity 300ms 300ms;
-          transition: opacity 300ms 300ms;
+  -webkit-transition: opacity 400ms 400ms;
+          transition: opacity 400ms 400ms;
 }
 /* line 40, ../../dev/sass/wd/_modalButtons.sass */
 .modal-btn .modal-btn-trigger > * {
-  -webkit-transition: opacity 300ms 500ms;
-          transition: opacity 300ms 500ms;
+  -webkit-transition: opacity 400ms 600ms;
+          transition: opacity 400ms 600ms;
 }
 /* line 42, ../../dev/sass/wd/_modalButtons.sass */
 .modal-btn .modal-btn-content {
@@ -3705,22 +3705,22 @@ select option[value=''] {
   overflow: hidden;
   pointer-events: none;
   position: fixed;
-  -webkit-transition: opacity 400ms 600ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms;
-          transition: opacity 400ms 600ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms;
-  -webkit-transition-timing-function: cubic-bezier(.7, 0, .3, 1);
-          transition-timing-function: cubic-bezier(.7, 0, .3, 1);
+  -webkit-transition: opacity 400ms 800ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms;
+          transition: opacity 400ms 800ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   z-index: 1000;
 }
 /* line 50, ../../dev/sass/wd/_modalButtons.sass */
 .modal-btn .modal-btn-content > * {
   opacity: 0;
-  -webkit-transition: opacity 300ms 0ms;
-          transition: opacity 300ms 0ms;
+  -webkit-transition: opacity 400ms 0ms;
+          transition: opacity 400ms 0ms;
 }
 /* line 53, ../../dev/sass/wd/_modalButtons.sass */
 .modal-btn .modal-btn-content .close-times {
   display: block;
-  opacity: .3;
+  opacity: 0.3;
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -3788,8 +3788,8 @@ select option[value=''] {
 /* line 102, ../../dev/sass/wd/_modalButtons.sass */
 .modal-btn.open .modal-btn-trigger > * {
   opacity: 0;
-  -webkit-transition: opacity 300ms;
-          transition: opacity 300ms;
+  -webkit-transition: opacity 400ms;
+          transition: opacity 400ms;
 }
 /* line 105, ../../dev/sass/wd/_modalButtons.sass */
 .modal-btn.open .modal-btn-content {
@@ -3802,16 +3802,16 @@ select option[value=''] {
 /* line 110, ../../dev/sass/wd/_modalButtons.sass */
 .modal-btn.open .modal-btn-content > * {
   opacity: 1;
-  -webkit-transition: opacity 400ms 500ms;
-          transition: opacity 400ms 500ms;
+  -webkit-transition: opacity 400ms 600ms;
+          transition: opacity 400ms 600ms;
 }
 /* line 113, ../../dev/sass/wd/_modalButtons.sass */
 .modal-btn.open .list-item-overlay {
   height: 0;
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: all 300ms 0;
-          transition: all 300ms 0;
+  -webkit-transition: all 400ms 0;
+          transition: all 400ms 0;
 }
 
 /* line 7, ../../dev/sass/wd/_modals.sass */
@@ -3870,7 +3870,7 @@ select option[value=''] {
 /* line 45, ../../dev/sass/wd/_modals.sass */
 .modal-container .modal > .close {
   color: #fff;
-  opacity: .5;
+  opacity: 0.5;
   padding: 0.5rem 1rem;
   position: absolute;
   right: 1rem;
@@ -3954,16 +3954,30 @@ select option[value=''] {
 .navigation {
   background-color: #fff;
   height: 100vh;
-  left: -20%;
+  left: -100%;
   overflow: hidden;
   position: fixed;
   top: 0;
   -webkit-transition: left 400ms ease-in-out;
           transition: left 400ms ease-in-out;
-  width: 20%;
+  width: 100%;
   z-index: 200;
 }
-/* line 17, ../../dev/sass/wd/_navigation.sass */
+@media only screen and (min-width: 768px) {
+  /* line 7, ../../dev/sass/wd/_navigation.sass */
+  .navigation {
+    left: -50%;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 7, ../../dev/sass/wd/_navigation.sass */
+  .navigation {
+    left: -30rem;
+    width: 30rem;
+  }
+}
+/* line 23, ../../dev/sass/wd/_navigation.sass */
 .navigation::after {
   background-color: rgba(0, 0, 0, 0.5);
   content: "";
@@ -3978,27 +3992,27 @@ select option[value=''] {
   width: 100%;
   z-index: -1;
 }
-/* line 29, ../../dev/sass/wd/_navigation.sass */
+/* line 35, ../../dev/sass/wd/_navigation.sass */
 .navigation.active {
   left: 0;
 }
-/* line 31, ../../dev/sass/wd/_navigation.sass */
+/* line 37, ../../dev/sass/wd/_navigation.sass */
 .navigation.active::after {
   left: 0;
   opacity: 1;
   -webkit-transition: left 0ms 0ms, opacity 200ms ease-in-out;
           transition: left 0ms 0ms, opacity 200ms ease-in-out;
 }
-/* line 35, ../../dev/sass/wd/_navigation.sass */
+/* line 41, ../../dev/sass/wd/_navigation.sass */
 .navigation li {
   border-top: 0.1rem solid rgba(51, 51, 51, 0.25);
   position: relative;
 }
-/* line 38, ../../dev/sass/wd/_navigation.sass */
+/* line 44, ../../dev/sass/wd/_navigation.sass */
 .navigation li:first-child {
   border-top: 0;
 }
-/* line 40, ../../dev/sass/wd/_navigation.sass */
+/* line 46, ../../dev/sass/wd/_navigation.sass */
 .navigation ul {
   height: calc(100% - 4rem);
   left: 0;
@@ -4014,389 +4028,309 @@ select option[value=''] {
           transition: max-height 0ms 400ms, left 400ms ease-in-out;
   width: 100%;
 }
-/* line 53, ../../dev/sass/wd/_navigation.sass */
+/* line 59, ../../dev/sass/wd/_navigation.sass */
 .navigation ul.active {
   max-height: calc(100% - 4rem);
   -webkit-transition: max-height 0ms 0ms, left 400ms ease-in-out;
           transition: max-height 0ms 0ms, left 400ms ease-in-out;
 }
-/* line 56, ../../dev/sass/wd/_navigation.sass */
+/* line 62, ../../dev/sass/wd/_navigation.sass */
 .navigation ul ul {
   max-height: 100%;
   top: 0;
 }
-/* line 65, ../../dev/sass/wd/_navigation.sass */
+/* line 71, ../../dev/sass/wd/_navigation.sass */
 .navigation.turquoise ul {
   background-color: #5af;
 }
-/* line 67, ../../dev/sass/wd/_navigation.sass */
+/* line 73, ../../dev/sass/wd/_navigation.sass */
 .navigation.turquoise li {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
-/* line 69, ../../dev/sass/wd/_navigation.sass */
+/* line 75, ../../dev/sass/wd/_navigation.sass */
 .navigation.turquoise .navigation-item {
   color: #fff;
 }
-/* line 71, ../../dev/sass/wd/_navigation.sass */
-.navigation.turquoise .navigation-item:hover {
-  background-color: #6fb7ff;
-}
-/* line 74, ../../dev/sass/wd/_navigation.sass */
+/* line 78, ../../dev/sass/wd/_navigation.sass */
 .navigation.turquoise .navigation-header .navigation-pane-opener {
   background-color: transparent;
 }
-/* line 76, ../../dev/sass/wd/_navigation.sass */
-.navigation.turquoise .navigation-header .navigation-pane-opener:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 78, ../../dev/sass/wd/_navigation.sass */
+/* line 80, ../../dev/sass/wd/_navigation.sass */
 .navigation.turquoise .navigation-pane-opener {
   background-color: #5af;
   border-left-color: rgba(255, 255, 255, 0.25);
 }
-/* line 81, ../../dev/sass/wd/_navigation.sass */
+/* line 83, ../../dev/sass/wd/_navigation.sass */
 .navigation.turquoise .navigation-pane-opener:hover {
-  background-color: #6fb7ff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 84, ../../dev/sass/wd/_navigation.sass */
+/* line 86, ../../dev/sass/wd/_navigation.sass */
 .navigation.turquoise .navigation-pane-opener .chevron::after, .navigation.turquoise .navigation-pane-opener .chevron::before {
   background-color: #fff;
 }
-/* line 65, ../../dev/sass/wd/_navigation.sass */
+/* line 71, ../../dev/sass/wd/_navigation.sass */
 .navigation.teal ul {
   background-color: #028428;
 }
-/* line 67, ../../dev/sass/wd/_navigation.sass */
+/* line 73, ../../dev/sass/wd/_navigation.sass */
 .navigation.teal li {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
-/* line 69, ../../dev/sass/wd/_navigation.sass */
+/* line 75, ../../dev/sass/wd/_navigation.sass */
 .navigation.teal .navigation-item {
   color: #fff;
 }
-/* line 71, ../../dev/sass/wd/_navigation.sass */
-.navigation.teal .navigation-item:hover {
-  background-color: #029d30;
-}
-/* line 74, ../../dev/sass/wd/_navigation.sass */
+/* line 78, ../../dev/sass/wd/_navigation.sass */
 .navigation.teal .navigation-header .navigation-pane-opener {
   background-color: transparent;
 }
-/* line 76, ../../dev/sass/wd/_navigation.sass */
-.navigation.teal .navigation-header .navigation-pane-opener:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 78, ../../dev/sass/wd/_navigation.sass */
+/* line 80, ../../dev/sass/wd/_navigation.sass */
 .navigation.teal .navigation-pane-opener {
   background-color: #028428;
   border-left-color: rgba(255, 255, 255, 0.25);
 }
-/* line 81, ../../dev/sass/wd/_navigation.sass */
+/* line 83, ../../dev/sass/wd/_navigation.sass */
 .navigation.teal .navigation-pane-opener:hover {
-  background-color: #029d30;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 84, ../../dev/sass/wd/_navigation.sass */
+/* line 86, ../../dev/sass/wd/_navigation.sass */
 .navigation.teal .navigation-pane-opener .chevron::after, .navigation.teal .navigation-pane-opener .chevron::before {
   background-color: #fff;
 }
-/* line 65, ../../dev/sass/wd/_navigation.sass */
+/* line 71, ../../dev/sass/wd/_navigation.sass */
 .navigation.yellow ul {
   background-color: #ffc200;
 }
-/* line 67, ../../dev/sass/wd/_navigation.sass */
+/* line 73, ../../dev/sass/wd/_navigation.sass */
 .navigation.yellow li {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
-/* line 69, ../../dev/sass/wd/_navigation.sass */
+/* line 75, ../../dev/sass/wd/_navigation.sass */
 .navigation.yellow .navigation-item {
   color: #fff;
 }
-/* line 71, ../../dev/sass/wd/_navigation.sass */
-.navigation.yellow .navigation-item:hover {
-  background-color: #ffc81a;
-}
-/* line 74, ../../dev/sass/wd/_navigation.sass */
+/* line 78, ../../dev/sass/wd/_navigation.sass */
 .navigation.yellow .navigation-header .navigation-pane-opener {
   background-color: transparent;
 }
-/* line 76, ../../dev/sass/wd/_navigation.sass */
-.navigation.yellow .navigation-header .navigation-pane-opener:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 78, ../../dev/sass/wd/_navigation.sass */
+/* line 80, ../../dev/sass/wd/_navigation.sass */
 .navigation.yellow .navigation-pane-opener {
   background-color: #ffc200;
   border-left-color: rgba(255, 255, 255, 0.25);
 }
-/* line 81, ../../dev/sass/wd/_navigation.sass */
+/* line 83, ../../dev/sass/wd/_navigation.sass */
 .navigation.yellow .navigation-pane-opener:hover {
-  background-color: #ffc81a;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 84, ../../dev/sass/wd/_navigation.sass */
+/* line 86, ../../dev/sass/wd/_navigation.sass */
 .navigation.yellow .navigation-pane-opener .chevron::after, .navigation.yellow .navigation-pane-opener .chevron::before {
   background-color: #fff;
 }
-/* line 65, ../../dev/sass/wd/_navigation.sass */
+/* line 71, ../../dev/sass/wd/_navigation.sass */
 .navigation.crimson ul {
   background-color: #dc143c;
 }
-/* line 67, ../../dev/sass/wd/_navigation.sass */
+/* line 73, ../../dev/sass/wd/_navigation.sass */
 .navigation.crimson li {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
-/* line 69, ../../dev/sass/wd/_navigation.sass */
+/* line 75, ../../dev/sass/wd/_navigation.sass */
 .navigation.crimson .navigation-item {
   color: #fff;
 }
-/* line 71, ../../dev/sass/wd/_navigation.sass */
-.navigation.crimson .navigation-item:hover {
-  background-color: #eb1f48;
-}
-/* line 74, ../../dev/sass/wd/_navigation.sass */
+/* line 78, ../../dev/sass/wd/_navigation.sass */
 .navigation.crimson .navigation-header .navigation-pane-opener {
   background-color: transparent;
 }
-/* line 76, ../../dev/sass/wd/_navigation.sass */
-.navigation.crimson .navigation-header .navigation-pane-opener:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 78, ../../dev/sass/wd/_navigation.sass */
+/* line 80, ../../dev/sass/wd/_navigation.sass */
 .navigation.crimson .navigation-pane-opener {
   background-color: #dc143c;
   border-left-color: rgba(255, 255, 255, 0.25);
 }
-/* line 81, ../../dev/sass/wd/_navigation.sass */
+/* line 83, ../../dev/sass/wd/_navigation.sass */
 .navigation.crimson .navigation-pane-opener:hover {
-  background-color: #eb1f48;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 84, ../../dev/sass/wd/_navigation.sass */
+/* line 86, ../../dev/sass/wd/_navigation.sass */
 .navigation.crimson .navigation-pane-opener .chevron::after, .navigation.crimson .navigation-pane-opener .chevron::before {
   background-color: #fff;
 }
-/* line 65, ../../dev/sass/wd/_navigation.sass */
+/* line 71, ../../dev/sass/wd/_navigation.sass */
 .navigation.mauve ul {
   background-color: #d473d4;
 }
-/* line 67, ../../dev/sass/wd/_navigation.sass */
+/* line 73, ../../dev/sass/wd/_navigation.sass */
 .navigation.mauve li {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
-/* line 69, ../../dev/sass/wd/_navigation.sass */
+/* line 75, ../../dev/sass/wd/_navigation.sass */
 .navigation.mauve .navigation-item {
   color: #fff;
 }
-/* line 71, ../../dev/sass/wd/_navigation.sass */
-.navigation.mauve .navigation-item:hover {
-  background-color: #da87da;
-}
-/* line 74, ../../dev/sass/wd/_navigation.sass */
+/* line 78, ../../dev/sass/wd/_navigation.sass */
 .navigation.mauve .navigation-header .navigation-pane-opener {
   background-color: transparent;
 }
-/* line 76, ../../dev/sass/wd/_navigation.sass */
-.navigation.mauve .navigation-header .navigation-pane-opener:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 78, ../../dev/sass/wd/_navigation.sass */
+/* line 80, ../../dev/sass/wd/_navigation.sass */
 .navigation.mauve .navigation-pane-opener {
   background-color: #d473d4;
   border-left-color: rgba(255, 255, 255, 0.25);
 }
-/* line 81, ../../dev/sass/wd/_navigation.sass */
+/* line 83, ../../dev/sass/wd/_navigation.sass */
 .navigation.mauve .navigation-pane-opener:hover {
-  background-color: #da87da;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 84, ../../dev/sass/wd/_navigation.sass */
+/* line 86, ../../dev/sass/wd/_navigation.sass */
 .navigation.mauve .navigation-pane-opener .chevron::after, .navigation.mauve .navigation-pane-opener .chevron::before {
   background-color: #fff;
 }
-/* line 65, ../../dev/sass/wd/_navigation.sass */
+/* line 71, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-dark ul {
   background-color: #333;
 }
-/* line 67, ../../dev/sass/wd/_navigation.sass */
+/* line 73, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-dark li {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
-/* line 69, ../../dev/sass/wd/_navigation.sass */
+/* line 75, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-dark .navigation-item {
   color: #fff;
 }
-/* line 71, ../../dev/sass/wd/_navigation.sass */
-.navigation.grey-dark .navigation-item:hover {
-  background-color: #404040;
-}
-/* line 74, ../../dev/sass/wd/_navigation.sass */
+/* line 78, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-dark .navigation-header .navigation-pane-opener {
   background-color: transparent;
 }
-/* line 76, ../../dev/sass/wd/_navigation.sass */
-.navigation.grey-dark .navigation-header .navigation-pane-opener:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 78, ../../dev/sass/wd/_navigation.sass */
+/* line 80, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-dark .navigation-pane-opener {
   background-color: #333;
   border-left-color: rgba(255, 255, 255, 0.25);
 }
-/* line 81, ../../dev/sass/wd/_navigation.sass */
+/* line 83, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-dark .navigation-pane-opener:hover {
-  background-color: #404040;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 84, ../../dev/sass/wd/_navigation.sass */
+/* line 86, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-dark .navigation-pane-opener .chevron::after, .navigation.grey-dark .navigation-pane-opener .chevron::before {
   background-color: #fff;
 }
-/* line 65, ../../dev/sass/wd/_navigation.sass */
+/* line 71, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-light ul {
   background-color: #ddd;
 }
-/* line 67, ../../dev/sass/wd/_navigation.sass */
+/* line 73, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-light li {
   border-top-color: rgba(102, 102, 102, 0.25);
 }
-/* line 69, ../../dev/sass/wd/_navigation.sass */
+/* line 75, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-light .navigation-item {
   color: #666;
 }
-/* line 71, ../../dev/sass/wd/_navigation.sass */
-.navigation.grey-light .navigation-item:hover {
-  background-color: #eaeaea;
-}
-/* line 74, ../../dev/sass/wd/_navigation.sass */
+/* line 78, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-light .navigation-header .navigation-pane-opener {
   background-color: transparent;
 }
-/* line 76, ../../dev/sass/wd/_navigation.sass */
-.navigation.grey-light .navigation-header .navigation-pane-opener:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 78, ../../dev/sass/wd/_navigation.sass */
+/* line 80, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-light .navigation-pane-opener {
   background-color: #ddd;
   border-left-color: rgba(102, 102, 102, 0.25);
 }
-/* line 81, ../../dev/sass/wd/_navigation.sass */
+/* line 83, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-light .navigation-pane-opener:hover {
-  background-color: #eaeaea;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 84, ../../dev/sass/wd/_navigation.sass */
+/* line 86, ../../dev/sass/wd/_navigation.sass */
 .navigation.grey-light .navigation-pane-opener .chevron::after, .navigation.grey-light .navigation-pane-opener .chevron::before {
   background-color: #666;
 }
-/* line 65, ../../dev/sass/wd/_navigation.sass */
+/* line 71, ../../dev/sass/wd/_navigation.sass */
 .navigation.orange ul {
   background-color: #f45633;
 }
-/* line 67, ../../dev/sass/wd/_navigation.sass */
+/* line 73, ../../dev/sass/wd/_navigation.sass */
 .navigation.orange li {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
-/* line 69, ../../dev/sass/wd/_navigation.sass */
+/* line 75, ../../dev/sass/wd/_navigation.sass */
 .navigation.orange .navigation-item {
   color: #fff;
 }
-/* line 71, ../../dev/sass/wd/_navigation.sass */
-.navigation.orange .navigation-item:hover {
-  background-color: #f56a4b;
-}
-/* line 74, ../../dev/sass/wd/_navigation.sass */
+/* line 78, ../../dev/sass/wd/_navigation.sass */
 .navigation.orange .navigation-header .navigation-pane-opener {
   background-color: transparent;
 }
-/* line 76, ../../dev/sass/wd/_navigation.sass */
-.navigation.orange .navigation-header .navigation-pane-opener:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 78, ../../dev/sass/wd/_navigation.sass */
+/* line 80, ../../dev/sass/wd/_navigation.sass */
 .navigation.orange .navigation-pane-opener {
   background-color: #f45633;
   border-left-color: rgba(255, 255, 255, 0.25);
 }
-/* line 81, ../../dev/sass/wd/_navigation.sass */
+/* line 83, ../../dev/sass/wd/_navigation.sass */
 .navigation.orange .navigation-pane-opener:hover {
-  background-color: #f56a4b;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 84, ../../dev/sass/wd/_navigation.sass */
+/* line 86, ../../dev/sass/wd/_navigation.sass */
 .navigation.orange .navigation-pane-opener .chevron::after, .navigation.orange .navigation-pane-opener .chevron::before {
   background-color: #fff;
 }
-/* line 65, ../../dev/sass/wd/_navigation.sass */
+/* line 71, ../../dev/sass/wd/_navigation.sass */
 .navigation.white ul {
   background-color: #fff;
 }
-/* line 67, ../../dev/sass/wd/_navigation.sass */
+/* line 73, ../../dev/sass/wd/_navigation.sass */
 .navigation.white li {
   border-top-color: rgba(102, 102, 102, 0.25);
 }
-/* line 69, ../../dev/sass/wd/_navigation.sass */
+/* line 75, ../../dev/sass/wd/_navigation.sass */
 .navigation.white .navigation-item {
   color: #666;
 }
-/* line 71, ../../dev/sass/wd/_navigation.sass */
-.navigation.white .navigation-item:hover {
-  background-color: white;
-}
-/* line 74, ../../dev/sass/wd/_navigation.sass */
+/* line 78, ../../dev/sass/wd/_navigation.sass */
 .navigation.white .navigation-header .navigation-pane-opener {
   background-color: transparent;
 }
-/* line 76, ../../dev/sass/wd/_navigation.sass */
-.navigation.white .navigation-header .navigation-pane-opener:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 78, ../../dev/sass/wd/_navigation.sass */
+/* line 80, ../../dev/sass/wd/_navigation.sass */
 .navigation.white .navigation-pane-opener {
   background-color: #fff;
   border-left-color: rgba(102, 102, 102, 0.25);
 }
-/* line 81, ../../dev/sass/wd/_navigation.sass */
+/* line 83, ../../dev/sass/wd/_navigation.sass */
 .navigation.white .navigation-pane-opener:hover {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 84, ../../dev/sass/wd/_navigation.sass */
+/* line 86, ../../dev/sass/wd/_navigation.sass */
 .navigation.white .navigation-pane-opener .chevron::after, .navigation.white .navigation-pane-opener .chevron::before {
   background-color: #666;
 }
-/* line 65, ../../dev/sass/wd/_navigation.sass */
+/* line 71, ../../dev/sass/wd/_navigation.sass */
 .navigation.black ul {
   background-color: #000;
 }
-/* line 67, ../../dev/sass/wd/_navigation.sass */
+/* line 73, ../../dev/sass/wd/_navigation.sass */
 .navigation.black li {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
-/* line 69, ../../dev/sass/wd/_navigation.sass */
+/* line 75, ../../dev/sass/wd/_navigation.sass */
 .navigation.black .navigation-item {
   color: #fff;
 }
-/* line 71, ../../dev/sass/wd/_navigation.sass */
-.navigation.black .navigation-item:hover {
-  background-color: #0d0d0d;
-}
-/* line 74, ../../dev/sass/wd/_navigation.sass */
+/* line 78, ../../dev/sass/wd/_navigation.sass */
 .navigation.black .navigation-header .navigation-pane-opener {
   background-color: transparent;
 }
-/* line 76, ../../dev/sass/wd/_navigation.sass */
-.navigation.black .navigation-header .navigation-pane-opener:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 78, ../../dev/sass/wd/_navigation.sass */
+/* line 80, ../../dev/sass/wd/_navigation.sass */
 .navigation.black .navigation-pane-opener {
   background-color: #000;
   border-left-color: rgba(255, 255, 255, 0.25);
 }
-/* line 81, ../../dev/sass/wd/_navigation.sass */
+/* line 83, ../../dev/sass/wd/_navigation.sass */
 .navigation.black .navigation-pane-opener:hover {
-  background-color: #0d0d0d;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 84, ../../dev/sass/wd/_navigation.sass */
+/* line 86, ../../dev/sass/wd/_navigation.sass */
 .navigation.black .navigation-pane-opener .chevron::after, .navigation.black .navigation-pane-opener .chevron::before {
   background-color: #fff;
 }
 
-/* line 88, ../../dev/sass/wd/_navigation.sass */
+/* line 90, ../../dev/sass/wd/_navigation.sass */
 .navigation-header {
   background-color: #333;
   color: #fff;
@@ -4408,53 +4342,69 @@ select option[value=''] {
   text-decoration: none;
   width: 100%;
 }
-/* line 98, ../../dev/sass/wd/_navigation.sass */
+/* line 100, ../../dev/sass/wd/_navigation.sass */
 .navigation-header .navigation-pane-opener {
   background-color: transparent;
   border-left: 0;
-  border-right: 0.1rem solid rgba(51, 51, 51, 0.25);
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.25);
   display: none;
   left: 0;
   right: auto;
 }
-/* line 105, ../../dev/sass/wd/_navigation.sass */
+/* line 107, ../../dev/sass/wd/_navigation.sass */
 .navigation-header .navigation-pane-opener.showing {
   display: block;
 }
-/* line 107, ../../dev/sass/wd/_navigation.sass */
+/* line 109, ../../dev/sass/wd/_navigation.sass */
 .navigation-header .navigation-trigger {
+  border-bottom: 1rem solid transparent;
+  border-left: 0.1rem solid rgba(255, 255, 255, 0.25);
+  border-top: 1rem solid transparent;
+  height: 100%;
   padding: 0 1rem;
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 112, ../../dev/sass/wd/_navigation.sass */
+/* line 118, ../../dev/sass/wd/_navigation.sass */
 .navigation-header .navigation-trigger:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 115, ../../dev/sass/wd/_navigation.sass */
+/* line 120, ../../dev/sass/wd/_navigation.sass */
+.navigation-header .navigation-trigger span {
+  top: 1rem;
+}
+/* line 122, ../../dev/sass/wd/_navigation.sass */
 .navigation-header .navigation-trigger span, .navigation-header .navigation-trigger span::after, .navigation-header .navigation-trigger span::before {
   height: 0.25rem;
   width: 2rem;
 }
+/* line 127, ../../dev/sass/wd/_navigation.sass */
+.navigation-header .navigation-trigger span::before {
+  top: -0.5rem;
+}
+/* line 129, ../../dev/sass/wd/_navigation.sass */
+.navigation-header .navigation-trigger span::after {
+  bottom: -0.5rem;
+}
 
-/* line 121, ../../dev/sass/wd/_navigation.sass */
+/* line 132, ../../dev/sass/wd/_navigation.sass */
 .navigation-item {
   color: #333;
   display: block;
   padding: 1rem 2rem;
   text-decoration: none;
 }
-/* line 126, ../../dev/sass/wd/_navigation.sass */
+/* line 137, ../../dev/sass/wd/_navigation.sass */
 .navigation-item:hover {
-  background-color: #f2f2f2;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* line 129, ../../dev/sass/wd/_navigation.sass */
+/* line 140, ../../dev/sass/wd/_navigation.sass */
 .navigation-pane-opener {
   background-color: #fff;
   border-bottom: 1rem solid transparent;
-  border-left: 0.1rem solid rgba(51, 51, 51, 0.25);
+  border-left: 0.1rem solid rgba(255, 255, 255, 0.25);
   border-top: 1rem solid transparent;
   display: block;
   height: 100%;
@@ -4463,97 +4413,97 @@ select option[value=''] {
   top: 0;
   width: 4rem;
 }
-/* line 140, ../../dev/sass/wd/_navigation.sass */
+/* line 151, ../../dev/sass/wd/_navigation.sass */
 .navigation-pane-opener:hover {
-  background-color: #f2f2f2;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* line 143, ../../dev/sass/wd/_navigation.sass */
+/* line 154, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger {
   display: inline-block;
   height: 4rem;
   position: relative;
   width: 4rem;
 }
-/* line 148, ../../dev/sass/wd/_navigation.sass */
+/* line 159, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger span {
   margin-top: -0.25rem;
   top: 2rem;
 }
-/* line 151, ../../dev/sass/wd/_navigation.sass */
+/* line 162, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger span, .navigation-trigger span::before, .navigation-trigger span::after {
   background-color: #fff;
   display: block;
   height: 0.5rem;
   position: absolute;
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
   width: 4rem;
 }
-/* line 160, ../../dev/sass/wd/_navigation.sass */
+/* line 171, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger span::before, .navigation-trigger span::after {
   content: "";
   left: 0;
 }
-/* line 164, ../../dev/sass/wd/_navigation.sass */
+/* line 175, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger span::before {
   top: -1rem;
 }
-/* line 166, ../../dev/sass/wd/_navigation.sass */
+/* line 177, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger span::after {
   bottom: -1rem;
 }
-/* line 172, ../../dev/sass/wd/_navigation.sass */
+/* line 183, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.turquoise span, .navigation-trigger.turquoise span::before, .navigation-trigger.turquoise span::after {
   background-color: #5af;
 }
-/* line 172, ../../dev/sass/wd/_navigation.sass */
+/* line 183, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.teal span, .navigation-trigger.teal span::before, .navigation-trigger.teal span::after {
   background-color: #028428;
 }
-/* line 172, ../../dev/sass/wd/_navigation.sass */
+/* line 183, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.yellow span, .navigation-trigger.yellow span::before, .navigation-trigger.yellow span::after {
   background-color: #ffc200;
 }
-/* line 172, ../../dev/sass/wd/_navigation.sass */
+/* line 183, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.crimson span, .navigation-trigger.crimson span::before, .navigation-trigger.crimson span::after {
   background-color: #dc143c;
 }
-/* line 172, ../../dev/sass/wd/_navigation.sass */
+/* line 183, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.mauve span, .navigation-trigger.mauve span::before, .navigation-trigger.mauve span::after {
   background-color: #d473d4;
 }
-/* line 172, ../../dev/sass/wd/_navigation.sass */
+/* line 183, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.grey-dark span, .navigation-trigger.grey-dark span::before, .navigation-trigger.grey-dark span::after {
   background-color: #333;
 }
-/* line 172, ../../dev/sass/wd/_navigation.sass */
+/* line 183, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.grey-light span, .navigation-trigger.grey-light span::before, .navigation-trigger.grey-light span::after {
   background-color: #ddd;
 }
-/* line 172, ../../dev/sass/wd/_navigation.sass */
+/* line 183, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.orange span, .navigation-trigger.orange span::before, .navigation-trigger.orange span::after {
   background-color: #f45633;
 }
-/* line 172, ../../dev/sass/wd/_navigation.sass */
+/* line 183, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.white span, .navigation-trigger.white span::before, .navigation-trigger.white span::after {
   background-color: #fff;
 }
-/* line 172, ../../dev/sass/wd/_navigation.sass */
+/* line 183, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.black span, .navigation-trigger.black span::before, .navigation-trigger.black span::after {
   background-color: #000;
 }
-/* line 178, ../../dev/sass/wd/_navigation.sass */
+/* line 189, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.active span {
   background-color: transparent;
 }
-/* line 180, ../../dev/sass/wd/_navigation.sass */
+/* line 191, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.active span::before {
   top: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-/* line 183, ../../dev/sass/wd/_navigation.sass */
+/* line 194, ../../dev/sass/wd/_navigation.sass */
 .navigation-trigger.active span::after {
   bottom: 0;
   -webkit-transform: rotate(-45deg);
@@ -6432,8 +6382,8 @@ table.table.black.bordered td {
   color: #4d4d4d;
   padding: 1rem 1rem;
   position: relative;
-  -webkit-transition: all 300ms ease-out;
-          transition: all 300ms ease-out;
+  -webkit-transition: all 400ms ease-out;
+          transition: all 400ms ease-out;
 }
 /* line 30, ../../dev/sass/wd/_treeView.sass */
 .tree-view .label::before {

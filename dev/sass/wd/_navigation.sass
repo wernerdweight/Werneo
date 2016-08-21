@@ -6,16 +6,22 @@
 
 	.navigation
 		background-color: $wdWerneoWhite
-		height: 100vh
-		left: -20%
+		height: $wdWerneoNavigationPaneHeight
+		left: -$wdWerneoNavigationPaneWidth
 		overflow: hidden
 		position: fixed
 		top: 0
-		transition: left 400ms ease-in-out
-		width: 20%
+		transition: left $wdWerneoAminationDuration ease-in-out
+		width: $wdWerneoNavigationPaneWidth
 		z-index: 200
+		+responsive(tablet)
+			left: -$wdWerneoNavigationPaneWidthTablet
+			width: $wdWerneoNavigationPaneWidthTablet
+		+responsive(desktop)
+			left: -$wdWerneoNavigationPaneWidthDesktop
+			width: $wdWerneoNavigationPaneWidthDesktop
 		&::after
-			background-color: rgba($wdWerneoBlack, 0.5)
+			background-color: rgba($wdWerneoNavigationCurtainColor, $wdWerneoNavigationCurtainOpacity)
 			content: ''
 			display: block
 			height: 100%
@@ -23,7 +29,7 @@
 			opacity: 0
 			position: fixed
 			top: 0
-			transition: left 0ms 200ms, opacity 200ms ease-in-out
+			transition: left 0ms $wdWerneoAminationDuration / 2, opacity $wdWerneoAminationDuration / 2 ease-in-out
 			width: 100%
 			z-index: -1
 		&.active
@@ -31,14 +37,14 @@
 			&::after
 				left: 0
 				opacity: 1
-				transition: left 0ms 0ms, opacity 200ms ease-in-out
+				transition: left 0ms 0ms, opacity $wdWerneoAminationDuration / 2 ease-in-out
 		li
-			border-top: 0.1rem solid rgba($wdWerneoGreyDark, 0.25)
+			border-top: $wdWerneoNavigationItemBorderWidth solid rgba($wdWerneoGreyDark, $wdWerneoNavigationItemBorderOpacity)
 			position: relative
 			&:first-child
 				border-top: 0
 		ul
-			height: calc(100% - 4rem)
+			height: calc(100% - #{$wdWerneoNavigationHeaderHeight})
 			left: 0
 			list-style: none
 			margin: 0
@@ -47,12 +53,12 @@
 			overflow-y: auto
 			padding: 0
 			position: absolute
-			top: 4rem
-			transition: max-height 0ms 400ms, left 400ms ease-in-out
+			top: $wdWerneoNavigationHeaderHeight
+			transition: max-height 0ms $wdWerneoAminationDuration, left $wdWerneoAminationDuration ease-in-out
 			width: 100%
 			&.active
-				max-height: calc(100% - 4rem)
-				transition: max-height 0ms 0ms, left 400ms ease-in-out
+				max-height: calc(100% - #{$wdWerneoNavigationHeaderHeight})
+				transition: max-height 0ms 0ms, left $wdWerneoAminationDuration ease-in-out
 			ul
 				max-height: 100%
 				top: 0
@@ -65,21 +71,17 @@
 				ul
 					background-color: $color
 				li
-					border-top-color: rgba($inverseColor, 0.25)
+					border-top-color: rgba($inverseColor, $wdWerneoNavigationItemBorderOpacity)
 				.navigation-item
 					color: $inverseColor
-					&:hover
-						background-color: lighten($color, 5%)
 				.navigation-header
 					.navigation-pane-opener
 						background-color: transparent
-						&:hover
-							background-color: rgba($wdWerneoWhite, 0.1)
 				.navigation-pane-opener
 					background-color: $color
-					border-left-color: rgba($inverseColor, 0.25)
+					border-left-color: rgba($inverseColor, $wdWerneoNavigationItemBorderOpacity)
 					&:hover
-						background-color: lighten($color, 5%)
+						background-color: $wdWerneoNavigationPaneOpenerBackgroundColorHover
 					.chevron
 						&::after,
 						&::before
@@ -89,82 +91,91 @@
 		background-color: $wdWerneoGreyDark
 		color: $wdWerneoWhite
 		display: block
-		height: 4rem
-		line-height: 4rem
+		height: $wdWerneoNavigationHeaderHeight
+		line-height: $wdWerneoNavigationHeaderHeight
 		position: relative
 		text-align: center
 		text-decoration: none
 		width: 100%
 		.navigation-pane-opener
-			background-color: transparent
+			background-color: $wdWerneoNavigationPaneOpenerBackgroundColor
 			border-left: 0
-			border-right: 0.1rem solid rgba($wdWerneoGreyDark, 0.25)
+			border-right: $wdWerneoNavigationPaneOpenerBorderWidth solid rgba($wdWerneoWhite, $wdWerneoNavigationItemBorderOpacity)
 			display: none
 			left: 0
 			right: auto
 			&.showing
 				display: block
 		.navigation-trigger
-			padding: 0 1rem
+			border-bottom: $wdWerneoNavigationPaneOpenerBorderSpacing solid transparent
+			border-left: $wdWerneoNavigationItemBorderWidth solid rgba($wdWerneoWhite, $wdWerneoNavigationItemBorderOpacity)
+			border-top: $wdWerneoNavigationPaneOpenerBorderSpacing solid transparent
+			height: 100%
+			padding: $wdWerneoNavigationHeaderTriggerPaddingVertical $wdWerneoNavigationHeaderTriggerPaddingHorizontal
 			position: absolute
 			right: 0
 			top: 0
 			&:hover
-				background-color: rgba($wdWerneoWhite, 0.1)
+				background-color: $wdWerneoNavigationPaneOpenerBackgroundColorHover
 			span
+				top: ($wdWerneoNavigationTriggerSize / 2) - $wdWerneoNavigationPaneOpenerBorderSpacing
 				&,
 				&::after,
 				&::before
-					height: (0.5rem / 2)
-					width: (4rem / 2)
+					height: $wdWerneoNavigationTriggerBarHeight / 2
+					width: $wdWerneoNavigationTriggerSize / 2
+				&::before
+					top: -2 * ($wdWerneoNavigationTriggerBarHeight / 2)
+				&::after
+					bottom: -2 * ($wdWerneoNavigationTriggerBarHeight / 2)
 
 	.navigation-item
 		color: $wdWerneoGreyDark
 		display: block
-		padding: 1rem 2rem
+		padding: $wdWerneoNavigationItemPaddingVertical $wdWerneoNavigationItemPaddingHorizontal
 		text-decoration: none
 		&:hover
-			background-color: darken($wdWerneoWhite, 5%)
+			background-color: $wdWerneoNavigationItemBackgroundColorHover
 
 	.navigation-pane-opener
 		background-color: $wdWerneoWhite
-		border-bottom: 1rem solid transparent
-		border-left: 0.1rem solid rgba($wdWerneoGreyDark, 0.25)
-		border-top: 1rem solid transparent
+		border-bottom: $wdWerneoNavigationPaneOpenerBorderSpacing solid transparent
+		border-left: $wdWerneoNavigationItemBorderWidth solid rgba($wdWerneoWhite, $wdWerneoNavigationItemBorderOpacity)
+		border-top: $wdWerneoNavigationPaneOpenerBorderSpacing solid transparent
 		display: block
 		height: 100%
 		position: absolute
 		right: 0
 		top: 0
-		width: 4rem
+		width: $wdWerneoNavigationPaneOpenerWidth
 		&:hover
-			background-color: darken($wdWerneoWhite, 5%)
+			background-color: $wdWerneoNavigationPaneOpenerBackgroundColorHover
 
 	.navigation-trigger
 		display: inline-block
-		height: 4rem
+		height: $wdWerneoNavigationTriggerSize
 		position: relative
-		width: 4rem
+		width: $wdWerneoNavigationTriggerSize
 		span
-			margin-top: -0.25rem
-			top: 2rem
+			margin-top: -$wdWerneoNavigationTriggerBarHeight / 2
+			top: $wdWerneoNavigationTriggerSize / 2
 			&,
 			&::before,
 			&::after
 				background-color: $wdWerneoWhite
 				display: block
-				height: 0.5rem
+				height: $wdWerneoNavigationTriggerBarHeight
 				position: absolute
-				transition: all 300ms ease-in-out
-				width: 4rem
+				transition: all $wdWerneoAminationDuration ease-in-out
+				width: $wdWerneoNavigationTriggerSize
 			&::before,
 			&::after
 				content: ''
 				left: 0
 			&::before
-				top: -1rem
+				top: -2 * $wdWerneoNavigationTriggerBarHeight
 			&::after
-				bottom: -1rem
+				bottom: -2 * $wdWerneoNavigationTriggerBarHeight
 
 		@each $name, $color, in $wdWerneoColors
 			&.#{$name}
