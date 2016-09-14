@@ -78,7 +78,7 @@ function WerneoNavigation(){
 		var _this = this;
 		var i;
 
-		_this.navigations = document.querySelectorAll('.navigation');
+		_this.navigations = document.querySelectorAll('.navigation > .navigation-container');
 		if(_this.navigations.length > 0){
 			_this.navigationPanes = [];
 			_this.currentPanes = {};

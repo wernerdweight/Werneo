@@ -7,12 +7,17 @@
 	::-webkit-scrollbar
 		height: $wdWerneoScrollbarsHeight
 		width: $wdWerneoScrollbarsWidth
+	::-webkit-scrollbar-corner
+		background-color: $wdWerneoScrollbarsTrackColor
 	::-webkit-scrollbar-thumb
-		background: darken($wdWerneoGreyLight, 10%)
-		border: $wdWerneoScrollbarsBorderWidth solid $wdWerneoGreyLightest
+		background: $wdWerneoScrollbarsThumbColor
 	::-webkit-scrollbar-track
-		background: $wdWerneoGreyLightest
+		background: $wdWerneoScrollbarsTrackColor
 
 	body
-		scrollbar-face-color: darken($wdWerneoGreyLight, 10%)
-		scrollbar-track-color: $wdWerneoGreyLightest
+		scrollbar-face-color: darken($wdWerneoScrollbarsThumbColor, 10%)
+		scrollbar-track-color: $wdWerneoScrollbarsBodyTrackColor
+		&::-webkit-scrollbar-track
+			background: $wdWerneoScrollbarsBodyTrackColor
+		&::-webkit-scrollbar-thumb
+			border: $wdWerneoScrollbarsBodyBorderWidth solid $wdWerneoScrollbarsBodyTrackColor

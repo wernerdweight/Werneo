@@ -8,7 +8,7 @@
 		background-color: $wdWerneoWhite
 		height: $wdWerneoNavigationPaneHeight
 		left: -$wdWerneoNavigationPaneWidth
-		overflow: hidden
+		overflow: visible
 		position: fixed
 		top: 0
 		transition: left $wdWerneoAminationDuration ease-in-out
@@ -86,6 +86,12 @@
 						&::after,
 						&::before
 							background-color: $inverseColor
+
+	.navigation-container
+		height: 100%
+		overflow: hidden
+		position: relative
+		width: 100%
 
 	.navigation-header
 		background-color: $wdWerneoGreyDark
