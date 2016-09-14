@@ -20,24 +20,26 @@
 		+responsive(desktop)
 			left: -$wdWerneoNavigationPaneWidthDesktop
 			width: $wdWerneoNavigationPaneWidthDesktop
-		&::after
-			background-color: rgba($wdWerneoNavigationCurtainColor, $wdWerneoNavigationCurtainOpacity)
-			content: ''
-			display: block
-			height: 100%
-			left: -100%
-			opacity: 0
-			position: fixed
-			top: 0
-			transition: left 0ms $wdWerneoAminationDuration / 2, opacity $wdWerneoAminationDuration / 2 ease-in-out
-			width: 100%
-			z-index: -1
+		+responsive(tablet)
+			&::after
+				background-color: rgba($wdWerneoNavigationCurtainColor, $wdWerneoNavigationCurtainOpacity)
+				content: ''
+				display: block
+				height: 100%
+				left: -100%
+				opacity: 0
+				position: fixed
+				top: 0
+				transition: left 0ms $wdWerneoAminationDuration / 2, opacity $wdWerneoAminationDuration / 2 ease-in-out
+				width: 100%
+				z-index: -1
 		&.active
 			left: 0
-			&::after
-				left: 0
-				opacity: 1
-				transition: left 0ms 0ms, opacity $wdWerneoAminationDuration / 2 ease-in-out
+			+responsive(tablet)
+				&::after
+					left: 0
+					opacity: 1
+					transition: left 0ms 0ms, opacity $wdWerneoAminationDuration / 2 ease-in-out
 		li
 			border-top: $wdWerneoNavigationItemBorderWidth solid rgba($wdWerneoGreyDark, $wdWerneoNavigationItemBorderOpacity)
 			position: relative
@@ -54,11 +56,13 @@
 			padding: 0
 			position: absolute
 			top: $wdWerneoNavigationHeaderHeight
-			transition: max-height 0ms $wdWerneoAminationDuration, left $wdWerneoAminationDuration ease-in-out
 			width: 100%
+			+responsive(tablet)
+				transition: max-height 0ms $wdWerneoAminationDuration, left $wdWerneoAminationDuration ease-in-out
 			&.active
 				max-height: calc(100% - #{$wdWerneoNavigationHeaderHeight})
-				transition: max-height 0ms 0ms, left $wdWerneoAminationDuration ease-in-out
+				+responsive(tablet)
+					transition: max-height 0ms 0ms, left $wdWerneoAminationDuration ease-in-out
 			ul
 				max-height: 100%
 				top: 0

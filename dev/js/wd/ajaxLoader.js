@@ -6,7 +6,7 @@ function WerneoAjaxLoader(){
 
 	WerneoAjaxLoader.prototype.handle = function(){
 		var _this = this;
-		var i,j;
+		var i;
 
 		_this.nodes = document.querySelectorAll('[data-ajax-load]');
 		if(_this.nodes.length > 0){
