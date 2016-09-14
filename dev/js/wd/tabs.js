@@ -1,17 +1,19 @@
-/* global werneo */
+/* global werneo, WerneoPlugin */
 
-function WerneoTabs(){
+class WerneoTabs extends WerneoPlugin {
 	
-	this.tabTriggers = null;
+	constructor(){
+		super();
+		this.tabTriggers = null;
+	}
 
-	WerneoTabs.prototype.handle = function(){
+	handle(){
 		var _this = this;
-		var i,j;
 
 		_this.tabTriggers = document.querySelectorAll('.tab-nav .nav');
 		if(_this.tabTriggers.length > 0){
-			for (i = 0; i < _this.tabTriggers.length; i++) {
-				_this.tabTriggers[i].addEventListener('click',function(event){
+			for (let tabTrigger of _this.tabTriggers) {
+				tabTrigger.addEventListener('click',function(event){
 					event.preventDefault();
 					event.stopPropagation();
 
@@ -24,12 +26,12 @@ function WerneoTabs(){
 					var triggers = tabContainer.querySelectorAll('.tab-nav .nav');
 
 					/// inactivate all tabs
-					for (j = 0; j < tabs.length; j++) {
-						tabs[j].classList.remove('active');
+					for (let tab of tabs) {
+						tab.classList.remove('active');
 					}
 					/// inactivate all triggers
-					for (j = 0; j < triggers.length; j++) {
-						triggers[j].classList.remove('active');
+					for (let trigger of triggers) {
+						trigger.classList.remove('active');
 					}
 					/// activate current tab and trigger
 					tabContainer.querySelector('.tab[data-id="' + this.dataset.target + '"]').classList.add('active');
@@ -38,15 +40,7 @@ function WerneoTabs(){
 			}
 		}
 
-	};
-
-	WerneoTabs.prototype.invoke = function(){
-		var _this = this;
-
-		document.addEventListener('DOMContentLoaded',function(){
-			_this.handle()
-		});
-	};
+	}
 
 }
 

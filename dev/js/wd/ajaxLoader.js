@@ -1,56 +1,48 @@
-/* global werneo */
+/* global werneo, WerneoPlugin */
 
-function WerneoAjaxLoader(){
+class WerneoAjaxLoader extends WerneoPlugin {
 	
-	this.nodes = null;
+	constructor(){
+		super();
+		this.nodes = null;
+	}
 
-	WerneoAjaxLoader.prototype.handle = function(){
+	handle(){
 		var _this = this;
-		var i;
 
 		_this.nodes = document.querySelectorAll('[data-ajax-load]');
 		if(_this.nodes.length > 0){
-			for (i = 0; i < _this.nodes.length; i++) {
-				var index = i;
+			for (let node of _this.nodes) {
 				var call = new XMLHttpRequest();
 				call.onreadystatechange = function(){
 					if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
-						if(typeof undefined !== typeof _this.nodes[index].dataset.replace && _this.nodes[index].dataset.replace === 'true'){
+						if(typeof undefined !== typeof node.dataset.replace && node.dataset.replace === 'true'){
 							var responseNode = document.createElement('div');
 							responseNode.innerHTML = this.responseText;
 							if(responseNode.childNodes.length > 0){
-								var k;
-								for (k = 0; k < responseNode.childNodes.length; k++) {
-									_this.nodes[index].parentNode.insertBefore(responseNode.childNodes[k],_this.nodes[index]);
+								for (let childNode of responseNode.childNodes) {
+									node.parentNode.insertBefore(childNode,node);
 								}
 							}
-							_this.nodes[index].parentNode.removeChild(_this.nodes[index]);
+							node.parentNode.removeChild(node);
 						}
 						else{
-							_this.nodes[index].innerHTML = this.responseText;
+							node.innerHTML = this.responseText;
 						}
 					}
 				};
 				call.onload = function(){
-					if(typeof undefined !== typeof _this.nodes[index].dataset.callback){
-						var callback = new Function(_this.nodes[index].dataset.callback);
+					if(typeof undefined !== typeof node.dataset.callback){
+						var callback = new Function(node.dataset.callback);
 						callback();
 					}
 				};
-				call.open('GET',_this.nodes[index].dataset.ajaxLoad,true);
+				call.open('GET',node.dataset.ajaxLoad,true);
 				call.send();
 			}
 		}
 
-	};
-
-	WerneoAjaxLoader.prototype.invoke = function(){
-		var _this = this;
-
-		document.addEventListener('DOMContentLoaded',function(){
-			_this.handle()
-		});
-	};
+	}
 
 }
 

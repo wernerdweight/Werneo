@@ -1,21 +1,23 @@
-/* global werneo */
+/* global werneo, WerneoPlugin */
 
-function WerneoModals(){
+class WerneoModals extends WerneoPlugin {
 	
-	this.modal = null;
-	this.modalTriggers = null;
-	this.modalClosers = null;
+	constructor(){
+		super();
+		this.modal = null;
+		this.modalTriggers = null;
+		this.modalClosers = null;
+	}
 
-	WerneoModals.prototype.handle = function(){
+	handle(){
 		var _this = this;
-		var i;
 
 		_this.modal = document.getElementById('modal-container');
 
 		_this.modalTriggers = document.querySelectorAll('[data-modal]');
 		if(_this.modalTriggers.length > 0){
-			for (i = 0; i < _this.modalTriggers.length; i++) {
-				_this.modalTriggers[i].addEventListener('click',function(event){
+			for (let modalTrigger of _this.modalTriggers) {
+				modalTrigger.addEventListener('click',function(event){
 					event.preventDefault();
 
 					_this.modal.classList.add('active');
@@ -43,8 +45,8 @@ function WerneoModals(){
 
 		_this.modalClosers = document.querySelectorAll('.modal > .close,#modal-container');
 		if(_this.modalClosers.length > 0){
-			for (i = 0; i < _this.modalClosers.length; i++) {
-				_this.modalClosers[i].addEventListener('click',function(event){
+			for (let modalCloser of _this.modalClosers) {
+				modalCloser.addEventListener('click',function(event){
 					event.preventDefault();
 
 					var iframe = _this.modal.querySelector('.modal > iframe');
@@ -60,15 +62,7 @@ function WerneoModals(){
 				});
 			}
 		}
-	};
-
-	WerneoModals.prototype.invoke = function(){
-		var _this = this;
-
-		document.addEventListener('DOMContentLoaded',function(){
-			_this.handle()
-		});
-	};
+	}
 
 }
 

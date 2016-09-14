@@ -1,23 +1,25 @@
-/* global werneo */
+/* global werneo, WerneoPlugin */
 
-function WerneoDropdowns(){
+class WerneoDropdowns extends WerneoPlugin {
 	
-	this.dropdownTriggers = null;
-	this.dropdownOptions = null;
+	constructor(){
+		super();
+		this.dropdownTriggers = null;
+		this.dropdownOptions = null;
+	}
 
-	WerneoDropdowns.prototype.toggle = function(dropdown){
+	toggle(dropdown){
 		var siblings = dropdown.parentNode.childNodes;
-		var i;
 
 		dropdown.classList.toggle('active');
-		for (i = 0; i < siblings.length; i++){
-			if(siblings[i].nodeType === 1 && siblings[i] !== dropdown){
-				siblings[i].classList.toggle('active');
+		for (let sibling of siblings){
+			if(sibling.nodeType === 1 && sibling !== dropdown){
+				sibling.classList.toggle('active');
 			}
 		}
-	};
+	}
 
-	WerneoDropdowns.prototype.select = function(option){
+	select(option){
 		/// get relevant dropdown
 		var dropdown = option;
 		while(null !== dropdown.parentElement && false === dropdown.classList.contains('dropdown')){
@@ -36,11 +38,10 @@ function WerneoDropdowns(){
 		}
 		else{
 			var activatedElements = dropdown.querySelectorAll('.dropdown-option,.dropdown-value,.dropdown-level,.dropdown-list,.dropdown-handle');
-			var i;
 			/// remove active class from everything in this dropdown
 			if(activatedElements.length > 0){
-				for (i = 0; i < activatedElements.length; i++){
-					activatedElements[i].classList.remove('active');
+				for (let activatedElement of activatedElements){
+					activatedElement.classList.remove('active');
 				}
 			}
 			/// add active class to selected option
@@ -69,16 +70,15 @@ function WerneoDropdowns(){
 				}
 			}
 		}
-	};
+	}
 
-	WerneoDropdowns.prototype.handle = function(){
+	handle(){
 		var _this = this;
-		var i;
 
 		_this.dropdownTriggers = document.querySelectorAll('.dropdown-handle,.dropdown-value');
 		if(_this.dropdownTriggers.length > 0){
-			for (i = 0; i < _this.dropdownTriggers.length; i++) {
-				_this.dropdownTriggers[i].addEventListener('click',function(){
+			for (let dropdownTrigger of _this.dropdownTriggers) {
+				dropdownTrigger.addEventListener('click',function(){
 					_this.toggle(this);
 				});
 			}
@@ -86,21 +86,13 @@ function WerneoDropdowns(){
 
 		_this.dropdownOptions = document.querySelectorAll('.dropdown-option');
 		if(_this.dropdownOptions.length > 0){
-			for (i = 0; i < _this.dropdownOptions.length; i++) {
-				_this.dropdownOptions[i].addEventListener('click',function(){
+			for (let dropdownOption of _this.dropdownOptions) {
+				dropdownOption.addEventListener('click',function(){
 					_this.select(this);
 				});
 			}
 		}
-	};
-
-	WerneoDropdowns.prototype.invoke = function(){
-		var _this = this;
-
-		document.addEventListener('DOMContentLoaded',function(){
-			_this.handle()
-		});
-	};
+	}
 
 }
 

@@ -1,17 +1,19 @@
-/* global werneo */
+/* global werneo, WerneoPlugin */
 
-function WerneoLists(){
+class WerneoLists extends WerneoPlugin {
 	
-	this.listItems = null;
+	constructor(){
+		super();
+		this.listItems = null;
+	}
 
-	WerneoLists.prototype.handle = function(){
+	handle(){
 		var _this = this;
-		var i;
 
 		_this.listItems = document.querySelectorAll('.list-item');
 		if(_this.listItems.length > 0){
-			for (i = 0; i < _this.listItems.length; i++) {
-				_this.listItems[i].addEventListener('contextmenu',function(event){
+			for (let listItem of _this.listItems) {
+				listItem.addEventListener('contextmenu',function(event){
 					event.preventDefault();
 					event.stopPropagation();
 
@@ -24,16 +26,7 @@ function WerneoLists(){
 				});
 			}
 		}
-
-	};
-
-	WerneoLists.prototype.invoke = function(){
-		var _this = this;
-
-		document.addEventListener('DOMContentLoaded',function(){
-			_this.handle()
-		});
-	};
+	}
 
 }
 

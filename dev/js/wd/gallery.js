@@ -1,17 +1,19 @@
-/* global werneo */
+/* global werneo, WerneoPlugin */
 
-function WerneoGallery(){
+class WerneoGallery extends WerneoPlugin {
 	
-	this.galleries = null;
+	constructor(){
+		super();
+		this.galleries = null;
+	}
 
-	WerneoGallery.prototype.create = function(gallery){
+	create(gallery){
 		var galleryWidth = gallery.offsetWidth;						/// total current width of the gallery container
 		var items = gallery.querySelectorAll('.gallery-item');		/// items of the gallery
 		var images = [];											/// array to hold images
 		var lowest;													/// holds height of the lowest image from images
 		var rows = [];												/// array of rows (images that will end up displayed in the same row)
 		var rowIndex = 0;											/// index of rows
-		var i,j;													/// iterators
 
 		var parameters = {
 			'gutter': 0,
@@ -37,11 +39,13 @@ function WerneoGallery(){
 		lowest = parameters.maxHeight;
 
 		if(items.length > 0){
-			for (i = 0; i < items.length; i++) {
-				images[i] = items[i].querySelector('img');
+			let i = 0;
+			for (let item of items) {
+				images[i] = item.querySelector('img');
 				if(lowest < 0 || lowest > images[i].naturalHeight){
 					lowest = images[i].naturalHeight;
 				}
+				i++;
 			}
 		}
 
@@ -50,7 +54,8 @@ function WerneoGallery(){
 		}
 
 		if(items.length > 0){
-			for (i = 0; i < items.length; i++) {
+			let i = 0;
+			for (let item of items) {
 				/// initialize row
 				if(typeof rows[rowIndex] === typeof undefined){
 					rows[rowIndex] = {
@@ -61,59 +66,59 @@ function WerneoGallery(){
 				/// calculate and width
 				var ratio = images[i].naturalWidth / images[i].naturalHeight;
 				var width = (lowest * ratio);
-				items[i].style.height = lowest + 'px';
-				items[i].style.width = width + 'px';
+				item.style.height = lowest + 'px';
+				item.style.width = width + 'px';
 				/// save row data
 				rows[rowIndex].contentWidth += width;
 				rows[rowIndex].items.push(i);
 				if(rows[rowIndex].contentWidth > galleryWidth || (parameters.maxItemsPerLine > 0 && parameters.maxItemsPerLine <= rows[rowIndex].items.length)){
 					rowIndex++;
 				}
+				i++;
 			}
 		}
 
 		if(rows.length > 0){
-			for (i = 0; i < rows.length; i++) {
+			for (let row of rows) {
 				/// calculate ratio to shrink items by
-				var scaleRatio = galleryWidth / (rows[i].contentWidth + ((rows[i].items.length - 1) * parameters.gutter));
-				if(rows[i].items.length > 0){
+				var scaleRatio = galleryWidth / (row.contentWidth + ((row.items.length - 1) * parameters.gutter));
+				if(row.items.length > 0){
 					var counter = 0;
-					for (j = 0; j < rows[i].items.length; j++) {
+					for (let item of row.items) {
 						/// calculate scaled dimensions
-						var scaledWidth = items[rows[i].items[j]].offsetWidth * scaleRatio;
-						var scaledHeight = items[rows[i].items[j]].offsetHeight * scaleRatio;
+						var scaledWidth = items[item].offsetWidth * scaleRatio;
+						var scaledHeight = items[item].offsetHeight * scaleRatio;
 						counter += scaledWidth;
 						/// set new dimensions
-						items[rows[i].items[j]].style.height = scaledHeight + 'px';
-						items[rows[i].items[j]].style.width = scaledWidth + 'px';
-						items[rows[i].items[j]].style.marginBottom = parameters.gutter + 'px';
+						items[item].style.height = scaledHeight + 'px';
+						items[item].style.width = scaledWidth + 'px';
+						items[item].style.marginBottom = parameters.gutter + 'px';
 					}
 				}
 			}
 		}
 
 		gallery.classList.add('showing');
-	};
+	}
 
-	WerneoGallery.prototype.handle = function(){
+	handle(){
 		var _this = this;
-		var i;
 
 		_this.galleries = document.querySelectorAll('.gallery');
 		if(_this.galleries.length > 0){
-			for (i = 0; i < _this.galleries.length; i++) {
-				_this.create(_this.galleries[i]);
+			for (let gallery of _this.galleries) {
+				_this.create(gallery);
 			}
 		}
-	};
+	}
 
-	WerneoGallery.prototype.invoke = function(){
+	invoke(){
 		var _this = this;
 
 		window.addEventListener('load',function(){
 			_this.handle()
 		});
-	};
+	}
 
 }
 

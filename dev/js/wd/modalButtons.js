@@ -1,18 +1,20 @@
-/* global werneo */
+/* global werneo, WerneoPlugin */
 
-function WerneoModalButtons(){
+class WerneoModalButtons extends WerneoPlugin {
 	
-	this.modalTriggers = null;
-	this.modalClosers = null;
+	constructor(){
+		super();
+		this.modalTriggers = null;
+		this.modalClosers = null;
+	}
 
-	WerneoModalButtons.prototype.handle = function(){
+	handle(){
 		var _this = this;
-		var i;
 
 		_this.modalTriggers = document.querySelectorAll('.modal-btn-trigger');
 		if(_this.modalTriggers.length > 0){
-			for (i = 0; i < _this.modalTriggers.length; i++) {
-				_this.modalTriggers[i].addEventListener('click',function(event){
+			for (let modalTrigger of _this.modalTriggers) {
+				modalTrigger.addEventListener('click',function(event){
 					event.preventDefault();
 					event.stopPropagation();
 
@@ -74,8 +76,8 @@ function WerneoModalButtons(){
 
 		_this.modalClosers = document.querySelectorAll('.modal-btn-content .close');
 		if(_this.modalClosers.length > 0){
-			for (i = 0; i < _this.modalClosers.length; i++) {
-				_this.modalClosers[i].addEventListener('click',function(event){
+			for (let modalCloser of _this.modalClosers) {
+				modalCloser.addEventListener('click',function(event){
 					event.preventDefault();
 					event.stopPropagation();
 
@@ -98,15 +100,7 @@ function WerneoModalButtons(){
 				});
 			}
 		}
-	};
-
-	WerneoModalButtons.prototype.invoke = function(){
-		var _this = this;
-
-		document.addEventListener('DOMContentLoaded',function(){
-			_this.handle()
-		});
-	};
+	}
 
 }
 

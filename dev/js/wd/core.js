@@ -1,19 +1,20 @@
-function Werneo(){
+class Werneo {
 
-	this.plugins = [];
-	this.pluginNames = [];
+	constructor(){
+		this.plugins = [];
+		this.pluginNames = [];
+	}
 
-	this.registerPlugin = function(name,plugin){
+	registerPlugin(name,plugin){
 		this.plugins[name] = plugin;
 		this.pluginNames.push(name);
-	};
+	}
 
-	this.invoke = function(){
-		var i;
-		for (i = 0; i < this.pluginNames.length; i++) {
-			this.plugins[this.pluginNames[i]].invoke();
+	invoke(){
+		for (let pluginName of this.pluginNames) {
+			this.plugins[pluginName].invoke();
 		}
-	};
+	}
 
 }
 

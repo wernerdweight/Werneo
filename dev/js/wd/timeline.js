@@ -1,21 +1,23 @@
-/* global werneo */
+/* global werneo, WerneoPlugin */
 
-function WerneoTimeline(){
+class WerneoTimeline extends WerneoPlugin {
 	
-	this.milestones = null;
-	this.offset = 0.8;
+	constructor(){
+		super();
+		this.milestones = null;
+		this.offset = 0.8;
+	}
 
-	WerneoTimeline.prototype.hideMilestones = function(){
+	hideMilestones(){
 		var _this = this;
-		var i,j;
 
 		if(_this.milestones.length > 0){
-			for (i = 0; i < _this.milestones.length; i++) {
-				if(_this.milestones[i].getBoundingClientRect().top > window.innerHeight * _this.offset){
-					var animatedItems = _this.milestones[i].querySelectorAll('.timeline-milestone-icon, .timeline-milestone-content');
+			for (let milestone of _this.milestones) {
+				if(milestone.getBoundingClientRect().top > window.innerHeight * _this.offset){
+					var animatedItems = milestone.querySelectorAll('.timeline-milestone-icon, .timeline-milestone-content');
 					if(animatedItems.length > 0){
-						for (j = 0; j < animatedItems.length; j++) {
-							animatedItems[j].classList.add('hidden');
+						for (let animatedItem of animatedItems) {
+							animatedItem.classList.add('hidden');
 						}
 					}
 				}
@@ -23,18 +25,17 @@ function WerneoTimeline(){
 		}
 	}
 
-	WerneoTimeline.prototype.showMilestones = function(){
+	showMilestones(){
 		var _this = this;
-		var i,j;
 
 		if(_this.milestones.length > 0){
-			for (i = 0; i < _this.milestones.length; i++) {
-				if(_this.milestones[i].getBoundingClientRect().top <= window.innerHeight * _this.offset && _this.milestones[i].querySelector('.timeline-milestone-content').classList.contains('hidden')){
-					var animatedItems = _this.milestones[i].querySelectorAll('.timeline-milestone-icon, .timeline-milestone-content');
+			for (let milestone of _this.milestones) {
+				if(milestone.getBoundingClientRect().top <= window.innerHeight * _this.offset && milestone.querySelector('.timeline-milestone-content').classList.contains('hidden')){
+					var animatedItems = milestone.querySelectorAll('.timeline-milestone-icon, .timeline-milestone-content');
 					if(animatedItems.length > 0){
-						for (j = 0; j < animatedItems.length; j++) {
-							animatedItems[j].classList.remove('hidden');
-							animatedItems[j].classList.add('animate');
+						for (let animatedItem of animatedItems) {
+							animatedItem.classList.remove('hidden');
+							animatedItem.classList.add('animate');
 						}
 					}
 				}
@@ -42,7 +43,7 @@ function WerneoTimeline(){
 		}
 	}
 
-	WerneoTimeline.prototype.handle = function(){
+	handle(){
 		var _this = this;
 
 		_this.milestones = document.querySelectorAll('.timeline-milestone');
@@ -64,15 +65,7 @@ function WerneoTimeline(){
 			}
 		});
 
-	};
-
-	WerneoTimeline.prototype.invoke = function(){
-		var _this = this;
-
-		document.addEventListener('DOMContentLoaded',function(){
-			_this.handle()
-		});
-	};
+	}
 
 }
 

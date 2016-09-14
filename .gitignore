@@ -1,2 +1,3 @@
 .htaccess
 sftp-config.json
+/cache/

@@ -1,65 +1,56 @@
-/* global werneo */
+/* global werneo, WerneoPlugin */
 
-function WerneoDynaFilter(){
+class WerneoDynaFilter extends WerneoPlugin {
 	
-	this.dynaFilters = null;
+	constructor(){
+		super();
+		this.dynaFilters = null;
+	}
 
-	WerneoDynaFilter.prototype.toggle = function(trigger,triggers,target){
-		var i;
-
+	toggle(trigger,triggers,target){
 		/// remove active class from all triggers
-		for (i = 0; i < triggers.length; i++) {
-			triggers[i].classList.remove('active');
+		for (let trigger of triggers) {
+			trigger.classList.remove('active');
 		}
 		/// hide items without respective class and show those that have it
 		if(trigger.dataset.class !== null){
 			if(trigger.dataset.class !== ''){
 				/// hide items
 				var itemsToHide = target.querySelectorAll('.dynafilter-item:not(.' + trigger.dataset.class + ')');
-				for (i = 0; i < itemsToHide.length; i++) {
-					itemsToHide[i].classList.add('dynafilter-hidden');
+				for (let itemToHide of itemsToHide) {
+					itemToHide.classList.add('dynafilter-hidden');
 				}
 			}
 
 			/// show items
 			var itemsToShow = target.querySelectorAll('.dynafilter-item' + (trigger.dataset.class !== '' ? '.' + trigger.dataset.class : ''));
-			for (i = 0; i < itemsToShow.length; i++) {
-				itemsToShow[i].classList.remove('dynafilter-hidden');
+			for (let itemToShow of itemsToShow) {
+				itemToShow.classList.remove('dynafilter-hidden');
 			}
 		}
 		/// add active class to current trigger
 		trigger.classList.add('active');
-	};
+	}
 
-	WerneoDynaFilter.prototype.handle = function(){
+	handle(){
 		var _this = this;
-		var i;
-		var j;
 
 		_this.dynaFilters = document.querySelectorAll('.dynafilter');
 		if(_this.dynaFilters.length > 0){
-			for (i = 0; i < _this.dynaFilters.length; i++) {
-				var target = document.querySelector(_this.dynaFilters[i].dataset.target);
-				var triggers = _this.dynaFilters[i].querySelectorAll('.dynafilter-trigger');
+			for (let dynaFilter of _this.dynaFilters) {
+				var target = document.querySelector(dynaFilter.dataset.target);
+				var triggers = dynaFilter.querySelectorAll('.dynafilter-trigger');
 
 				if(target !== null && triggers.length > 0){
-					for (j = 0; j < triggers.length; j++) {
-						triggers[j].addEventListener('click',function(){
+					for (let trigger of triggers) {
+						trigger.addEventListener('click',function(){
 							_this.toggle(this,triggers,target);
 						});
 					}
 				}
 			}
 		}
-	};
-
-	WerneoDynaFilter.prototype.invoke = function(){
-		var _this = this;
-
-		document.addEventListener('DOMContentLoaded',function(){
-			_this.handle()
-		});
-	};
+	}
 
 }
 

@@ -1,17 +1,20 @@
-/* global werneo */
+/* global werneo, WerneoPlugin */
 
-function WerneoFlashMessages(){
+class WerneoFlashMessages extends WerneoPlugin {
 	
-	this.queue = null;
-	this.id = 1;
+	constructor(){
+		super();
+		this.queue = null;
+		this.id = 1;
+	}
 
-	WerneoFlashMessages.prototype.dismiss = function(id){
+	dismiss(id){
 		var _this = this;
 
 		_this.queue.querySelector('#flash-message-' + id).classList.remove('active');
-	};
+	}
 
-	WerneoFlashMessages.prototype.show = function(id){
+	show(id){
 		var _this = this;
 
 		_this.queue.querySelector('#flash-message-' + id).classList.add('active');
@@ -19,18 +22,18 @@ function WerneoFlashMessages(){
         _this.queue.querySelector('#flash-message-' + id + '-close').addEventListener('click',function(){
 			_this.dismiss(id);
         });
-	};
+	}
 
-	WerneoFlashMessages.prototype.getMessageHtml = function(content,type,id){
+	getMessageHtml(content,type,id){
 		var html = '<div class="' + type + ' flash-message" id="flash-message-' + id + '">';
 		html += content;
 		html += '<span class="close" id="flash-message-' + id + '-close">&times;</span>';
 		html += '</div>';
 
 		return html;
-	};
+	}
 
-	WerneoFlashMessages.prototype.createMessage = function(content,type){
+	createMessage(content,type){
 		var _this = this;
 		var id = _this.id++;
         
@@ -44,9 +47,9 @@ function WerneoFlashMessages(){
         setTimeout(function(){
 			_this.dismiss(id);
         },5100);
-	};
+	}
 
-	WerneoFlashMessages.prototype.invoke = function(){
+	invoke(){
 		var _this = this;
 
 		/// append queue if not present
@@ -54,7 +57,7 @@ function WerneoFlashMessages(){
             document.querySelector('body').innerHTML += '<div id="flash-message-queue" class="flash-message-queue"></div>';
         }
         _this.queue = document.getElementById('flash-message-queue');
-	};
+	}
 
 }
 

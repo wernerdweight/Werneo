@@ -30,6 +30,10 @@ module.exports = function (grunt) {
                 stylesheets: 'dist/css',
                 javascript: 'dist/js',
             },
+            cache: {
+                root: 'cache',
+                javascript: 'cache/js',
+            }
         },
 
         /// [JAVASCRIPT]
@@ -38,21 +42,45 @@ module.exports = function (grunt) {
 
                 /// [Werner Dweight's Werneo]
                 '<%= dirs.dest_generated.javascript %>/werneo.js': [
-                    '<%= dirs.src.javascript %>/wd/core.js',
-                    '<%= dirs.src.javascript %>/wd/ajaxLoader.js',
-                    '<%= dirs.src.javascript %>/wd/dropdowns.js',
-                    '<%= dirs.src.javascript %>/wd/dynaFilter.js',
-                    '<%= dirs.src.javascript %>/wd/flashMessages.js',
-                    '<%= dirs.src.javascript %>/wd/gallery.js',
-                    '<%= dirs.src.javascript %>/wd/lists.js',
-                    '<%= dirs.src.javascript %>/wd/modalButtons.js',
-                    '<%= dirs.src.javascript %>/wd/modals.js',
-                    '<%= dirs.src.javascript %>/wd/navigation.js',
-                    '<%= dirs.src.javascript %>/wd/tabs.js',
-                    '<%= dirs.src.javascript %>/wd/timeline.js',
-                    '<%= dirs.src.javascript %>/wd/treeView.js',
-                    '<%= dirs.src.javascript %>/wd/main.js',
+                    '<%= dirs.cache.javascript %>/wd/core.js',
+                    '<%= dirs.cache.javascript %>/wd/plugin.js',
+                    '<%= dirs.cache.javascript %>/wd/ajaxLoader.js',
+                    '<%= dirs.cache.javascript %>/wd/dropdowns.js',
+                    '<%= dirs.cache.javascript %>/wd/dynaFilter.js',
+                    '<%= dirs.cache.javascript %>/wd/flashMessages.js',
+                    '<%= dirs.cache.javascript %>/wd/gallery.js',
+                    '<%= dirs.cache.javascript %>/wd/lists.js',
+                    '<%= dirs.cache.javascript %>/wd/modalButtons.js',
+                    '<%= dirs.cache.javascript %>/wd/modals.js',
+                    '<%= dirs.cache.javascript %>/wd/navigation.js',
+                    '<%= dirs.cache.javascript %>/wd/tabs.js',
+                    '<%= dirs.cache.javascript %>/wd/timeline.js',
+                    '<%= dirs.cache.javascript %>/wd/treeView.js',
+                    '<%= dirs.cache.javascript %>/wd/main.js',
                 ]
+            }
+        },
+
+        babel: {
+            options: {
+                sourceMap: true,
+                presets: ['es2015']
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= dirs.src.javascript %>',
+                    src: ['**/*.js'],
+                    dest: '<%= dirs.cache.javascript %>',
+                }]
+            },
+            dev: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= dirs.src.javascript %>',
+                    src: ['**/*.js'],
+                    dest: '<%= dirs.cache.javascript %>',
+                }]
             }
         },
 
@@ -125,6 +153,9 @@ module.exports = function (grunt) {
                 '<%= dirs.dest_generated.stylesheets %>/*',
                 '<%= dirs.dest_generated.javascript %>/*',
             ],
+            cache: [
+                '<%= dirs.cache.javascript %>/*',
+            ],
         },
 
         // [WATCH]
@@ -154,7 +185,7 @@ module.exports = function (grunt) {
                     spawn: true
                 },
                 files: '<%= dirs.src.javascript %>/**/*.js',
-                tasks: ['newer:jshint:theme', 'newer:uglify:dev', 'notify:uglify']
+                tasks: ['newer:jshint:theme', 'newer:babel:dev', 'newer:uglify:dev', 'notify:uglify']
             },
 
         },
@@ -236,6 +267,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-sass-lint');
+    grunt.loadNpmTasks('grunt-babel');
 
     grunt.task.run('notify_hooks');
 
@@ -256,6 +288,8 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'jshint:theme',
         'clean:base',
+        'clean:cache',
+        'babel:dist',
         'uglify:dist',
         'build_css',
         'notify:build_finish'
@@ -266,6 +300,8 @@ module.exports = function (grunt) {
     grunt.registerTask('build_dev', [
         'jshint:theme',
         'clean:base',
+        'clean:cache',
+        'babel:dev',
         'uglify:dev',
         'sasslint',
         'compass:dev',
@@ -273,7 +309,7 @@ module.exports = function (grunt) {
         'notify:build_finish'
     ]);
     grunt.registerTask('build_dev_css', ['sasslint', 'compass:dev', 'autoprefixer']);
-    grunt.registerTask('build_dev_js', ['jshint:theme', 'uglify:dev']);
+    grunt.registerTask('build_dev_js', ['jshint:theme', 'babel:dev', 'uglify:dev']);
     grunt.registerTask('build_dev_watch', ['build_dev', 'watch']);
 
 }
