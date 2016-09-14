@@ -39,6 +39,7 @@ module.exports = function (grunt) {
                 /// [Werner Dweight's Werneo]
                 '<%= dirs.dest_generated.javascript %>/werneo.js': [
                     '<%= dirs.src.javascript %>/wd/core.js',
+                    '<%= dirs.src.javascript %>/wd/ajaxLoader.js',
                     '<%= dirs.src.javascript %>/wd/dropdowns.js',
                     '<%= dirs.src.javascript %>/wd/dynaFilter.js',
                     '<%= dirs.src.javascript %>/wd/flashMessages.js',
