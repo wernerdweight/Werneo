@@ -15,14 +15,14 @@
 		overflow: hidden
 		position: fixed
 		top: 0
-		transition: opacity 400ms 200ms, max-width 0ms 600ms, max-height 0ms 600ms
+		transition: opacity $wdWerneoAminationDuration $wdWerneoAminationDuration / 2, max-width 0ms $wdWerneoAminationDuration * 1.5, max-height 0ms $wdWerneoAminationDuration * 1.5
 		width: 100%
 		z-index: 99999
 		&.active
 			max-height: 100%
 			max-width: 100%
 			opacity: 1
-			transition: opacity 400ms
+			transition: opacity $wdWerneoAminationDuration
 			.modal
 				opacity: 1
 		.modal
@@ -36,7 +36,7 @@
 			overflow: hidden
 			position: absolute
 			top: 50%
-			transition: opacity 400ms
+			transition: opacity $wdWerneoAminationDuration
 			width: 100%
 			+responsive(tablet)
 				left: 50%
@@ -50,7 +50,7 @@
 				right: $wdWerneoModalsCloseButtonOffsetHorizontal
 				text-decoration: none
 				top: $wdWerneoModalsCloseButtonOffsetVertical
-				transition: opacity 400ms
+				transition: opacity $wdWerneoAminationDuration
 				&:hover
 					opacity: 1
 			& > iframe

@@ -30,33 +30,33 @@
 			pointer-events: none
 			position: fixed
 			top: 0
-			transition: opacity 400ms 400ms
+			transition: opacity $wdWerneoAminationDuration $wdWerneoAminationDuration
 			width: 100%
 			z-index: 800
 		.modal-btn-trigger
 			display: block
 			pointer-events: auto
-			transition: opacity 300ms 300ms
+			transition: opacity $wdWerneoAminationDuration $wdWerneoAminationDuration
 			& > *
-				transition: opacity 300ms 500ms
+				transition: opacity $wdWerneoAminationDuration $wdWerneoAminationDuration * 1.5
 		.modal-btn-content
 			opacity: 0
 			overflow: hidden
 			pointer-events: none
 			position: fixed
-			transition: opacity 400ms 600ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms
+			transition: opacity $wdWerneoAminationDuration $wdWerneoAminationDuration * 2, width $wdWerneoAminationDuration 100ms, height $wdWerneoAminationDuration 100ms, top $wdWerneoAminationDuration 100ms, left $wdWerneoAminationDuration 100ms, margin $wdWerneoAminationDuration 100ms
 			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
 			z-index: 1000
 			& > *
 				opacity: 0
-				transition: opacity 300ms 0ms
+				transition: opacity $wdWerneoAminationDuration 0ms
 			.close-times
 				display: block
 				opacity: 0.3
 				position: absolute
 				right: $wdWerneoModalButtonsCloseButtonOffsetHorizontal
 				top: $wdWerneoModalButtonsCloseButtonOffsetVertical
-				transition: opacity 400ms ease-in-out
+				transition: opacity $wdWerneoAminationDuration ease-in-out
 				z-index: 1101
 				&:hover
 					opacity: 1
@@ -94,24 +94,24 @@
 			&::before
 				opacity: 1
 				pointer-events: auto
-				transition: opacity 400ms 100ms
+				transition: opacity $wdWerneoAminationDuration 100ms
 			.modal-btn-trigger
 				opacity: 0
 				pointer-events: none
 				transition: opacity 100ms 100ms
 				& > *
 					opacity: 0
-					transition: opacity 300ms
+					transition: opacity $wdWerneoAminationDuration
 			.modal-btn-content
 				box-sizing: border-box
 				opacity: 1
 				pointer-events: auto
-				transition: opacity 100ms 100ms, width 400ms 100ms, height 400ms 100ms, top 400ms 100ms, left 400ms 100ms, margin 400ms 100ms
+				transition: opacity 100ms 100ms, width $wdWerneoAminationDuration 100ms, height $wdWerneoAminationDuration 100ms, top $wdWerneoAminationDuration 100ms, left $wdWerneoAminationDuration 100ms, margin $wdWerneoAminationDuration 100ms
 				& > *
 					opacity: 1
-					transition: opacity 400ms 500ms
+					transition: opacity $wdWerneoAminationDuration $wdWerneoAminationDuration * 1.5
 			.list-item-overlay
 				height: 0
 				opacity: 0
 				pointer-events: none
-				transition: all 300ms 0
+				transition: all $wdWerneoAminationDuration 0

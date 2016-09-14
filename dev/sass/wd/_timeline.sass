@@ -57,7 +57,7 @@
 			&.hidden
 				visibility: hidden
 			&.animate
-				animation: bounceScaleIn 600ms
+				animation: bounceScaleIn $wdWerneoAminationDuration * 1.5
 				visibility: visible
 
 	.timeline-milestone-content
@@ -94,7 +94,7 @@
 			&.hidden
 				visibility: hidden
 			&.animate
-				animation: bounceSlideInLeft 600ms
+				animation: bounceSlideInLeft $wdWerneoAminationDuration * 1.5
 				visibility: visible
 
 		@each $name, $color in $wdWerneoColors
@@ -114,4 +114,4 @@
 		.timeline-milestone:nth-child(even)
 			.timeline-milestone-content
 				&.animate
-					animation: bounceSlideInRight 600ms
+					animation: bounceSlideInRight $wdWerneoAminationDuration * 1.5

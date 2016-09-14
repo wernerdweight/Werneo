@@ -11,62 +11,15 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	</head>
 	<body>
-		<header class="bg-mauve fixed-header">
-			<div class="r mtb-0">
-				<div class="c-12">
-					<div class="r r-fixed">
-						<div class="c-8">
-							<div class="title">
-								<small class="ib">Werner<br>Dweight's</small>
-								<h1 class="h1 tt-uc ib ml-1">
-									Werneo <small class="tt-lc text-grey-light">/ Lists</small>
-								</h1>
-							</div>
-						</div>
-						<div class="c-4">
-							<div class="dropdown mauve full-colored">
-								<span class="dropdown-value"></span>
-								<div class="dropdown-handle">
-									<div class="chevron"></div>
-								</div>
-								<div class="dropdown-list">
-									<a href="index.html" class="dropdown-option sm">Home</a>
-									<a href="backgrounds.html" class="dropdown-option sm">Backgrounds</a>
-									<a href="badges.html" class="dropdown-option sm">Badges</a>
-									<a href="breadcrumbs.html" class="dropdown-option sm">Breadcrumbs</a>
-									<a href="buttons.html" class="dropdown-option sm">Buttons</a>
-									<a href="code.html" class="dropdown-option sm">Code</a>
-									<a href="dropdowns.html" class="dropdown-option sm">Dropdowns</a>
-									<a href="dynamicFilters.html" class="dropdown-option sm">Dynamic Filters</a>
-									<a href="flashMessages.html" class="dropdown-option sm">Flash Messages</a>
-									<a href="forms.html" class="dropdown-option sm">Forms</a>
-									<a href="gallery.html" class="dropdown-option sm">Gallery</a>
-									<a href="groups.html" class="dropdown-option sm">Groups</a>
-									<a href="lists.html" class="dropdown-option sm active">Lists</a>
-									<a href="modalButtons.html" class="dropdown-option sm">Modal Buttons</a>
-									<a href="modals.html" class="dropdown-option sm">Modals</a>
-									<a href="pagination.html" class="dropdown-option sm">Pagination</a>
-									<a href="progressbars.html" class="dropdown-option sm">Progressbars</a>
-									<a href="scrollbars.html" class="dropdown-option sm">Scrollbars</a>
-									<a href="tables.html" class="dropdown-option sm">Tables</a>
-									<a href="tabs.html" class="dropdown-option sm">Tabs</a>
-									<a href="timeline.html" class="dropdown-option sm">Timeline</a>
-									<a href="treeView.html" class="dropdown-option sm">Tree View</a>
-									<a href="typography.html" class="dropdown-option sm">Typography</a>
-									<a href="widgets.html" class="dropdown-option sm">Widgets</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
+
+		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+
 		<div class="r r-fixed">
 			<div class="c-12">
 
 				<h2 class="h2">Lists <small class="text-orange">(requires lists.js)</small></h2>
 
-				<h3>Colors <small class="text-yellow">(right-click to select an item)</small></h3>
+				<h3 class="h3" id="lists-colors">Colors <small class="text-yellow">(right-click to select an item)</small></h3>
 				<div class="r r-1 t-3 d-4 r-jc-s">
 					<div class="list-item-container">
 						<a href="#" title="Some item" class="list-item bg-turquoise">
@@ -207,7 +160,7 @@
 						</a>
 					</div>
 				</div>
-				<h3>Colored overlays <small class="text-yellow">(hover over list item to see it)</small></h3>
+				<h3 class="h3" id="lists-overlays">Colored overlays <small class="text-yellow">(hover over list item to see it)</small></h3>
 				<div class="r r-1 t-2 d-3 r-jc-s">
 					<div class="list-item-container">
 						<a class="list-item-overlay bg-turquoise" href="#" title="show more">show more</a>
