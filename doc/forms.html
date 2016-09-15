@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
 		<link rel="stylesheet" href="doc.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
 	</head>
 	<body>
 
@@ -122,6 +123,65 @@
 						</div>
 					</div>
 				</div>
+				<pre class="widget mb-2">
+                    <code class="html">&lt;!-- Text --&gt;
+&lt;input id="t0" type="text" name="t0" value="" placeholder="Placeholder"&gt;
+
+&lt;!-- Select --&gt;
+&lt;select name="t1"&gt;
+    &lt;option value=""&gt;&lt;/option&gt;
+    &lt;option value="1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="2"&gt;Option 2&lt;/option&gt;
+    &lt;option value="3"&gt;Option 3&lt;/option&gt;
+    &lt;option value="4"&gt;Option 4&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Dropdown select (via hidden input) --&gt;
+&lt;input type="hidden" name="t7" id="t7" value=""&gt;
+&lt;div class="dropdown white " data-input-id="t7"&gt;
+    &lt;span class="dropdown-value"&gt;Choose&lt;/span&gt;
+    &lt;div class="dropdown-handle"&gt;
+        &lt;div class="chevron"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="dropdown-list"&gt;
+        &lt;span class="dropdown-option" data-value="1"&gt;Option 1&lt;/span&gt;
+        &lt;span class="dropdown-option" data-value="2"&gt;Option 2&lt;/span&gt;
+        &lt;span class="dropdown-option" data-value="3"&gt;Option 3&lt;/span&gt;
+        &lt;span class="dropdown-option" data-value="4"&gt;Option 4&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Textarea --&gt;
+&lt;textarea name="t4" id="t4" placeholder="Placeholder" rows="4"&gt;&lt;/textarea&gt;
+
+&lt;!-- Multi-select --&gt;
+&lt;select name="t5" multiple="multiple"&gt;
+    &lt;option value="1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="2"&gt;Option 2&lt;/option&gt;
+    &lt;option value="3"&gt;Option 3&lt;/option&gt;
+    &lt;option value="4"&gt;Option 4&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- File input --&gt;
+&lt;input type="file" name="t8" id="t8" placeholder="Placeholder"&gt;
+
+&lt;!-- Checkbox --&gt;
+&lt;input id="t2_0" type="checkbox" name="t2_0" value="0"&gt;
+&lt;label for="t2_0"&gt;Option 1&lt;/label&gt;  
+
+
+&lt;!-- Radio --&gt;
+&lt;input id="t3_0" type="radio" name="t3" value="0"&gt;
+&lt;label for="t3_0"&gt;Option 1&lt;/label&gt;  
+
+&lt;!-- Switch (checkbox) --&gt;
+&lt;label for="t6_0" class="switch"&gt;
+    &lt;input id="t6_0" type="checkbox" name="t6_0" value="0"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;Option 1&lt;/span&gt;
+&lt;/label&gt;</code>
+                </pre>
+
 				<h3 class="h3" id="forms-colors">Colors</h3>
 				<div class="r r-1 t-3">
 					<div>
@@ -231,6 +291,81 @@
 						</div>
 					</div>
 				</div>
+				<pre class="widget mb-2">
+                    <code class="html">&lt;!-- inputs --&gt;
+&lt;input type="text" placeholder="Placeholder" class="turquoise"&gt;
+&lt;input type="text" placeholder="Placeholder" class="teal"&gt;
+&lt;input type="text" placeholder="Placeholder" class="yellow"&gt;
+&lt;input type="text" placeholder="Placeholder" class="orange"&gt;
+&lt;input type="text" placeholder="Placeholder" class="crimson"&gt;
+&lt;input type="text" placeholder="Placeholder" class="mauve"&gt;
+&lt;input type="text" placeholder="Placeholder" class="black"&gt;
+&lt;input type="text" placeholder="Placeholder" class="grey-dark"&gt;
+&lt;input type="text" placeholder="Placeholder" class="grey-light"&gt;
+&lt;input type="text" placeholder="Placeholder" class="white"&gt;
+
+&lt;!-- switches --&gt;
+&lt;label for="t9_0" class="switch turquoise"&gt;
+    &lt;input id="t9_0" type="checkbox" name="t9_0"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;turquoise&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label for="t9_1" class="switch teal"&gt;
+    &lt;input id="t9_1" type="checkbox" name="t9_1"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;teal&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label for="t9_2" class="switch yellow"&gt;
+    &lt;input id="t9_2" type="checkbox" name="t9_2"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;yellow&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label for="t9_3" class="switch orange"&gt;
+    &lt;input id="t9_3" type="checkbox" name="t9_3"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;orange&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label for="t9_4" class="switch crimson"&gt;
+    &lt;input id="t9_4" type="checkbox" name="t9_4"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;crimson&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label for="t9_5" class="switch mauve"&gt;
+    &lt;input id="t9_5" type="checkbox" name="t9_5"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;mauve&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label for="t9_6" class="switch black"&gt;
+    &lt;input id="t9_6" type="checkbox" name="t9_6"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;black&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label for="t9_7" class="switch grey-dark"&gt;
+    &lt;input id="t9_7" type="checkbox" name="t9_7"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;grey-dark&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label for="t9_8" class="switch grey-light"&gt;
+    &lt;input id="t9_8" type="checkbox" name="t9_8"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;grey-light&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label for="t9_9" class="switch white"&gt;
+    &lt;input id="t9_9" type="checkbox" name="t9_9"&gt;
+    &lt;span class="check"&gt;&lt;/span&gt;
+    &lt;span class="label"&gt;white&lt;/span&gt;
+&lt;/label&gt;</code>
+                </pre>
+
 				<h3 class="h3" id="forms-sizes">Sizes</h3>
 				<div class="r r-1 t-4">
 					<div>
@@ -246,6 +381,13 @@
 						<input type="text" name="t14" value="" placeholder="&.lg" class="lg mauve">
 					</div>
 				</div>
+				<pre class="widget mb-2">
+                    <code class="html">&lt;input type="text" name="t14" value="" placeholder="&amp;.sm" class="yellow sm"&gt;
+&lt;input type="text" name="t14" value="" placeholder="basic" class="orange"&gt;
+&lt;input type="text" name="t14" value="" placeholder="&amp;.medium" class="medium crimson"&gt;
+&lt;input type="text" name="t14" value="" placeholder="&amp;.lg" class="lg mauve"&gt;</code>
+                </pre>
+
 				<h3 class="h3" id="forms-states">States and validation</h3>
 				<div class="r">
 					<div class="c-12 t-c-6 d-c-3">
@@ -267,10 +409,31 @@
 					</div>
 				</div>
 
+				<pre class="widget mb-2">
+                    <code class="html">&lt;!-- required --&gt;
+&lt;label for="t15" class="required"&gt;Required field&lt;/label&gt;
+&lt;input type="text" name="" value="" placeholder="required field" required="required"&gt;
+
+&lt;!-- disabled --&gt;
+&lt;label for="t16"&gt;Disabled &amp; read-only field&lt;/label&gt;
+&lt;input type="text" name="" value="" placeholder="disabled or readonly field" disabled="disabled"&gt;
+
+&lt;!-- validation errors --&gt;
+&lt;div class="form-errors"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;E-mail address is invalid&lt;/li&gt;
+        &lt;li&gt;Everything is wrong&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;input type="email" name="t17" value="not an e-mail" placeholder="Type in your e-mail"&gt;</code>
+                </pre>
+
 			</div>
 		</div>
 
 		<script type="text/javascript" src="../dist/js/werneo.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+		<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
 	</body>
 </html>

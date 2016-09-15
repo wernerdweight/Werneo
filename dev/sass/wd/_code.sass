@@ -5,21 +5,22 @@
 @if $wdWerneoUseCode == true
 
 	code
+		background-color: $wdWerneoCodeBackgroundColor
+		border-radius: $wdWerneoCodeBorderRadius
+		color: $wdWerneoCodeColor
 		display: inline-block
 		font-family: monospace
 		font-size: $wdWerneoTypographyBasicFontSize
 		padding: $wdWerneoCodePaddingVertical $wdWerneoCodePaddingHorizontal
 		pre &
 			background-color: transparent
+			color: inherit
 			display: block
 			margin: 0
 			padding: 0
 
-	code,
 	pre
-		background-color: rgba($wdWerneoBlack, 0.25)
-
-	pre
+		background-color: $wdWerneoPreBackgroundColor
 		margin: 0
 		overflow: auto
-		padding: $wdWerneoPreePaddingVertical $wdWerneoPreePaddingHorizontal
+		padding: $wdWerneoPrePaddingVertical $wdWerneoPrePaddingHorizontal

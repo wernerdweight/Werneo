@@ -1,10 +1,13 @@
 body{
-	background-color: #393F5F;
-	color: white;
+	background-color: #f9f9f9;
+	color: #333;
 	padding-top: 8rem;
 }
 header .title{
 	margin-top: 0.5rem;
+}
+pre.widget{
+	background-color: #23241f;
 }
 .fixed-header{
 	position: fixed;
@@ -24,4 +27,9 @@ header .title{
 	height: 50rem;
 	padding: 2rem;
 	box-sizing: border-box;
+}
+
+ /* highlight.js customize */
+.hljs-attr{
+	color: #60ff12 !important;
 }

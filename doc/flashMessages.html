@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
 
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Flash Messages</h2>
+                <h2 class="h2">Flash Messages</h2>
 
-				<h3 class="h3" id="flashMessages-types">Types</h3>
-				<div class="r r-1 t-4">
-					<div>
-						<button class="btn full grey-light" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>Some boring text that you want to show</p>',null);">Trigger default message</button>
-					</div>
-					<div>
-						<button class="btn full teal" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><strong>You\'ve done it!</strong> You are now the president of the world!</p>','success');">Trigger success message</button>
-					</div>
-					<div>
-						<button class="btn full turquoise" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>You have a new message from your Mum. You better read it quick!</p>','info');">Trigger info message</button>
-					</div>
-					<div>
-						<button class="btn full crimson" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><strong>Oh no!</strong> You got fired right now. Better luck next time!</p>','error');">Trigger error message</button>
-					</div>
-				</div>
+                <h3 class="h3" id="flashMessages-types">Types</h3>
+                <div class="r r-1 t-4">
+                    <div>
+                        <button class="btn full grey-light" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>Some boring text that you want to show</p>',null);">Trigger default message</button>
+                    </div>
+                    <div>
+                        <button class="btn full teal" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><strong>You\'ve done it!</strong> You are now the president of the world!</p>','success');">Trigger success message</button>
+                    </div>
+                    <div>
+                        <button class="btn full turquoise" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>You have a new message from your Mum. You better read it quick!</p>','info');">Trigger info message</button>
+                    </div>
+                    <div>
+                        <button class="btn full crimson" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><strong>Oh no!</strong> You got fired right now. Better luck next time!</p>','error');">Trigger error message</button>
+                    </div>
+                </div>
 
-				<h3 class="h3" id="flashMessages-contents">Contents</h3>
-				<p>You can put practically anything inside the flash message, it accepts HTML content and message type.</p>
-				<div class="r r-1 t-4">
-					<div>
-						<button class="btn full grey-light" type="button" onclick="werneo.plugins.flashMessages.createMessage('<img src=\'https://media1.giphy.com/media/FxufOs6bQwxO0/200.gif\' width=\'100%\'>',null);">What about an image?</button>
-					</div>
-					<div>
-						<button class="btn full teal" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><i class=\'fa fa-check\'></i> <strong>You\'ve done it!</strong></p>','success');">Icons?</button>
-					</div>
-					<div>
-						<button class="btn full turquoise" type="button" onclick="werneo.plugins.flashMessages.createMessage('<div class=\'r\'><div class=\'c-4\'><img src=\'https://media4.giphy.com/media/q6QHDGE3X4EWA/200.gif\' width=\'100%\'></div><div class=\'c-8\'><p class=\'pl-1\'>You have a new message from your Mum!</p></div></div>','info');">More&hellip;</button>
-					</div>
-					<div>
-						<button class="btn full crimson" type="button" onclick="werneo.plugins.flashMessages.createMessage('<div class=\'r\'><img src=\'https://media4.giphy.com/media/q6QHDGE3X4EWA/200.gif\' width=\'100%\'></div><div class=\'r\'><p>Another message from your Mum!</p></div>','error');">&hellip;and more</button>
-					</div>
-				</div>
+                <h3 class="h3" id="flashMessages-contents">Contents</h3>
+                <p>You can put practically anything inside the flash message, it accepts HTML content and message type.</p>
+                <div class="r r-1 t-4">
+                    <div>
+                        <button class="btn full grey-light" type="button" onclick="werneo.plugins.flashMessages.createMessage('<img src=\'https://media1.giphy.com/media/FxufOs6bQwxO0/200.gif\' width=\'100%\'>',null);">What about an image?</button>
+                    </div>
+                    <div>
+                        <button class="btn full teal" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p><i class=\'fa fa-check\'></i> <strong>You\'ve done it!</strong></p>','success');">Icons?</button>
+                    </div>
+                    <div>
+                        <button class="btn full turquoise" type="button" onclick="werneo.plugins.flashMessages.createMessage('<div class=\'r\'><div class=\'c-4\'><img src=\'https://media4.giphy.com/media/q6QHDGE3X4EWA/200.gif\' width=\'100%\'></div><div class=\'c-8\'><p class=\'pl-1\'>You have a new message from your Mum!</p></div></div>','info');">More&hellip;</button>
+                    </div>
+                    <div>
+                        <button class="btn full crimson" type="button" onclick="werneo.plugins.flashMessages.createMessage('<div class=\'r\'><img src=\'https://media4.giphy.com/media/q6QHDGE3X4EWA/200.gif\' width=\'100%\'></div><div class=\'r\'><p>Another message from your Mum!</p></div>','error');">&hellip;and more</button>
+                    </div>
+                </div>
 
-			</div>
-		</div>
+                <p class="mb-1">Flash messages are created using javascript call (you can try copying following code into console):</p>
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
+                <pre class="widget mb-2">
+                    <code class="js">werneo.plugins.flashMessages.createMessage('any HTML content',null);        // default
+werneo.plugins.flashMessages.createMessage('any HTML content','error');     // error
+werneo.plugins.flashMessages.createMessage('any HTML content','info');      // info
+werneo.plugins.flashMessages.createMessage('any HTML content','success');   // success</code>
+                </pre>
 
-	</body>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>

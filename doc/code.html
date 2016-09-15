@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
 		<link rel="stylesheet" href="doc.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
 	</head>
 	<body>
 
@@ -18,34 +19,37 @@
 			<div class="c-12">
 
 				<h2 class="h2">Code</h2>
-				<p class="text-yellow">User .bg-[color] classes and .text-[color] classes to change colors of <code>code</code> and <code>pre</code> elements.</p>
+				<p class="text-turquoise mb-1">You can use <code>bg-[color-name]</code> classes and <code>text-[color-name]</code> classes to change colors of <code>code</code> and <code>pre</code> elements.</p>
+				<p class="mb-1">Werneo has no built-in code highlighter! Example below is highlighted manually! You can either write your own highlighter that will use Werneo's <code>text-[color]</code> classes or use some library (this documentation is using <a href="https://highlightjs.org/">highlight.js</a>).</p>
 				<div class="r">
 					<div class="c-12">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <code>display: inline;</code> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <code>&lt;code&gt;foo();&lt;/code&gt;</code> nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <code class="bg-grey-dark"><span class="text-turquoise">display:</span> inline;</code> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <code>&lt;code&gt;foo();&lt;/code&gt;</code> nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 				</div>
 				<div class="r">
 					<div class="c-12">
 						<pre class="bg-black">
-							<code>
+							<code class="nohighlight">
 <span class="text-grey-light">/// dev/wd/core.js</span>
 
-<span class="text-turquoise">function</span> <span class="text-yellow">Werneo</span>(){
+<span class="text-turquoise">class</span> <span class="text-yellow">Werneo</span> {
 
-	this.plugins <span class="text-crimson">=</span> [];
-	this.pluginNames <span class="text-crimson">=</span> [];
+	<span class="text-yellow">constructor</span>(){
+		this.plugins <span class="text-crimson">=</span> [];
+		this.pluginNames <span class="text-crimson">=</span> [];
+	}
 
-	this.<span class="text-yellow">registerPlugin</span> <span class="text-crimson">=</span> <span class="text-turquoise">function</span>(<span class="text-orange">name</span>,<span class="text-orange">plugin</span>){
+	<span class="text-yellow">registerPlugin</span>(<span class="text-orange">name</span>,<span class="text-orange">plugin</span>){
 		this.plugins[name] <span class="text-crimson">=</span> plugin;
 		this.pluginNames.<span class="text-turquoise">push</span>(name);
-	};
+	}
 
-	this.<span class="text-yellow">invoke</span> = <span class="text-turquoise">function</span>(){
+	<span class="text-yellow">invoke</span>(){
 		<span class="text-turquoise">var</span> i;
-		<span class="text-crimson">for</span> (i <span class="text-crimson">=</span> <span class="text-mauve">0</span>; i <span class="text-crimson">&lt;</span> this.pluginNames.length; i<span class="text-crimson">++</span>) {
-			this.plugins[this.pluginNames[i]].invoke();
+		<span class="text-crimson">for</span> (<span class="text-turquoise">let</span> pluginName <span class="text-crimson">of</span> this.pluginNames) {
+			this.plugins[pluginName].invoke();
 		}
-	};
+	}
 
 }
 
@@ -59,6 +63,7 @@
 		</div>
 
 		<script type="text/javascript" src="../dist/js/werneo.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
 
 	</body>
 </html>

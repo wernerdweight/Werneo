@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
 		<link rel="stylesheet" href="doc.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
 	</head>
 	<body>
 
@@ -18,7 +19,26 @@
 			<div class="c-12">
 
 				<h2 class="h2">Dynamic Filters <small class="text-orange">(requires dynaFilter.js)</small></h2>
-				<p>Triggers may be anything you want (buttons, dropdown, spans, whatever).</p>
+				<p class="mb-1">Dynamic filters allow you to filter loaded content by class (each item must have <code>dynafilter-item</code> class). Triggers may be anything you want (buttons, dropdown, spans, whatever). Targeted dynamic filter is selected via <code>data-target</code> attribute of <code>.dynafilter</code> element. Class to be filtered by is selected via <code>data-class</code> attribute of <code>.dynafilter-trigger</code> element.</p>
+
+				<table class="table turquoise bg-white striped mb-2">
+                    <thead>
+                        <tr>
+                            <th>attribute</th>
+                            <th>what for</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>.dynafilter[<strong>data-target</strong>]</td>
+                            <td>selector (for <code>querySeletor</code> method) of targeted dynamic filter (any element with <code>dynafilter-item</code> children)</td>
+                        </tr>
+                        <tr>
+                            <td>.dynafilter-trigger[<strong>data-class</strong>]</td>
+                            <td>class to filter</td>
+                        </tr>
+                    </tbody>
+                </table>
 
 				<div class="r">
 					<div class="c-12 d-c-9 ta-c d-ta-l">
@@ -102,10 +122,93 @@
 					</div>
 				</div>
 
+				<pre class="widget mtb-2">
+                    <code class="html">&lt;!-- button-like triggers --&gt;
+&lt;div class="dynafilter" data-target="#dynafilter-test"&gt;
+    &lt;span class="dynafilter-trigger btn orange active" data-class=""&gt;All&lt;/span&gt;
+    &lt;span class="dynafilter-trigger btn orange" data-class="group-1"&gt;Group 1&lt;/span&gt;
+    &lt;span class="dynafilter-trigger btn orange" data-class="group-2"&gt;Group 2&lt;/span&gt;
+    &lt;span class="dynafilter-trigger btn orange" data-class="group-3"&gt;Group 3&lt;/span&gt;
+    &lt;span class="dynafilter-trigger btn orange" data-class="group-4"&gt;Group 4&lt;/span&gt;
+    &lt;span class="dynafilter-trigger btn orange" data-class="group-5"&gt;Group 5&lt;/span&gt;
+    &lt;span class="dynafilter-trigger btn orange" data-class="group-6"&gt;Group 6&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- dropdown-like triggers --&gt;
+&lt;div class="dropdown mauve full-colored dynafilter" data-target="#dynafilter-test"&gt;
+    &lt;span class="dropdown-value"&gt;All&lt;/span&gt;
+    &lt;div class="dropdown-handle"&gt;
+        &lt;div class="chevron"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="dropdown-list"&gt;
+        &lt;span class="dynafilter-trigger dropdown-option active" data-class=""&gt;All&lt;/span&gt;
+        &lt;span class="dynafilter-trigger dropdown-option" data-class="group-1"&gt;Group 1&lt;/span&gt;
+        &lt;span class="dynafilter-trigger dropdown-option" data-class="group-2"&gt;Group 2&lt;/span&gt;
+        &lt;span class="dynafilter-trigger dropdown-option" data-class="group-3"&gt;Group 3&lt;/span&gt;
+        &lt;span class="dynafilter-trigger dropdown-option" data-class="group-4"&gt;Group 4&lt;/span&gt;
+        &lt;span class="dynafilter-trigger dropdown-option" data-class="group-5"&gt;Group 5&lt;/span&gt;
+        &lt;span class="dynafilter-trigger dropdown-option" data-class="group-6"&gt;Group 6&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- text-like triggers --&gt;
+&lt;div class="dynafilter" data-target="#dynafilter-test"&gt;
+    &lt;span class="dynafilter-trigger active" data-class=""&gt;All&lt;/span&gt;
+    &lt;span class="dynafilter-trigger" data-class="group-1"&gt;Group 1&lt;/span&gt;
+    &lt;span class="dynafilter-trigger" data-class="group-2"&gt;Group 2&lt;/span&gt;
+    &lt;span class="dynafilter-trigger" data-class="group-3"&gt;Group 3&lt;/span&gt;
+    &lt;span class="dynafilter-trigger" data-class="group-4"&gt;Group 4&lt;/span&gt;
+    &lt;span class="dynafilter-trigger" data-class="group-5"&gt;Group 5&lt;/span&gt;
+    &lt;span class="dynafilter-trigger" data-class="group-6"&gt;Group 6&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- list of items --&gt;
+&lt;div id="dynafilter-test"&gt;
+    &lt;div class="dynafilter-item group-1 group-2 group-6"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-2 group-5"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-3 group-5 group-6"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-5"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-1 group-3 group-4"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-2 group-4"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-3 group-5"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-2 group-5"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-3 group-5"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-6"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-2 group-3 group-6"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+    &lt;div class="dynafilter-item group-3 group-4"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
+
 			</div>
 		</div>
 
 		<script type="text/javascript" src="../dist/js/werneo.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+		<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
 	</body>
 </html>
