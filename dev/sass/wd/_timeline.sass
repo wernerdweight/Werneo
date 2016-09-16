@@ -7,7 +7,7 @@
 	.timeline
 		position: relative
 		&::before
-			background-color: $wdWerneoWhite
+			background-color: $wdWerneoTimelineLineColor
 			content: ''
 			height: 100%
 			left: ($wdWerneoTimelineIconSize - $wdWerneoTimelineLineWidth) / 2
@@ -30,7 +30,7 @@
 		position: relative
 
 	.timeline-milestone-icon
-		border: $wdWerneoTimelineLineWidth solid $wdWerneoWhite
+		border: $wdWerneoTimelineLineWidth solid $wdWerneoTimelineLineColor
 		height: $wdWerneoTimelineIconSize
 		left: 0
 		position: absolute
@@ -68,7 +68,7 @@
 			border-radius: $wdWerneoTimelineContentBorderRadius
 		&::before
 			border: $wdWerneoTimelineArrowSize solid transparent
-			border-right-color: $wdWerneoWhite
+			border-right-color: $wdWerneoTimelineLineColor
 			content: ''
 			height: 0
 			position: absolute
@@ -81,14 +81,14 @@
 			width: $wdWerneoTimelineContentWidth
 			&::before
 				border-color: transparent
-				border-left-color: $wdWerneoWhite
+				border-left-color: $wdWerneoTimelineLineColor
 				left: 100%
 				top: ($wdWerneoTimelineIconOffset + (($wdWerneoTimelineIconSize * 1.5) / 2)) - $wdWerneoTimelineArrowSize
 			.timeline-milestone:nth-child(even) &
 				float: right
 				&::before
 					border-color: transparent
-					border-right-color: $wdWerneoWhite
+					border-right-color: $wdWerneoTimelineLineColor
 					left: auto
 					right: 100%
 			&.hidden

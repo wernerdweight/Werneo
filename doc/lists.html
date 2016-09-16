@@ -1,405 +1,797 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
 
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Lists <small class="text-orange">(requires lists.js)</small></h2>
+                <h2 class="h2">Lists <small class="text-orange">(requires lists.js)</small></h2>
 
-				<h3 class="h3" id="lists-colors">Colors <small class="text-yellow">(right-click to select an item)</small></h3>
-				<div class="r r-1 t-3 d-4 r-jc-s">
-					<div class="list-item-container">
-						<a href="#" title="Some item" class="list-item bg-turquoise">
-							<div class="icon split">
-								<img src="http://placehold.it/80x80" alt="Some item" width="100%">
-							</div>
-							<div class="info">
-								<p class="title mb-1">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t17-0" id="t17-0">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a href="#" title="Some item" class="list-item bg-teal">
-							<div class="icon split">
-								<i class="fa fa-folder"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t17-1" id="t17-1">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a href="#" title="Some item" class="list-item bg-yellow">
-							<div class="icon split">
-								<i class="fa fa-cog fa-spin"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t17-2" id="t17-2">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a href="#" title="Some item" class="list-item bg-orange">
-							<div class="icon split">
-								<i class="fa fa-image"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t17-3" id="t17-3">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a href="#" title="Some item" class="list-item bg-crimson">
-							<div class="icon split">
-								<i class="fa fa-dollar"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t17-4" id="t17-4">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a href="#" title="Some item" class="list-item bg-mauve">
-							<div class="icon split">
-								<i class="fa fa-truck"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t17-5" id="t17-5">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a href="#" title="Some item" class="list-item bg-black">
-							<div class="icon split">
-								<i class="fa fa-file-pdf-o"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t17-6" id="t17-6">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a href="#" title="Some item" class="list-item bg-grey-dark">
-							<div class="icon split">
-								<i class="fa fa-cloud"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t17-7" id="t17-7">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a href="#" title="Some item" class="list-item bg-grey-light">
-							<div class="icon split">
-								<i class="fa fa-home"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t17-8" id="t17-8">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a href="#" title="Some item" class="list-item bg-white">
-							<div class="icon split"></div>
-							<div class="info">
-								<p class="title mb-1">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t17-9" id="t17-9">
-						</a>
-					</div>
-				</div>
-				<h3 class="h3" id="lists-overlays">Colored overlays <small class="text-yellow">(hover over list item to see it)</small></h3>
-				<div class="r r-1 t-2 d-3 r-jc-s">
-					<div class="list-item-container">
-						<a class="list-item-overlay bg-turquoise" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="list-item bg-white">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t23-0" id="t23-0">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a class="list-item-overlay bg-teal" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="list-item bg-white">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t23-1" id="t23-1">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a class="list-item-overlay bg-yellow" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="list-item bg-white">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t23-2" id="t23-2">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a class="list-item-overlay bg-orange" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="list-item bg-white">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t23-3" id="t23-3">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a class="list-item-overlay bg-crimson" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="list-item bg-white">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t23-4" id="t23-4">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a class="list-item-overlay bg-mauve" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="list-item bg-white">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t23-5" id="t23-5">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a class="list-item-overlay bg-black" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="list-item bg-white">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t23-6" id="t23-6">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a class="list-item-overlay bg-grey-dark" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="list-item bg-white">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t23-7" id="t23-7">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a class="list-item-overlay bg-grey-light" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="list-item bg-white">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t23-8" id="t23-8">
-						</a>
-					</div>
-					<div class="list-item-container">
-						<a class="list-item-overlay bg-white" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="list-item bg-white">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title mb-1">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t23-9" id="t23-9">
-						</a>
-					</div>
-				</div>
+                <h3 class="h3" id="lists-colors">Colors <small class="text-turquoise">(right-click to select an item)</small></h3>
+                <div class="r r-1 t-3 d-4 r-jc-s">
+                    <div class="list-item-container">
+                        <a href="#" title="Some item" class="list-item bg-turquoise">
+                            <div class="icon split">
+                                <img src="http://placehold.it/80x80" alt="Some item" width="100%">
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t17-0" id="t17-0">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a href="#" title="Some item" class="list-item bg-teal">
+                            <div class="icon split">
+                                <i class="fa fa-folder"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t17-1" id="t17-1">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a href="#" title="Some item" class="list-item bg-yellow">
+                            <div class="icon split">
+                                <i class="fa fa-cog fa-spin"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t17-2" id="t17-2">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a href="#" title="Some item" class="list-item bg-orange">
+                            <div class="icon split">
+                                <i class="fa fa-image"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t17-3" id="t17-3">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a href="#" title="Some item" class="list-item bg-crimson">
+                            <div class="icon split">
+                                <i class="fa fa-dollar"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t17-4" id="t17-4">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a href="#" title="Some item" class="list-item bg-mauve">
+                            <div class="icon split">
+                                <i class="fa fa-truck"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t17-5" id="t17-5">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a href="#" title="Some item" class="list-item bg-black">
+                            <div class="icon split">
+                                <i class="fa fa-file-pdf-o"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t17-6" id="t17-6">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a href="#" title="Some item" class="list-item bg-grey-dark">
+                            <div class="icon split">
+                                <i class="fa fa-cloud"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t17-7" id="t17-7">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a href="#" title="Some item" class="list-item bg-grey-light">
+                            <div class="icon split">
+                                <i class="fa fa-home"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t17-8" id="t17-8">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a href="#" title="Some item" class="list-item bg-white">
+                            <div class="icon split"></div>
+                            <div class="info">
+                                <p class="title mb-1">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t17-9" id="t17-9">
+                        </a>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="list-item bg-turquoise"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;img src="http://placehold.it/80x80" alt="Some item" width="100%"&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t17-0" id="t17-0"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-			</div>
-		</div>
+&lt;div class="list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="list-item bg-teal"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t17-1" id="t17-1"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+&lt;div class="list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="list-item bg-yellow"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-cog fa-spin"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t17-2" id="t17-2"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-	</body>
+&lt;div class="list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="list-item bg-orange"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-image"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t17-3" id="t17-3"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="list-item bg-crimson"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-dollar"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t17-4" id="t17-4"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="list-item bg-mauve"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-truck"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t17-5" id="t17-5"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="list-item bg-black"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-file-pdf-o"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t17-6" id="t17-6"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="list-item bg-grey-dark"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-cloud"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t17-7" id="t17-7"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="list-item bg-grey-light"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-home"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t17-8" id="t17-8"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;&lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t17-9" id="t17-9"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+                <h3 class="h3" id="lists-overlays">Colored overlays <small class="text-turquoise">(hover over list item to see it)</small></h3>
+                <div class="r r-1 t-2 d-3 r-jc-s">
+                    <div class="list-item-container">
+                        <a class="list-item-overlay bg-turquoise" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="list-item bg-white">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t23-0" id="t23-0">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a class="list-item-overlay bg-teal" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="list-item bg-white">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t23-1" id="t23-1">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a class="list-item-overlay bg-yellow" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="list-item bg-white">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t23-2" id="t23-2">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a class="list-item-overlay bg-orange" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="list-item bg-white">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t23-3" id="t23-3">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a class="list-item-overlay bg-crimson" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="list-item bg-white">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t23-4" id="t23-4">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a class="list-item-overlay bg-mauve" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="list-item bg-white">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t23-5" id="t23-5">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a class="list-item-overlay bg-black" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="list-item bg-white">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t23-6" id="t23-6">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a class="list-item-overlay bg-grey-dark" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="list-item bg-white">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t23-7" id="t23-7">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a class="list-item-overlay bg-grey-light" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="list-item bg-white">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t23-8" id="t23-8">
+                        </a>
+                    </div>
+                    <div class="list-item-container">
+                        <a class="list-item-overlay bg-white" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="list-item bg-white">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title mb-1">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t23-9" id="t23-9">
+                        </a>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-turquoise" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t23-0" id="t23-0"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-teal" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t23-1" id="t23-1"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-yellow" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t23-2" id="t23-2"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-orange" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t23-3" id="t23-3"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-crimson" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t23-4" id="t23-4"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-mauve" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t23-5" id="t23-5"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-black" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t23-6" id="t23-6"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-grey-dark" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t23-7" id="t23-7"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-grey-light" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t23-8" id="t23-8"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-white" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="list-item bg-white"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title mb-1"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t23-9" id="t23-9"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>

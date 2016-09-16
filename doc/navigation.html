@@ -1,38 +1,311 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
-		
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
+        
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Navigation <small class="text-orange">(requires navigation.js)</small></h2>
+                <h2 class="h2">Navigation <small class="text-orange">(requires navigation.js)</small></h2>
 
-				<div class="r">
-					<div class="c-12">
-						<div>
-							<p>Navigation of this page is a good example of usage. Navigation trigger is independent of the navigation itself and can be placed anywhere in the document body - even multiple times (triggered navigation is selected via <code>data-navigation-trigger</code> attribute. For instance <a href="#" data-navigation-trigger="nav" class="text-yellow">this link</a>.</p>
-						</div>
-					</div>
-				</div>
+                <p class="mb-1">Navigation of this page is a good example of usage. Navigation trigger is independent of the navigation itself and can be placed anywhere in the document body - even multiple times (triggered navigation is selected via <code>data-navigation-trigger</code> attribute. For instance <a href="#" data-navigation-trigger="nav" class="text-turquoise">this link</a>.</p>
 
-			</div>
-		</div>
+                <table class="table turquoise bg-white striped mb-1">
+                    <thead>
+                        <tr>
+                            <th>attribute</th>
+                            <th>what for</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>*[<strong>data-navigation-trigger</strong>]</td>
+                            <td>specifies ID of the navigation you want to trigger by clicking this element</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+                <p class="mb-1">Navigation comes with navigation trigger (burger-like menu button):</p>
 
-	</body>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;a href="#" class="navigation-trigger white" title="Show navigation" data-navigation-trigger="nav"&gt;
+    &lt;span&gt;&lt;/span&gt;
+&lt;/a&gt;</code>
+                </pre>
+
+                <pre class="widget mb-2">
+                    <code class="html">&lt;nav id="nav" class="navigation turquoise"&gt;
+    &lt;div class="navigation-container"&gt;
+        &lt;div class="navigation-header"&gt;
+            &lt;span class="title"&gt;Navigation&lt;/span&gt;
+            &lt;a href="#" class="navigation-trigger" data-navigation-trigger="nav"&gt;
+                &lt;span&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;form class="group" action="#" method="post"&gt;
+                    &lt;input type="search" name="t0" value="" placeholder="Search..." class="turquoise full-colored"&gt;
+                    &lt;button type="submit" class="btn turquoise"&gt;Search&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="index.html" class="navigation-item"&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="backgrounds.html" class="navigation-item"&gt;Backgrounds&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="badges.html" class="navigation-item"&gt;Badges&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="badges.html#badges-colors" class="navigation-item"&gt;Sizes&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="badges.html#badges-colors" class="navigation-item"&gt;Colors&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="breadcrumbs.html" class="navigation-item"&gt;Breadcrumbs&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="breadcrumbs.html#breadcrumbs-dark" class="navigation-item"&gt;Dark&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="breadcrumbs.html#breadcrumbs-light" class="navigation-item"&gt;Light&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="buttons.html" class="navigation-item"&gt;Buttons&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="buttons.html#buttons-sizes" class="navigation-item"&gt;Sizes&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="buttons.html#buttons-colors" class="navigation-item"&gt;Colors&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="buttons.html#buttons-outline" class="navigation-item"&gt;Outline&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="buttons.html#buttons-states" class="navigation-item"&gt;States&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="code.html" class="navigation-item"&gt;Code&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="dropdowns.html" class="navigation-item"&gt;Dropdowns&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="dropdowns.html#dropdowns-multilevel" class="navigation-item"&gt;Multilevel&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="dropdowns.html#dropdowns-colors" class="navigation-item"&gt;Colors&lt;/a&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;
+                                &lt;a href="dropdowns.html#dropdowns-colors-basic" class="navigation-item"&gt;Basic&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="dropdowns.html#dropdowns-colors-half" class="navigation-item"&gt;Half-Colored&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="dropdowns.html#dropdowns-colors-full" class="navigation-item"&gt;Full-Colored&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="dynamicFilters.html" class="navigation-item"&gt;Dynamic Filters&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="flashMessages.html" class="navigation-item"&gt;Flash Messages&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="flashMessages.html#flashMessages-types" class="navigation-item"&gt;Types&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="flashMessages.html#flashMessages-contents" class="navigation-item"&gt;Contents&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="forms.html" class="navigation-item"&gt;Forms&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="forms.html#forms-fields" class="navigation-item"&gt;Fields&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="forms.html#forms-colors" class="navigation-item"&gt;Colors&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="forms.html#forms-sizes" class="navigation-item"&gt;Sizes&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="forms.html#forms-states" class="navigation-item"&gt;States and validation&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="gallery.html" class="navigation-item"&gt;Gallery&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="groups.html" class="navigation-item"&gt;Groups&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="lists.html" class="navigation-item"&gt;Lists&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="lists.html#lists-colors" class="navigation-item"&gt;Colors&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="lists.html#lists-overlays" class="navigation-item"&gt;Overlays&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="modalButtons.html" class="navigation-item"&gt;Modal Buttons&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="modals.html" class="navigation-item active"&gt;Modals&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="navigation.html" class="navigation-item"&gt;Navigation&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="pagination.html" class="navigation-item"&gt;Pagination&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="progressbars.html" class="navigation-item"&gt;Progressbars&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="progressbars.html#progressbars-sizes" class="navigation-item"&gt;Sizes&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="progressbars.html#progressbars-colors" class="navigation-item"&gt;Colors&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="progressbars.html#progressbars-multiple" class="navigation-item"&gt;Multiple bars&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="scrollbars.html" class="navigation-item"&gt;Scrollbars&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="tables.html" class="navigation-item"&gt;Tables&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="tables.html#tables-basic" class="navigation-item"&gt;Basic&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="tables.html#tables-lined" class="navigation-item"&gt;Lined, striped, bordered&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="tables.html#tables-align" class="navigation-item"&gt;Alignment&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="tables.html#tables-colors" class="navigation-item"&gt;Colors&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="tables.html#tables-variations" class="navigation-item"&gt;Variations&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="tabs.html" class="navigation-item"&gt;Tabs&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="tabs.html#tabs-orientation" class="navigation-item"&gt;Orientation&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="tabs.html#tabs-colors" class="navigation-item"&gt;Colors&lt;/a&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;
+                                &lt;a href="tabs.html#tabs-colors" class="navigation-item"&gt;Basic&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="tabs.html#tabs-colors-full" class="navigation-item"&gt;Full-Colored&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="tabs.html#tabs-colors-fullBgContent" class="navigation-item"&gt;Full-Colored + background color&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="timeline.html" class="navigation-item"&gt;Timeline&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="treeView.html" class="navigation-item"&gt;Tree View&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="treeView.html" class="navigation-item"&gt;Basic&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="treeView.html#treeView-colors" class="navigation-item"&gt;Colors&lt;/a&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;
+                                &lt;a href="treeView.html#treeView-colors" class="navigation-item"&gt;Basic&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="treeView.html#treeView-colors-full" class="navigation-item"&gt;Full-Colored&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="typography.html" class="navigation-item"&gt;Typography&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href="typography.html" class="navigation-item"&gt;Basic&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="typography.html#typography-alignment" class="navigation-item"&gt;Alignment&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="typography.html#typography-case" class="navigation-item"&gt;Case transformation&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="typography.html#typography-ellipsis" class="navigation-item"&gt;Ellipsis&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="typography.html#typography-colors" class="navigation-item"&gt;Colors&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="widgets.html" class="navigation-item"&gt;Widgets&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code>
+                </pre>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>

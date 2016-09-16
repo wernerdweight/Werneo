@@ -1,95 +1,192 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
-		
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
+        
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Gallery <small class="text-orange">(requires gallery.js)</small></h2>
+                <h2 class="h2">Gallery <small class="text-orange">(requires gallery.js)</small></h2>
 
-				<div class="r">
-					<div class="c-12">
-						<p>Mind that some settings are logically mutually exclusive (e.g. if you wanted to have max. 3 items per line each 10px high with 1000px gallery width - max-height will be overriden in this case).</p>
-						<div class="gallery" data-gutter="5" data-max-items-per-line="4" data-min-height="300" data-max-height="50" data-loading-text="Loading...">
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/350x150">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/280x280">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/500x720">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/1280x960">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/500x400">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/200x200">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/800x600">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/600x800">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/320x240">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/400x800">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/900x450">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/540x480">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/920x860">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/1024x768">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/1366x768">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/768x1290">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/120x160">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/560x480">
-							</a>
-							<a class="gallery-item" href="#">
-								<img src="http://placehold.it/1000x400">
-							</a>
-						</div>
-					</div>
-				</div>
+                <p class="mb-1">Gallery can alter image container size to make rectangular grid of images.</p>
 
-			</div>
-		</div>
+                <table class="table turquoise bg-white striped mb-1">
+                    <thead>
+                        <tr>
+                            <th>attribute</th>
+                            <th>what for</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>.gallery[<strong>data-gutter</strong>]</td>
+                            <td>space between items of the gallery in pixels</td>
+                        </tr>
+                        <tr>
+                            <td>.gallery[<strong>data-max-items-per-line</strong>]</td>
+                            <td>maximal number of items per line</td>
+                        </tr>
+                        <tr>
+                            <td>.gallery[<strong>data-min-height</strong>]</td>
+                            <td>minimal item height</td>
+                        </tr>
+                        <tr>
+                            <td>.gallery[<strong>data-max-height</strong>]</td>
+                            <td>maximal item height</td>
+                        </tr>
+                        <tr>
+                            <td>.gallery[<strong>data-loading-text</strong>]</td>
+                            <td>text to display while loading images</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+                <p class="mb-1">Mind that some settings are logically mutually exclusive (e.g. if you wanted to have max. 3 items per line each 10px high with 1000px gallery width - max-height will be overriden in this case).</p>
 
-	</body>
+                <div class="r">
+                    <div class="c-12">
+                        <div class="gallery" data-gutter="5" data-max-items-per-line="4" data-min-height="300" data-max-height="50" data-loading-text="Loading...">
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/350x150">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/280x280">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/500x720">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/1280x960">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/500x400">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/200x200">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/800x600">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/600x800">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/320x240">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/400x800">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/900x450">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/540x480">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/920x860">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/1024x768">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/1366x768">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/768x1290">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/120x160">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/560x480">
+                            </a>
+                            <a class="gallery-item" href="#">
+                                <img src="http://placehold.it/1000x400">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="gallery" data-gutter="5" data-max-items-per-line="4" data-min-height="300" data-max-height="50" data-loading-text="Loading..."&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/350x150"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/280x280"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/500x720"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/1280x960"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/500x400"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/200x200"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/800x600"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/600x800"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/320x240"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/400x800"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/900x450"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/540x480"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/920x860"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/1024x768"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/1366x768"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/768x1290"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/120x160"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/560x480"&gt;
+    &lt;/a&gt;
+    &lt;a class="gallery-item" href="#"&gt;
+        &lt;img src="http://placehold.it/1000x400"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>

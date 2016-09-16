@@ -1,529 +1,1016 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
 
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Pagination</h2>
-				<p>Use <code>&lt;span&gt;</code> instead of <code>&lt;a&gt;</code> to disable a page or navigation arrow.</p>
+                <h2 class="h2">Pagination</h2>
+                <p>Use <code>&lt;span&gt;</code> instead of <code>&lt;a&gt;</code> to disable a page or navigation arrow.</p>
 
-				<div class="r r-1">
-					<div>
-						<div class="pagination">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<div class="pagination turquoise">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<div class="pagination teal">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<div class="pagination yellow">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<div class="pagination orange">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<div class="pagination crimson">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<div class="pagination mauve">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<div class="pagination black">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<div class="pagination grey-dark">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<div class="pagination grey-light">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<div class="pagination white">
-							<ul>
-								<li>
-									<a href="#" title="previous">
-										<div class="chevron" data-rotate="90deg"></div>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Page 1">1</a>
-								</li>
-								<li>
-									<a href="#" title="Page 2">2</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 5">5</a>
-								</li>
-								<li>
-									<a href="#" title="Page 6">6</a>
-								</li>
-								<li class="active">
-									<a href="#" title="Page 7">7</a>
-								</li>
-								<li>
-									<a href="#" title="Page 8">8</a>
-								</li>
-								<li>
-									<a href="#" title="Page 9">9</a>
-								</li>
-								<li class="dots"></li>
-								<li>
-									<a href="#" title="Page 39">39</a>
-								</li>
-								<li>
-									<a href="#" title="Page 40">40</a>
-								</li>
-								<li>
-									<a href="#" title="next">
-										<div class="chevron" data-rotate="-90deg"></div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+                <div class="r r-1">
+                    <div>
+                        <div class="pagination">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination turquoise">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination teal">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination yellow">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination orange">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination crimson">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination mauve">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination black">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination grey-dark">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination grey-light">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination white">
+                            <ul>
+                                <li>
+                                    <a href="#" title="previous">
+                                        <div class="chevron" data-rotate="90deg"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 1">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 2">2</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 5">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 6">6</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" title="Page 7">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 8">8</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 9">9</a>
+                                </li>
+                                <li class="dots"></li>
+                                <li>
+                                    <a href="#" title="Page 39">39</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Page 40">40</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="next">
+                                        <div class="chevron" data-rotate="-90deg"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-			</div>
-		</div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="pagination"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+&lt;div class="pagination turquoise"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
 
-	</body>
+&lt;div class="pagination teal"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination yellow"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination orange"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination crimson"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination mauve"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination black"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination grey-dark"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination grey-light"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination white"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="previous"&gt;
+                &lt;div class="chevron" data-rotate="90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 1"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 2"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 5"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 6"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#" title="Page 7"&gt;7&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 8"&gt;8&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 9"&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dots"&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 39"&gt;39&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="Page 40"&gt;40&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" title="next"&gt;
+                &lt;div class="chevron" data-rotate="-90deg"&gt;&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>

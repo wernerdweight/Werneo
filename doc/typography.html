@@ -1,107 +1,169 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
 
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Typography</h2>
-				<p>The <code>h1</code> - <code>h6</code> classes can be used for <code>p</code>, <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code>, and <code>label</code> elements that are normalized to look the same because sometimes you need to style a <code>p</code> element like a heading without it really beaing a <code>h[1-6]</code> element and vice versa.</p>
+                <h2 class="h2">Typography</h2>
+                <p>The <code>h1</code> - <code>h6</code> classes can be used for <code>p</code>, <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code>, and <code>label</code> elements that are normalized to look the same because sometimes you need to style a <code>p</code> element like a heading without it really beaing a <code>h[1-6]</code> element and vice versa.</p>
 
-				<div class="r r-1 t-2">
-					<div>
-						<div>
-							<p class="text-yellow">Outside an <code>article</code> (no margin)</p>
-							<p class="h1">h1: The quick brown fox jumps over the lazy dog.</p>
-							<p class="h2">h2: The quick brown fox jumps over the lazy dog.</p>
-							<p class="h3">h3: The quick brown fox jumps over the lazy dog.</p>
-							<p class="h4">h4: The quick brown fox jumps over the lazy dog.</p>
-							<p class="h5">h5: The quick brown fox jumps over the lazy dog.</p>
-							<p class="h6">h6: The quick brown fox jumps over the lazy dog.</p>
-							<p><small>Small text</small></p>
-							<p>Basic text</p>
-							<p><big>Big text</big></p>
-						</div>
-					</div>
-					<div>
-						<article>
-							<p class="text-yellow">Inside an <code>article</code> (has bottom margin)</p>
-							<p class="h1">h1: The quick brown fox jumps over the lazy dog.</p>
-							<p class="h2">h2: The quick brown fox jumps over the lazy dog.</p>
-							<p class="h3">h3: The quick brown fox jumps over the lazy dog.</p>
-							<p class="h4">h4: The quick brown fox jumps over the lazy dog.</p>
-							<p class="h5">h5: The quick brown fox jumps over the lazy dog.</p>
-							<p class="h6">h6: The quick brown fox jumps over the lazy dog.</p>
-							<p><small>Small text</small></p>
-							<p>Basic text</p>
-							<p><big>Big text</big></p>
-						</article>
-					</div>
-				</div>
-				<h3 class="h3" id="typography-alignment">Alignment</h3>
-				<div class="r">
-					<div class="c-12">
-						<article>
-							<p class="ta-l"><strong>&amp;.ta-l - align left</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p class="ta-c"><strong>&amp;.ta-c - align center</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p class="ta-r"><strong>&amp;.ta-r - align right</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p class="ta-j"><strong>&amp;.ta-j - align justify</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</article>
-					</div>
-				</div>
-				<h3 class="h3" id="typography-case">Case transformation</h3>
-				<div class="r">
-					<div class="c-12">
-						<article>
-							<p class="tt-uc"><strong>&amp;.tt-uc - uppercase</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p class="tt-lc"><strong>&amp;.tt-lc - lowercase</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</article>
-					</div>
-				</div>
-				<h3 class="h3" id="typography-ellipsis">Ellipsis</h3>
-				<div class="r">
-					<div class="c-12">
-						<article>
-							<p class="hellip"><strong>&amp;.hellip - ellipsis</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</article>
-					</div>
-				</div>
-				<h3 class="h3" id="typography-colors">Colors</h3>
-				<div class="r">
-					<div class="c-12">
-						<article>
-							<p class="text-turquoise">&amp;.text-turquoise: The quick brown fox jumps over the lazy dog</p>
-							<p class="text-teal">&amp;.text-teal: The quick brown fox jumps over the lazy dog</p>
-							<p class="text-yellow">&amp;.text-yellow: The quick brown fox jumps over the lazy dog</p>
-							<p class="text-orange">&amp;.text-orange: The quick brown fox jumps over the lazy dog</p>
-							<p class="text-crimson">&amp;.text-crimson: The quick brown fox jumps over the lazy dog</p>
-							<p class="text-mauve">&amp;.text-mauve: The quick brown fox jumps over the lazy dog</p>
-							<p class="text-black">&amp;.text-black: The quick brown fox jumps over the lazy dog</p>
-							<p class="text-grey-dark">&amp;.text-grey-dark: The quick brown fox jumps over the lazy dog</p>
-							<p class="text-grey-light">&amp;.text-grey-light: The quick brown fox jumps over the lazy dog</p>
-							<p class="text-white">&amp;.text-white: The quick brown fox jumps over the lazy dog</p>
-						</article>
-					</div>
-				</div>
+                <div class="r r-1 t-2">
+                    <div>
+                        <div>
+                            <p class="text-yellow">Outside an <code>article</code> (no margin)</p>
+                            <p class="h1">h1: The quick brown fox jumps over the lazy dog.</p>
+                            <p class="h2">h2: The quick brown fox jumps over the lazy dog.</p>
+                            <p class="h3">h3: The quick brown fox jumps over the lazy dog.</p>
+                            <p class="h4">h4: The quick brown fox jumps over the lazy dog.</p>
+                            <p class="h5">h5: The quick brown fox jumps over the lazy dog.</p>
+                            <p class="h6">h6: The quick brown fox jumps over the lazy dog.</p>
+                            <p><small>Small text</small></p>
+                            <p>Basic text</p>
+                            <p><big>Big text</big></p>
+                            
+                            <pre class="widget mb-2">
+                                <code class="html">&lt;p class="text-yellow"&gt;Outside an &lt;code&gt;article&lt;/code&gt; (no margin)&lt;/p&gt;
+&lt;p class="h1"&gt;h1: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+&lt;p class="h2"&gt;h2: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+&lt;p class="h3"&gt;h3: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+&lt;p class="h4"&gt;h4: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+&lt;p class="h5"&gt;h5: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+&lt;p class="h6"&gt;h6: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Small text&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Basic text&lt;/p&gt;
+&lt;p&gt;&lt;big&gt;Big text&lt;/big&gt;&lt;/p&gt;</code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div>
+                        <article>
+                            <p class="text-yellow">Inside an <code>article</code> (has bottom margin)</p>
+                            <p class="h1">h1: The quick brown fox jumps over the lazy dog.</p>
+                            <p class="h2">h2: The quick brown fox jumps over the lazy dog.</p>
+                            <p class="h3">h3: The quick brown fox jumps over the lazy dog.</p>
+                            <p class="h4">h4: The quick brown fox jumps over the lazy dog.</p>
+                            <p class="h5">h5: The quick brown fox jumps over the lazy dog.</p>
+                            <p class="h6">h6: The quick brown fox jumps over the lazy dog.</p>
+                            <p><small>Small text</small></p>
+                            <p>Basic text</p>
+                            <p><big>Big text</big></p>
 
-			</div>
-		</div>
+                            <pre class="widget mb-2">
+                                <code class="html">&lt;article&gt;
+    &lt;p class="text-yellow"&gt;Inside an &lt;code&gt;article&lt;/code&gt; (has bottom margin)&lt;/p&gt;
+    &lt;p class="h1"&gt;h1: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+    &lt;p class="h2"&gt;h2: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+    &lt;p class="h3"&gt;h3: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+    &lt;p class="h4"&gt;h4: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+    &lt;p class="h5"&gt;h5: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+    &lt;p class="h6"&gt;h6: The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+    &lt;p&gt;&lt;small&gt;Small text&lt;/small&gt;&lt;/p&gt;
+    &lt;p&gt;Basic text&lt;/p&gt;
+    &lt;p&gt;&lt;big&gt;Big text&lt;/big&gt;&lt;/p&gt;
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    &lt;pre class="widget mb-2"&gt;
+        &lt;code class="html"&gt;
+        &lt;/code&gt;
+    &lt;/pre&gt;
+&lt;/article&gt;</code>
+                            </pre>
+                        </article>
+                    </div>
+                </div>
+                <h3 class="h3" id="typography-alignment">Alignment</h3>
+                <div class="r">
+                    <div class="c-12">
+                        <article>
+                            <p class="ta-l"><strong>&amp;.ta-l - align left</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p class="ta-c"><strong>&amp;.ta-c - align center</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p class="ta-r"><strong>&amp;.ta-r - align right</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p class="ta-j"><strong>&amp;.ta-j - align justify</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </article>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;p class="ta-l"&gt;&lt;strong&gt;&amp;.ta-l - align left&lt;/strong&gt;&lt;br&gt;Lorem ipsum dolor sit...&lt;/p&gt;
+&lt;p class="ta-c"&gt;&lt;strong&gt;&amp;.ta-c - align center&lt;/strong&gt;&lt;br&gt;Lorem ipsum dolor sit...&lt;/p&gt;
+&lt;p class="ta-r"&gt;&lt;strong&gt;&amp;.ta-r - align right&lt;/strong&gt;&lt;br&gt;Lorem ipsum dolor sit...&lt;/p&gt;
+&lt;p class="ta-j"&gt;&lt;strong&gt;&amp;.ta-j - align justify&lt;/strong&gt;&lt;br&gt;Lorem ipsum dolor sit...&lt;/p&gt;</code>
+                </pre>
 
-	</body>
+                <h3 class="h3" id="typography-case">Case transformation</h3>
+                <div class="r">
+                    <div class="c-12">
+                        <article>
+                            <p class="tt-uc"><strong>&amp;.tt-uc - uppercase</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p class="tt-lc"><strong>&amp;.tt-lc - lowercase</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </article>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;p class="tt-uc"&gt;&lt;strong&gt;&amp;.tt-uc - uppercase&lt;/strong&gt;&lt;br&gt;Lorem ipsum dolor sit...&lt;/p&gt;
+&lt;p class="tt-lc"&gt;&lt;strong&gt;&amp;.tt-lc - lowercase&lt;/strong&gt;&lt;br&gt;Lorem ipsum dolor sit...&lt;/p&gt;</code>
+                </pre>
+
+                <h3 class="h3" id="typography-ellipsis">Ellipsis</h3>
+                <div class="r">
+                    <div class="c-12">
+                        <article>
+                            <p class="hellip"><strong>&amp;.hellip - ellipsis</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </article>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;p class="hellip"&gt;&lt;strong&gt;&amp;.hellip - ellipsis&lt;/strong&gt; Lorem ipsum dolor sit...&lt;/p&gt;</code>
+                </pre>
+
+                <h3 class="h3" id="typography-colors">Colors</h3>
+                <div class="r">
+                    <div class="c-12">
+                        <article>
+                            <p class="text-turquoise">&amp;.text-turquoise: The quick brown fox jumps over the lazy dog</p>
+                            <p class="text-teal">&amp;.text-teal: The quick brown fox jumps over the lazy dog</p>
+                            <p class="text-yellow">&amp;.text-yellow: The quick brown fox jumps over the lazy dog</p>
+                            <p class="text-orange">&amp;.text-orange: The quick brown fox jumps over the lazy dog</p>
+                            <p class="text-crimson">&amp;.text-crimson: The quick brown fox jumps over the lazy dog</p>
+                            <p class="text-mauve">&amp;.text-mauve: The quick brown fox jumps over the lazy dog</p>
+                            <p class="text-black">&amp;.text-black: The quick brown fox jumps over the lazy dog</p>
+                            <p class="text-grey-dark">&amp;.text-grey-dark: The quick brown fox jumps over the lazy dog</p>
+                            <p class="text-grey-light">&amp;.text-grey-light: The quick brown fox jumps over the lazy dog</p>
+                            <p class="text-white">&amp;.text-white: The quick brown fox jumps over the lazy dog</p>
+                        </article>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;p class="text-turquoise"&gt;&amp;.text-turquoise: The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-teal"&gt;&amp;.text-teal: The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-yellow"&gt;&amp;.text-yellow: The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-orange"&gt;&amp;.text-orange: The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-crimson"&gt;&amp;.text-crimson: The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-mauve"&gt;&amp;.text-mauve: The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-black"&gt;&amp;.text-black: The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-grey-dark"&gt;&amp;.text-grey-dark: The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-grey-light"&gt;&amp;.text-grey-light: The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-white"&gt;&amp;.text-white: The quick brown fox jumps over the lazy dog&lt;/p&gt;</code>
+                </pre>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>

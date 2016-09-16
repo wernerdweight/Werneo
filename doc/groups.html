@@ -1,100 +1,169 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
 
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Groups</h2>
+                <h2 class="h2">Groups</h2>
+                <p class="mb-1">Groups are simple flexbox-based elements that can contain various elements and try to distribute them accordingly to their dimensions.</p>
 
-				<div class="r r-1 t-2 d-3">
-					<div>
-						<div class="group">
-							<input type="search" name="t12" value="" placeholder="Placeholder" id="t12" class="turquoise full-colored">
-							<button type="submit" class="btn input turquoise">
-								<i class="fa fa-search"></i>
-							</button>
-							<button type="submit" class="btn input crimson">
-								<i class="fa fa-times"></i>
-							</button>
-						</div>
-					</div>
-					<div>
-						<div class="group">
-							<div class="dropdown mauve">
-								<span class="dropdown-value">Order by</span>
-								<div class="dropdown-handle">
-									<div class="chevron"></div>
-								</div>
-								<div class="dropdown-list">
-									<span class="dropdown-option" data-value="1">Name</span>
-									<span class="dropdown-option" data-value="2">Surname</span>
-									<span class="dropdown-option" data-value="3">Age</span>
-									<span class="dropdown-option" data-value="4">Height</span>
-								</div>
-							</div>
-							<button type="submit" class="btn input mauve">
-								<i class="fa fa-arrow-down"></i>
-							</button>
-							<button type="submit" class="btn input mauve">
-								<i class="fa fa-arrow-up"></i>
-							</button>
-						</div>
-					</div>
-					<div>
-						<div class="group">
-							<select name="t13" class="teal">
-								<option value="">Select action</option>
-								<option value="1">Copy</option>
-								<option value="2">Move</option>
-								<option value="3">Delete</option>
-							</select>
-							<button type="submit" class="btn input teal">Execute</button>
-						</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="c-12">
-						<div class="group bg-grey-light plr-1 ptb-1">
-							<label for="t10" class="input-like plr-2">Label&nbsp;1</label>
-							<input type="text" name="t10" value="" placeholder="Placeholder" id="t10" class="orange">
-							<label for="t11" class="input-like plr-2">Label&nbsp;2</label>
-							<input type="number" name="t11" value="" placeholder="Placeholder" id="t11" class="orange full-colored">
-							<button type="submit" class="btn input orange">Button</button>
-							<div class="dropdown crimson full-colored">
-								<span class="dropdown-value">Choose</span>
-								<div class="dropdown-handle">
-									<div class="chevron"></div>
-								</div>
-								<div class="dropdown-list">
-									<span class="dropdown-option" data-value="1">Option 1</span>
-									<span class="dropdown-option" data-value="2">Option 2</span>
-									<span class="dropdown-option" data-value="3">Option 3</span>
-									<span class="dropdown-option" data-value="4">Option 4</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="r r-1 t-2 d-3">
+                    <div>
+                        <div class="group">
+                            <input type="search" name="t12" value="" placeholder="Placeholder" id="t12" class="turquoise full-colored">
+                            <button type="submit" class="btn input turquoise">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            <button type="submit" class="btn input crimson">
+                                <i class="fa fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="group">
+                            <div class="dropdown mauve">
+                                <span class="dropdown-value">Order by</span>
+                                <div class="dropdown-handle">
+                                    <div class="chevron"></div>
+                                </div>
+                                <div class="dropdown-list">
+                                    <span class="dropdown-option" data-value="1">Name</span>
+                                    <span class="dropdown-option" data-value="2">Surname</span>
+                                    <span class="dropdown-option" data-value="3">Age</span>
+                                    <span class="dropdown-option" data-value="4">Height</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn input mauve">
+                                <i class="fa fa-arrow-down"></i>
+                            </button>
+                            <button type="submit" class="btn input mauve">
+                                <i class="fa fa-arrow-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="group">
+                            <select name="t13" class="teal">
+                                <option value="">Select action</option>
+                                <option value="1">Copy</option>
+                                <option value="2">Move</option>
+                                <option value="3">Delete</option>
+                            </select>
+                            <button type="submit" class="btn input teal">Execute</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="c-12">
+                        <div class="group bg-grey-light plr-1 ptb-1">
+                            <label for="t10" class="input-like plr-2">Label&nbsp;1</label>
+                            <input type="text" name="t10" value="" placeholder="Placeholder" id="t10" class="orange">
+                            <label for="t11" class="input-like plr-2">Label&nbsp;2</label>
+                            <input type="number" name="t11" value="" placeholder="Placeholder" id="t11" class="orange full-colored">
+                            <button type="submit" class="btn input orange">Button</button>
+                            <div class="dropdown crimson full-colored">
+                                <span class="dropdown-value">Choose</span>
+                                <div class="dropdown-handle">
+                                    <div class="chevron"></div>
+                                </div>
+                                <div class="dropdown-list">
+                                    <span class="dropdown-option" data-value="1">Option 1</span>
+                                    <span class="dropdown-option" data-value="2">Option 2</span>
+                                    <span class="dropdown-option" data-value="3">Option 3</span>
+                                    <span class="dropdown-option" data-value="4">Option 4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-			</div>
-		</div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;!-- search group --&gt;
+&lt;div class="group"&gt;
+    &lt;input type="search" name="t12" value="" placeholder="Placeholder" id="t12" class="turquoise full-colored"&gt;
+    &lt;button type="submit" class="btn input turquoise"&gt;
+        &lt;i class="fa fa-search"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;button type="submit" class="btn input crimson"&gt;
+        &lt;i class="fa fa-times"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+&lt;!-- dropdown group --&gt;
+&lt;div class="group"&gt;
+    &lt;div class="dropdown mauve"&gt;
+        &lt;span class="dropdown-value"&gt;Order by&lt;/span&gt;
+        &lt;div class="dropdown-handle"&gt;
+            &lt;div class="chevron"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="dropdown-list"&gt;
+            &lt;span class="dropdown-option" data-value="1"&gt;Name&lt;/span&gt;
+            &lt;span class="dropdown-option" data-value="2"&gt;Surname&lt;/span&gt;
+            &lt;span class="dropdown-option" data-value="3"&gt;Age&lt;/span&gt;
+            &lt;span class="dropdown-option" data-value="4"&gt;Height&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn input mauve"&gt;
+        &lt;i class="fa fa-arrow-down"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;button type="submit" class="btn input mauve"&gt;
+        &lt;i class="fa fa-arrow-up"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
 
-	</body>
+&lt;!-- select-box group --&gt;
+&lt;div class="group"&gt;
+    &lt;select name="t13" class="teal"&gt;
+        &lt;option value=""&gt;Select action&lt;/option&gt;
+        &lt;option value="1"&gt;Copy&lt;/option&gt;
+        &lt;option value="2"&gt;Move&lt;/option&gt;
+        &lt;option value="3"&gt;Delete&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button type="submit" class="btn input teal"&gt;Execute&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- group of various elements --&gt;
+&lt;div class="group bg-grey-light plr-1 ptb-1"&gt;
+    &lt;label for="t10" class="input-like plr-2"&gt;Label&nbsp;1&lt;/label&gt;
+    &lt;input type="text" name="t10" value="" placeholder="Placeholder" id="t10" class="orange"&gt;
+    &lt;label for="t11" class="input-like plr-2"&gt;Label&nbsp;2&lt;/label&gt;
+    &lt;input type="number" name="t11" value="" placeholder="Placeholder" id="t11" class="orange full-colored"&gt;
+    &lt;button type="submit" class="btn input orange"&gt;Button&lt;/button&gt;
+    &lt;div class="dropdown crimson full-colored"&gt;
+        &lt;span class="dropdown-value"&gt;Choose&lt;/span&gt;
+        &lt;div class="dropdown-handle"&gt;
+            &lt;div class="chevron"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="dropdown-list"&gt;
+            &lt;span class="dropdown-option" data-value="1"&gt;Option 1&lt;/span&gt;
+            &lt;span class="dropdown-option" data-value="2"&gt;Option 2&lt;/span&gt;
+            &lt;span class="dropdown-option" data-value="3"&gt;Option 3&lt;/span&gt;
+            &lt;span class="dropdown-option" data-value="4"&gt;Option 4&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>

@@ -1,177 +1,339 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
 
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Modal Buttons <small class="text-orange">(requires modalButtons.js)</small></h2>
+                <h2 class="h2">Modal Buttons <small class="text-orange">(requires modalButtons.js)</small></h2>
+                <p class="mb-1">Modal buttons are a way how to hide content inside of a button (or any other clickable element - see more examples below). Ideal for "Contact us" forms, "Show more" buttons etc.</p>
 
-				<div class="r r-1 t-2 r-jc-s">
-					<div class="modal-btn orange list-item-container">
-						<a class="list-item-overlay bg-orange" href="#" title="show more">show more</a>
-						<a href="#" title="Some folder" class="modal-btn-trigger list-item bg-white checked">
-							<div class="icon split">
-								<i class="fa fa-folder-open"></i>
-							</div>
-							<div class="info">
-								<p class="title">Some folder</p>
-								<span>July 25, 2015, 3:10am</span>
-								<span>
-									<i class="fa fa-check-circle-o text-teal"></i>
-									Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
-									Released
-								</span>
-								<span class="byline">
-									<i class="fa fa-folder-open"></i>
-									11&nbsp;<i class="fa fa-file"></i>
-									377&nbsp;
-								</span>
-							</div>
-							<input type="checkbox" name="t24-0" id="t24-0">
-						</a>
-						<div class="modal-btn-content list-item-modal bg-white" data-width="100rem" data-height="40rem">
-							<div class="r header">
-								<a href="#" title="" class="close close-times">
-									<i class="fa fa-times"></i>
-								</a>
-								<div class="c-12">
-									<p>Some folder</p>
-								</div>
-							</div>
-							<div class="r body">
-								<div class="c-12">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
-							<div class="r footer">
-								<div class="c-4">
-									<a class="btn turquoise full" href="#" title="edit">edit</a>
-								</div>
-								<div class="c-4">
-									<a class="btn grey-light full" href="#" title="release">
-										<i class="fa fa-times-circle-o text-crimson"></i> release
-									</a>
-								</div>
-								<div class="c-4">
-									<a class="btn crimson full" href="#" title="delete">delete</a>
-								</div>
-							</div>
-						</div>
-					</div>
+                <table class="table turquoise bg-white striped mb-1">
+                    <thead>
+                        <tr>
+                            <th>attribute</th>
+                            <th>what for</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>.modal-btn-content[<strong>data-width</strong>]</td>
+                            <td>width of modal button when triggered (you can use any valid css unit; if the viewport is too small, 100 % will be used)</td>
+                        </tr>
+                        <tr>
+                            <td>.modal-btn-content[<strong>data-height</strong>]</td>
+                            <td>height of modal button when triggered (you can use any valid css unit; if the viewport is too small, 100 % will be used)</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-					<div class="modal-btn mauve list-item-container">
-						<a href="#" title="Some item" class="modal-btn-trigger list-item bg-mauve checked">
-							<div class="icon split">
-								<img src="http://placehold.it/80x80" alt="Some item" width="100%">
-							</div>
-							<div class="info">
-								<p class="title">Headline</p>
-								<span>Subheadline line 1</span>
-								<span>Subheadline line 2</span>
-								<span class="byline">Byline</span>
-							</div>
-							<input type="checkbox" name="t24-1" id="t24-1">
-						</a>
-						<div class="modal-btn-content list-item-modal bg-mauve r r-ac-c" data-width="100%" data-height="100vh">
-							<a href="#" title="" class="close close-times text-white">
-								<i class="fa fa-times"></i>
-							</a>
-							<div class="c-12 ptb-6 plr-6">
-								<div class="text-box plr-6 r r-ac-c">
-									<div class="c-3">
-										<img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Slugs_1896.png" alt="Slug" class="mw-full bg-white">
-									</div>
-									<div class="c-9">
-										<div class="pl-4">
-											<p class="h1">Behaviour of a Slug</p>
-											<p>When attacked, slugs can contract their body, making themselves harder and more compact and more still and round. By doing this, they become firmly attached to the substrate. This, combined with the slippery mucus they produce, makes slugs more difficult for predators to grasp. The unpleasant taste of the mucus is also a deterrent. Some species present different response behaviors when attacked, such as the Kerry slug. In contrast to the general behavioral pattern, the Kerry slug retracts its head, lets go of the substrate, rolls up completely, and stays contracted in a ball-like shape. This is a unique feature among all the Arionidae, and among most other slugs. Some slugs can self-amputate (autotomy) a portion of their tail to help the slug escape from a predator. Some slug species hibernate underground during the winter in temperate climates, but in other species, the adults die in the autumn.</p>
-											<p>Intra and inter-specific agonistic behavior is documented, but varies greatly among slug species. Slugs often resort to aggression, attacking both conspecifics and individuals from other species when competing for resources. This aggressiveness is also influenced by seasonality, because the availability of resources such as shelter and food may be compromised due to climatic conditions. Slugs are prone to attack during the summer, when the availability of resources is reduced. During winter, the aggressive responses are substituted by a gregarious behavior.</p>
-											<p>Source: wikipedia.org</p>
-											<div class="mt-2 ta-c">
-												<button type="button" class="btn white lg">Slug on!</button>
-												<button type="button" class="close btn grey-dark lg">Hide this!</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="c-12">
-						<div>
-							<div class="modal-btn black">
-								<a href="#" title="Some item" class="btn black modal-btn-trigger">Click me!</a>
-								<div class="modal-btn-content bg-black r r-ac-c" data-width="40rem" data-height="10rem">
-									<a href="#" title="" class="close close-times text-white">
-										<i class="fa fa-times"></i>
-									</a>
-									<div class="c-12 plr-3">
-										<div class="group">
-											<input type="text" name="t18" value="" placeholder="Your favourite number?" class="yellow">
-											<button type="submit" class="btn input yellow">Submit</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-btn yellow">
-								<a href="#" title="Some item" class="btn yellow modal-btn-trigger">Or me!</a>
-								<div class="modal-btn-content bg-yellow r r-ac-c" data-width="40rem" data-height="40rem">
-									<a href="#" title="" class="close close-times text-white">
-										<i class="fa fa-times"></i>
-									</a>
-									<div class="c-12 plr-3">
-										<p class="h1 mb-1">Let's give us some info!</p>
-										<input type="text" name="t19" value="" placeholder="Your favourite number?" class="black mb-1">
-										<input type="text" name="t20" value="" placeholder="Your favourite actor?" class="black mb-1">
-										<input type="text" name="t21" value="" placeholder="Your favourite disease?" class="black mb-1">
-										<button type="submit" class="btn black">Submit</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="c-12">
-						<div>
-							<div class="modal-btn white">
-								<a href="#" title="Some item" class="btn grey-light modal-btn-trigger">
-									<img src="https://media4.giphy.com/media/3o7WTJn8VVkJDdSyB2/200.gif" alt="click me...">
-								</a>
-								<div class="modal-btn-content bg-white r r-ac-c" data-width="30rem" data-height="20rem">
-									<a href="#" title="" class="close close-times text-crimson">
-										<i class="fa fa-times"></i>
-									</a>
-									<div class="c-12 plr-3">
-										<p>I'm sorry but I'm tired right now so I don't really have an idea what else to put in this modal. Hope you get it by now, anyway.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <div class="modal-btn black">
+                                <a href="#" title="Some item" class="btn black modal-btn-trigger">Click me!</a>
+                                <div class="modal-btn-content bg-black r r-ac-c" data-width="40rem" data-height="10rem">
+                                    <a href="#" title="" class="close close-times text-white">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                    <div class="c-12 plr-3">
+                                        <div class="group">
+                                            <input type="text" name="t18" value="" placeholder="Your favourite number?" class="yellow">
+                                            <button type="submit" class="btn input yellow">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-btn yellow">
+                                <a href="#" title="Some item" class="btn yellow modal-btn-trigger">Or me!</a>
+                                <div class="modal-btn-content bg-yellow r r-ac-c" data-width="40rem" data-height="40rem">
+                                    <a href="#" title="" class="close close-times text-white">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                    <div class="c-12 plr-3">
+                                        <p class="h1 mb-1">Let's give us some info!</p>
+                                        <input type="text" name="t19" value="" placeholder="Your favourite number?" class="black mb-1">
+                                        <input type="text" name="t20" value="" placeholder="Your favourite actor?" class="black mb-1">
+                                        <input type="text" name="t21" value="" placeholder="Your favourite disease?" class="black mb-1">
+                                        <button type="submit" class="btn black">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="modal-btn black"&gt;
+    &lt;a href="#" title="Some item" class="btn black modal-btn-trigger"&gt;Click me!&lt;/a&gt;
+    &lt;div class="modal-btn-content bg-black r r-ac-c" data-width="40rem" data-height="10rem"&gt;
+        &lt;a href="#" title="" class="close close-times text-white"&gt;
+            &lt;i class="fa fa-times"&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class="c-12 plr-3"&gt;
+            &lt;div class="group"&gt;
+                &lt;input type="text" name="t18" value="" placeholder="Your favourite number?" class="yellow"&gt;
+                &lt;button type="submit" class="btn input yellow"&gt;Submit&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-			</div>
-		</div>
+&lt;div class="modal-btn yellow"&gt;
+    &lt;a href="#" title="Some item" class="btn yellow modal-btn-trigger"&gt;Or me!&lt;/a&gt;
+    &lt;div class="modal-btn-content bg-yellow r r-ac-c" data-width="40rem" data-height="40rem"&gt;
+        &lt;a href="#" title="" class="close close-times text-white"&gt;
+            &lt;i class="fa fa-times"&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class="c-12 plr-3"&gt;
+            &lt;p class="h1 mb-1"&gt;Let's give us some info!&lt;/p&gt;
+            &lt;input type="text" name="t19" value="" placeholder="Your favourite number?" class="black mb-1"&gt;
+            &lt;input type="text" name="t20" value="" placeholder="Your favourite actor?" class="black mb-1"&gt;
+            &lt;input type="text" name="t21" value="" placeholder="Your favourite disease?" class="black mb-1"&gt;
+            &lt;button type="submit" class="btn black"&gt;Submit&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+                <div class="r r-1 t-2 r-jc-s">
+                    <div class="modal-btn orange list-item-container">
+                        <a class="list-item-overlay bg-orange" href="#" title="show more">show more</a>
+                        <a href="#" title="Some folder" class="modal-btn-trigger list-item bg-white checked">
+                            <div class="icon split">
+                                <i class="fa fa-folder-open"></i>
+                            </div>
+                            <div class="info">
+                                <p class="title">Some folder</p>
+                                <span>July 25, 2015, 3:10am</span>
+                                <span>
+                                    <i class="fa fa-check-circle-o text-teal"></i>
+                                    Active,&nbsp;<i class="fa fa-times-circle-o text-crimson"></i>
+                                    Released
+                                </span>
+                                <span class="byline">
+                                    <i class="fa fa-folder-open"></i>
+                                    11&nbsp;<i class="fa fa-file"></i>
+                                    377&nbsp;
+                                </span>
+                            </div>
+                            <input type="checkbox" name="t24-0" id="t24-0">
+                        </a>
+                        <div class="modal-btn-content list-item-modal bg-white" data-width="100rem" data-height="40rem">
+                            <div class="r header">
+                                <a href="#" title="" class="close close-times">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                                <div class="c-12">
+                                    <p>Some folder</p>
+                                </div>
+                            </div>
+                            <div class="r body">
+                                <div class="c-12">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </div>
+                            <div class="r footer">
+                                <div class="c-4">
+                                    <a class="btn turquoise full" href="#" title="edit">edit</a>
+                                </div>
+                                <div class="c-4">
+                                    <a class="btn grey-light full" href="#" title="release">
+                                        <i class="fa fa-times-circle-o text-crimson"></i> release
+                                    </a>
+                                </div>
+                                <div class="c-4">
+                                    <a class="btn crimson full" href="#" title="delete">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-	</body>
+                    <div class="modal-btn mauve list-item-container">
+                        <a href="#" title="Some item" class="modal-btn-trigger list-item bg-mauve checked">
+                            <div class="icon split">
+                                <img src="http://placehold.it/80x80" alt="Some item" width="100%">
+                            </div>
+                            <div class="info">
+                                <p class="title">Headline</p>
+                                <span>Subheadline line 1</span>
+                                <span>Subheadline line 2</span>
+                                <span class="byline">Byline</span>
+                            </div>
+                            <input type="checkbox" name="t24-1" id="t24-1">
+                        </a>
+                        <div class="modal-btn-content list-item-modal bg-mauve r r-ac-c" data-width="100%" data-height="100vh">
+                            <a href="#" title="" class="close close-times text-white">
+                                <i class="fa fa-times"></i>
+                            </a>
+                            <div class="c-12 ptb-6 plr-6">
+                                <div class="text-box plr-6 r r-ac-c">
+                                    <div class="c-3">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Slugs_1896.png" alt="Slug" class="mw-full bg-white">
+                                    </div>
+                                    <div class="c-9">
+                                        <div class="pl-4">
+                                            <p class="h1">Behaviour of a Slug</p>
+                                            <p>When attacked, slugs can contract their body, making themselves harder and more compact and more still and round. By doing this, they become firmly attached to the substrate. This, combined with the slippery mucus they produce, makes slugs more difficult for predators to grasp. The unpleasant taste of the mucus is also a deterrent. Some species present different response behaviors when attacked, such as the Kerry slug. In contrast to the general behavioral pattern, the Kerry slug retracts its head, lets go of the substrate, rolls up completely, and stays contracted in a ball-like shape. This is a unique feature among all the Arionidae, and among most other slugs. Some slugs can self-amputate (autotomy) a portion of their tail to help the slug escape from a predator. Some slug species hibernate underground during the winter in temperate climates, but in other species, the adults die in the autumn.</p>
+                                            <p>Intra and inter-specific agonistic behavior is documented, but varies greatly among slug species. Slugs often resort to aggression, attacking both conspecifics and individuals from other species when competing for resources. This aggressiveness is also influenced by seasonality, because the availability of resources such as shelter and food may be compromised due to climatic conditions. Slugs are prone to attack during the summer, when the availability of resources is reduced. During winter, the aggressive responses are substituted by a gregarious behavior.</p>
+                                            <p>Source: wikipedia.org</p>
+                                            <div class="mt-2 ta-c">
+                                                <button type="button" class="btn white lg">Slug on!</button>
+                                                <button type="button" class="close btn grey-dark lg">Hide this!</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="modal-btn orange list-item-container"&gt;
+    &lt;a class="list-item-overlay bg-orange" href="#" title="show more"&gt;show more&lt;/a&gt;
+    &lt;a href="#" title="Some folder" class="modal-btn-trigger list-item bg-white checked"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title"&gt;Some folder&lt;/p&gt;
+            &lt;span&gt;July 25, 2015, 3:10am&lt;/span&gt;
+            &lt;span&gt;
+                &lt;i class="fa fa-check-circle-o text-teal"&gt;&lt;/i&gt;
+                Active,&nbsp;&lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt;
+                Released
+            &lt;/span&gt;
+            &lt;span class="byline"&gt;
+                &lt;i class="fa fa-folder-open"&gt;&lt;/i&gt;
+                11&nbsp;&lt;i class="fa fa-file"&gt;&lt;/i&gt;
+                377&nbsp;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t24-0" id="t24-0"&gt;
+    &lt;/a&gt;
+    &lt;div class="modal-btn-content list-item-modal bg-white" data-width="100rem" data-height="40rem"&gt;
+        &lt;div class="r header"&gt;
+            &lt;a href="#" title="" class="close close-times"&gt;
+                &lt;i class="fa fa-times"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;div class="c-12"&gt;
+                &lt;p&gt;Some folder&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="r body"&gt;
+            &lt;div class="c-12"&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="r footer"&gt;
+            &lt;div class="c-4"&gt;
+                &lt;a class="btn turquoise full" href="#" title="edit"&gt;edit&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="c-4"&gt;
+                &lt;a class="btn grey-light full" href="#" title="release"&gt;
+                    &lt;i class="fa fa-times-circle-o text-crimson"&gt;&lt;/i&gt; release
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="c-4"&gt;
+                &lt;a class="btn crimson full" href="#" title="delete"&gt;delete&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="modal-btn mauve list-item-container"&gt;
+    &lt;a href="#" title="Some item" class="modal-btn-trigger list-item bg-mauve checked"&gt;
+        &lt;div class="icon split"&gt;
+            &lt;img src="http://placehold.it/80x80" alt="Some item" width="100%"&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+            &lt;p class="title"&gt;Headline&lt;/p&gt;
+            &lt;span&gt;Subheadline line 1&lt;/span&gt;
+            &lt;span&gt;Subheadline line 2&lt;/span&gt;
+            &lt;span class="byline"&gt;Byline&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type="checkbox" name="t24-1" id="t24-1"&gt;
+    &lt;/a&gt;
+    &lt;div class="modal-btn-content list-item-modal bg-mauve r r-ac-c" data-width="100%" data-height="100vh"&gt;
+        &lt;a href="#" title="" class="close close-times text-white"&gt;
+            &lt;i class="fa fa-times"&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class="c-12 ptb-6 plr-6"&gt;
+            &lt;div class="text-box plr-6 r r-ac-c"&gt;
+                &lt;div class="c-3"&gt;
+                    &lt;img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Slugs_1896.png" alt="Slug" class="mw-full bg-white"&gt;
+                &lt;/div&gt;
+                &lt;div class="c-9"&gt;
+                    &lt;div class="pl-4"&gt;
+                        &lt;p class="h1"&gt;Behaviour of a Slug&lt;/p&gt;
+                        &lt;p&gt;When attacked, slugs can contract their body, making themselves harder and more compact and more still and round. By doing this, they become firmly attached to the substrate. This, combined with the slippery mucus they produce, makes slugs more difficult for predators to grasp. The unpleasant taste of the mucus is also a deterrent. Some species present different response behaviors when attacked, such as the Kerry slug. In contrast to the general behavioral pattern, the Kerry slug retracts its head, lets go of the substrate, rolls up completely, and stays contracted in a ball-like shape. This is a unique feature among all the Arionidae, and among most other slugs. Some slugs can self-amputate (autotomy) a portion of their tail to help the slug escape from a predator. Some slug species hibernate underground during the winter in temperate climates, but in other species, the adults die in the autumn.&lt;/p&gt;
+                        &lt;p&gt;Intra and inter-specific agonistic behavior is documented, but varies greatly among slug species. Slugs often resort to aggression, attacking both conspecifics and individuals from other species when competing for resources. This aggressiveness is also influenced by seasonality, because the availability of resources such as shelter and food may be compromised due to climatic conditions. Slugs are prone to attack during the summer, when the availability of resources is reduced. During winter, the aggressive responses are substituted by a gregarious behavior.&lt;/p&gt;
+                        &lt;p&gt;Source: wikipedia.org&lt;/p&gt;
+                        &lt;div class="mt-2 ta-c"&gt;
+                            &lt;button type="button" class="btn white lg"&gt;Slug on!&lt;/button&gt;
+                            &lt;button type="button" class="close btn grey-dark lg"&gt;Hide this!&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <div class="modal-btn white">
+                                <a href="#" title="Some item" class="btn grey-light modal-btn-trigger">
+                                    <img src="https://media4.giphy.com/media/3o7WTJn8VVkJDdSyB2/200.gif" alt="click me...">
+                                </a>
+                                <div class="modal-btn-content bg-white r r-ac-c" data-width="30rem" data-height="20rem">
+                                    <a href="#" title="" class="close close-times text-crimson">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                    <div class="c-12 plr-3">
+                                        <p>I'm sorry but I'm tired right now so I don't really have an idea what else to put in this modal. Hope you get it by now, anyway.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="modal-btn white"&gt;
+    &lt;a href="#" title="Some item" class="btn grey-light modal-btn-trigger"&gt;
+        &lt;img src="https://media4.giphy.com/media/3o7WTJn8VVkJDdSyB2/200.gif" alt="click me..."&gt;
+    &lt;/a&gt;
+    &lt;div class="modal-btn-content bg-white r r-ac-c" data-width="30rem" data-height="20rem"&gt;
+        &lt;a href="#" title="" class="close close-times text-crimson"&gt;
+            &lt;i class="fa fa-times"&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class="c-12 plr-3"&gt;
+            &lt;p&gt;I'm sorry but I'm tired right now so I don't really have an idea what else to put in this modal. Hope you get it by now, anyway.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>

@@ -1,131 +1,196 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
 
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Progressbars</h2>
+                <h2 class="h2">Progressbars</h2>
 
-				<h3 class="h3" id="progressbars-sizes">Sizes</h3>
-				<div class="r r-2 t-3">
-					<div>
-						<div class="progressbar sm">
-							<span class="black" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar">
-							<span class="black" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar lg">
-							<span class="black" style="width: 50%;"></span>
-						</div>
-					</div>
-				</div>
-				<h3 class="h3" id="progressbars-colors">Colors</h3>
-				<div class="r r-2 t-4">
-					<div>
-						<div class="progressbar">
-							<span class="turquoise" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar">
-							<span class="teal" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar">
-							<span class="yellow" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar">
-							<span class="orange" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar">
-							<span class="crimson" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar">
-							<span class="mauve" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar">
-							<span class="black" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar">
-							<span class="grey-dark" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar">
-							<span class="grey-light" style="width: 50%;"></span>
-						</div>
-					</div>
-					<div>
-						<div class="progressbar">
-							<span class="white" style="width: 50%;"></span>
-						</div>
-					</div>
-				</div>
-				<h3 class="h3" id="progressbars-multiple">Multiple bars</h3>
-				<div class="r r-1">
-					<div>
-						<div class="progressbar">
-							<span class="crimson" style="width: 60%;"></span>
-							<span class="orange" style="width: 40%;"></span>
-							<span class="yellow" style="width: 20%;"></span>
-							<span class="teal" style="width: 0%;"></span>
-						</div>
-					</div>
-				</div>
+                <h3 class="h3" id="progressbars-sizes">Sizes</h3>
+                <div class="r r-2 t-3">
+                    <div>
+                        <div class="progressbar sm">
+                            <span class="black" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar">
+                            <span class="black" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar lg">
+                            <span class="black" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="progressbar sm"&gt;
+    &lt;span class="black" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
 
-			</div>
-		</div>
+&lt;div class="progressbar"&gt;
+    &lt;span class="black" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-		<script type="text/javascript">
-			/// randomly animate progressbars
-			document.addEventListener('DOMContentLoaded',function(){
-				setInterval(function(){
-					var progressbarHandles = document.querySelectorAll('.progressbar > span');
-					for (i = 0;i < progressbarHandles.length;i++){
-						var value = parseInt(progressbarHandles[i].style.width);
-						if(value >= 100){
-							progressbarHandles[i].style.width = '0%';
-						}
-						else{
-							var newValue = Math.min(value + parseInt(5 * Math.random()),100) + '%';
-							progressbarHandles[i].style.width = newValue;
-						}
-					}
-				},500);
-			});
-		</script>
+&lt;div class="progressbar lg"&gt;
+    &lt;span class="black" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;</code>
+                </pre>
 
-	</body>
+                <h3 class="h3" id="progressbars-colors">Colors</h3>
+                <div class="r r-2 t-4">
+                    <div>
+                        <div class="progressbar">
+                            <span class="turquoise" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar">
+                            <span class="teal" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar">
+                            <span class="yellow" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar">
+                            <span class="orange" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar">
+                            <span class="crimson" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar">
+                            <span class="mauve" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar">
+                            <span class="black" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar">
+                            <span class="grey-dark" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar">
+                            <span class="grey-light" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progressbar">
+                            <span class="white" style="width: 50%;"></span>
+                        </div>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="progressbar"&gt;
+    &lt;span class="turquoise" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="progressbar"&gt;
+    &lt;span class="teal" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="progressbar"&gt;
+    &lt;span class="yellow" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="progressbar"&gt;
+    &lt;span class="orange" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="progressbar"&gt;
+    &lt;span class="crimson" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="progressbar"&gt;
+    &lt;span class="mauve" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="progressbar"&gt;
+    &lt;span class="black" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="progressbar"&gt;
+    &lt;span class="grey-dark" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="progressbar"&gt;
+    &lt;span class="grey-light" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="progressbar"&gt;
+    &lt;span class="white" style="width: 50%;"&gt;&lt;/span&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+                <h3 class="h3" id="progressbars-multiple">Multiple bars</h3>
+                <div class="r r-1">
+                    <div>
+                        <div class="progressbar">
+                            <span class="crimson" style="width: 60%;"></span>
+                            <span class="orange" style="width: 40%;"></span>
+                            <span class="yellow" style="width: 20%;"></span>
+                            <span class="teal" style="width: 0%;"></span>
+                        </div>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="progressbar"&gt;
+    &lt;span class="crimson" style="width: 60%;"&gt;&lt;/span&gt;
+    &lt;span class="orange" style="width: 40%;"&gt;&lt;/span&gt;
+    &lt;span class="yellow" style="width: 20%;"&gt;&lt;/span&gt;
+    &lt;span class="teal" style="width: 0%;"&gt;&lt;/span&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+        <script type="text/javascript">
+            /// randomly animate progressbars
+            document.addEventListener('DOMContentLoaded',function(){
+                setInterval(function(){
+                    var progressbarHandles = document.querySelectorAll('.progressbar > span');
+                    for (i = 0;i < progressbarHandles.length;i++){
+                        var value = parseInt(progressbarHandles[i].style.width);
+                        if(value >= 100){
+                            progressbarHandles[i].style.width = '0%';
+                        }
+                        else{
+                            var newValue = Math.min(value + parseInt(5 * Math.random()),100) + '%';
+                            progressbarHandles[i].style.width = newValue;
+                        }
+                    }
+                },500);
+            });
+        </script>
+
+    </body>
 </html>

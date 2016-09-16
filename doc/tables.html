@@ -1,777 +1,1220 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
 
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Tables</h2>
+                <h2 class="h2">Tables</h2>
 
-				<h3 class="h3" id="tables-basic">Basic table (pretty default)</h3>
-				<div class="r r-1">
-					<div>
-						<table class="table">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<h3 class="h3" id="tables-lined">Lined, striped, and bordered tables</h3>
-				<div class="r r-1 t-3">
-					<div>
-						<table class="table lined">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table striped">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table bordered">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<h3 class="h3" id="tables-align">Align</h3>
-				<p>Using typography classes <code>ta-c</code>,<code>ta-l</code>, and <code>ta-r</code> will align all cells of the table.</p>
-				<div class="r r-1 t-2">
-					<div>
-						<h4 class="h4">First column left</h4>
-						<table class="table bordered first-left">
-							<thead>
-								<tr>
-									<th class="text-yellow">header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="text-yellow">data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td class="text-yellow">data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td class="text-yellow">data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<h4 class="h4">Last column left</h4>
-						<table class="table bordered last-right">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th class="text-yellow">header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td class="text-yellow">data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td class="text-yellow">data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td class="text-yellow">data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<h3 class="h3" id="tables-colors">Colors</h3>
-				<div class="r r-1 t-2">
-					<div>
-						<table class="table turquoise">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table teal">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table yellow">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table orange">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table crimson">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table mauve">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table black">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table grey-dark">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table grey-light">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table white">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<h3 class="h3" id="tables-variations">Variations</h3>
-				<div class="r r-1 t-2">
-					<div>
-						<table class="table turquoise bg-white lined">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table teal bg-grey-light striped">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table yellow bg-black bordered striped first-left last-right">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table orange bg-white striped">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table crimson bg-grey-dark lined">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table mauve bg-white lined striped">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table black bg-crimson lined">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table grey-dark bg-orange striped">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table grey-light bg-white bordered">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>
-						<table class="table white bg-turquoise striped">
-							<thead>
-								<tr>
-									<th>header 1</th>
-									<th>header 2</th>
-									<th>header 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data 1</td>
-									<td>data 2</td>
-									<td>data 3</td>
-								</tr>
-								<tr>
-									<td>data 4</td>
-									<td>data 5</td>
-									<td>data 6</td>
-								</tr>
-								<tr>
-									<td>data 7</td>
-									<td>data 8</td>
-									<td>data 9</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+                <h3 class="h3" id="tables-basic">Basic table (pretty default)</h3>
+                <div class="r r-1">
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;table class="table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+                </pre>
 
-			</div>
-		</div>
+                <h3 class="h3" id="tables-lined">Lined, striped, and bordered tables</h3>
+                <div class="r r-1 t-3">
+                    <div>
+                        <table class="table lined">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table striped">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table bordered">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;table class="table lined"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+&lt;table class="table striped"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
 
-	</body>
+&lt;table class="table bordered"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+                </pre>
+
+                <h3 class="h3" id="tables-align">Align</h3>
+                <p>Using typography classes <code>ta-c</code>,<code>ta-l</code>, and <code>ta-r</code> will align all cells of the table.</p>
+                <div class="r r-1 t-2">
+                    <div>
+                        <h4 class="h4">First column left</h4>
+                        <table class="table bordered first-left">
+                            <thead>
+                                <tr>
+                                    <th class="text-yellow">header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-yellow">data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-yellow">data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-yellow">data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h4 class="h4">Last column left</h4>
+                        <table class="table bordered last-right">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th class="text-yellow">header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td class="text-yellow">data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td class="text-yellow">data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td class="text-yellow">data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;!-- First column left --&gt;
+&lt;table class="table bordered first-left"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class="text-yellow"&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class="text-yellow"&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class="text-yellow"&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class="text-yellow"&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;!-- &gt;Last column left --&gt;
+&lt;table class="table bordered last-right"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th class="text-yellow"&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td class="text-yellow"&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td class="text-yellow"&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td class="text-yellow"&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+                </pre>
+
+                <h3 class="h3" id="tables-colors">Colors</h3>
+                <div class="r r-1 t-2">
+                    <div>
+                        <table class="table turquoise">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table teal">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table yellow">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table orange">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table crimson">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table mauve">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table black">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table grey-dark">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table grey-light">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table white">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;table class="table turquoise"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table teal"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table yellow"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table orange"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table crimson"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table mauve"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table black"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table grey-dark"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table grey-light"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table white"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header 1&lt;/th&gt;
+            &lt;th&gt;header 2&lt;/th&gt;
+            &lt;th&gt;header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 1&lt;/td&gt;
+            &lt;td&gt;data 2&lt;/td&gt;
+            &lt;td&gt;data 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 4&lt;/td&gt;
+            &lt;td&gt;data 5&lt;/td&gt;
+            &lt;td&gt;data 6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;data 7&lt;/td&gt;
+            &lt;td&gt;data 8&lt;/td&gt;
+            &lt;td&gt;data 9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+                </pre>
+
+                <h3 class="h3" id="tables-variations">Variations <small>(just combinations of above mentioned classes)</small></h3>
+                <div class="r r-1 t-2">
+                    <div>
+                        <table class="table turquoise bg-white lined">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table teal bg-grey-light striped">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table yellow bg-black bordered striped first-left last-right">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table orange bg-white striped">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table crimson bg-grey-dark lined">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table mauve bg-white lined striped">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table black bg-crimson lined">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table grey-dark bg-orange striped">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table grey-light bg-white bordered">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table white bg-turquoise striped">
+                            <thead>
+                                <tr>
+                                    <th>header 1</th>
+                                    <th>header 2</th>
+                                    <th>header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data 1</td>
+                                    <td>data 2</td>
+                                    <td>data 3</td>
+                                </tr>
+                                <tr>
+                                    <td>data 4</td>
+                                    <td>data 5</td>
+                                    <td>data 6</td>
+                                </tr>
+                                <tr>
+                                    <td>data 7</td>
+                                    <td>data 8</td>
+                                    <td>data 9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>

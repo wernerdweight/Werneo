@@ -1,96 +1,168 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
 
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<h2 class="h2">Widgets</h2>
+                <h2 class="h2">Widgets</h2>
 
-				<div class="r r-1 t-2 d-4">
-					<div class="widget">
-						<div class="widget-section">
-							<p class="h2 pb-1">Simplest widget</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</div>
-					</div>
-					<div class="widget bg-white">
-						<div class="widget-section">
-							<p class="h2 pb-1">Simple widget</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</div>
-					</div>
-					<div class="widget bg-white">
-						<div class="widget-section bg-grey-light">
-							<p class="h2">Header</p>
-						</div>
-						<div class="widget-section">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</div>
-					</div>
-					<div class="widget bg-black">
-						<div class="widget-section bg-crimson">
-							<p class="h2">Header</p>
-						</div>
-						<div class="widget-section">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</div>
-					</div>
-				</div>
-				<div class="r r-1 t-3 r-ai-c">
-					<div class="widget bg-white ta-c">
-						<img src="http://loremflickr.com/g/480/360/handsome+boy/all" width="100%">
-						<div class="ptb-1 bg-turquoise">
-							<p class="h2">Caption</p>
-						</div>
-						<div class="widget-section">
-							<p class="pb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<span class="btn turquoise">Show more</span>
-						</div>
-					</div>
-					<div class="widget bg-white ta-c">
-						<img src="http://loremflickr.com/g/480/360/wedding/all" width="100%">
-						<div class="widget-section bg-mauve">
-							<p class="h3">Caption</p>
-						</div>
-						<div class="widget-section bg-orange">
-							<p class="h4">Lorem ipsum dolor sit amet.</p>
-						</div>
-						<div class="widget-section">
-							<p class="pb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<span class="btn orange">Show more</span>
-						</div>
-					</div>
-					<div class="widget bg-white ta-c">
-						<img src="http://loremflickr.com/g/480/360/beautiful+girl/all" width="100%">
-						<div class="ptb-1 bg-teal">
-							<p class="h2">Caption</p>
-						</div>
-						<div class="widget-section">
-							<p class="pb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<span class="btn teal">Show more</span>
-						</div>
-					</div>
-				</div>
+                <div class="r r-1 t-2 d-4">
+                    <div class="widget">
+                        <div class="widget-section">
+                            <p class="h2 pb-1">Simplest widget</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="widget bg-white">
+                        <div class="widget-section">
+                            <p class="h2 pb-1">Simple widget</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="widget bg-white">
+                        <div class="widget-section bg-grey-light">
+                            <p class="h2">Header</p>
+                        </div>
+                        <div class="widget-section">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="widget bg-black">
+                        <div class="widget-section bg-crimson">
+                            <p class="h2">Header</p>
+                        </div>
+                        <div class="widget-section">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="widget"&gt;
+    &lt;div class="widget-section"&gt;
+        &lt;p class="h2 pb-1"&gt;Simplest widget&lt;/p&gt;
+        &lt;p&gt;Lorem ipsum dolor sit...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-			</div>
-		</div>
+&lt;div class="widget bg-white"&gt;
+    &lt;div class="widget-section"&gt;
+        &lt;p class="h2 pb-1"&gt;Simple widget&lt;/p&gt;
+        &lt;p&gt;Lorem ipsum dolor sit...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+&lt;div class="widget bg-white"&gt;
+    &lt;div class="widget-section bg-grey-light"&gt;
+        &lt;p class="h2"&gt;Header&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="widget-section"&gt;
+        &lt;p&gt;Lorem ipsum dolor sit...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-	</body>
+&lt;div class="widget bg-black"&gt;
+    &lt;div class="widget-section bg-crimson"&gt;
+        &lt;p class="h2"&gt;Header&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="widget-section"&gt;
+        &lt;p&gt;Lorem ipsum dolor sit...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+                <div class="r r-1 t-3 r-ai-c">
+                    <div class="widget bg-white ta-c">
+                        <img src="http://loremflickr.com/g/480/360/handsome+boy/all" width="100%">
+                        <div class="ptb-1 bg-turquoise">
+                            <p class="h2">Caption</p>
+                        </div>
+                        <div class="widget-section">
+                            <p class="pb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <span class="btn turquoise">Show more</span>
+                        </div>
+                    </div>
+                    <div class="widget bg-white ta-c">
+                        <img src="http://loremflickr.com/g/480/360/wedding/all" width="100%">
+                        <div class="widget-section bg-mauve">
+                            <p class="h3">Caption</p>
+                        </div>
+                        <div class="widget-section bg-orange">
+                            <p class="h4">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="widget-section">
+                            <p class="pb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <span class="btn orange">Show more</span>
+                        </div>
+                    </div>
+                    <div class="widget bg-white ta-c">
+                        <img src="http://loremflickr.com/g/480/360/beautiful+girl/all" width="100%">
+                        <div class="ptb-1 bg-teal">
+                            <p class="h2">Caption</p>
+                        </div>
+                        <div class="widget-section">
+                            <p class="pb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <span class="btn teal">Show more</span>
+                        </div>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;div class="widget bg-white ta-c"&gt;
+    &lt;img src="http://loremflickr.com/g/480/360/handsome+boy/all" width="100%"&gt;
+    &lt;div class="ptb-1 bg-turquoise"&gt;
+        &lt;p class="h2"&gt;Caption&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="widget-section"&gt;
+        &lt;p class="pb-1"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+        &lt;span class="btn turquoise"&gt;Show more&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="widget bg-white ta-c"&gt;
+    &lt;img src="http://loremflickr.com/g/480/360/wedding/all" width="100%"&gt;
+    &lt;div class="widget-section bg-mauve"&gt;
+        &lt;p class="h3"&gt;Caption&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="widget-section bg-orange"&gt;
+        &lt;p class="h4"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="widget-section"&gt;
+        &lt;p class="pb-1"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+        &lt;span class="btn orange"&gt;Show more&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="widget bg-white ta-c"&gt;
+    &lt;img src="http://loremflickr.com/g/480/360/beautiful+girl/all" width="100%"&gt;
+    &lt;div class="ptb-1 bg-teal"&gt;
+        &lt;p class="h2"&gt;Caption&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="widget-section"&gt;
+        &lt;p class="pb-1"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+        &lt;span class="btn teal"&gt;Show more&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>
