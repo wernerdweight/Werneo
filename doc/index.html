@@ -21,15 +21,401 @@
 				<p class="h2 text-orange">Under development (navigate through the menu to see components)</p>
 
 				<h2 class="h2">Installation</h2>
-				<p class="mb-1">...</p>
+				<p class="mb-1">Via <a href="https://bower.io/search/?q=werneo" target="_blank" class="text-turquoise">Bower</a>: <code class="bash">bower install werneo</code> or download latest release from github: <a href="https://github.com/wernerdweight/Werneo/releases" target="_blank" class="text-turquoise">https://github.com/wernerdweight/Werneo/releases</a></p>
 
 				<h2 class="h2">Usage</h2>
-				<p class="mb-1">...</p>
+				<p class="mb-1">Compiled files are in the <code>dist</code> folder but it is <strong>NOT recommended</strong> to use them for you will hardly need all the components! If you use sass, you should import the sass file and edit configuration (see below).</p>
+				<pre class="widget mb-2">
+                    <code class="nohighlight"><span class="text-grey-light">// your sass stylesheet file (e.g. stylesheets/theme.sass - that's up to you of course)</span>
+
+<span class="text-mauve">@charset</span> <span class="text-yellow">'UTF-8'</span>
+...
+<span class="text-mauve">@import</span> <span class="text-yellow">'werneo-settings'</span>	<span class="text-grey-light">// it is recommended to use separate file to configure werneo</span>
+<span class="text-mauve">@import</span> <span class="text-yellow">'bower_components/werneo/dev/sass/werneo'</span> <span class="text-grey-light">// path may differ according to your use of bower</span>
+...</code>
+				</pre>
+				<p class="mb-1">Create and edit <code>_werneo-settings.sass</code> file. It is recommended to copy the defaults from <code>bower_components/werneo/dev/sass/_variables.sass</code>, change variables and comment-out lines that you do not want to change. Below is the default configuration.</p>
+				<p class="plr-1 ptb-1 mb-1 bg-turquoise"><strong>Pro Tip:</strong> You can lower the final filesize by using only the colors that you need - change the <code class="bg-turquoise">$wdWerneoColors</code> variable (affects color name classes - e.g. if you change the variable to <code class="bg-turquoise">('black' $wdWerneoBlack, 'custom' $customColor)</code> only classes <code class="bg-turquoise">.bg-black</code> and <code class="bg-turquoise">.bg-custom</code> will be available).</p>
+				<pre class="widget bg-black mb-2">
+                    <code class="nohighlight"><span class="text-grey-light">// _werneo-settings.sass</span>
+
+<span class="text-grey-light">///////////////////////////////////////////////////////////////////////////////////</span>
+<span class="text-grey-light">///            SWITCHES (plus additional size if minified)</span>
+<span class="text-grey-light">///            minimal size is 2.5 kB</span>
+<span class="text-grey-light">///            maximal size is 122 kB</span>
+<span class="text-grey-light">///////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="text-grey-light">/// use backgrounds ~ 0.5 kB</span>
+<span class="text-turquoise">$wdWerneoUseBackgrounds</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use badges ~ 0.5 kB</span>
+<span class="text-turquoise">$wdWerneoUseBadges</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use breadcrumbs ~ 1.25 kB</span>
+<span class="text-turquoise">$wdWerneoUseBreadcrumbs</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use buttons ~ 13 kB</span>
+<span class="text-turquoise">$wdWerneoUseButtons</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use chevrons ~ 1 kB</span>
+<span class="text-turquoise">$wdWerneoUseChevrons</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use code ~ 0.25 kB</span>
+<span class="text-turquoise">$wdWerneoUseCode</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use dropdowns ~ 28 kB</span>
+<span class="text-turquoise">$wdWerneoUseDropdowns</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use dynamic filters ~ 0.25 kB</span>
+<span class="text-turquoise">$wdWerneoUseDynaFilter</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use flash messages ~ 1.25 kB</span>
+<span class="text-turquoise">$wdWerneoUseFlashMessages</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use forms ~ 14 kB</span>
+<span class="text-turquoise">$wdWerneoUseForms</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use gallery ~ 1.25 kB</span>
+<span class="text-turquoise">$wdWerneoUseGallery</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use groups ~ 0.1 kB</span>
+<span class="text-turquoise">$wdWerneoUseGroups</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use lists ~ 15 kB</span>
+<span class="text-turquoise">$wdWerneoUseLists</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use modal buttons ~ 5 kB</span>
+<span class="text-turquoise">$wdWerneoUseModalButtons</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use modals ~ 2 kB</span>
+<span class="text-turquoise">$wdWerneoUseModals</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use navigation ~ ? kB</span>
+<span class="text-turquoise">$wdWerneoUseNavigation</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use pagination ~ 11 kB</span>
+<span class="text-turquoise">$wdWerneoUsePagination</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use progressbar ~ 1 kB</span>
+<span class="text-turquoise">$wdWerneoUseProgressBar</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use scrollbars ~ 0.25 kB</span>
+<span class="text-turquoise">$wdWerneoUseScrollbars</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use tables ~ 3.5 kB</span>
+<span class="text-turquoise">$wdWerneoUseTables</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use tabs ~ 9 kB</span>
+<span class="text-turquoise">$wdWerneoUseTabs</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use timeline ~ 6 kB</span>
+<span class="text-turquoise">$wdWerneoUseTimeline</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use transformations ~ 0.1 kB</span>
+<span class="text-turquoise">$wdWerneoUseTransformations</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use tree view ~ 6 kB</span>
+<span class="text-turquoise">$wdWerneoUseTreeView</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use typography ~ 1.75 kB</span>
+<span class="text-turquoise">$wdWerneoUseTypography</span>: true <span class="text-crimson">!default</span>
+<span class="text-grey-light">/// use widgets ~ 0.1 kB</span>
+<span class="text-turquoise">$wdWerneoUseWidgets</span>: true <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">///////////////////////////////////////////////////////////////////////////////////</span>
+<span class="text-grey-light">///            GENERAL VARIABLES</span>
+<span class="text-grey-light">///////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="text-grey-light">/// base variables</span>
+<span class="text-turquoise">$wdWerneoBorderRadius</span>: 0 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoElementSize</span>: 5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoAminationDuration</span>: 400ms <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// colors</span>
+<span class="text-turquoise">$wdWerneoBlack</span>: #000 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoCrimson</span>: #dc143c <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoGreyDark</span>: #333 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoGreyMedium</span>: #666 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoGreyLight</span>: #ddd <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoGreyLightest</span>: #eee <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoMauve</span>: #d473d4 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoOrange</span>: #f45633 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTeal</span>: #028428 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTurquoise</span>: #5af <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoWhite</span>: #fff <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoYellow</span>: #ffc200 <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// color map</span>
+<span class="text-turquoise">$wdWerneoColors</span>: (<span class="text-yellow">'turquoise'</span> <span class="text-turquoise">$wdWerneoTurquoise</span>, <span class="text-yellow">'teal'</span> <span class="text-turquoise">$wdWerneoTeal</span>, <span class="text-yellow">'yellow'</span> <span class="text-turquoise">$wdWerneoYellow</span>, <span class="text-yellow">'crimson'</span> <span class="text-turquoise">$wdWerneoCrimson</span>, <span class="text-yellow">'mauve'</span> <span class="text-turquoise">$wdWerneoMauve</span>, <span class="text-yellow">'grey-dark'</span> <span class="text-turquoise">$wdWerneoGreyDark</span>, <span class="text-yellow">'grey-light'</span> <span class="text-turquoise">$wdWerneoGreyLight</span>, <span class="text-yellow">'orange'</span> <span class="text-turquoise">$wdWerneoOrange</span>, <span class="text-yellow">'white'</span> <span class="text-turquoise">$wdWerneoWhite</span>, <span class="text-yellow">'black'</span> <span class="text-turquoise">$wdWerneoBlack</span>) <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// font weights</span>
+<span class="text-turquoise">$wdWerneoLighter</span>: 200 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNormal</span>: 400 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBold</span>: 700 <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// breakpoints</span>
+<span class="text-turquoise">$wdWerneoResponsiveWidthDesktop</span>: 1200px <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoResponsiveWidthTablet</span>: 768px <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// socpe map</span>
+<span class="text-turquoise">$wdWerneoScopes</span>: (<span class="text-yellow">'tablet'</span>: <span class="text-yellow">'t'</span>, <span class="text-yellow">'desktop'</span>: <span class="text-yellow">'d'</span>)
+
+<span class="text-grey-light">///////////////////////////////////////////////////////////////////////////////////</span>
+<span class="text-grey-light">///            COMPONENT VARIABLES</span>
+<span class="text-grey-light">///////////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="text-grey-light">/// badges</span>
+<span class="text-turquoise">$wdWerneoBadgesPaddingVertical</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBadgesPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// breadcrumbs</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsRoot</span>: <span class="text-yellow">'\\\\ '</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsSeparator</span>: <span class="text-yellow">' \\ '</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsSubcrumbBorderRadius</span>: <span class="text-turquoise">$wdWerneoBorderRadius</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsSubcrumbBorderStyle</span>: solid <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsSubcrumbBorderWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsSubcrumbMaxHeight</span>: 20rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsSubcrumbMaxWidth</span>: 30rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsSubcrumbPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsSubcrumbPaddingVertical</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsSubcrumbTriggerHeight</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoBreadcrumbsSubcrumbTriggerWidth</span>: 1rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// buttons</span>
+<span class="text-turquoise">$wdWerneoButtonsBorderRadius</span>: <span class="text-turquoise">$wdWerneoBorderRadius</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoButtonsFocusAnimationDuration</span>: 1000ms <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoButtonsFocusAnimationFunction</span>: diagonalSplitBackgroundHover <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoButtonsLoadingAnimationDuration</span>: 1000ms <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoButtonsLoadingAnimationFunction</span>: loadMoreSpinner <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoButtonsLoadingSize</span>: <span class="text-turquoise">$wdWerneoElementSize</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoButtonsOutlineStyle</span>: solid <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoButtonsOutlineWidth</span>: 0.2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoButtonsPaddingVertical</span>: 1.6rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoButtonsPaddingHorizontal</span>: 3rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// chevrons</span>
+<span class="text-turquoise">$wdWerneoChevronsHeight</span>: 0.4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoChevronsWidth</span>: 1.2rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// code</span>
+<span class="text-turquoise">$wdWerneoCodeBackgroundColor</span>: rgba(<span class="text-turquoise">$wdWerneoCrimson</span>, 0.15) <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoCodeBorderRadius</span>: <span class="text-turquoise">$wdWerneoBorderRadius</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoCodeColor</span>: <span class="text-turquoise">$wdWerneoCrimson</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoCodePaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoCodePaddingVertical</span>: 0.25rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoPrePaddingHorizontal</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoPrePaddingVertical</span>: 0 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoPreBackgroundColor</span>: <span class="text-turquoise">$wdWerneoBlack</span> <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// dropdowns</span>
+<span class="text-turquoise">$wdWerneoDropdownsBorderRadius</span>: <span class="text-turquoise">$wdWerneoBorderRadius</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDropdownsBorderWidth</span>: 0.4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDropdownsDividerHeight</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDropdownsDividerMarginHorizontal</span>: 0 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDropdownsDividerMarginVertical</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDropdownsHeight</span>: <span class="text-turquoise">$wdWerneoElementSize</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDropdownsMaxViewportHeight</span>: 90vh <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDropdownsOptionBorderTopWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDropdownsOptionPaddingHorizontal</span>: 1.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDropdownsOptionPaddingVertical</span>: 0 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDropdownsValuePaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// dynamic filters</span>
+<span class="text-turquoise">$wdWerneoDynaFilterItemMaxHeight</span>: 50rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoDynaFilterItemMaxWidth</span>: 50rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// flash messages</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesMessageBorder</span>: 0.4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesMessageCloseSize</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesMessageMarginBottom</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesMessagePaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesMessagePaddingVertical</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesQueueMinWidth</span>: 24rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesQueueOffsetHorizontal</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesQueueOffsetVertical</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesQueuePositionHorizontal</span>: right <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesQueuePositionVertical</span>: bottom <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFlashMessagesQueueWidth</span>: 20% <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// forms</span>
+<span class="text-turquoise">$wdWerneoFormsBorderRadius</span>: <span class="text-turquoise">$wdWerneoBorderRadius</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsBorderStyle</span>: solid <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsBorderWidth</span>: 0.4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsErrorPadding</span>: 0.5rem 1rem 0.2rem 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsExpandedChoiceBorderWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsExpandedChoiceLabelMarginRight</span>: 1.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsExpandedChoiceMarginRight</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsExpandedChoiceSize</span>: 1.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsInputSize</span>: <span class="text-turquoise">$wdWerneoElementSize</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsInputPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsInputPaddingVertical</span>: 0 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsSwitchHeight</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsSwitchOutlineWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsSwitchPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsSwitchPaddingVertical</span>: 0 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsSwitchWidth</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsTextareaPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoFormsTextareaPaddingVertical</span>: 0.5rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// lists</span>
+<span class="text-turquoise">$wdWerneoListsCheckBorderWidth</span>: 0.3rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsCheckOffsetHorizontal</span>: 0.25rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsCheckOffsetVertical</span>: 0.25rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsCheckHeight</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsCheckWidth</span>: 1.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsItemBorderWidth</span>: 0.4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsItemCheckerSize</span>: 4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsItemHeight</span>: 10rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsItemHoverShadowWidth</span>: 0.3rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsItemOverlayHeight</span>: 3.2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsItemPaddingHorizontal</span>: 0.6rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoListsItemPaddingVertical</span>: 0.6rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// modal buttons</span>
+<span class="text-turquoise">$wdWerneoModalButtonsBodyPaddingHorizontal</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsBodyPaddingVertical</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsCloseButtonOffsetHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsCloseButtonOffsetVertical</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsHeaderBorderTopWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsFooterPaddingHorizontal</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsFooterPaddingVertical</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsHeaderBorderBottomWidth</span>: 0.4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsHeaderPaddingBottom</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsHeaderPaddingLeft</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsHeaderPaddingRight</span>: 3.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalButtonsHeaderPaddingTop</span>: 1rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// modals</span>
+<span class="text-turquoise">$wdWerneoModalsBackgroundColor</span>: <span class="text-turquoise">$wdWerneoBlack</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsBasicHeight</span>: 30rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsBasicWidth</span>: 65rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsBoxShadowFeather</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsCloseButtonColor</span>: <span class="text-turquoise">$wdWerneoGreyDark</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsCloseButtonOffsetHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsCloseButtonOffsetVertical</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsCloseButtonPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsCloseButtonPaddingVertical</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsFullHeight</span>: 100% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsFullWidth</span>: 100% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsLargeHeight</span>: 80% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsLargeWidth</span>: 80% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsMediumHeight</span>: 50% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsMediumWidth</span>: 50% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsTallHeight</span>: 80% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsWideHeight</span>: 50% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoModalsWideWidth</span>: 80% <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// navigation</span>
+<span class="text-turquoise">$wdWerneoNavigationCurtainColor</span>: <span class="text-turquoise">$wdWerneoBlack</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationCurtainOpacity</span>: 0.5 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationHeaderHeight</span>: 4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationHeaderTriggerPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationHeaderTriggerPaddingVertical</span>: 0 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationItemBackgroundColorHover</span>: rgba(<span class="text-turquoise">$wdWerneoWhite</span>, 0.1) <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationItemBorderOpacity</span>: 0.25 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationItemBorderWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationItemPaddingHorizontal</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationItemPaddingVertical</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationPaneHeight</span>: 100vh <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationPaneOpenerBackgroundColor</span>: transparent <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationPaneOpenerBackgroundColorHover</span>: rgba(<span class="text-turquoise">$wdWerneoWhite</span>, 0.1) <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationPaneOpenerBorderSpacing</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationPaneOpenerBorderWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationPaneOpenerWidth</span>: 4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationPaneWidth</span>: 100% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationPaneWidthDesktop</span>: 30rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationPaneWidthTablet</span>: 50% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationTriggerBarHeight</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoNavigationTriggerSize</span>: 4rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// pagination</span>
+<span class="text-turquoise">$wdWerneoPaginationDirectionNavigationMargin</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoPaginationDotsMarginHorizontal</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoPaginationDotsMarginVertical</span>: 0 <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoPaginationItemBorderRadius</span>: <span class="text-turquoise">$wdWerneoBorderRadius</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoPaginationItemHeight</span>: 4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoPaginationItemPaddingHorizontal</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoPaginationItemPaddingVertical</span>: 1rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// progress bar</span>
+<span class="text-turquoise">$wdWerneoProgressBarBorderWidth</span>: 0.3rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoProgressBarHeight</span>: 1.5rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// scrollbars</span>
+<span class="text-turquoise">$wdWerneoScrollbarsBodyBorderWidth</span>: 0.2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoScrollbarsBodyTrackColor</span>: <span class="text-turquoise">$wdWerneoWhite</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoScrollbarsBorderWidth</span>: 0.2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoScrollbarsHeight</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoScrollbarsThumbColor</span>: rgba(<span class="text-turquoise">$wdWerneoBlack</span>,0.25) <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoScrollbarsTrackColor</span>: transparent <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoScrollbarsWidth</span>: 1rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// tables</span>
+<span class="text-turquoise">$wdWerneoTablesBodyCellPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTablesBodyCellPaddingVertical</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTablesBorderedBorderWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTablesHeaderCellPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTablesHeaderCellPaddingVertical</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTablesLinedBorderWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// tabs</span>
+<span class="text-turquoise">$wdWerneoTabsBorderWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTabsBorderWidthActive</span>: 0.4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTabsContentPaddingHorizontal</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTabsContentPaddingVertical</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTabsNavigationPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTabsNavigationPaddingVertical</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTabsVarticalMarginBottom</span>: 0.2rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// timeline</span>
+<span class="text-turquoise">$wdWerneoTimelineArrowSize</span>: 0.7rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTimelineContentBorderRadius</span>: <span class="text-turquoise">$wdWerneoBorderRadius</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTimelineContentPaddingHorizontal</span>: 2.7rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTimelineContentPaddingVertical</span>: 2.7rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTimelineContentWidth</span>: 45% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTimelineIconBorderRadius</span>: <span class="text-turquoise">$wdWerneoBorderRadius</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTimelineIconOffset</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTimelineIconSize</span>: 4rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTimelineLineColor</span>: <span class="text-turquoise">$wdWerneoGreyLight</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTimelineLineWidth</span>: 0.4rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// transformations</span>
+<span class="text-turquoise">$wdWerneoRotationSteps</span>: (-90deg, 90deg, 180deg) <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// tree view</span>
+<span class="text-turquoise">$wdWerneoTreeViewBranchWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTreeViewLabelBorderWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTreeViewLabelPaddingHorizontal</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTreeViewLabelPaddingVertical</span>: 1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTreeViewNodeStep</span>: 1rem <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// typography</span>
+<span class="text-turquoise">$wdWerneoTypographyAccentFontFamily</span>: Helvetica, Arial, sans-serif <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTypographyArticleParagraphMarginBottom</span>: 0.5rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTypographyBasicFontFamily</span>: Helvetica, Arial, sans-serif <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTypographyBasicFontSize</span>: 1.6rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTypographyBasicLineHeight</span>: 150% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTypographyBigFontSize</span>: 120% <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoTypographySmallFontSize</span>: 80% <span class="text-crimson">!default</span>
+
+<span class="text-grey-light">/// widgets</span>
+<span class="text-turquoise">$wdWerneoWidgetsBorderRadius</span>: <span class="text-turquoise">$wdWerneoBorderRadius</span> <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoWidgetsBorderWidth</span>: 0.1rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoWidgetsSectionPaddingHorizontal</span>: 2rem <span class="text-crimson">!default</span>
+<span class="text-turquoise">$wdWerneoWidgetsSectionPaddingVertical</span>: 2rem <span class="text-crimson">!default</span></code>
+				</pre>
+
+				<p class="mb-1">As for javascript files you can either use the precompiled file in <code>dist/js/werneo.js</code> or compile the code from source files in <code>dev/js/wd/*.js</code> - order of files matter (<code>core.js</code> and <code>plugin.js</code> first, <code>main.js</code> last). Werneo is using <a href="http://gruntjs.com/" target="_blank">Grunt</a>, so you can just comment-out javascript files you don't need and run <code>grunt build</code> to compile from source (which requires <a href="https://www.npmjs.com/" target="_blank">npm</a> and <a href="http://gruntjs.com/" target="_blank">grunt</a>).</p>
+
+				<pre class="widget mb-2">
+					<code class="js">// Gruntfile.js line 39 - 62
+...
+/// [JAVASCRIPT]
+javascript: {
+    files: {
+
+        /// [Werner Dweight's Werneo]
+        '<%= dirs.dest_generated.javascript %>/werneo.js': [
+            '<%= dirs.cache.javascript %>/wd/core.js',
+            '<%= dirs.cache.javascript %>/wd/plugin.js',
+            '<%= dirs.cache.javascript %>/wd/ajaxLoader.js',
+            '<%= dirs.cache.javascript %>/wd/dropdowns.js',
+            '<%= dirs.cache.javascript %>/wd/dynaFilter.js',
+            '<%= dirs.cache.javascript %>/wd/flashMessages.js',
+            '<%= dirs.cache.javascript %>/wd/gallery.js',
+            '<%= dirs.cache.javascript %>/wd/lists.js',
+            '<%= dirs.cache.javascript %>/wd/modalButtons.js',
+            '<%= dirs.cache.javascript %>/wd/modals.js',
+            '<%= dirs.cache.javascript %>/wd/navigation.js',
+            '<%= dirs.cache.javascript %>/wd/tabs.js',
+            '<%= dirs.cache.javascript %>/wd/timeline.js',
+            '<%= dirs.cache.javascript %>/wd/treeView.js',
+            '<%= dirs.cache.javascript %>/wd/main.js',
+        ]
+    }
+},
+...</code>
+				</pre>
 
 				<h2 class="h2">Compatibility</h2>
-				<p class="mb-1">...</p>
 
-				<table class="table mauve bg-white lined first-left ta-c">
+				<table class="table turquoise bg-white lined first-left ta-c">
 					<thead>
 						<tr>
 							<th></th>
@@ -395,6 +781,7 @@
 
 		<script type="text/javascript" src="../dist/js/werneo.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+		<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
 	</body>
 </html>
