@@ -45,6 +45,7 @@ module.exports = function (grunt) {
                     '<%= dirs.cache.javascript %>/wd/core.js',
                     '<%= dirs.cache.javascript %>/wd/plugin.js',
                     '<%= dirs.cache.javascript %>/wd/ajaxLoader.js',
+                    '<%= dirs.cache.javascript %>/wd/breadcrumbs.js',
                     '<%= dirs.cache.javascript %>/wd/dropdowns.js',
                     '<%= dirs.cache.javascript %>/wd/dynaFilter.js',
                     '<%= dirs.cache.javascript %>/wd/flashMessages.js',

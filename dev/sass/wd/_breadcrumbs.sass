@@ -6,62 +6,87 @@
 
 	.breadcrumbs
 		margin: 0
-		padding: 0
-		&.light
-			a
-				color: $wdWerneoWhite
-			.subcrumb
-				a
-					color: $wdWerneoGreyDark
+		padding: $wdWerneoBreadcrumbsPaddingVertical $wdWerneoBreadcrumbsPaddingHorizontal
+		@if $wdWerneoBreadcrumbsSubcrumbBorderRadius != 0
+			border-radius: $wdWerneoBreadcrumbsSubcrumbBorderRadius
 		li
-			color: darken($wdWerneoGreyLight, 20%)
 			display: inline-block
 			list-style: none
+			position: relative
 			&::before
-				color: $wdWerneoGreyLight
 				content: $wdWerneoBreadcrumbsSeparator
 				display: inline-block
 			&:first-child
 				&::before
 					content: $wdWerneoBreadcrumbsRoot
 		a
-			color: $wdWerneoGreyDark
+			color: $wdWerneoGreyMedium
 			display: inline-block
+			padding: $wdWerneoBreadcrumbsLinkPaddingVertical $wdWerneoBreadcrumbsLinkPaddingHorizontal
 			text-decoration: none
-			&:hover
-				text-decoration: underline
-			&.subcrumb-trigger
-				color: $wdWerneoGreyLight
-				height: $wdWerneoBreadcrumbsSubcrumbTriggerHeight
-				position: relative
-				width: $wdWerneoBreadcrumbsSubcrumbTriggerWidth
-				&:hover,
-				&:focus
-					color: $wdWerneoGreyDark
-				&:focus
-					& + .subcrumb
-						max-height: $wdWerneoBreadcrumbsSubcrumbMaxHeight
-						opacity: 1
-						transition: max-height 100ms 0ms
-		.subcrumb
-			background-color: $wdWerneoWhite
-			border: $wdWerneoBreadcrumbsSubcrumbBorderWidth $wdWerneoBreadcrumbsSubcrumbBorderStyle $wdWerneoGreyMedium
-			margin: 0
-			max-height: 0
-			max-width: $wdWerneoBreadcrumbsSubcrumbMaxWidth
-			opacity: 0
-			overflow: auto
-			padding: $wdWerneoBreadcrumbsSubcrumbPaddingVertical $wdWerneoBreadcrumbsSubcrumbPaddingHorizontal
-			position: absolute
-			transition: max-height 100ms 100ms
-			z-index: 2
 			@if $wdWerneoBreadcrumbsSubcrumbBorderRadius != 0
 				border-radius: $wdWerneoBreadcrumbsSubcrumbBorderRadius
+			&:hover
+				background-color: rgba($wdWerneoBlack, 0.1)
+			&.subcrumb-trigger
+				height: $wdWerneoBreadcrumbsSubcrumbTriggerHeight
+				margin-left: -$wdWerneoBreadcrumbsLinkPaddingHorizontal
+				padding: 1.25rem
+				position: relative
+				vertical-align: middle
+				width: $wdWerneoBreadcrumbsSubcrumbTriggerWidth
+		span
+			padding: $wdWerneoBreadcrumbsLinkPaddingVertical $wdWerneoBreadcrumbsLinkPaddingHorizontal
+		ul
+			background-color: $wdWerneoWhite
+			margin: $wdWerneoBreadcrumbsPaddingVertical 0 0 0
+			max-height: 0
+			max-width: $wdWerneoBreadcrumbsSubcrumbMaxWidth
+			overflow: auto
+			padding: 0 $wdWerneoBreadcrumbsSubcrumbPaddingHorizontal
+			position: absolute
+			right: 0
+			transition: max-height 400ms
+			z-index: 2
+			@if $wdWerneoBreadcrumbsSubcrumbBorderRadius != 0
+				border-radius: 0 0 $wdWerneoBreadcrumbsSubcrumbBorderRadius $wdWerneoBreadcrumbsSubcrumbBorderRadius
+			@if $wdWerneoBreadcrumbsSubcrumbBorderWidth != 0
+				border: $wdWerneoBreadcrumbsSubcrumbBorderWidth $wdWerneoBreadcrumbsSubcrumbBorderStyle $wdWerneoBreadcrumbsSubcrumbBorderColor
+			&.active
+				max-height: $wdWerneoBreadcrumbsSubcrumbMaxHeight
 			a
 				+hellip
 				display: block
+				padding: $wdWerneoBreadcrumbsSubcrumbLinkPaddingVertical $wdWerneoBreadcrumbsSubcrumbLinkPaddingHorizontal
+				@if $wdWerneoBreadcrumbsSubcrumbBorderRadius != 0
+					border-radius: 0
+				&.active
+					background-color: rgba($wdWerneoWhite, 0.25)
+					&:hover
+						background-color: rgba($wdWerneoBlack, 0.1)
 			li
 				display: block
 				&::before
 					content: ''
 					display: none
+
+		@each $name, $color, in $wdWerneoColors
+			$inverseColor: $wdWerneoWhite
+			$currentPageColor: darken($inverseColor, 10%)
+			@if $name == 'white' or $name == 'grey-light'
+				$inverseColor: $wdWerneoGreyMedium
+				$currentPageColor: lighten($inverseColor, 20%)
+			&.#{$name}
+				background-color: $color
+				color: $inverseColor
+				a
+					color: $inverseColor
+					.chevron
+						&::after,
+						&::before
+							background-color: $inverseColor
+				span
+					color: $currentPageColor
+				ul
+					background-color: $color
+

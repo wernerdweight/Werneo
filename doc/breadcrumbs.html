@@ -1,162 +1,1236 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Werner Dweight's Werneo</title>
-		<link rel="stylesheet" href="../dist/css/werneo.css">
-		<link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
-		<link rel="stylesheet" href="doc.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Werner Dweight's Werneo</title>
+        <link rel="stylesheet" href="../dist/css/werneo.css">
+        <link rel="stylesheet" href="../bower_components/flexer/dist/css/flexer.css">
+        <link rel="stylesheet" href="doc.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+    </head>
+    <body>
 
-		<div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
+        <div data-ajax-load="partials/header.html" data-replace="true" data-callback="werneo.plugins.navigation.handle();"></div>
 
-		<div class="r r-fixed">
-			<div class="c-12">
+        <div class="r r-fixed">
+            <div class="c-12">
 
-				<p class="plr-2 ptb-1 bg-orange mb-2"><strong>Heads up!</strong> This component will soon be updated.</p>
+                <h2 class="h2">Breadcrumbs <small class="text-orange">(if you want to use subcrumb (openable submenu of breadcrumb level) you need to use breadcrumbs.js)</small></h2>
 
-				<h2 class="h2">Breadcrumbs</h2>
+                <h3 class="h3" id="breadcrumbs-default">Default</h3>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3"><strong>Level 4.3</strong></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3"><strong>Level 5.3</strong></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;ul class="breadcrumbs"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3"&gt;&lt;strong&gt;Level 4.3&lt;/strong&gt;&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3"&gt;&lt;strong&gt;Level 5.3&lt;/strong&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
+                </pre>
 
-				<h3 class="h3" id="breadcrumbs-dark">Dark (default)</h3>
-				<div class="r">
-					<div class="c-12">
-						<div>
-							<ul class="breadcrumbs">
-								<li>
-									<a href="#" title="Level 1">Level 1</a>
-								</li>
-								<li>
-									<a href="#" title="Level 2">Level 2</a>
-								</li>
-								<li>
-									<a href="#" title="Level 3">Level 3</a>
-								</li>
-								<li>
-									<a href="#" title="Level 4">Level 4.3</a>
-									<a href="#" class="subcrumb-trigger">
-										<span class="chevron sm"></span>
-									</a>
-									<ul class="subcrumb">
-										<li>
-											<a href="#" title="Level 4.1">Level 4.1</a>
-										</li>
-										<li>
-											<a href="#" title="Level 4.2">Level 4.2</a>
-										</li>
-										<li>
-											<a href="#" title="Level 4.3"><strong>Level 4.3</strong></a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									Level 5.3
-									<a href="#" class="subcrumb-trigger">
-										<span class="chevron sm"></span>
-									</a>
-									<ul class="subcrumb">
-										<li>
-											<a href="#" title="Level 5.1">Level 5.1</a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.2">Level 5.2</a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.3"><strong>Level 5.3</strong></a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.4">Level 5.4</a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.5">Level 5.5</a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.6">Level 5.6</a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.7">Level 5.7</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+                <h3 class="h3" id="breadcrumbs-colors">Colors</h3>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs turquoise">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3" class="active">Level 4.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3" class="active">Level 5.3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs teal">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3" class="active">Level 4.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3" class="active">Level 5.3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs yellow">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3" class="active">Level 4.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3" class="active">Level 5.3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs orange">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3" class="active">Level 4.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3" class="active">Level 5.3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs crimson">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3" class="active">Level 4.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3" class="active">Level 5.3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs mauve">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3" class="active">Level 4.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3" class="active">Level 5.3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs black">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3" class="active">Level 4.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3" class="active">Level 5.3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs grey-dark">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3" class="active">Level 4.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3" class="active">Level 5.3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs grey-light">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3" class="active">Level 4.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3" class="active">Level 5.3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="c-12">
+                        <div>
+                            <ul class="breadcrumbs white">
+                                <li>
+                                    <a href="#" title="Level 1">Level 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 2">Level 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 3">Level 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Level 4">Level 4.3</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 4.1">Level 4.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.2">Level 4.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 4.3" class="active">Level 4.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Level 5.3</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Level 5.1">Level 5.1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.2">Level 5.2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.3" class="active">Level 5.3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.4">Level 5.4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.5">Level 5.5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.6">Level 5.6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Level 5.7">Level 5.7</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <pre class="widget mb-2">
+                    <code class="html">&lt;ul class="breadcrumbs turquoise"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3" class="active"&gt;Level 4.3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3" class="active"&gt;Level 5.3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
 
-				<h3 class="h3" id="breadcrumbs-light">Light <code>&amp;.light</code></h3>
-				<div class="r">
-					<div class="c-12 bg-black plr-1 ptb-1">
-						<div>
-							<ul class="breadcrumbs light">
-								<li>
-									<a href="#" title="Level 1">Level 1</a>
-								</li>
-								<li>
-									<a href="#" title="Level 2">Level 2</a>
-								</li>
-								<li>
-									<a href="#" title="Level 3">Level 3</a>
-								</li>
-								<li>
-									<a href="#" title="Level 4">Level 4.3</a>
-									<a href="#" class="subcrumb-trigger">
-										<span class="chevron sm"></span>
-									</a>
-									<ul class="subcrumb">
-										<li>
-											<a href="#" title="Level 4.1">Level 4.1</a>
-										</li>
-										<li>
-											<a href="#" title="Level 4.2">Level 4.2</a>
-										</li>
-										<li>
-											<a href="#" title="Level 4.3"><strong>Level 4.3</strong></a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									Level 5.3
-									<a href="#" class="subcrumb-trigger">
-										<span class="chevron sm"></span>
-									</a>
-									<ul class="subcrumb">
-										<li>
-											<a href="#" title="Level 5.1">Level 5.1</a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.2">Level 5.2</a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.3"><strong>Level 5.3</strong></a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.4">Level 5.4</a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.5">Level 5.5</a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.6">Level 5.6</a>
-										</li>
-										<li>
-											<a href="#" title="Level 5.7">Level 5.7</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+&lt;ul class="breadcrumbs teal"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3" class="active"&gt;Level 4.3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3" class="active"&gt;Level 5.3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
 
-			</div>
-		</div>
+&lt;ul class="breadcrumbs yellow"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3" class="active"&gt;Level 4.3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3" class="active"&gt;Level 5.3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
 
-		<script type="text/javascript" src="../dist/js/werneo.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+&lt;ul class="breadcrumbs orange"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3" class="active"&gt;Level 4.3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3" class="active"&gt;Level 5.3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
 
-	</body>
+&lt;ul class="breadcrumbs crimson"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3" class="active"&gt;Level 4.3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3" class="active"&gt;Level 5.3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="breadcrumbs mauve"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3" class="active"&gt;Level 4.3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3" class="active"&gt;Level 5.3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="breadcrumbs black"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3" class="active"&gt;Level 4.3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3" class="active"&gt;Level 5.3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="breadcrumbs grey-dark"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3" class="active"&gt;Level 4.3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3" class="active"&gt;Level 5.3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="breadcrumbs grey-light"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3" class="active"&gt;Level 4.3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3" class="active"&gt;Level 5.3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="breadcrumbs white"&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 1"&gt;Level 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 2"&gt;Level 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 3"&gt;Level 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#" title="Level 4"&gt;Level 4.3&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.1"&gt;Level 4.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.2"&gt;Level 4.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 4.3" class="active"&gt;Level 4.3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Level 5.3&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.1"&gt;Level 5.1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.2"&gt;Level 5.2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.3" class="active"&gt;Level 5.3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.4"&gt;Level 5.4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.5"&gt;Level 5.5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.6"&gt;Level 5.6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" title="Level 5.7"&gt;Level 5.7&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
+                </pre>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../dist/js/werneo.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    </body>
 </html>
