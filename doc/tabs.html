@@ -43,7 +43,7 @@
 				<div class="r r-1 d-2">
 					<div>
 						<div class="tabs">
-							<div class="tab-nav">
+                            <div class="tab-nav">
                     			<div class="nav active" data-target="tab_en">
                     				<label>English</label>
                     			</div>
@@ -107,66 +107,70 @@
 					</div>
 					<div>
 						<div class="r r-nm tabs vertical r-jc-s">
-							<div class="c-3 t-c-2 tab-nav">
-                    			<div class="nav active" data-target="tab_en_vertical">
-                    				<label>EN</label>
-                    			</div>
-                    			<div class="nav" data-target="tab_de_vertical">
-                    				<label>DE</label>
-                    			</div>
-                    			<div class="nav" data-target="tab_fr_vertical">
-                    				<label>FR</label>
-                    			</div>
-                    			<div class="nav" data-target="tab_it_vertical">
-                    				<label>IT</label>
-                    			</div>
-                    		</div>
-							<div class="c-9 t-c-10 tab-content bg-white">
-                    			<div class="tab active" data-id="tab_en_vertical">
-            						<label for="tab_en_vertical_active" class="switch">
-										<input type="checkbox" id="tab_en_vertical_active" name="tab_en_vertical[active]" value="1">
-										<span class="check"></span>
-            							<span class="label">Active</span>
-            						</label>
-									<label for="tab_en_vertical_title">Title</label>
-									<input type="text" id="tab_en_vertical_title" name="tab_en_vertical[title]" maxlength="80" placeholder="Name this item">
-									<label for="tab_en_vertical_description">Description</label>
-									<textarea type="text" id="tab_en_vertical_description" name="tab_en_vertical[description]" maxlength="510" rows="7" placeholder="Describe this item in English"></textarea>
+							<div class="c-3 t-c-2">
+                                <div class="tab-nav">
+                        			<div class="nav active" data-target="tab_en_vertical">
+                        				<label>EN</label>
+                        			</div>
+                        			<div class="nav" data-target="tab_de_vertical">
+                        				<label>DE</label>
+                        			</div>
+                        			<div class="nav" data-target="tab_fr_vertical">
+                        				<label>FR</label>
+                        			</div>
+                        			<div class="nav" data-target="tab_it_vertical">
+                        				<label>IT</label>
+                        			</div>
+                        		</div>
+                            </div>
+							<div class="c-9 t-c-10 bg-white">
+                                <div class="tab-content">
+                        			<div class="tab active" data-id="tab_en_vertical">
+                						<label for="tab_en_vertical_active" class="switch">
+    										<input type="checkbox" id="tab_en_vertical_active" name="tab_en_vertical[active]" value="1">
+    										<span class="check"></span>
+                							<span class="label">Active</span>
+                						</label>
+    									<label for="tab_en_vertical_title">Title</label>
+    									<input type="text" id="tab_en_vertical_title" name="tab_en_vertical[title]" maxlength="80" placeholder="Name this item">
+    									<label for="tab_en_vertical_description">Description</label>
+    									<textarea type="text" id="tab_en_vertical_description" name="tab_en_vertical[description]" maxlength="510" rows="7" placeholder="Describe this item in English"></textarea>
+        							</div>
+        							<div class="tab" data-id="tab_de_vertical">
+                						<label for="tab_de_vertical_active" class="switch">
+    										<input type="checkbox" id="tab_de_vertical_active" name="tab_de_vertical[active]" value="1">
+    										<span class="check"></span>
+                							<span class="label">Active</span>
+                						</label>
+    									<label for="tab_de_vertical_title">Title</label>
+    									<input type="text" id="tab_de_vertical_title" name="tab_de_vertical[title]" maxlength="80" placeholder="Name this item">
+    									<label for="tab_de_vertical_description">Description</label>
+    									<textarea type="text" id="tab_de_vertical_description" name="tab_de_vertical[description]" maxlength="510" rows="7" placeholder="Describe this item in German"></textarea>
+        							</div>
+        							<div class="tab" data-id="tab_fr_vertical">
+                						<label for="tab_fr_vertical_active" class="switch">
+    										<input type="checkbox" id="tab_fr_vertical_active" name="tab_fr_vertical[active]" value="1">
+    										<span class="check"></span>
+                							<span class="label">Active</span>
+                						</label>
+    									<label for="tab_fr_vertical_title">Title</label>
+    									<input type="text" id="tab_fr_vertical_title" name="tab_fr_vertical[title]" maxlength="80" placeholder="Name this item">
+    									<label for="tab_fr_vertical_description">Description</label>
+    									<textarea type="text" id="tab_fr_vertical_description" name="tab_fr_vertical[description]" maxlength="510" rows="7" placeholder="Describe this item in French"></textarea>
+        							</div>
+        							<div class="tab" data-id="tab_it_vertical">
+                						<label for="tab_it_vertical_active" class="switch">
+    										<input type="checkbox" id="tab_it_vertical_active" name="tab_it_vertical[active]" value="1">
+    										<span class="check"></span>
+                							<span class="label">Active</span>
+                						</label>
+    									<label for="tab_it_vertical_title">Title</label>
+    									<input type="text" id="tab_it_vertical_title" name="tab_it_vertical[title]" maxlength="80" placeholder="Name this item">
+    									<label for="tab_it_description">Description</label>
+    									<textarea type="text" id="tab_it_vertical_description" name="tab_it_vertical[description]" maxlength="510" rows="7" placeholder="Describe this item in Italian"></textarea>
+        							</div>
     							</div>
-    							<div class="tab" data-id="tab_de_vertical">
-            						<label for="tab_de_vertical_active" class="switch">
-										<input type="checkbox" id="tab_de_vertical_active" name="tab_de_vertical[active]" value="1">
-										<span class="check"></span>
-            							<span class="label">Active</span>
-            						</label>
-									<label for="tab_de_vertical_title">Title</label>
-									<input type="text" id="tab_de_vertical_title" name="tab_de_vertical[title]" maxlength="80" placeholder="Name this item">
-									<label for="tab_de_vertical_description">Description</label>
-									<textarea type="text" id="tab_de_vertical_description" name="tab_de_vertical[description]" maxlength="510" rows="7" placeholder="Describe this item in German"></textarea>
-    							</div>
-    							<div class="tab" data-id="tab_fr_vertical">
-            						<label for="tab_fr_vertical_active" class="switch">
-										<input type="checkbox" id="tab_fr_vertical_active" name="tab_fr_vertical[active]" value="1">
-										<span class="check"></span>
-            							<span class="label">Active</span>
-            						</label>
-									<label for="tab_fr_vertical_title">Title</label>
-									<input type="text" id="tab_fr_vertical_title" name="tab_fr_vertical[title]" maxlength="80" placeholder="Name this item">
-									<label for="tab_fr_vertical_description">Description</label>
-									<textarea type="text" id="tab_fr_vertical_description" name="tab_fr_vertical[description]" maxlength="510" rows="7" placeholder="Describe this item in French"></textarea>
-    							</div>
-    							<div class="tab" data-id="tab_it_vertical">
-            						<label for="tab_it_vertical_active" class="switch">
-										<input type="checkbox" id="tab_it_vertical_active" name="tab_it_vertical[active]" value="1">
-										<span class="check"></span>
-            							<span class="label">Active</span>
-            						</label>
-									<label for="tab_it_vertical_title">Title</label>
-									<input type="text" id="tab_it_vertical_title" name="tab_it_vertical[title]" maxlength="80" placeholder="Name this item">
-									<label for="tab_it_description">Description</label>
-									<textarea type="text" id="tab_it_vertical_description" name="tab_it_vertical[description]" maxlength="510" rows="7" placeholder="Describe this item in Italian"></textarea>
-    							</div>
-							</div>
+                            </div>
 						</div>
 					</div>
 				</div>
