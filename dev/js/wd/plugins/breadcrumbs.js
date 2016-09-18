@@ -63,7 +63,7 @@ class WerneoBreadcrumbs extends WerneoPlugin {
 
 					var subcrumb = subcrumbTrigger.nextSibling;
 
-					/// hide all panes
+					/// deactivate currently active subcrumb
 					if(null !== _this.activeSubcrumb && subcrumb !== _this.activeSubcrumb){
 						_this.activeSubcrumb.classList.remove('active');
 						_this.activeSubcrumbTrigger.classList.remove('active');

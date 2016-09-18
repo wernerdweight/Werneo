@@ -178,7 +178,7 @@ module.exports = function (grunt) {
                     spawn: true
                 },
                 files: '<%= dirs.src.javascript %>/**/*.js',
-                tasks: ['newer:jshint:theme', 'newer:browserify:dev', 'newer:uglify:dev', 'notify:uglify']
+                tasks: ['newer:jshint:theme', 'browserify:dev', 'newer:uglify:dev', 'notify:uglify']
             },
 
         },

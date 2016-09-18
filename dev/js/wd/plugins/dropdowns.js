@@ -4,19 +4,31 @@ class WerneoDropdowns extends WerneoPlugin {
 	
 	constructor(){
 		super();
+		this.activeDropdown = null;
+		this.dropdowns = null;
 		this.dropdownTriggers = null;
 		this.dropdownOptions = null;
 	}
 
 	toggle(dropdown){
+		var _this = this;
 		var siblings = dropdown.parentNode.childNodes;
 
+		/// deactivate currenlty active dropdown
+		if(null !== _this.activeDropdown && dropdown !== _this.activeDropdown){
+			for (let sibling of _this.activeDropdown.parentNode.childNodes){
+				if(sibling.nodeType === 1){
+					sibling.classList.remove('active');
+				}
+			}
+		}
 		dropdown.classList.toggle('active');
 		for (let sibling of siblings){
 			if(sibling.nodeType === 1 && sibling !== dropdown){
 				sibling.classList.toggle('active');
 			}
 		}
+		_this.activeDropdown = dropdown;
 	}
 
 	select(option){
@@ -74,6 +86,8 @@ class WerneoDropdowns extends WerneoPlugin {
 
 	handle(){
 		var _this = this;
+
+		_this.dropdowns = document.querySelectorAll('.dropdown-list');
 
 		_this.dropdownTriggers = document.querySelectorAll('.dropdown-handle,.dropdown-value');
 		if(_this.dropdownTriggers.length > 0){
