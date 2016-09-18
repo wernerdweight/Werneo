@@ -18,4 +18,4 @@ class Werneo {
 
 }
 
-var werneo = new Werneo();
+export default Werneo;

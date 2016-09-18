@@ -9,3 +9,5 @@ class WerneoPlugin {
 	}
 
 }
+
+export default WerneoPlugin;

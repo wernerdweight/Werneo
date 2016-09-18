@@ -387,36 +387,44 @@
 <span class="text-turquoise">$wdWerneoWidgetsSectionPaddingVertical</span>: 2rem <span class="text-crimson">!default</span></code>
 				</pre>
 
-				<p class="mb-1">As for javascript files you can either use the precompiled file in <code>dist/js/werneo.js</code> or compile the code from source files in <code>dev/js/wd/*.js</code> - order of files matter (<code>core.js</code> and <code>plugin.js</code> first, <code>main.js</code> last). Werneo is using <a href="http://gruntjs.com/" target="_blank">Grunt</a>, so you can just comment-out javascript files you don't need and run <code>grunt build</code> to compile from source (which requires <a href="https://www.npmjs.com/" target="_blank">npm</a> and <a href="http://gruntjs.com/" target="_blank">grunt</a>).</p>
+				<p class="mb-1">As for javascript files you can either use the precompiled file in <code>dist/js/werneo.js</code> or compile the code from source files in <code>dev/js/wd/*.js</code>. Werneo is using <a href="http://gruntjs.com/" target="_blank">Grunt</a>, so you can just comment-out modules you don't need in <code>dev/js/wd/main.js</code> (see below) and run <code>grunt build</code> to compile from source (which requires <a href="https://www.npmjs.com/" target="_blank">npm</a> and running <code>npm install</code> the first time).</p>
 
 				<pre class="widget mb-2">
-					<code class="js">// Gruntfile.js line 39 - 62
-...
-/// [JAVASCRIPT]
-javascript: {
-    files: {
+					<code class="js">// dev/js/wd/main.js
 
-        /// [Werner Dweight's Werneo]
-        '<%= dirs.dest_generated.javascript %>/werneo.js': [
-            '<%= dirs.cache.javascript %>/wd/core.js',
-            '<%= dirs.cache.javascript %>/wd/plugin.js',
-            '<%= dirs.cache.javascript %>/wd/ajaxLoader.js',
-            '<%= dirs.cache.javascript %>/wd/dropdowns.js',
-            '<%= dirs.cache.javascript %>/wd/dynaFilter.js',
-            '<%= dirs.cache.javascript %>/wd/flashMessages.js',
-            '<%= dirs.cache.javascript %>/wd/gallery.js',
-            '<%= dirs.cache.javascript %>/wd/lists.js',
-            '<%= dirs.cache.javascript %>/wd/modalButtons.js',
-            '<%= dirs.cache.javascript %>/wd/modals.js',
-            '<%= dirs.cache.javascript %>/wd/navigation.js',
-            '<%= dirs.cache.javascript %>/wd/tabs.js',
-            '<%= dirs.cache.javascript %>/wd/timeline.js',
-            '<%= dirs.cache.javascript %>/wd/treeView.js',
-            '<%= dirs.cache.javascript %>/wd/main.js',
-        ]
-    }
-},
-...</code>
+import Werneo from "./core/werneo.js";
+import WerneoAjaxLoader from "./plugins/ajaxLoader.js";
+import WerneoBreadcrumbs from "./plugins/breadcrumbs.js";
+import WerneoDropdowns from "./plugins/dropdowns.js";
+import WerneoDynaFilter from "./plugins/dynaFilter.js";
+import WerneoFlashMessages from "./plugins/flashMessages.js";
+import WerneoGallery from "./plugins/gallery.js";
+import WerneoLists from "./plugins/lists.js";
+import WerneoModalButtons from "./plugins/modalButtons.js";
+import WerneoModals from "./plugins/modals.js";
+import WerneoNavigation from "./plugins/navigation.js";
+import WerneoTabs from "./plugins/tabs.js";
+import WerneoTimeline from "./plugins/timeline.js";
+import WerneoTreeView from "./plugins/treeView.js";
+
+window.werneo = new Werneo();
+
+/// register plugins
+window.werneo.registerPlugin('ajaxLoader',new WerneoAjaxLoader());
+window.werneo.registerPlugin('breadcrumbs',new WerneoBreadcrumbs());
+window.werneo.registerPlugin('dropdowns',new WerneoDropdowns());
+window.werneo.registerPlugin('dynaFilter',new WerneoDynaFilter());
+window.werneo.registerPlugin('flashMessages',new WerneoFlashMessages());
+window.werneo.registerPlugin('gallery',new WerneoGallery());
+window.werneo.registerPlugin('lists',new WerneoLists());
+window.werneo.registerPlugin('modalButtons',new WerneoModalButtons());
+window.werneo.registerPlugin('modals',new WerneoModals());
+window.werneo.registerPlugin('navigation',new WerneoNavigation());
+window.werneo.registerPlugin('tabs',new WerneoTabs());
+window.werneo.registerPlugin('timeline',new WerneoTimeline());
+window.werneo.registerPlugin('treeView',new WerneoTreeView());
+
+window.werneo.invoke();</code>
 				</pre>
 
 				<h2 class="h2">Compatibility</h2>
@@ -474,12 +482,12 @@ javascript: {
 							<td class="bg-teal"><i class="fa fa-check"></i></td>
 							<td class="bg-teal"><i class="fa fa-check"></i></td>
 							<td></td>
-							<td class="bg-mauve"><i class="fa fa-question"></i> <code class="bg-black">subcrumb</code></td>
-							<td></td>
-							<td class="bg-mauve"><i class="fa fa-question"></i> <code class="bg-black">subcrumb</code></td>
+							<td class="bg-teal"><i class="fa fa-check"></i></td>
 							<td></td>
 							<td class="bg-teal"><i class="fa fa-check"></i></td>
-							<td class="bg-mauve"><i class="fa fa-question"></i> <code class="bg-black">subcrumb</code></td>
+							<td></td>
+							<td class="bg-teal"><i class="fa fa-check"></i></td>
+							<td class="bg-teal"><i class="fa fa-check"></i></td>
 						</tr>
 						<tr>
 							<td><strong>Buttons</strong></td>

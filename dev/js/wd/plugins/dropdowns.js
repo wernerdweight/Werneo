@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoDropdowns extends WerneoPlugin {
 	
@@ -96,5 +96,4 @@ class WerneoDropdowns extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('dropdowns',new WerneoDropdowns());
+export default WerneoDropdowns;

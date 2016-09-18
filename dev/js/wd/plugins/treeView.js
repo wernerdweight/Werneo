@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoTreeView extends WerneoPlugin {
 	
@@ -31,5 +31,4 @@ class WerneoTreeView extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('treeView',new WerneoTreeView());
+export default WerneoTreeView;

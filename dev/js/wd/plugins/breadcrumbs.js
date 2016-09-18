@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoBreadcrumbs extends WerneoPlugin {
 	
@@ -88,5 +88,4 @@ class WerneoBreadcrumbs extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('breadcrumbs',new WerneoBreadcrumbs());
+export default WerneoBreadcrumbs;

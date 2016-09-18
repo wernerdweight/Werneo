@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoTabs extends WerneoPlugin {
 	
@@ -44,5 +44,4 @@ class WerneoTabs extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('tabs',new WerneoTabs());
+export default WerneoTabs;

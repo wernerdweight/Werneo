@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoNavigation extends WerneoPlugin {
 	
@@ -179,5 +179,4 @@ class WerneoNavigation extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('navigation',new WerneoNavigation());
+export default WerneoNavigation;

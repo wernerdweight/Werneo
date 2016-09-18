@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoDynaFilter extends WerneoPlugin {
 	
@@ -54,5 +54,4 @@ class WerneoDynaFilter extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('dynaFilter',new WerneoDynaFilter());
+export default WerneoDynaFilter;

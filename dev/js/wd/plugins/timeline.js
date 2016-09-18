@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoTimeline extends WerneoPlugin {
 	
@@ -69,5 +69,4 @@ class WerneoTimeline extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('timeline',new WerneoTimeline());
+export default WerneoTimeline;

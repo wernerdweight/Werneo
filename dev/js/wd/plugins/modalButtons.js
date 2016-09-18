@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoModalButtons extends WerneoPlugin {
 	
@@ -104,5 +104,4 @@ class WerneoModalButtons extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('modalButtons',new WerneoModalButtons());
+export default WerneoModalButtons;

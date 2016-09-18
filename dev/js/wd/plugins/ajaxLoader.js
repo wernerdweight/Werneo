@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoAjaxLoader extends WerneoPlugin {
 	
@@ -46,5 +46,4 @@ class WerneoAjaxLoader extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('ajaxLoader',new WerneoAjaxLoader());
+export default WerneoAjaxLoader;

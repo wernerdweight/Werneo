@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoGallery extends WerneoPlugin {
 	
@@ -122,5 +122,4 @@ class WerneoGallery extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('gallery',new WerneoGallery());
+export default WerneoGallery;

@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoLists extends WerneoPlugin {
 	
@@ -30,5 +30,4 @@ class WerneoLists extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('lists',new WerneoLists());
+export default WerneoLists;

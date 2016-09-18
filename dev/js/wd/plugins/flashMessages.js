@@ -1,4 +1,4 @@
-/* global werneo, WerneoPlugin */
+import WerneoPlugin from "../core/plugin.js";
 
 class WerneoFlashMessages extends WerneoPlugin {
 	
@@ -61,5 +61,4 @@ class WerneoFlashMessages extends WerneoPlugin {
 
 }
 
-/// register plugin to Werneo core
-werneo.registerPlugin('flashMessages',new WerneoFlashMessages());
+export default WerneoFlashMessages;
