@@ -1,0 +1,346 @@
+///////////////////////////////////////////////////////////////////////////////////
+///            SWITCHES (plus additional size if minified)
+///            minimal size is 2.5 kB
+///            maximal size is 122 kB
+///////////////////////////////////////////////////////////////////////////////////
+
+/// use backgrounds ~ 0.5 kB
+$wdWerneoUseBackgrounds: true !default
+/// use badges ~ 0.5 kB
+$wdWerneoUseBadges: true !default
+/// use breadcrumbs ~ 1.25 kB
+$wdWerneoUseBreadcrumbs: true !default
+/// use buttons ~ 13 kB
+$wdWerneoUseButtons: true !default
+/// use chevrons ~ 1 kB
+$wdWerneoUseChevrons: true !default
+/// use code ~ 0.25 kB
+$wdWerneoUseCode: true !default
+/// use dropdowns ~ 28 kB
+$wdWerneoUseDropdowns: true !default
+/// use dynamic filters ~ 0.25 kB
+$wdWerneoUseDynaFilter: true !default
+/// use flash messages ~ 1.25 kB
+$wdWerneoUseFlashMessages: true !default
+/// use forms ~ 14 kB
+$wdWerneoUseForms: true !default
+/// use gallery ~ 1.25 kB
+$wdWerneoUseGallery: true !default
+/// use groups ~ 0.1 kB
+$wdWerneoUseGroups: true !default
+/// use lists ~ 15 kB
+$wdWerneoUseLists: true !default
+/// use modal buttons ~ 5 kB
+$wdWerneoUseModalButtons: true !default
+/// use modals ~ 2 kB
+$wdWerneoUseModals: true !default
+/// use navigation ~ ? kB
+$wdWerneoUseNavigation: true !default
+/// use pagination ~ 11 kB
+$wdWerneoUsePagination: true !default
+/// use progressbar ~ 1 kB
+$wdWerneoUseProgressBar: true !default
+/// use scrollbars ~ 0.25 kB
+$wdWerneoUseScrollbars: true !default
+/// use tables ~ 3.5 kB
+$wdWerneoUseTables: true !default
+/// use tabs ~ 9 kB
+$wdWerneoUseTabs: true !default
+/// use timeline ~ 6 kB
+$wdWerneoUseTimeline: true !default
+/// use transformations ~ 0.1 kB
+$wdWerneoUseTransformations: true !default
+/// use tree view ~ 6 kB
+$wdWerneoUseTreeView: true !default
+/// use typography ~ 1.75 kB
+$wdWerneoUseTypography: true !default
+/// use widgets ~ 0.1 kB
+$wdWerneoUseWidgets: true !default
+
+///////////////////////////////////////////////////////////////////////////////////
+///            GENERAL VARIABLES
+///////////////////////////////////////////////////////////////////////////////////
+
+/// base variables
+$wdWerneoBorderRadius: 0 !default
+$wdWerneoElementSize: 4rem !default
+$wdWerneoAminationDuration: 400ms !default
+
+/// colors
+$wdWerneoBlack: #000 !default
+$wdWerneoCrimson: #be4042 !default
+$wdWerneoGreyDark: #333 !default
+$wdWerneoGreyMedium: #666 !default
+$wdWerneoGreyLight: #ddd !default
+$wdWerneoGreyLightest: #eee !default
+$wdWerneoMauve: #ba87ba !default
+$wdWerneoOrange: #c65842 !default
+$wdWerneoTeal: #3c754c !default
+$wdWerneoTurquoise: #749cc2 !default
+$wdWerneoWhite: #fff !default
+$wdWerneoYellow: #cea730 !default
+
+/// color map
+$wdWerneoColors: ('turquoise' $wdWerneoTurquoise, 'teal' $wdWerneoTeal, 'yellow' $wdWerneoYellow, 'crimson' $wdWerneoCrimson, 'mauve' $wdWerneoMauve, 'grey-dark' $wdWerneoGreyDark, 'grey-light' $wdWerneoGreyLight, 'orange' $wdWerneoOrange, 'white' $wdWerneoWhite, 'black' $wdWerneoBlack) !default
+
+/// font weights
+$wdWerneoLighter: 200 !default
+$wdWerneoNormal: 400 !default
+$wdWerneoBold: 700 !default
+
+/// breakpoints
+$wdWerneoResponsiveWidthDesktop: 1200px !default
+$wdWerneoResponsiveWidthTablet: 768px !default
+
+/// socpe map
+$wdWerneoScopes: ('tablet': 't', 'desktop': 'd')
+
+///////////////////////////////////////////////////////////////////////////////////
+///            COMPONENT VARIABLES
+///////////////////////////////////////////////////////////////////////////////////
+
+/// badges
+$wdWerneoBadgesPaddingVertical: 0.25rem !default
+$wdWerneoBadgesPaddingHorizontal: 0.5rem !default
+
+/// breadcrumbs
+$wdWerneoBreadcrumbsLinkPaddingVertical: 0.25rem !default
+$wdWerneoBreadcrumbsLinkPaddingHorizontal: 0.5rem !default
+$wdWerneoBreadcrumbsPaddingHorizontal: 1rem !default
+$wdWerneoBreadcrumbsPaddingVertical: 0.5rem !default
+$wdWerneoBreadcrumbsRoot: ':: ' !default
+$wdWerneoBreadcrumbsSeparator: ' > ' !default
+$wdWerneoBreadcrumbsSubcrumbBorderColor: $wdWerneoGreyDark !default
+$wdWerneoBreadcrumbsSubcrumbBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoBreadcrumbsSubcrumbBorderStyle: solid !default
+$wdWerneoBreadcrumbsSubcrumbBorderWidth: 0.1rem !default
+$wdWerneoBreadcrumbsSubcrumbLinkPaddingVertical: 0.25rem !default
+$wdWerneoBreadcrumbsSubcrumbLinkPaddingHorizontal: 1rem !default
+$wdWerneoBreadcrumbsSubcrumbMaxHeight: 20rem !default
+$wdWerneoBreadcrumbsSubcrumbMaxWidth: 40rem !default
+$wdWerneoBreadcrumbsSubcrumbPaddingHorizontal: 0 !default
+$wdWerneoBreadcrumbsSubcrumbTriggerHeight: 1rem !default
+$wdWerneoBreadcrumbsSubcrumbTriggerWidth: 1rem !default
+
+/// buttons
+$wdWerneoButtonsBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoButtonsFocusAnimationDuration: 1000ms !default
+$wdWerneoButtonsFocusAnimationFunction: diagonalSplitBackgroundHover !default
+$wdWerneoButtonsLoadingAnimationDuration: 1000ms !default
+$wdWerneoButtonsLoadingAnimationFunction: loadMoreSpinner !default
+$wdWerneoButtonsLoadingSize: $wdWerneoElementSize !default
+$wdWerneoButtonsOutlineStyle: solid !default
+$wdWerneoButtonsOutlineWidth: 0.2rem !default
+$wdWerneoButtonsPaddingVertical: 1rem !default
+$wdWerneoButtonsPaddingHorizontal: 2rem !default
+
+/// chevrons
+$wdWerneoChevronsHeight: 0.2rem !default
+$wdWerneoChevronsWidth: 1.2rem !default
+
+/// code
+$wdWerneoCodeBackgroundColor: rgba($wdWerneoCrimson, 0.15) !default
+$wdWerneoCodeBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoCodeColor: $wdWerneoCrimson !default
+$wdWerneoCodePaddingHorizontal: 1rem !default
+$wdWerneoCodePaddingVertical: 0.25rem !default
+$wdWerneoPrePaddingHorizontal: 2rem !default
+$wdWerneoPrePaddingVertical: 0 !default
+$wdWerneoPreBackgroundColor: $wdWerneoBlack !default
+
+/// dropdowns
+$wdWerneoDropdownsBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoDropdownsBorderWidth: 0.2rem !default
+$wdWerneoDropdownsDividerHeight: 0.1rem !default
+$wdWerneoDropdownsDividerMarginHorizontal: 0 !default
+$wdWerneoDropdownsDividerMarginVertical: 0.25rem !default
+$wdWerneoDropdownsHeight: $wdWerneoElementSize !default
+$wdWerneoDropdownsMaxViewportHeight: 90vh !default
+$wdWerneoDropdownsOptionBorderTopWidth: 0.1rem !default
+$wdWerneoDropdownsOptionPaddingHorizontal: 1rem !default
+$wdWerneoDropdownsOptionPaddingVertical: 0 !default
+$wdWerneoDropdownsValuePaddingHorizontal: 0.5rem !default
+
+/// dynamic filters
+$wdWerneoDynaFilterItemMaxHeight: 50rem !default
+$wdWerneoDynaFilterItemMaxWidth: 50rem !default
+
+/// flash messages
+$wdWerneoFlashMessagesMessageBorder: 0.2rem !default
+$wdWerneoFlashMessagesMessageCloseSize: 2rem !default
+$wdWerneoFlashMessagesMessageMarginBottom: 0.5rem !default
+$wdWerneoFlashMessagesMessagePaddingHorizontal: 1rem !default
+$wdWerneoFlashMessagesMessagePaddingVertical: 1rem !default
+$wdWerneoFlashMessagesQueueMinWidth: 24rem !default
+$wdWerneoFlashMessagesQueueOffsetHorizontal: 1rem !default
+$wdWerneoFlashMessagesQueueOffsetVertical: 1rem !default
+$wdWerneoFlashMessagesQueuePositionHorizontal: right !default
+$wdWerneoFlashMessagesQueuePositionVertical: top !default
+$wdWerneoFlashMessagesQueueWidth: 15% !default
+
+/// forms
+$wdWerneoFormsBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoFormsBorderStyle: solid !default
+$wdWerneoFormsBorderWidth: 0.2rem !default
+$wdWerneoFormsErrorPadding: 0.5rem 1rem 0.2rem 1rem !default
+$wdWerneoFormsExpandedChoiceBorderWidth: 0.1rem !default
+$wdWerneoFormsExpandedChoiceLabelMarginRight: 1.5rem !default
+$wdWerneoFormsExpandedChoiceMarginRight: 0.5rem !default
+$wdWerneoFormsExpandedChoiceSize: 2rem !default
+$wdWerneoFormsInputSize: $wdWerneoElementSize !default
+$wdWerneoFormsInputPaddingHorizontal: 0.5rem !default
+$wdWerneoFormsInputPaddingVertical: 0 !default
+$wdWerneoFormsSwitchHeight: 1.5rem !default
+$wdWerneoFormsSwitchOutlineWidth: 0.1rem !default
+$wdWerneoFormsSwitchPaddingHorizontal: 1rem !default
+$wdWerneoFormsSwitchPaddingVertical: 0 !default
+$wdWerneoFormsSwitchWidth: 1rem !default
+$wdWerneoFormsTextareaPaddingHorizontal: 0.5rem !default
+$wdWerneoFormsTextareaPaddingVertical: 0.5rem !default
+
+/// lists
+$wdWerneoListsCheckBorderWidth: 0.1rem !default
+$wdWerneoListsCheckOffsetHorizontal: 0.125rem !default
+$wdWerneoListsCheckOffsetVertical: 0.125rem !default
+$wdWerneoListsCheckHeight: 1rem !default
+$wdWerneoListsCheckWidth: 1rem !default
+$wdWerneoListsItemBorderWidth: 0.2rem !default
+$wdWerneoListsItemCheckerSize: 3rem !default
+$wdWerneoListsItemHeight: 8rem !default
+$wdWerneoListsItemHoverShadowWidth: 0.2rem !default
+$wdWerneoListsItemOverlayHeight: 2.6rem !default
+$wdWerneoListsItemPaddingHorizontal: 0.3rem !default
+$wdWerneoListsItemPaddingVertical: 0.3rem !default
+
+/// modal buttons
+$wdWerneoModalButtonsBodyPaddingHorizontal: 1rem !default
+$wdWerneoModalButtonsBodyPaddingVertical: 0.5rem !default
+$wdWerneoModalButtonsCloseButtonOffsetHorizontal: 0.5rem !default
+$wdWerneoModalButtonsCloseButtonOffsetVertical: 0.5rem !default
+$wdWerneoModalButtonsHeaderBorderTopWidth: 0.1rem !default
+$wdWerneoModalButtonsFooterPaddingHorizontal: 0.25rem !default
+$wdWerneoModalButtonsFooterPaddingVertical: 0.25rem !default
+$wdWerneoModalButtonsHeaderBorderBottomWidth: 0.2rem !default
+$wdWerneoModalButtonsHeaderPaddingBottom: 0.25rem !default
+$wdWerneoModalButtonsHeaderPaddingLeft: 0.5rem !default
+$wdWerneoModalButtonsHeaderPaddingRight: 2.5rem !default
+$wdWerneoModalButtonsHeaderPaddingTop: 0.5rem !default
+
+/// modals
+$wdWerneoModalsBackgroundColor: $wdWerneoBlack !default
+$wdWerneoModalsBasicHeight: 30rem !default
+$wdWerneoModalsBasicWidth: 65rem !default
+$wdWerneoModalsBoxShadowFeather: 2rem !default
+$wdWerneoModalsCloseButtonColor: $wdWerneoGreyDark !default
+$wdWerneoModalsCloseButtonOffsetHorizontal: 1rem !default
+$wdWerneoModalsCloseButtonOffsetVertical: 1rem !default
+$wdWerneoModalsCloseButtonPaddingHorizontal: 1rem !default
+$wdWerneoModalsCloseButtonPaddingVertical: 0.5rem !default
+$wdWerneoModalsFullHeight: 100% !default
+$wdWerneoModalsFullWidth: 100% !default
+$wdWerneoModalsLargeHeight: 80% !default
+$wdWerneoModalsLargeWidth: 80% !default
+$wdWerneoModalsMediumHeight: 50% !default
+$wdWerneoModalsMediumWidth: 50% !default
+$wdWerneoModalsTallHeight: 80% !default
+$wdWerneoModalsWideHeight: 50% !default
+$wdWerneoModalsWideWidth: 80% !default
+
+/// navigation
+$wdWerneoNavigationCurtainColor: $wdWerneoBlack !default
+$wdWerneoNavigationCurtainOpacity: 0.5 !default
+$wdWerneoNavigationHeaderHeight: 4rem !default
+$wdWerneoNavigationHeaderTriggerPaddingHorizontal: 1rem !default
+$wdWerneoNavigationHeaderTriggerPaddingVertical: 0 !default
+$wdWerneoNavigationItemBackgroundColorHover: rgba($wdWerneoWhite, 0.1) !default
+$wdWerneoNavigationItemBorderOpacity: 0.25 !default
+$wdWerneoNavigationItemBorderWidth: 0.1rem !default
+$wdWerneoNavigationItemPaddingHorizontal: 2rem !default
+$wdWerneoNavigationItemPaddingVertical: 1rem !default
+$wdWerneoNavigationPaneHeight: 100vh !default
+$wdWerneoNavigationPaneOpenerBackgroundColor: transparent !default
+$wdWerneoNavigationPaneOpenerBackgroundColorHover: rgba($wdWerneoWhite, 0.1) !default
+$wdWerneoNavigationPaneOpenerBorderSpacing: 1rem !default
+$wdWerneoNavigationPaneOpenerBorderWidth: 0.1rem !default
+$wdWerneoNavigationPaneOpenerWidth: 4rem !default
+$wdWerneoNavigationPaneWidth: 100% !default
+$wdWerneoNavigationPaneWidthDesktop: 30rem !default
+$wdWerneoNavigationPaneWidthTablet: 50% !default
+$wdWerneoNavigationTriggerBarHeight: 0.5rem !default
+$wdWerneoNavigationTriggerSize: 4rem !default
+
+/// pagination
+$wdWerneoPaginationDirectionNavigationMargin: 0.5rem !default
+$wdWerneoPaginationDotsMarginHorizontal: 0.5rem !default
+$wdWerneoPaginationDotsMarginVertical: 0 !default
+$wdWerneoPaginationItemBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoPaginationItemHeight: 4rem !default
+$wdWerneoPaginationItemPaddingHorizontal: 2rem !default
+$wdWerneoPaginationItemPaddingVertical: 1rem !default
+
+/// progress bar
+$wdWerneoProgressBarBorderWidth: 0.3rem !default
+$wdWerneoProgressBarHeight: 1.5rem !default
+
+/// scrollbars
+$wdWerneoScrollbarsBodyBorderWidth: 0.2rem !default
+$wdWerneoScrollbarsBodyTrackColor: $wdWerneoWhite !default
+$wdWerneoScrollbarsBorderWidth: 0.2rem !default
+$wdWerneoScrollbarsHeight: 1rem !default
+$wdWerneoScrollbarsThumbColor: rgba($wdWerneoBlack,0.25) !default
+$wdWerneoScrollbarsTrackColor: transparent !default
+$wdWerneoScrollbarsWidth: 1rem !default
+
+/// tables
+$wdWerneoTablesBodyCellPaddingHorizontal: 1rem !default
+$wdWerneoTablesBodyCellPaddingVertical: 0.5rem !default
+$wdWerneoTablesBorderedBorderWidth: 0.1rem !default
+$wdWerneoTablesHeaderCellPaddingHorizontal: 1rem !default
+$wdWerneoTablesHeaderCellPaddingVertical: 1rem !default
+$wdWerneoTablesLinedBorderWidth: 0.1rem !default
+
+/// tabs
+$wdWerneoTabsBorderWidth: 0.1rem !default
+$wdWerneoTabsBorderWidthActive: 0.4rem !default
+$wdWerneoTabsContentPaddingHorizontal: 2rem !default
+$wdWerneoTabsContentPaddingVertical: 2rem !default
+$wdWerneoTabsNavigationPaddingHorizontal: 1rem !default
+$wdWerneoTabsNavigationPaddingVertical: 0.5rem !default
+$wdWerneoTabsVarticalMarginBottom: 0.2rem !default
+
+/// timeline
+$wdWerneoTimelineArrowSize: 0.7rem !default
+$wdWerneoTimelineContentBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoTimelineContentPaddingHorizontal: 2.7rem !default
+$wdWerneoTimelineContentPaddingVertical: 2.7rem !default
+$wdWerneoTimelineContentWidth: 45% !default
+$wdWerneoTimelineIconBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoTimelineIconOffset: 1rem !default
+$wdWerneoTimelineIconSize: 4rem !default
+$wdWerneoTimelineLineColor: $wdWerneoGreyLight !default
+$wdWerneoTimelineLineWidth: 0.4rem !default
+
+/// transformations
+$wdWerneoRotationSteps: (-90deg, 90deg, 180deg) !default
+
+/// tree view
+$wdWerneoTreeViewBranchWidth: 0.1rem !default
+$wdWerneoTreeViewLabelBorderWidth: 0.1rem !default
+$wdWerneoTreeViewLabelPaddingHorizontal: 1rem !default
+$wdWerneoTreeViewLabelPaddingVertical: 1rem !default
+$wdWerneoTreeViewNodeStep: 1rem !default
+
+/// typography
+$wdWerneoTypographyAccentFontFamily: "Courier New", Courier, monospace !default
+$wdWerneoTypographyArticleParagraphMarginBottom: 0.5rem !default
+$wdWerneoTypographyBasicFontFamily: "Courier New", Courier, monospace !default
+$wdWerneoTypographyBasicFontSize: 1.6rem !default
+$wdWerneoTypographyBasicLineHeight: 150% !default
+$wdWerneoTypographyBigFontSize: 120% !default
+$wdWerneoTypographySmallFontSize: 80% !default
+
+/// widgets
+$wdWerneoWidgetsBorderRadius: $wdWerneoBorderRadius !default
+$wdWerneoWidgetsBorderWidth: 0.1rem !default
+$wdWerneoWidgetsSectionPaddingHorizontal: 2rem !default
+$wdWerneoWidgetsSectionPaddingVertical: 2rem !default
