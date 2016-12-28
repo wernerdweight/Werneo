@@ -105,10 +105,9 @@
 					&::before
 						border-color: transparent
 						border-left-color: $color
-					.timeline-milestone
-						&:nth-child(even) &
-							&::before
-								border-right-color: $color
+					.timeline-milestone:nth-child(even) &
+						&::before
+							border-right-color: $color
 
 	+responsive(desktop)
 		.timeline-milestone:nth-child(even)

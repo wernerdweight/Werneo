@@ -1,3 +1,7 @@
+var webpack = require("webpack");
+
+var webpackConfig = require("./webpack.config.js");
+
 module.exports = function (grunt) {
 
     require('time-grunt')(grunt);
@@ -30,10 +34,6 @@ module.exports = function (grunt) {
                 stylesheets: 'dist/css',
                 javascript: 'dist/js',
             },
-            cache: {
-                root: 'cache',
-                javascript: 'cache/js',
-            }
         },
 
         /// [JAVASCRIPT]
@@ -42,69 +42,30 @@ module.exports = function (grunt) {
 
                 /// [Werner Dweight's Werneo]
                 '<%= dirs.dest_generated.javascript %>/werneo.js': [
-                    '<%= dirs.cache.javascript %>/wd/main.js',
+                    '<%= dirs.src.javascript %>/wd/main.js',
                 ]
             }
         },
 
-        browserify: {
-            options: {
-                transform: [
-                    [
-                        'babelify',
-                        {
-                            'presets': ['es2015'],
-                            'plugins': ['transform-runtime']
-                        }
-                    ]
-                ]
-            },
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= dirs.src.javascript %>',
-                    src: ['wd/main.js'],
-                    dest: '<%= dirs.cache.javascript %>',
-                }]
-            },
-            dev: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= dirs.src.javascript %>',
-                    src: ['wd/main.js'],
-                    dest: '<%= dirs.cache.javascript %>',
-                }]
-            }
-        },
+        webpack: {
+            options: webpackConfig,
 
-        uglify: {
-            options: {
-                banner: '<%= banner %>',
-                sourceMap: false,
-                mangle: false,
-                compress: {
-                    warnings: true
-                },
-                beautify: false,
-                wrap: false,
-                exportAll: true,
-                preserveComments: false
-            },
+            dev: {},
+
             dist: {
-                options: {
-                    sourceMap: false,
-                    mangle: false,
-                    beautify: false
-                },
-                files: '<%= javascript.files %>'
+                plugins: webpackConfig.plugins.concat(
+                    new webpack.optimize.UglifyJsPlugin(),
+                    new webpack.DefinePlugin({
+                        'process.env': {NODE_ENV: JSON.stringify("production")}
+                    })
+                )
             },
-            dev: {
-                options: {
-                    sourceMap: false,
-                    mangle: false,
-                    beautify: false
-                },
-                files: '<%= javascript.files %>'
+
+            watch: {
+                watch: true,
+                keepalive: true,
+                failOnError: false,
+                // devtool: "source-map"
             }
         },
 
@@ -146,9 +107,6 @@ module.exports = function (grunt) {
                 '<%= dirs.dest_generated.stylesheets %>/*',
                 '<%= dirs.dest_generated.javascript %>/*',
             ],
-            cache: [
-                '<%= dirs.cache.javascript %>/*',
-            ],
         },
 
         // [WATCH]
@@ -178,7 +136,7 @@ module.exports = function (grunt) {
                     spawn: true
                 },
                 files: '<%= dirs.src.javascript %>/**/*.js',
-                tasks: ['newer:jshint:theme', 'browserify:dev', 'newer:uglify:dev', 'notify:uglify']
+                tasks: ['newer:jshint:theme', 'webpack:dev', 'notify:webpack']
             },
 
         },
@@ -207,10 +165,10 @@ module.exports = function (grunt) {
                     message: 'Compass + Autoprefixer tasks successfully finished!'
                 }
             },
-            uglify: {
+            webpack: {
                 options: {
-                    title: 'Uglify done!',
-                    message: 'Uglify task successfully finished!'
+                    title: 'Webpack done!',
+                    message: 'JS Transpiled and uglified!'
                 }
             },
         },
@@ -257,10 +215,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-notify');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-sass-lint');
-    grunt.loadNpmTasks("grunt-browserify");
+    grunt.loadNpmTasks('grunt-webpack');
 
     grunt.task.run('notify_hooks');
 
@@ -281,9 +238,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'jshint:theme',
         'clean:base',
-        'clean:cache',
-        'browserify:dist',
-        'uglify:dist',
+        'webpack:dist',
         'build_css',
         'notify:build_finish'
     ]);
@@ -293,16 +248,14 @@ module.exports = function (grunt) {
     grunt.registerTask('build_dev', [
         'jshint:theme',
         'clean:base',
-        'clean:cache',
-        'browserify:dev',
-        'uglify:dev',
+        'webpack:dev',
         'sasslint',
         'compass:dev',
         'autoprefixer',
         'notify:build_finish'
     ]);
     grunt.registerTask('build_dev_css', ['sasslint', 'compass:dev', 'autoprefixer']);
-    grunt.registerTask('build_dev_js', ['jshint:theme', 'browserify:dev', 'uglify:dev']);
+    grunt.registerTask('build_dev_js', ['jshint:theme', 'webpack:dev']);
     grunt.registerTask('build_dev_watch', ['build_dev', 'watch']);
 
 }
