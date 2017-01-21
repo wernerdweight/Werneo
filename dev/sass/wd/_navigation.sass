@@ -70,7 +70,7 @@
 		@each $name, $color, in $wdWerneoColors
 			&.#{$name}
 				$inverseColor: $wdWerneoWhite
-				@if $name == 'white' or $name == 'grey-light'
+				@if $name == 'white' or $name == 'grey-light' or $name == 'grey-lightest'
 					$inverseColor: $wdWerneoGreyMedium
 				ul
 					background-color: $color

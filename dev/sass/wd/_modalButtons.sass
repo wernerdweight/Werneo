@@ -11,7 +11,7 @@
 			&.#{$name}
 				$inverseColor: $wdWerneoWhite
 				$darkerColor: darken($color, 50%)
-				@if $name == 'white' or $name == 'grey-light'
+				@if $name == 'white' or $name == 'grey-light' or $name == 'grey-lightest'
 					$inverseColor: $wdWerneoGreyMedium
 				&::before
 					background: rgba($darkerColor, 0.5)
