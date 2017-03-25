@@ -16,6 +16,10 @@
 		font-weight: $wdWerneoNormal
 		line-height: $wdWerneoTypographyBasicLineHeight
 		margin: 0
+		+responsive(tablet)
+			font-size: $wdWerneoTypographyBasicFontSizeTablet
+		+responsive(desktop)
+			font-size: $wdWerneoTypographyBasicFontSizeDesktop
 		article &
 			margin-bottom: $wdWerneoTypographyArticleParagraphMarginBottom
 	.h1

@@ -1,13 +1,12 @@
 {
   "name": "werneo",
-  "version": "0.7.0",
+  "version": "0.7.3",
   "description": "SASS component library",
   "keywords": [
     "sass",
     "component",
     "library"
   ],
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/WernerDweight/Werneo.git"
