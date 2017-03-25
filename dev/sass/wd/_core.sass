@@ -15,6 +15,10 @@ body
 	font-family: $wdWerneoTypographyBasicFontFamily
 	font-size: $wdWerneoTypographyBasicFontSize
 	margin: 0
+	+responsive(tablet)
+		font-size: $wdWerneoTypographyBasicFontSizeTablet
+	+responsive(desktop)
+		font-size: $wdWerneoTypographyBasicFontSizeDesktop
 
 .disable-transition
 	transition: none !important
