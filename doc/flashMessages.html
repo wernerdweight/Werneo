@@ -53,13 +53,35 @@
                     </div>
                 </div>
 
+                <h3 class="h3" id="flashMessages-timeout">Timeout</h3>
+                <p>Default timeout (delay before a message is automatically hidden) of a message is 5 seconds. You can set the timeout in milliseconds manually when creating a message (see examples below). Use <code>0</code> for no timeout (message must be dismissed manually).</p>
+                <div class="r r-1 t-4">
+                    <div>
+                        <button class="btn full grey-light" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>I will hide in just a second</p>',null,1000);">Hides after 1 second</button>
+                    </div>
+                    <div>
+                        <button class="btn full teal" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>I will hide in 5 seconds</p>','success',5000);">Hides after 5 seconds</button>
+                    </div>
+                    <div>
+                        <button class="btn full turquoise" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>You will have to wait for 20 seconds for me to dismiss... Boring, I know.</p>','info',20000);">Hides after 20 seconds</button>
+                    </div>
+                    <div>
+                        <button class="btn full crimson" type="button" onclick="werneo.plugins.flashMessages.createMessage('<p>I think I will hang around for a while (like when your brother comes to visit, you have to show him out manually)!</p>','error',0);">Never hides</button>
+                    </div>
+                </div>
+
                 <p class="mb-1">Flash messages are created using javascript call (you can try copying following code into console):</p>
 
                 <pre class="widget mb-2">
                     <code class="js">werneo.plugins.flashMessages.createMessage('any HTML content',null);        // default
 werneo.plugins.flashMessages.createMessage('any HTML content','error');     // error
 werneo.plugins.flashMessages.createMessage('any HTML content','info');      // info
-werneo.plugins.flashMessages.createMessage('any HTML content','success');   // success</code>
+werneo.plugins.flashMessages.createMessage('any HTML content','success');   // success
+
+werneo.plugins.flashMessages.createMessage('any HTML content',null);        // default timeout (5s)
+werneo.plugins.flashMessages.createMessage('any HTML content',null,1000);   // 1s
+werneo.plugins.flashMessages.createMessage('any HTML content',null,20000);  // 20s
+werneo.plugins.flashMessages.createMessage('any HTML content',null,0);      // no timeout (never hides)</code>
                 </pre>
 
             </div>
