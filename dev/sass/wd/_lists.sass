@@ -23,7 +23,7 @@
 			transition: height $wdWerneoAminationDuration $wdWerneoAminationDuration, opacity $wdWerneoAminationDuration 100ms, background-position $wdWerneoAminationDuration 0
 			width: 100%
 			z-index: 700
-			@each $name, $color, in $wdWerneoColors
+			@each $name, $color in $wdWerneoColors
 				&.bg-#{$name}
 					$inverseColor: $wdWerneoWhite
 					@if $name == 'white' or $name == 'grey-light' or $name == 'grey-lightest'
@@ -46,7 +46,7 @@
 		position: relative
 		text-decoration: none
 		transition: all $wdWerneoAminationDuration ease-in-out
-		@each $name, $color, in $wdWerneoColors
+		@each $name, $color in $wdWerneoColors
 			&.bg-#{$name}
 				$inverseColor: $wdWerneoWhite
 				@if $name == 'white' or $name == 'grey-light' or $name == 'grey-lightest'

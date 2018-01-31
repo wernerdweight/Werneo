@@ -67,7 +67,7 @@
 				max-height: 100%
 				top: 0
 
-		@each $name, $color, in $wdWerneoColors
+		@each $name, $color in $wdWerneoColors
 			&.#{$name}
 				$inverseColor: $wdWerneoWhite
 				@if $name == 'white' or $name == 'grey-light' or $name == 'grey-lightest'
@@ -187,7 +187,7 @@
 			&::after
 				bottom: -2 * $wdWerneoNavigationTriggerBarHeight
 
-		@each $name, $color, in $wdWerneoColors
+		@each $name, $color in $wdWerneoColors
 			&.#{$name}
 				span
 					&,

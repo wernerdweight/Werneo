@@ -70,7 +70,7 @@
 					content: ''
 					display: none
 
-		@each $name, $color, in $wdWerneoColors
+		@each $name, $color in $wdWerneoColors
 			$inverseColor: $wdWerneoWhite
 			$currentPageColor: darken($inverseColor, 10%)
 			@if $name == 'white' or $name == 'grey-light' or $name == 'grey-lightest'
