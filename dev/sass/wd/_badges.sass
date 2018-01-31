@@ -11,7 +11,7 @@
 			padding: $wdWerneoBadgesPaddingVertical * 0.5 $wdWerneoBadgesPaddingHorizontal * 0.5
 		&.lg
 			padding: $wdWerneoBadgesPaddingVertical * 2 $wdWerneoBadgesPaddingHorizontal * 2
-		@each $name, $color, in $wdWerneoColors
+		@each $name, $color in $wdWerneoColors
 			$inverseColor: $wdWerneoWhite
 			@if $name == 'white' or $name == 'grey-light' or $name == 'grey-lightest'
 				$inverseColor: $wdWerneoGreyMedium

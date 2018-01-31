@@ -7,7 +7,7 @@
 	.modal-btn
 		display: inline-block
 		position: relative
-		@each $name, $color, in $wdWerneoColors
+		@each $name, $color in $wdWerneoColors
 			&.#{$name}
 				$inverseColor: $wdWerneoWhite
 				$darkerColor: darken($color, 50%)

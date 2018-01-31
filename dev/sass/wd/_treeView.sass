@@ -51,7 +51,7 @@
 				&:hover
 					border-bottom-width: $wdWerneoTreeViewLabelBorderWidth * 4
 
-		@each $name, $color, in $wdWerneoColors
+		@each $name, $color in $wdWerneoColors
 			$inverseColor: $wdWerneoWhite
 			@if $name == 'white' or $name == 'grey-light' or $name == 'grey-lightest'
 				$inverseColor: $wdWerneoGreyMedium
