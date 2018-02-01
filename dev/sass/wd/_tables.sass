@@ -55,7 +55,7 @@
 				td
 					border: $wdWerneoTablesBorderedBorderWidth solid $wdWerneoGreyLightest
 
-			@each $name, $color, in $wdWerneoColors
+			@each $name, $color in $wdWerneoColors
 				$inverseColor: $wdWerneoWhite
 				@if $name == 'white' or $name == 'grey-light' or $name == 'grey-lightest'
 					$inverseColor: $wdWerneoGreyMedium
